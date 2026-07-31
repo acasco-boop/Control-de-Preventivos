@@ -1,0 +1,5070 @@
+{
+  "centros_de_costo": [
+    "ADA_CH - Danone Arg. S.A. - Chascomus",
+    "AGN_TTE - AGUANORT - Transporte",
+    "Alfavinil SA",
+    "Arcor S.A.I.C.",
+    "CCUCoAZA",
+    "CCUDyAZA",
+    "CCU_MZA - Comp. Cerv. Unidas - MZA",
+    "CENCOMLD - Cencosud SA - Mendoza",
+    "CENCO_MZ - Cencosud SA - Mendoza",
+    "CENCO_SJ - Cencosud SA - San Juan",
+    "CIMSA_BS AS",
+    "CIMSA_MZA",
+    "CIMSA_SRA",
+    "CMQ_TTE - QUILMES TTE",
+    "Expreso - Servicios Troncales",
+    "JOHNSON - SC JOHNSON DE ARGENTINA SAIC",
+    "LlaveLay",
+    "Molca",
+    "Papelera - Papelera del Plata S.A - Zarate.",
+    "Papelera - Papelera del Plata S.A.",
+    "SUC_CTC - Sucursal Buenos Aires",
+    "SUC_GAL - Sucursal General Alvear",
+    "SUC_MAL - Sucursal Malargüe",
+    "SUC_MEN - Sucursal Mendoza",
+    "SUC_REA - Sucursal Realicó",
+    "SUC_ROS - Sucursal Rosario",
+    "SUC_SLU - Sucursal San Luis",
+    "SUC_SRA - Sucursal San Rafael",
+    "Sin Operación",
+    "Topacio",
+    "Unilever - Unilever de Arg. S.A.",
+    "Sin Centro de Costo"
+  ],
+  "talleres": [
+    "BSAS",
+    "CIUD",
+    "MNZA",
+    "SRAF"
+  ],
+  "vehiculos": [
+    {
+      "patente": "AB320YQ",
+      "centro_costo": "CCU_MZA - Comp. Cerv. Unidas - MZA"
+    },
+    {
+      "patente": "AF877NC",
+      "centro_costo": "CENCO_MZ - Cencosud SA - Mendoza"
+    },
+    {
+      "patente": "CVF923",
+      "centro_costo": "JOHNSON - SC JOHNSON DE ARGENTINA SAIC"
+    },
+    {
+      "patente": "FCD324",
+      "centro_costo": "SUC_MEN - Sucursal Mendoza"
+    },
+    {
+      "patente": "KHS009",
+      "centro_costo": "CENCO_MZ - Cencosud SA - Mendoza"
+    },
+    {
+      "patente": "KKI233",
+      "centro_costo": "Papelera - Papelera del Plata S.A."
+    },
+    {
+      "patente": "NIE146",
+      "centro_costo": "CMQ_TTE - QUILMES TTE"
+    },
+    {
+      "patente": "OHH596",
+      "centro_costo": "CCUCoAZA"
+    },
+    {
+      "patente": "OHH597",
+      "centro_costo": "CMQ_TTE - QUILMES TTE"
+    },
+    {
+      "patente": "OJG060",
+      "centro_costo": "CCUDyAZA"
+    },
+    {
+      "patente": "AF156NK",
+      "centro_costo": "SUC_ROS - Sucursal Rosario"
+    },
+    {
+      "patente": "AF156NL",
+      "centro_costo": "SUC_SRA - Sucursal San Rafael"
+    },
+    {
+      "patente": "AF461DQ",
+      "centro_costo": "SUC_MEN - Sucursal Mendoza"
+    },
+    {
+      "patente": "AF491HL",
+      "centro_costo": "SUC_CTC - Sucursal Buenos Aires"
+    },
+    {
+      "patente": "AF156NJ",
+      "centro_costo": "SUC_SLU - Sucursal San Luis"
+    },
+    {
+      "patente": "AF156NM",
+      "centro_costo": "SUC_MEN - Sucursal Mendoza"
+    },
+    {
+      "patente": "AF619YP",
+      "centro_costo": "LlaveLay"
+    },
+    {
+      "patente": "IRC117",
+      "centro_costo": "SUC_CTC - Sucursal Buenos Aires"
+    },
+    {
+      "patente": "GVU097",
+      "centro_costo": "Papelera - Papelera del Plata S.A."
+    },
+    {
+      "patente": "GUW657",
+      "centro_costo": "CENCO_SJ - Cencosud SA - San Juan"
+    },
+    {
+      "patente": "GTE289",
+      "centro_costo": "Papelera - Papelera del Plata S.A."
+    },
+    {
+      "patente": "GQN688",
+      "centro_costo": "Expreso - Servicios Troncales"
+    },
+    {
+      "patente": "GOX957",
+      "centro_costo": "Papelera - Papelera del Plata S.A."
+    },
+    {
+      "patente": "GOX956",
+      "centro_costo": "JOHNSON - SC JOHNSON DE ARGENTINA SAIC"
+    },
+    {
+      "patente": "GOR390",
+      "centro_costo": "Unilever - Unilever de Arg. S.A."
+    },
+    {
+      "patente": "GNY197",
+      "centro_costo": "Papelera - Papelera del Plata S.A."
+    },
+    {
+      "patente": "GMJ025",
+      "centro_costo": "CENCO_MZ - Cencosud SA - Mendoza"
+    },
+    {
+      "patente": "GMJ024",
+      "centro_costo": "Papelera - Papelera del Plata S.A."
+    },
+    {
+      "patente": "GLT552",
+      "centro_costo": "Unilever - Unilever de Arg. S.A."
+    },
+    {
+      "patente": "GKK500",
+      "centro_costo": "SUC_MEN - Sucursal Mendoza"
+    },
+    {
+      "patente": "GJC632",
+      "centro_costo": "Topacio"
+    },
+    {
+      "patente": "AF804RB",
+      "centro_costo": "CCU_MZA - Comp. Cerv. Unidas - MZA"
+    },
+    {
+      "patente": "AF642OS",
+      "centro_costo": "CCUDyAZA"
+    },
+    {
+      "patente": "OZH811",
+      "centro_costo": "CENCOMLD - Cencosud SA - Mendoza"
+    },
+    {
+      "patente": "KER728",
+      "centro_costo": "CENCO_MZ - Cencosud SA - Mendoza"
+    },
+    {
+      "patente": "AG079GB",
+      "centro_costo": "CMQ_TTE - QUILMES TTE"
+    },
+    {
+      "patente": "AG079GA",
+      "centro_costo": "CENCO_MZ - Cencosud SA - Mendoza"
+    },
+    {
+      "patente": "AF066NS",
+      "centro_costo": "CMQ_TTE - QUILMES TTE"
+    },
+    {
+      "patente": "KNE956",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus"
+    },
+    {
+      "patente": "AF118QB",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus"
+    },
+    {
+      "patente": "AF743LB",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus"
+    },
+    {
+      "patente": "AF804RD",
+      "centro_costo": "Arcor S.A.I.C."
+    },
+    {
+      "patente": "AG043HA",
+      "centro_costo": "Arcor S.A.I.C."
+    },
+    {
+      "patente": "AG017HW",
+      "centro_costo": "Arcor S.A.I.C."
+    },
+    {
+      "patente": "AE787OQ",
+      "centro_costo": "CENCOMLD - Cencosud SA - Mendoza"
+    },
+    {
+      "patente": "AF148MS",
+      "centro_costo": "CENCOMLD - Cencosud SA - Mendoza"
+    },
+    {
+      "patente": "AG238NS",
+      "centro_costo": "CENCOMLD - Cencosud SA - Mendoza"
+    },
+    {
+      "patente": "AG269WH",
+      "centro_costo": "CENCOMLD - Cencosud SA - Mendoza"
+    },
+    {
+      "patente": "IDX164",
+      "centro_costo": "Expreso - Servicios Troncales"
+    },
+    {
+      "patente": "JIU311",
+      "centro_costo": "Expreso - Servicios Troncales"
+    },
+    {
+      "patente": "KBO542",
+      "centro_costo": "Expreso - Servicios Troncales"
+    },
+    {
+      "patente": "KUF609",
+      "centro_costo": "Expreso - Servicios Troncales"
+    },
+    {
+      "patente": "IDX163",
+      "centro_costo": "JOHNSON - SC JOHNSON DE ARGENTINA SAIC"
+    },
+    {
+      "patente": "AD426HT",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus"
+    },
+    {
+      "patente": "AD426HW",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus"
+    },
+    {
+      "patente": "AD426HZ",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus"
+    },
+    {
+      "patente": "AD426HY",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus"
+    },
+    {
+      "patente": "AD426IJ",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus"
+    },
+    {
+      "patente": "AD426IH",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus"
+    },
+    {
+      "patente": "AD426HU",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus"
+    },
+    {
+      "patente": "AD426HV",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus"
+    },
+    {
+      "patente": "AD426HX",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus"
+    },
+    {
+      "patente": "AE700VN",
+      "centro_costo": "Expreso - Servicios Troncales"
+    },
+    {
+      "patente": "AE700VS",
+      "centro_costo": "Expreso - Servicios Troncales"
+    },
+    {
+      "patente": "LFK336",
+      "centro_costo": "Expreso - Servicios Troncales"
+    },
+    {
+      "patente": "LFK338",
+      "centro_costo": "Expreso - Servicios Troncales"
+    },
+    {
+      "patente": "LFK339",
+      "centro_costo": "Expreso - Servicios Troncales"
+    },
+    {
+      "patente": "AG300AQ",
+      "centro_costo": "Expreso - Servicios Troncales"
+    },
+    {
+      "patente": "SYG971",
+      "centro_costo": "Expreso - Servicios Troncales"
+    },
+    {
+      "patente": "KUF605",
+      "centro_costo": "Expreso - Servicios Troncales"
+    },
+    {
+      "patente": "OAF641",
+      "centro_costo": "Expreso - Servicios Troncales"
+    },
+    {
+      "patente": "OAF642",
+      "centro_costo": "Expreso - Servicios Troncales"
+    },
+    {
+      "patente": "OAF643",
+      "centro_costo": "Expreso - Servicios Troncales"
+    },
+    {
+      "patente": "OAF644",
+      "centro_costo": "Expreso - Servicios Troncales"
+    },
+    {
+      "patente": "OJG103",
+      "centro_costo": "Expreso - Servicios Troncales"
+    },
+    {
+      "patente": "LTS288",
+      "centro_costo": "CENCOMLD - Cencosud SA - Mendoza"
+    },
+    {
+      "patente": "BRJ211",
+      "centro_costo": "SUC_MAL - Sucursal Malargüe"
+    },
+    {
+      "patente": "AF804RA",
+      "centro_costo": "CENCO_MZ - Cencosud SA - Mendoza"
+    },
+    {
+      "patente": "HRJ004",
+      "centro_costo": "CENCO_MZ - Cencosud SA - Mendoza"
+    },
+    {
+      "patente": "GPL520",
+      "centro_costo": "SUC_REA - Sucursal Realicó"
+    },
+    {
+      "patente": "NIE152",
+      "centro_costo": "CMQ_TTE - QUILMES TTE"
+    },
+    {
+      "patente": "OIC418",
+      "centro_costo": "CCUDyAZA"
+    },
+    {
+      "patente": "SYP554",
+      "centro_costo": "Expreso - Servicios Troncales"
+    },
+    {
+      "patente": "KDG188",
+      "centro_costo": "CCUCoAZA"
+    },
+    {
+      "patente": "OMQ199",
+      "centro_costo": "CCUDyAZA"
+    },
+    {
+      "patente": "FFJ868",
+      "centro_costo": "Sin Operación"
+    },
+    {
+      "patente": "HNE430",
+      "centro_costo": "CCUCoAZA"
+    },
+    {
+      "patente": "KBV620",
+      "centro_costo": "CCUCoAZA"
+    },
+    {
+      "patente": "OMQ198",
+      "centro_costo": "CCUDyAZA"
+    },
+    {
+      "patente": "GDR525",
+      "centro_costo": "Arcor S.A.I.C."
+    },
+    {
+      "patente": "JCF735",
+      "centro_costo": "SUC_SRA - Sucursal San Rafael"
+    },
+    {
+      "patente": "JIL525",
+      "centro_costo": "CENCO_SJ - Cencosud SA - San Juan"
+    },
+    {
+      "patente": "AF613YX",
+      "centro_costo": "CMQ_TTE - QUILMES TTE"
+    },
+    {
+      "patente": "JWV371",
+      "centro_costo": "Sin Operación"
+    },
+    {
+      "patente": "AF804RC",
+      "centro_costo": "CCU_MZA - Comp. Cerv. Unidas - MZA"
+    },
+    {
+      "patente": "OJG099",
+      "centro_costo": "CCUDyAZA"
+    },
+    {
+      "patente": "OJG097",
+      "centro_costo": "CCUDyAZA"
+    },
+    {
+      "patente": "AE243WV",
+      "centro_costo": "CENCOMLD - Cencosud SA - Mendoza"
+    },
+    {
+      "patente": "MYR537",
+      "centro_costo": "CENCOMLD - Cencosud SA - Mendoza"
+    },
+    {
+      "patente": "LRN157",
+      "centro_costo": "CENCOMLD - Cencosud SA - Mendoza"
+    },
+    {
+      "patente": "KTC854",
+      "centro_costo": "CCUCoAZA"
+    },
+    {
+      "patente": "OJG101",
+      "centro_costo": "CCUDyAZA"
+    },
+    {
+      "patente": "KBV618",
+      "centro_costo": "CCUDyAZA"
+    },
+    {
+      "patente": "GDR527",
+      "centro_costo": "CMQ_TTE - QUILMES TTE"
+    },
+    {
+      "patente": "AF613YZ",
+      "centro_costo": "CMQ_TTE - QUILMES TTE"
+    },
+    {
+      "patente": "JYQ969",
+      "centro_costo": "Topacio"
+    },
+    {
+      "patente": "KHS025",
+      "centro_costo": "Sin Operación"
+    },
+    {
+      "patente": "AF118QC",
+      "centro_costo": "CENCOMLD - Cencosud SA - Mendoza"
+    },
+    {
+      "patente": "JAD357",
+      "centro_costo": "CMQ_TTE - QUILMES TTE"
+    },
+    {
+      "patente": "OJG098",
+      "centro_costo": "CCUDyAZA"
+    },
+    {
+      "patente": "KUF606",
+      "centro_costo": "Expreso - Servicios Troncales"
+    },
+    {
+      "patente": "AF831AF",
+      "centro_costo": "CIMSA_BS AS"
+    },
+    {
+      "patente": "BJH275",
+      "centro_costo": "Sin Operación"
+    },
+    {
+      "patente": "DTU738",
+      "centro_costo": "CIMSA_BS AS"
+    },
+    {
+      "patente": "FEQ601",
+      "centro_costo": "Sin Operación"
+    },
+    {
+      "patente": "FEQ602",
+      "centro_costo": "Sin Operación"
+    },
+    {
+      "patente": "FFV165",
+      "centro_costo": "Sin Operación"
+    },
+    {
+      "patente": "FFV166",
+      "centro_costo": "Sin Operación"
+    },
+    {
+      "patente": "FQT892",
+      "centro_costo": "Sin Operación"
+    },
+    {
+      "patente": "FQT893",
+      "centro_costo": "Sin Operación"
+    },
+    {
+      "patente": "FVH034",
+      "centro_costo": "SUC_SRA - Sucursal San Rafael"
+    },
+    {
+      "patente": "FVK506",
+      "centro_costo": "Sin Operación"
+    },
+    {
+      "patente": "JXZ993",
+      "centro_costo": "Sin Operación"
+    },
+    {
+      "patente": "KBO540",
+      "centro_costo": "Sin Operación"
+    },
+    {
+      "patente": "KHS026",
+      "centro_costo": "CMQ_TTE - QUILMES TTE"
+    },
+    {
+      "patente": "KPQ392",
+      "centro_costo": "Sin Operación"
+    },
+    {
+      "patente": "OHH589",
+      "centro_costo": "CMQ_TTE - QUILMES TTE"
+    },
+    {
+      "patente": "OHH592",
+      "centro_costo": "CMQ_TTE - QUILMES TTE"
+    },
+    {
+      "patente": "RNX412",
+      "centro_costo": "Expreso - Servicios Troncales"
+    },
+    {
+      "patente": "SOC883",
+      "centro_costo": "Expreso - Servicios Troncales"
+    },
+    {
+      "patente": "TLH736",
+      "centro_costo": "SUC_SRA - Sucursal San Rafael"
+    },
+    {
+      "patente": "TTV899",
+      "centro_costo": "Sin Operación"
+    },
+    {
+      "patente": "AF114FZ",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus"
+    },
+    {
+      "patente": "KJH882",
+      "centro_costo": "Unilever - Unilever de Arg. S.A."
+    },
+    {
+      "patente": "GJC631",
+      "centro_costo": "CCUCoAZA"
+    },
+    {
+      "patente": "JKQ773",
+      "centro_costo": "Sin Operación"
+    },
+    {
+      "patente": "JKQ774",
+      "centro_costo": "CCUCoAZA"
+    },
+    {
+      "patente": "OJG063",
+      "centro_costo": "CCUCoAZA"
+    },
+    {
+      "patente": "AF542LX",
+      "centro_costo": "CIMSA_SRA"
+    },
+    {
+      "patente": "OHH590",
+      "centro_costo": "CCUDyAZA"
+    },
+    {
+      "patente": "BJG486",
+      "centro_costo": "Sin Operación"
+    },
+    {
+      "patente": "OHH595",
+      "centro_costo": "CCUDyAZA"
+    },
+    {
+      "patente": "AE794VC",
+      "centro_costo": "SUC_MEN - Sucursal Mendoza"
+    },
+    {
+      "patente": "OIC419",
+      "centro_costo": "CCUDyAZA"
+    },
+    {
+      "patente": "FFO440",
+      "centro_costo": "Sin Operación"
+    },
+    {
+      "patente": "FHK364",
+      "centro_costo": "Sin Operación"
+    },
+    {
+      "patente": "FVO107",
+      "centro_costo": "Sin Operación"
+    },
+    {
+      "patente": "FVO108",
+      "centro_costo": "Sin Operación"
+    },
+    {
+      "patente": "GLT551",
+      "centro_costo": "Sin Operación"
+    },
+    {
+      "patente": "GOR397",
+      "centro_costo": "SUC_SLU - Sucursal San Luis"
+    },
+    {
+      "patente": "AF148ME",
+      "centro_costo": "CMQ_TTE - QUILMES TTE"
+    },
+    {
+      "patente": "HRJ003",
+      "centro_costo": "CENCO_MZ - Cencosud SA - Mendoza"
+    },
+    {
+      "patente": "JEB635",
+      "centro_costo": "CMQ_TTE - QUILMES TTE"
+    },
+    {
+      "patente": "NIE147",
+      "centro_costo": "CMQ_TTE - QUILMES TTE"
+    },
+    {
+      "patente": "AF118QA",
+      "centro_costo": "CENCOMLD - Cencosud SA - Mendoza"
+    },
+    {
+      "patente": "LFK337",
+      "centro_costo": "Expreso - Servicios Troncales"
+    },
+    {
+      "patente": "HPR687",
+      "centro_costo": "Unilever - Unilever de Arg. S.A."
+    },
+    {
+      "patente": "KPQ389",
+      "centro_costo": "AGN_TTE - AGUANORT - Transporte"
+    },
+    {
+      "patente": "HNL373",
+      "centro_costo": "Alfavinil SA"
+    },
+    {
+      "patente": "AG176NA",
+      "centro_costo": "CCUCoAZA"
+    },
+    {
+      "patente": "AG176NB",
+      "centro_costo": "CCUCoAZA"
+    },
+    {
+      "patente": "AF066NX",
+      "centro_costo": "CMQ_TTE - QUILMES TTE"
+    },
+    {
+      "patente": "AF088ED",
+      "centro_costo": "CMQ_TTE - QUILMES TTE"
+    },
+    {
+      "patente": "AF746EN",
+      "centro_costo": "CMQ_TTE - QUILMES TTE"
+    },
+    {
+      "patente": "NIE154",
+      "centro_costo": "CMQ_TTE - QUILMES TTE"
+    },
+    {
+      "patente": "KPQ390",
+      "centro_costo": "Sin Operación"
+    },
+    {
+      "patente": "KPQ391",
+      "centro_costo": "Sin Operación"
+    },
+    {
+      "patente": "BNW644",
+      "centro_costo": "SUC_GAL - Sucursal General Alvear"
+    },
+    {
+      "patente": "FJT707",
+      "centro_costo": "SUC_MEN - Sucursal Mendoza"
+    },
+    {
+      "patente": "AB029TN",
+      "centro_costo": "Unilever - Unilever de Arg. S.A."
+    },
+    {
+      "patente": "NIE155",
+      "centro_costo": "Papelera - Papelera del Plata S.A."
+    },
+    {
+      "patente": "GDR526",
+      "centro_costo": "Molca"
+    },
+    {
+      "patente": "GTE288",
+      "centro_costo": "JOHNSON - SC JOHNSON DE ARGENTINA SAIC"
+    },
+    {
+      "patente": "GRE073",
+      "centro_costo": "SUC_MEN - Sucursal Mendoza"
+    },
+    {
+      "patente": "HKW894",
+      "centro_costo": "Papelera - Papelera del Plata S.A - Zarate."
+    },
+    {
+      "patente": "JKG664",
+      "centro_costo": "Molca"
+    },
+    {
+      "patente": "AD426IF",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus"
+    },
+    {
+      "patente": "OAF640",
+      "centro_costo": "Expreso - Servicios Troncales"
+    },
+    {
+      "patente": "AF088EA",
+      "centro_costo": "CMQ_TTE - QUILMES TTE"
+    },
+    {
+      "patente": "AF114FP",
+      "centro_costo": "CMQ_TTE - QUILMES TTE"
+    },
+    {
+      "patente": "AF338VO",
+      "centro_costo": "CMQ_TTE - QUILMES TTE"
+    },
+    {
+      "patente": "AF518DM",
+      "centro_costo": "CMQ_TTE - QUILMES TTE"
+    },
+    {
+      "patente": "AF722DN",
+      "centro_costo": "CMQ_TTE - QUILMES TTE"
+    },
+    {
+      "patente": "AF918RI",
+      "centro_costo": "CMQ_TTE - QUILMES TTE"
+    },
+    {
+      "patente": "AG095MQ",
+      "centro_costo": "CMQ_TTE - QUILMES TTE"
+    },
+    {
+      "patente": "AG095MR",
+      "centro_costo": "CMQ_TTE - QUILMES TTE"
+    },
+    {
+      "patente": "GFZ650",
+      "centro_costo": "CENCO_MZ - Cencosud SA - Mendoza"
+    },
+    {
+      "patente": "JWV370",
+      "centro_costo": "CCUDyAZA"
+    },
+    {
+      "patente": "JXZ992",
+      "centro_costo": "CCUCoAZA"
+    },
+    {
+      "patente": "KBV611",
+      "centro_costo": "CCUDyAZA"
+    },
+    {
+      "patente": "NIE153",
+      "centro_costo": "CMQ_TTE - QUILMES TTE"
+    },
+    {
+      "patente": "NVX394",
+      "centro_costo": "CIMSA_MZA"
+    },
+    {
+      "patente": "OHH588",
+      "centro_costo": "CCUDyAZA"
+    },
+    {
+      "patente": "OHH593",
+      "centro_costo": "CCUCoAZA"
+    },
+    {
+      "patente": "HRJ002",
+      "centro_costo": "SUC_REA - Sucursal Realicó"
+    },
+    {
+      "patente": "AF804RF",
+      "centro_costo": "CCU_MZA - Comp. Cerv. Unidas - MZA"
+    },
+    {
+      "patente": "AF444TW",
+      "centro_costo": "CMQ_TTE - QUILMES TTE"
+    },
+    {
+      "patente": "GJQ699",
+      "centro_costo": "CCUDyAZA"
+    },
+    {
+      "patente": "OJG061",
+      "centro_costo": "CCUDyAZA"
+    },
+    {
+      "patente": "IVD940",
+      "centro_costo": "CCUCoAZA"
+    },
+    {
+      "patente": "GUW658",
+      "centro_costo": "Unilever - Unilever de Arg. S.A."
+    },
+    {
+      "patente": "AF066NT",
+      "centro_costo": "CMQ_TTE - QUILMES TTE"
+    },
+    {
+      "patente": "AF642OU",
+      "centro_costo": "CCUDyAZA"
+    },
+    {
+      "patente": "HUY047",
+      "centro_costo": "Unilever - Unilever de Arg. S.A."
+    },
+    {
+      "patente": "OHH591",
+      "centro_costo": "CCUDyAZA"
+    },
+    {
+      "patente": "AG404LX",
+      "centro_costo": "CCUDyAZA"
+    },
+    {
+      "patente": "AF804RE",
+      "centro_costo": "CCU_MZA - Comp. Cerv. Unidas - MZA"
+    },
+    {
+      "patente": "GOX958",
+      "centro_costo": "Papelera - Papelera del Plata S.A."
+    },
+    {
+      "patente": "OHH586",
+      "centro_costo": "CCUDyAZA"
+    },
+    {
+      "patente": "AF619YO",
+      "centro_costo": "SUC_MEN - Sucursal Mendoza"
+    },
+    {
+      "patente": "AG390QD",
+      "centro_costo": "CCUDyAZA"
+    },
+    {
+      "patente": "OJG062",
+      "centro_costo": "CCUDyAZA"
+    },
+    {
+      "patente": "PLU469",
+      "centro_costo": "CCUDyAZA"
+    },
+    {
+      "patente": "AF461DV",
+      "centro_costo": "Unilever - Unilever de Arg. S.A."
+    },
+    {
+      "patente": "GFZ651",
+      "centro_costo": "SUC_CTC - Sucursal Buenos Aires"
+    },
+    {
+      "patente": "GRC311",
+      "centro_costo": "CCUCoAZA"
+    },
+    {
+      "patente": "FGV321",
+      "centro_costo": "CCUCoAZA"
+    },
+    {
+      "patente": "AF642OT",
+      "centro_costo": "CCU_MZA - Comp. Cerv. Unidas - MZA"
+    },
+    {
+      "patente": "AF338VQ",
+      "centro_costo": "CMQ_TTE - QUILMES TTE"
+    },
+    {
+      "patente": "AF737MP",
+      "centro_costo": "CMQ_TTE - QUILMES TTE"
+    },
+    {
+      "patente": "AG404LU",
+      "centro_costo": "CMQ_TTE - QUILMES TTE"
+    },
+    {
+      "patente": "GLT550",
+      "centro_costo": "Expreso - Servicios Troncales"
+    },
+    {
+      "patente": "AF444TV",
+      "centro_costo": "CMQ_TTE - QUILMES TTE"
+    },
+    {
+      "patente": "KGM735",
+      "centro_costo": "CENCO_MZ - Cencosud SA - Mendoza"
+    },
+    {
+      "patente": "AG300AR",
+      "centro_costo": "Arcor S.A.I.C."
+    },
+    {
+      "patente": "HSC655",
+      "centro_costo": "CENCO_MZ - Cencosud SA - Mendoza"
+    },
+    {
+      "patente": "KHS013",
+      "centro_costo": "SUC_GAL - Sucursal General Alvear"
+    },
+    {
+      "patente": "JWV379",
+      "centro_costo": "CCUCoAZA"
+    },
+    {
+      "patente": "KIP032",
+      "centro_costo": "Expreso - Servicios Troncales"
+    }
+  ],
+  "mantenimientos": [
+    {
+      "id": 1,
+      "patente": "AB029TN",
+      "centro_costo": "Unilever - Unilever de Arg. S.A.",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-07-05",
+      "mes_original": 7,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Julio"
+    },
+    {
+      "id": 2,
+      "patente": "AB320YQ",
+      "centro_costo": "CCU_MZA - Comp. Cerv. Unidas - MZA",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-02-14",
+      "mes_original": 2,
+      "fecha_ejecucion": "2026-03-05",
+      "mes_ejecucion": 3,
+      "taller": "MNZA",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Marzo (Origen: Febrero)"
+    },
+    {
+      "id": 3,
+      "patente": "AD426HT",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-04-05",
+      "mes_original": 4,
+      "fecha_ejecucion": "2026-05-20",
+      "mes_ejecucion": 5,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Mayo (Origen: Abril)"
+    },
+    {
+      "id": 4,
+      "patente": "AD426HU",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-02-14",
+      "mes_original": 2,
+      "fecha_ejecucion": "2026-05-19",
+      "mes_ejecucion": 5,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Mayo (Origen: Febrero)"
+    },
+    {
+      "id": 5,
+      "patente": "AD426HU",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-05-22",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-01-30",
+      "mes_ejecucion": 1,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado por adelantado en Enero (Programado: Mayo)"
+    },
+    {
+      "id": 6,
+      "patente": "AD426HV",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-01-31",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-01-05",
+      "mes_ejecucion": 1,
+      "taller": "BSAS",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 05/01/2026"
+    },
+    {
+      "id": 7,
+      "patente": "AD426HV",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-05-17",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-07-06",
+      "mes_ejecucion": 7,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Julio (Origen: Mayo)"
+    },
+    {
+      "id": 8,
+      "patente": "AD426HV",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-10-14",
+      "mes_original": 10,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Octubre"
+    },
+    {
+      "id": 9,
+      "patente": "AD426HW",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-04-03",
+      "mes_original": 4,
+      "fecha_ejecucion": "2026-06-27",
+      "mes_ejecucion": 6,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Junio (Origen: Abril)"
+    },
+    {
+      "id": 10,
+      "patente": "AD426HW",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-07-05",
+      "mes_original": 7,
+      "fecha_ejecucion": "2026-01-08",
+      "mes_ejecucion": 1,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado por adelantado en Enero (Programado: Julio)"
+    },
+    {
+      "id": 11,
+      "patente": "AD426HW",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-08-15",
+      "mes_original": 8,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Agosto"
+    },
+    {
+      "id": 12,
+      "patente": "AD426HX",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-01-10",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-01-14",
+      "mes_ejecucion": 1,
+      "taller": "BSAS",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 14/01/2026"
+    },
+    {
+      "id": 13,
+      "patente": "AD426HX",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-04-05",
+      "mes_original": 4,
+      "fecha_ejecucion": "2026-04-17",
+      "mes_ejecucion": 4,
+      "taller": "BSAS",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 17/04/2026"
+    },
+    {
+      "id": 14,
+      "patente": "AD426HX",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-11-25",
+      "mes_original": 11,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Noviembre"
+    },
+    {
+      "id": 15,
+      "patente": "AD426HY",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-01-13",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-01-29",
+      "mes_ejecucion": 1,
+      "taller": "BSAS",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 29/01/2026"
+    },
+    {
+      "id": 16,
+      "patente": "AD426HY",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-07-05",
+      "mes_original": 7,
+      "fecha_ejecucion": "2026-07-01",
+      "mes_ejecucion": 7,
+      "taller": "CIUD",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 01/07/2026"
+    },
+    {
+      "id": 17,
+      "patente": "AD426HY",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-08-10",
+      "mes_original": 8,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Agosto"
+    },
+    {
+      "id": 18,
+      "patente": "AD426HZ",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-02-08",
+      "mes_original": 2,
+      "fecha_ejecucion": "2026-04-14",
+      "mes_ejecucion": 4,
+      "taller": "BSAS",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Abril (Origen: Febrero)"
+    },
+    {
+      "id": 19,
+      "patente": "AD426HZ",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-05-11",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-01-07",
+      "mes_ejecucion": 1,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado por adelantado en Enero (Programado: Mayo)"
+    },
+    {
+      "id": 20,
+      "patente": "AD426HZ",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-11-16",
+      "mes_original": 11,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Noviembre"
+    },
+    {
+      "id": 21,
+      "patente": "AD426IF",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-10-26",
+      "mes_original": 10,
+      "fecha_ejecucion": "2026-01-19",
+      "mes_ejecucion": 1,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado por adelantado en Enero (Programado: Octubre)"
+    },
+    {
+      "id": 22,
+      "patente": "AD426IH",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-01-23",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-01-06",
+      "mes_ejecucion": 1,
+      "taller": "BSAS",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 06/01/2026"
+    },
+    {
+      "id": 23,
+      "patente": "AD426IH",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-05-02",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-04-11",
+      "mes_ejecucion": 4,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado por adelantado en Abril (Programado: Mayo)"
+    },
+    {
+      "id": 24,
+      "patente": "AD426IH",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-12-22",
+      "mes_original": 12,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Diciembre"
+    },
+    {
+      "id": 25,
+      "patente": "AD426IJ",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-01-13",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-01-10",
+      "mes_ejecucion": 1,
+      "taller": "BSAS",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 10/01/2026"
+    },
+    {
+      "id": 26,
+      "patente": "AD426IJ",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-05-26",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-03-21",
+      "mes_ejecucion": 3,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado por adelantado en Marzo (Programado: Mayo)"
+    },
+    {
+      "id": 27,
+      "patente": "AD426IJ",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-11-28",
+      "mes_original": 11,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Noviembre"
+    },
+    {
+      "id": 28,
+      "patente": "AE243WV",
+      "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-05-12",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-06-22",
+      "mes_ejecucion": 6,
+      "taller": "MNZA",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Junio (Origen: Mayo)"
+    },
+    {
+      "id": 29,
+      "patente": "AE243WV",
+      "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-06-10",
+      "mes_original": 6,
+      "fecha_ejecucion": "2026-01-28",
+      "mes_ejecucion": 1,
+      "taller": "MNZA",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado por adelantado en Enero (Programado: Junio)"
+    },
+    {
+      "id": 30,
+      "patente": "AE243WV",
+      "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-07-05",
+      "mes_original": 7,
+      "fecha_ejecucion": "2026-04-20",
+      "mes_ejecucion": 4,
+      "taller": "MNZA",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado por adelantado en Abril (Programado: Julio)"
+    },
+    {
+      "id": 31,
+      "patente": "AE700VN",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-01-03",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-01-22",
+      "mes_ejecucion": 1,
+      "taller": "MNZA",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 22/01/2026"
+    },
+    {
+      "id": 32,
+      "patente": "AE700VN",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-03-23",
+      "mes_original": 3,
+      "fecha_ejecucion": "2026-04-27",
+      "mes_ejecucion": 4,
+      "taller": "MNZA",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Abril (Origen: Marzo)"
+    },
+    {
+      "id": 33,
+      "patente": "AE700VN",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-07-05",
+      "mes_original": 7,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Julio"
+    },
+    {
+      "id": 34,
+      "patente": "AE700VS",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-01-16",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-01-07",
+      "mes_ejecucion": 1,
+      "taller": "SRAF",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 07/01/2026"
+    },
+    {
+      "id": 35,
+      "patente": "AE700VS",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-04-05",
+      "mes_original": 4,
+      "fecha_ejecucion": "2026-05-04",
+      "mes_ejecucion": 5,
+      "taller": "SRAF",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Mayo (Origen: Abril)"
+    },
+    {
+      "id": 36,
+      "patente": "AE700VS",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-12-09",
+      "mes_original": 12,
+      "fecha_ejecucion": "2026-07-21",
+      "mes_ejecucion": 7,
+      "taller": "SRAF",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado por adelantado en Julio (Programado: Diciembre)"
+    },
+    {
+      "id": 37,
+      "patente": "AE787OQ",
+      "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-01-16",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-02-23",
+      "mes_ejecucion": 2,
+      "taller": "MNZA",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Febrero (Origen: Enero)"
+    },
+    {
+      "id": 38,
+      "patente": "AE787OQ",
+      "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-06-27",
+      "mes_original": 6,
+      "fecha_ejecucion": "2026-05-27",
+      "mes_ejecucion": 5,
+      "taller": "MNZA",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado por adelantado en Mayo (Programado: Junio)"
+    },
+    {
+      "id": 39,
+      "patente": "AE787OQ",
+      "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-11-30",
+      "mes_original": 11,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Noviembre"
+    },
+    {
+      "id": 40,
+      "patente": "AE794VC",
+      "centro_costo": "SUC_MEN - Sucursal Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-06-15",
+      "mes_original": 6,
+      "fecha_ejecucion": "2026-02-04",
+      "mes_ejecucion": 2,
+      "taller": "MNZA",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado por adelantado en Febrero (Programado: Junio)"
+    },
+    {
+      "id": 41,
+      "patente": "AE794VC",
+      "centro_costo": "SUC_MEN - Sucursal Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-07-05",
+      "mes_original": 7,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Julio"
+    },
+    {
+      "id": 42,
+      "patente": "AF066NS",
+      "centro_costo": "CMQ_TTE - QUILMES TTE",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-03-18",
+      "mes_original": 3,
+      "fecha_ejecucion": "2026-01-15",
+      "mes_ejecucion": 1,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado por adelantado en Enero (Programado: Marzo)"
+    },
+    {
+      "id": 43,
+      "patente": "AF066NX",
+      "centro_costo": "CMQ_TTE - QUILMES TTE",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-07-05",
+      "mes_original": 7,
+      "fecha_ejecucion": "2026-07-07",
+      "mes_ejecucion": 7,
+      "taller": "CIUD",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 07/07/2026"
+    },
+    {
+      "id": 44,
+      "patente": "AF088ED",
+      "centro_costo": "CMQ_TTE - QUILMES TTE",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-07-05",
+      "mes_original": 7,
+      "fecha_ejecucion": "2026-07-14",
+      "mes_ejecucion": 7,
+      "taller": "CIUD",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 14/07/2026"
+    },
+    {
+      "id": 45,
+      "patente": "AF114FZ",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-06-10",
+      "mes_original": 6,
+      "fecha_ejecucion": "2026-06-02",
+      "mes_ejecucion": 6,
+      "taller": "CIUD",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 02/06/2026"
+    },
+    {
+      "id": 46,
+      "patente": "AF118QA",
+      "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-06-27",
+      "mes_original": 6,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Junio"
+    },
+    {
+      "id": 47,
+      "patente": "AF118QA",
+      "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-08-11",
+      "mes_original": 8,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Agosto"
+    },
+    {
+      "id": 48,
+      "patente": "AF118QB",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-01-16",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-01-24",
+      "mes_ejecucion": 1,
+      "taller": "BSAS",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 24/01/2026"
+    },
+    {
+      "id": 49,
+      "patente": "AF118QC",
+      "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-01-06",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-03-09",
+      "mes_ejecucion": 3,
+      "taller": "MNZA",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Marzo (Origen: Enero)"
+    },
+    {
+      "id": 50,
+      "patente": "AF118QC",
+      "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-05-14",
+      "mes_original": 5,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Mayo"
+    },
+    {
+      "id": 51,
+      "patente": "AF148ME",
+      "centro_costo": "CMQ_TTE - QUILMES TTE",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-06-20",
+      "mes_original": 6,
+      "fecha_ejecucion": "2026-05-19",
+      "mes_ejecucion": 5,
+      "taller": "CIUD",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado por adelantado en Mayo (Programado: Junio)"
+    },
+    {
+      "id": 52,
+      "patente": "AF148ME",
+      "centro_costo": "CMQ_TTE - QUILMES TTE",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-07-05",
+      "mes_original": 7,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Julio"
+    },
+    {
+      "id": 53,
+      "patente": "AF148MS",
+      "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-01-12",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-04-22",
+      "mes_ejecucion": 4,
+      "taller": "MNZA",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Abril (Origen: Enero)"
+    },
+    {
+      "id": 54,
+      "patente": "AF148MS",
+      "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-11-06",
+      "mes_original": 11,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Noviembre"
+    },
+    {
+      "id": 55,
+      "patente": "AF156NJ",
+      "centro_costo": "SUC_SLU - Sucursal San Luis",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-01-03",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-06-24",
+      "mes_ejecucion": 6,
+      "taller": "MNZA",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Junio (Origen: Enero)"
+    },
+    {
+      "id": 56,
+      "patente": "AF156NJ",
+      "centro_costo": "SUC_SLU - Sucursal San Luis",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-08-28",
+      "mes_original": 8,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Agosto"
+    },
+    {
+      "id": 57,
+      "patente": "AF156NK",
+      "centro_costo": "SUC_ROS - Sucursal Rosario",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-05-01",
+      "mes_original": 5,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Mayo"
+    },
+    {
+      "id": 58,
+      "patente": "AF156NK",
+      "centro_costo": "SUC_ROS - Sucursal Rosario",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-10-14",
+      "mes_original": 10,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Octubre"
+    },
+    {
+      "id": 59,
+      "patente": "AF156NL",
+      "centro_costo": "SUC_SRA - Sucursal San Rafael",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-01-03",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-06-24",
+      "mes_ejecucion": 6,
+      "taller": "SRAF",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Junio (Origen: Enero)"
+    },
+    {
+      "id": 60,
+      "patente": "AF156NL",
+      "centro_costo": "SUC_SRA - Sucursal San Rafael",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-01-22",
+      "mes_original": 1,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Enero"
+    },
+    {
+      "id": 61,
+      "patente": "AF156NM",
+      "centro_costo": "SUC_MEN - Sucursal Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-02-18",
+      "mes_original": 2,
+      "fecha_ejecucion": "2026-03-10",
+      "mes_ejecucion": 3,
+      "taller": "MNZA",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Marzo (Origen: Febrero)"
+    },
+    {
+      "id": 62,
+      "patente": "AF156NM",
+      "centro_costo": "SUC_MEN - Sucursal Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-10-26",
+      "mes_original": 10,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Octubre"
+    },
+    {
+      "id": 63,
+      "patente": "AF461DQ",
+      "centro_costo": "SUC_MEN - Sucursal Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-02-27",
+      "mes_original": 2,
+      "fecha_ejecucion": "2026-05-23",
+      "mes_ejecucion": 5,
+      "taller": "MNZA",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Mayo (Origen: Febrero)"
+    },
+    {
+      "id": 64,
+      "patente": "AF491HL",
+      "centro_costo": "SUC_CTC - Sucursal Buenos Aires",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-03-17",
+      "mes_original": 3,
+      "fecha_ejecucion": "2026-05-14",
+      "mes_ejecucion": 5,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Mayo (Origen: Marzo)"
+    },
+    {
+      "id": 65,
+      "patente": "AF542LX",
+      "centro_costo": "CIMSA_SRA",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-06-15",
+      "mes_original": 6,
+      "fecha_ejecucion": "2026-06-01",
+      "mes_ejecucion": 6,
+      "taller": "SRAF",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 01/06/2026"
+    },
+    {
+      "id": 66,
+      "patente": "AF542LX",
+      "centro_costo": "CIMSA_SRA",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-07-05",
+      "mes_original": 7,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Julio"
+    },
+    {
+      "id": 67,
+      "patente": "AF613YX",
+      "centro_costo": "CMQ_TTE - QUILMES TTE",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-04-22",
+      "mes_original": 4,
+      "fecha_ejecucion": "2026-05-19",
+      "mes_ejecucion": 5,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Mayo (Origen: Abril)"
+    },
+    {
+      "id": 68,
+      "patente": "AF613YZ",
+      "centro_costo": "CMQ_TTE - QUILMES TTE",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-05-23",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-06-02",
+      "mes_ejecucion": 6,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Junio (Origen: Mayo)"
+    },
+    {
+      "id": 69,
+      "patente": "AF619YP",
+      "centro_costo": "LlaveLay",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-03-13",
+      "mes_original": 3,
+      "fecha_ejecucion": "2026-02-13",
+      "mes_ejecucion": 2,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado por adelantado en Febrero (Programado: Marzo)"
+    },
+    {
+      "id": 70,
+      "patente": "AF642OS",
+      "centro_costo": "CCUDyAZA",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-04-24",
+      "mes_original": 4,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Abril"
+    },
+    {
+      "id": 71,
+      "patente": "AF743LB",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-03-08",
+      "mes_original": 3,
+      "fecha_ejecucion": "2026-04-09",
+      "mes_ejecucion": 4,
+      "taller": "BSAS",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Abril (Origen: Marzo)"
+    },
+    {
+      "id": 72,
+      "patente": "AF743LB",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-11-07",
+      "mes_original": 11,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Noviembre"
+    },
+    {
+      "id": 73,
+      "patente": "AF746EN",
+      "centro_costo": "CMQ_TTE - QUILMES TTE",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-07-05",
+      "mes_original": 7,
+      "fecha_ejecucion": "2026-07-02",
+      "mes_ejecucion": 7,
+      "taller": "CIUD",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 02/07/2026"
+    },
+    {
+      "id": 74,
+      "patente": "AF804RA",
+      "centro_costo": "CENCO_MZ - Cencosud SA - Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-01-24",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-05-22",
+      "mes_ejecucion": 5,
+      "taller": "MNZA",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Mayo (Origen: Enero)"
+    },
+    {
+      "id": 75,
+      "patente": "AF804RB",
+      "centro_costo": "CCU_MZA - Comp. Cerv. Unidas - MZA",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-04-02",
+      "mes_original": 4,
+      "fecha_ejecucion": "2026-03-06",
+      "mes_ejecucion": 3,
+      "taller": "MNZA",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado por adelantado en Marzo (Programado: Abril)"
+    },
+    {
+      "id": 76,
+      "patente": "AF804RC",
+      "centro_costo": "CCU_MZA - Comp. Cerv. Unidas - MZA",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-05-08",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-03-09",
+      "mes_ejecucion": 3,
+      "taller": "MNZA",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado por adelantado en Marzo (Programado: Mayo)"
+    },
+    {
+      "id": 77,
+      "patente": "AF804RD",
+      "centro_costo": "Arcor S.A.I.C.",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-04-07",
+      "mes_original": 4,
+      "fecha_ejecucion": "2026-05-06",
+      "mes_ejecucion": 5,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Mayo (Origen: Abril)"
+    },
+    {
+      "id": 78,
+      "patente": "AF831AF",
+      "centro_costo": "CIMSA_BS AS",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-02-15",
+      "mes_original": 2,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Febrero"
+    },
+    {
+      "id": 79,
+      "patente": "AF877NC",
+      "centro_costo": "CENCO_MZ - Cencosud SA - Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-05-05",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-05-22",
+      "mes_ejecucion": 5,
+      "taller": "MNZA",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 22/05/2026"
+    },
+    {
+      "id": 80,
+      "patente": "AG017HW",
+      "centro_costo": "Arcor S.A.I.C.",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-01-10",
+      "mes_original": 1,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Enero"
+    },
+    {
+      "id": 81,
+      "patente": "AG043HA",
+      "centro_costo": "Arcor S.A.I.C.",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-05-25",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-07-08",
+      "mes_ejecucion": 7,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Julio (Origen: Mayo)"
+    },
+    {
+      "id": 82,
+      "patente": "AG079GA",
+      "centro_costo": "CENCO_MZ - Cencosud SA - Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-05-05",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-01-12",
+      "mes_ejecucion": 1,
+      "taller": "MNZA",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado por adelantado en Enero (Programado: Mayo)"
+    },
+    {
+      "id": 83,
+      "patente": "AG079GB",
+      "centro_costo": "CMQ_TTE - QUILMES TTE",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-04-12",
+      "mes_original": 4,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Abril"
+    },
+    {
+      "id": 84,
+      "patente": "AG176NA",
+      "centro_costo": "CCUCoAZA",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-07-05",
+      "mes_original": 7,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Julio"
+    },
+    {
+      "id": 85,
+      "patente": "AG176NA",
+      "centro_costo": "CCUCoAZA",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-09-03",
+      "mes_original": 9,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Septiembre"
+    },
+    {
+      "id": 86,
+      "patente": "AG176NB",
+      "centro_costo": "CCUCoAZA",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-07-05",
+      "mes_original": 7,
+      "fecha_ejecucion": "2026-07-13",
+      "mes_ejecucion": 7,
+      "taller": "CIUD",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 13/07/2026"
+    },
+    {
+      "id": 87,
+      "patente": "AG176NB",
+      "centro_costo": "CCUCoAZA",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-08-19",
+      "mes_original": 8,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Agosto"
+    },
+    {
+      "id": 88,
+      "patente": "AG238NS",
+      "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-02-01",
+      "mes_original": 2,
+      "fecha_ejecucion": "2026-05-20",
+      "mes_ejecucion": 5,
+      "taller": "MNZA",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Mayo (Origen: Febrero)"
+    },
+    {
+      "id": 89,
+      "patente": "AG269WH",
+      "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-03-02",
+      "mes_original": 3,
+      "fecha_ejecucion": "2026-03-30",
+      "mes_ejecucion": 3,
+      "taller": "MNZA",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 30/03/2026"
+    },
+    {
+      "id": 90,
+      "patente": "AG269WH",
+      "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-07-05",
+      "mes_original": 7,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Julio"
+    },
+    {
+      "id": 91,
+      "patente": "AG269WH",
+      "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-09-07",
+      "mes_original": 9,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Septiembre"
+    },
+    {
+      "id": 92,
+      "patente": "AG300AQ",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-05-04",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-07-17",
+      "mes_ejecucion": 7,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Julio (Origen: Mayo)"
+    },
+    {
+      "id": 93,
+      "patente": "AG300AQ",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-07-05",
+      "mes_original": 7,
+      "fecha_ejecucion": "2026-01-31",
+      "mes_ejecucion": 1,
+      "taller": "MNZA",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado por adelantado en Enero (Programado: Julio)"
+    },
+    {
+      "id": 94,
+      "patente": "AG300AQ",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-09-12",
+      "mes_original": 9,
+      "fecha_ejecucion": "2026-04-16",
+      "mes_ejecucion": 4,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado por adelantado en Abril (Programado: Septiembre)"
+    },
+    {
+      "id": 95,
+      "patente": "BJG486",
+      "centro_costo": "Sin Operación",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-06-15",
+      "mes_original": 6,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Junio"
+    },
+    {
+      "id": 96,
+      "patente": "BJH275",
+      "centro_costo": "Sin Operación",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-01-02",
+      "mes_original": 1,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Enero"
+    },
+    {
+      "id": 97,
+      "patente": "BJH275",
+      "centro_costo": "Sin Operación",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-06-15",
+      "mes_original": 6,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Junio"
+    },
+    {
+      "id": 98,
+      "patente": "BNW644",
+      "centro_costo": "SUC_GAL - Sucursal General Alvear",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-07-05",
+      "mes_original": 7,
+      "fecha_ejecucion": "2026-07-14",
+      "mes_ejecucion": 7,
+      "taller": "SRAF",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 14/07/2026"
+    },
+    {
+      "id": 99,
+      "patente": "BRJ211",
+      "centro_costo": "SUC_MAL - Sucursal Malargüe",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-01-20",
+      "mes_original": 1,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Enero"
+    },
+    {
+      "id": 100,
+      "patente": "BRJ211",
+      "centro_costo": "SUC_MAL - Sucursal Malargüe",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-06-15",
+      "mes_original": 6,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Junio"
+    },
+    {
+      "id": 101,
+      "patente": "CVF923",
+      "centro_costo": "JOHNSON - SC JOHNSON DE ARGENTINA SAIC",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-03-22",
+      "mes_original": 3,
+      "fecha_ejecucion": "2026-05-08",
+      "mes_ejecucion": 5,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Mayo (Origen: Marzo)"
+    },
+    {
+      "id": 102,
+      "patente": "DTU738",
+      "centro_costo": "CIMSA_BS AS",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-02-05",
+      "mes_original": 2,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Febrero"
+    },
+    {
+      "id": 103,
+      "patente": "FCD324",
+      "centro_costo": "SUC_MEN - Sucursal Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-04-26",
+      "mes_original": 4,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Abril"
+    },
+    {
+      "id": 104,
+      "patente": "FCD324",
+      "centro_costo": "SUC_MEN - Sucursal Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-11-09",
+      "mes_original": 11,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Noviembre"
+    },
+    {
+      "id": 105,
+      "patente": "FEQ601",
+      "centro_costo": "Sin Operación",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-02-02",
+      "mes_original": 2,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Febrero"
+    },
+    {
+      "id": 106,
+      "patente": "FEQ601",
+      "centro_costo": "Sin Operación",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-06-15",
+      "mes_original": 6,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Junio"
+    },
+    {
+      "id": 107,
+      "patente": "FEQ602",
+      "centro_costo": "Sin Operación",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-02-02",
+      "mes_original": 2,
+      "fecha_ejecucion": "2026-04-20",
+      "mes_ejecucion": 4,
+      "taller": "BSAS",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Abril (Origen: Febrero)"
+    },
+    {
+      "id": 108,
+      "patente": "FFJ868",
+      "centro_costo": "Sin Operación",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-03-25",
+      "mes_original": 3,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Marzo"
+    },
+    {
+      "id": 109,
+      "patente": "FFJ868",
+      "centro_costo": "Sin Operación",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-06-10",
+      "mes_original": 6,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Junio"
+    },
+    {
+      "id": 110,
+      "patente": "FFO440",
+      "centro_costo": "Sin Operación",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-06-15",
+      "mes_original": 6,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Junio"
+    },
+    {
+      "id": 111,
+      "patente": "FFV165",
+      "centro_costo": "Sin Operación",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-03-04",
+      "mes_original": 3,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Marzo"
+    },
+    {
+      "id": 112,
+      "patente": "FFV165",
+      "centro_costo": "Sin Operación",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-06-15",
+      "mes_original": 6,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Junio"
+    },
+    {
+      "id": 113,
+      "patente": "FFV166",
+      "centro_costo": "Sin Operación",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-01-16",
+      "mes_original": 1,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Enero"
+    },
+    {
+      "id": 114,
+      "patente": "FFV166",
+      "centro_costo": "Sin Operación",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-06-15",
+      "mes_original": 6,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Junio"
+    },
+    {
+      "id": 115,
+      "patente": "FHK364",
+      "centro_costo": "Sin Operación",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-06-15",
+      "mes_original": 6,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Junio"
+    },
+    {
+      "id": 116,
+      "patente": "FJT707",
+      "centro_costo": "SUC_MEN - Sucursal Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-07-05",
+      "mes_original": 7,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Julio"
+    },
+    {
+      "id": 117,
+      "patente": "FQT892",
+      "centro_costo": "Sin Operación",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-02-02",
+      "mes_original": 2,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Febrero"
+    },
+    {
+      "id": 118,
+      "patente": "FQT892",
+      "centro_costo": "Sin Operación",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-06-20",
+      "mes_original": 6,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Junio"
+    },
+    {
+      "id": 119,
+      "patente": "FQT893",
+      "centro_costo": "Sin Operación",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-02-02",
+      "mes_original": 2,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Febrero"
+    },
+    {
+      "id": 120,
+      "patente": "FQT893",
+      "centro_costo": "Sin Operación",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-06-20",
+      "mes_original": 6,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Junio"
+    },
+    {
+      "id": 121,
+      "patente": "FVH034",
+      "centro_costo": "SUC_SRA - Sucursal San Rafael",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-01-25",
+      "mes_original": 1,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Enero"
+    },
+    {
+      "id": 122,
+      "patente": "FVK506",
+      "centro_costo": "Sin Operación",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-05-28",
+      "mes_original": 5,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Mayo"
+    },
+    {
+      "id": 123,
+      "patente": "FVO107",
+      "centro_costo": "Sin Operación",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-06-20",
+      "mes_original": 6,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Junio"
+    },
+    {
+      "id": 124,
+      "patente": "FVO108",
+      "centro_costo": "Sin Operación",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-06-20",
+      "mes_original": 6,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Junio"
+    },
+    {
+      "id": 125,
+      "patente": "GDR525",
+      "centro_costo": "Arcor S.A.I.C.",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-03-27",
+      "mes_original": 3,
+      "fecha_ejecucion": "2026-01-26",
+      "mes_ejecucion": 1,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado por adelantado en Enero (Programado: Marzo)"
+    },
+    {
+      "id": 126,
+      "patente": "GDR526",
+      "centro_costo": "Molca",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-09-19",
+      "mes_original": 9,
+      "fecha_ejecucion": "2026-07-03",
+      "mes_ejecucion": 7,
+      "taller": "CIUD",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado por adelantado en Julio (Programado: Septiembre)"
+    },
+    {
+      "id": 127,
+      "patente": "GDR527",
+      "centro_costo": "CMQ_TTE - QUILMES TTE",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-05-23",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-06-23",
+      "mes_ejecucion": 6,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Junio (Origen: Mayo)"
+    },
+    {
+      "id": 128,
+      "patente": "GJC631",
+      "centro_costo": "CCUCoAZA",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-06-10",
+      "mes_original": 6,
+      "fecha_ejecucion": "2026-06-18",
+      "mes_ejecucion": 6,
+      "taller": "CIUD",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 18/06/2026"
+    },
+    {
+      "id": 129,
+      "patente": "GJC632",
+      "centro_costo": "Topacio",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-02-10",
+      "mes_original": 2,
+      "fecha_ejecucion": "2026-04-13",
+      "mes_ejecucion": 4,
+      "taller": "BSAS",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Abril (Origen: Febrero)"
+    },
+    {
+      "id": 130,
+      "patente": "GKK500",
+      "centro_costo": "SUC_MEN - Sucursal Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-03-29",
+      "mes_original": 3,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Marzo"
+    },
+    {
+      "id": 131,
+      "patente": "GKK500",
+      "centro_costo": "SUC_MEN - Sucursal Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-10-04",
+      "mes_original": 10,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Octubre"
+    },
+    {
+      "id": 132,
+      "patente": "GLT551",
+      "centro_costo": "Sin Operación",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-06-20",
+      "mes_original": 6,
+      "fecha_ejecucion": "2026-07-23",
+      "mes_ejecucion": 7,
+      "taller": "MNZA",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Julio (Origen: Junio)"
+    },
+    {
+      "id": 133,
+      "patente": "GLT552",
+      "centro_costo": "Unilever - Unilever de Arg. S.A.",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-04-26",
+      "mes_original": 4,
+      "fecha_ejecucion": "2026-04-23",
+      "mes_ejecucion": 4,
+      "taller": "BSAS",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 23/04/2026"
+    },
+    {
+      "id": 134,
+      "patente": "GMJ024",
+      "centro_costo": "Papelera - Papelera del Plata S.A.",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-02-24",
+      "mes_original": 2,
+      "fecha_ejecucion": "2026-05-06",
+      "mes_ejecucion": 5,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Mayo (Origen: Febrero)"
+    },
+    {
+      "id": 135,
+      "patente": "GMJ025",
+      "centro_costo": "CENCO_MZ - Cencosud SA - Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-05-05",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-05-26",
+      "mes_ejecucion": 5,
+      "taller": "MNZA",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 26/05/2026"
+    },
+    {
+      "id": 136,
+      "patente": "GNY197",
+      "centro_costo": "Papelera - Papelera del Plata S.A.",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-03-26",
+      "mes_original": 3,
+      "fecha_ejecucion": "2026-05-08",
+      "mes_ejecucion": 5,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Mayo (Origen: Marzo)"
+    },
+    {
+      "id": 137,
+      "patente": "GOR390",
+      "centro_costo": "Unilever - Unilever de Arg. S.A.",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-04-06",
+      "mes_original": 4,
+      "fecha_ejecucion": "2026-05-15",
+      "mes_ejecucion": 5,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Mayo (Origen: Abril)"
+    },
+    {
+      "id": 138,
+      "patente": "GOR397",
+      "centro_costo": "SUC_SLU - Sucursal San Luis",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-06-20",
+      "mes_original": 6,
+      "fecha_ejecucion": "2026-05-30",
+      "mes_ejecucion": 5,
+      "taller": "MNZA",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado por adelantado en Mayo (Programado: Junio)"
+    },
+    {
+      "id": 139,
+      "patente": "GOX956",
+      "centro_costo": "JOHNSON - SC JOHNSON DE ARGENTINA SAIC",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-03-16",
+      "mes_original": 3,
+      "fecha_ejecucion": "2026-05-05",
+      "mes_ejecucion": 5,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Mayo (Origen: Marzo)"
+    },
+    {
+      "id": 140,
+      "patente": "GOX957",
+      "centro_costo": "Papelera - Papelera del Plata S.A.",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-04-10",
+      "mes_original": 4,
+      "fecha_ejecucion": "2026-05-07",
+      "mes_ejecucion": 5,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Mayo (Origen: Abril)"
+    },
+    {
+      "id": 141,
+      "patente": "GPL520",
+      "centro_costo": "SUC_REA - Sucursal Realicó",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-02-05",
+      "mes_original": 2,
+      "fecha_ejecucion": "2026-06-02",
+      "mes_ejecucion": 6,
+      "taller": "SRAF",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Junio (Origen: Febrero)"
+    },
+    {
+      "id": 142,
+      "patente": "GQN688",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-01-26",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-03-09",
+      "mes_ejecucion": 3,
+      "taller": "BSAS",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Marzo (Origen: Enero)"
+    },
+    {
+      "id": 143,
+      "patente": "GRE073",
+      "centro_costo": "SUC_MEN - Sucursal Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-11-03",
+      "mes_original": 11,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Noviembre"
+    },
+    {
+      "id": 144,
+      "patente": "GTE288",
+      "centro_costo": "JOHNSON - SC JOHNSON DE ARGENTINA SAIC",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-12-20",
+      "mes_original": 12,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Diciembre"
+    },
+    {
+      "id": 145,
+      "patente": "GTE289",
+      "centro_costo": "Papelera - Papelera del Plata S.A.",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-03-16",
+      "mes_original": 3,
+      "fecha_ejecucion": "2026-05-14",
+      "mes_ejecucion": 5,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Mayo (Origen: Marzo)"
+    },
+    {
+      "id": 146,
+      "patente": "GUW657",
+      "centro_costo": "CENCO_SJ - Cencosud SA - San Juan",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-02-09",
+      "mes_original": 2,
+      "fecha_ejecucion": "2026-07-16",
+      "mes_ejecucion": 7,
+      "taller": "MNZA",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Julio (Origen: Febrero)"
+    },
+    {
+      "id": 147,
+      "patente": "GVU097",
+      "centro_costo": "Papelera - Papelera del Plata S.A.",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-05-17",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-04-17",
+      "mes_ejecucion": 4,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado por adelantado en Abril (Programado: Mayo)"
+    },
+    {
+      "id": 148,
+      "patente": "HKW894",
+      "centro_costo": "Papelera - Papelera del Plata S.A - Zarate.",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-11-05",
+      "mes_original": 11,
+      "fecha_ejecucion": "2026-02-18",
+      "mes_ejecucion": 2,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado por adelantado en Febrero (Programado: Noviembre)"
+    },
+    {
+      "id": 149,
+      "patente": "HNE430",
+      "centro_costo": "CCUCoAZA",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-03-21",
+      "mes_original": 3,
+      "fecha_ejecucion": "2026-04-16",
+      "mes_ejecucion": 4,
+      "taller": "BSAS",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Abril (Origen: Marzo)"
+    },
+    {
+      "id": 150,
+      "patente": "HNL373",
+      "centro_costo": "Alfavinil SA",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-07-05",
+      "mes_original": 7,
+      "fecha_ejecucion": "2026-06-26",
+      "mes_ejecucion": 6,
+      "taller": "CIUD",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado por adelantado en Junio (Programado: Julio)"
+    },
+    {
+      "id": 151,
+      "patente": "HPR687",
+      "centro_costo": "Unilever - Unilever de Arg. S.A.",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-06-27",
+      "mes_original": 6,
+      "fecha_ejecucion": "2026-06-02",
+      "mes_ejecucion": 6,
+      "taller": "CIUD",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 02/06/2026"
+    },
+    {
+      "id": 152,
+      "patente": "HRJ003",
+      "centro_costo": "CENCO_MZ - Cencosud SA - Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-06-20",
+      "mes_original": 6,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Junio"
+    },
+    {
+      "id": 153,
+      "patente": "HRJ004",
+      "centro_costo": "CENCO_MZ - Cencosud SA - Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-01-31",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-02-11",
+      "mes_ejecucion": 2,
+      "taller": "MNZA",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Febrero (Origen: Enero)"
+    },
+    {
+      "id": 154,
+      "patente": "IDX163",
+      "centro_costo": "JOHNSON - SC JOHNSON DE ARGENTINA SAIC",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-03-01",
+      "mes_original": 3,
+      "fecha_ejecucion": "2026-04-15",
+      "mes_ejecucion": 4,
+      "taller": "BSAS",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Abril (Origen: Marzo)"
+    },
+    {
+      "id": 155,
+      "patente": "IDX164",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-01-11",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-05-08",
+      "mes_ejecucion": 5,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Mayo (Origen: Enero)"
+    },
+    {
+      "id": 156,
+      "patente": "IRC117",
+      "centro_costo": "SUC_CTC - Sucursal Buenos Aires",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-01-25",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-03-30",
+      "mes_ejecucion": 3,
+      "taller": "BSAS",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Marzo (Origen: Enero)"
+    },
+    {
+      "id": 157,
+      "patente": "JAD357",
+      "centro_costo": "CMQ_TTE - QUILMES TTE",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-02-17",
+      "mes_original": 2,
+      "fecha_ejecucion": "2026-03-17",
+      "mes_ejecucion": 3,
+      "taller": "BSAS",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Marzo (Origen: Febrero)"
+    },
+    {
+      "id": 158,
+      "patente": "JCF735",
+      "centro_costo": "SUC_SRA - Sucursal San Rafael",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-04-01",
+      "mes_original": 4,
+      "fecha_ejecucion": "2026-04-22",
+      "mes_ejecucion": 4,
+      "taller": "SRAF",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 22/04/2026"
+    },
+    {
+      "id": 159,
+      "patente": "JEB635",
+      "centro_costo": "CMQ_TTE - QUILMES TTE",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-06-27",
+      "mes_original": 6,
+      "fecha_ejecucion": "2026-06-22",
+      "mes_ejecucion": 6,
+      "taller": "CIUD",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 22/06/2026"
+    },
+    {
+      "id": 160,
+      "patente": "JEB635",
+      "centro_costo": "CMQ_TTE - QUILMES TTE",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-07-05",
+      "mes_original": 7,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Julio"
+    },
+    {
+      "id": 161,
+      "patente": "JIL525",
+      "centro_costo": "CENCO_SJ - Cencosud SA - San Juan",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-04-01",
+      "mes_original": 4,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Abril"
+    },
+    {
+      "id": 162,
+      "patente": "JIL525",
+      "centro_costo": "CENCO_SJ - Cencosud SA - San Juan",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-07-05",
+      "mes_original": 7,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Julio"
+    },
+    {
+      "id": 163,
+      "patente": "JIU311",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-01-23",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-02-06",
+      "mes_ejecucion": 2,
+      "taller": "SRAF",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Febrero (Origen: Enero)"
+    },
+    {
+      "id": 164,
+      "patente": "JIU311",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-05-02",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-05-26",
+      "mes_ejecucion": 5,
+      "taller": "SRAF",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 26/05/2026"
+    },
+    {
+      "id": 165,
+      "patente": "JKG664",
+      "centro_costo": "Molca",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-11-18",
+      "mes_original": 11,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Noviembre"
+    },
+    {
+      "id": 166,
+      "patente": "JKQ773",
+      "centro_costo": "Sin Operación",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-06-10",
+      "mes_original": 6,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Junio"
+    },
+    {
+      "id": 167,
+      "patente": "JKQ774",
+      "centro_costo": "CCUCoAZA",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-06-15",
+      "mes_original": 6,
+      "fecha_ejecucion": "2026-06-03",
+      "mes_ejecucion": 6,
+      "taller": "CIUD",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 03/06/2026"
+    },
+    {
+      "id": 168,
+      "patente": "JWV371",
+      "centro_costo": "Sin Operación",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-04-24",
+      "mes_original": 4,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Abril"
+    },
+    {
+      "id": 169,
+      "patente": "JWV371",
+      "centro_costo": "Sin Operación",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-07-05",
+      "mes_original": 7,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Julio"
+    },
+    {
+      "id": 170,
+      "patente": "JXZ993",
+      "centro_costo": "Sin Operación",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-03-13",
+      "mes_original": 3,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Marzo"
+    },
+    {
+      "id": 171,
+      "patente": "JXZ993",
+      "centro_costo": "Sin Operación",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-06-20",
+      "mes_original": 6,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Junio"
+    },
+    {
+      "id": 172,
+      "patente": "JYQ969",
+      "centro_costo": "Topacio",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-05-24",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-07-02",
+      "mes_ejecucion": 7,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Julio (Origen: Mayo)"
+    },
+    {
+      "id": 173,
+      "patente": "KBO540",
+      "centro_costo": "Sin Operación",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-04-04",
+      "mes_original": 4,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Abril"
+    },
+    {
+      "id": 174,
+      "patente": "KBO540",
+      "centro_costo": "Sin Operación",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-07-05",
+      "mes_original": 7,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Julio"
+    },
+    {
+      "id": 175,
+      "patente": "KBO542",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-01-31",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-04-13",
+      "mes_ejecucion": 4,
+      "taller": "BSAS",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Abril (Origen: Enero)"
+    },
+    {
+      "id": 176,
+      "patente": "KBO542",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-10-05",
+      "mes_original": 10,
+      "fecha_ejecucion": "2026-07-13",
+      "mes_ejecucion": 7,
+      "taller": "CIUD",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado por adelantado en Julio (Programado: Octubre)"
+    },
+    {
+      "id": 177,
+      "patente": "KBV618",
+      "centro_costo": "CCUDyAZA",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-05-22",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-06-03",
+      "mes_ejecucion": 6,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Junio (Origen: Mayo)"
+    },
+    {
+      "id": 178,
+      "patente": "KBV620",
+      "centro_costo": "CCUCoAZA",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-03-27",
+      "mes_original": 3,
+      "fecha_ejecucion": "2026-01-28",
+      "mes_ejecucion": 1,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado por adelantado en Enero (Programado: Marzo)"
+    },
+    {
+      "id": 179,
+      "patente": "KDG188",
+      "centro_costo": "CCUCoAZA",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-03-19",
+      "mes_original": 3,
+      "fecha_ejecucion": "2026-03-26",
+      "mes_ejecucion": 3,
+      "taller": "BSAS",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 26/03/2026"
+    },
+    {
+      "id": 180,
+      "patente": "KER728",
+      "centro_costo": "CENCO_MZ - Cencosud SA - Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-01-05",
+      "mes_original": 1,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Enero"
+    },
+    {
+      "id": 181,
+      "patente": "KHS009",
+      "centro_costo": "CENCO_MZ - Cencosud SA - Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-01-05",
+      "mes_original": 1,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Enero"
+    },
+    {
+      "id": 182,
+      "patente": "KHS009",
+      "centro_costo": "Sin Operación",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-07-05",
+      "mes_original": 7,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Julio"
+    },
+    {
+      "id": 183,
+      "patente": "KHS009",
+      "centro_costo": "Sin Operación",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-09-05",
+      "mes_original": 9,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Septiembre"
+    },
+    {
+      "id": 184,
+      "patente": "KHS025",
+      "centro_costo": "Sin Operación",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-05-26",
+      "mes_original": 5,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Mayo"
+    },
+    {
+      "id": 185,
+      "patente": "KHS026",
+      "centro_costo": "CMQ_TTE - QUILMES TTE",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-02-26",
+      "mes_original": 2,
+      "fecha_ejecucion": "2026-01-16",
+      "mes_ejecucion": 1,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado por adelantado en Enero (Programado: Febrero)"
+    },
+    {
+      "id": 186,
+      "patente": "KJH882",
+      "centro_costo": "Unilever - Unilever de Arg. S.A.",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-06-10",
+      "mes_original": 6,
+      "fecha_ejecucion": "2026-07-02",
+      "mes_ejecucion": 7,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Julio (Origen: Junio)"
+    },
+    {
+      "id": 187,
+      "patente": "KKI233",
+      "centro_costo": "Papelera - Papelera del Plata S.A.",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-05-01",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-05-08",
+      "mes_ejecucion": 5,
+      "taller": "CIUD",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 08/05/2026"
+    },
+    {
+      "id": 188,
+      "patente": "KNE956",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-03-11",
+      "mes_original": 3,
+      "fecha_ejecucion": "2026-06-04",
+      "mes_ejecucion": 6,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Junio (Origen: Marzo)"
+    },
+    {
+      "id": 189,
+      "patente": "KNE956",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-06-10",
+      "mes_original": 6,
+      "fecha_ejecucion": "2026-02-02",
+      "mes_ejecucion": 2,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado por adelantado en Febrero (Programado: Junio)"
+    },
+    {
+      "id": 190,
+      "patente": "KPQ389",
+      "centro_costo": "AGN_TTE - AGUANORT - Transporte",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-07-05",
+      "mes_original": 7,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Julio"
+    },
+    {
+      "id": 191,
+      "patente": "KPQ390",
+      "centro_costo": "Sin Operación",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-07-05",
+      "mes_original": 7,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Julio"
+    },
+    {
+      "id": 192,
+      "patente": "KPQ391",
+      "centro_costo": "Sin Operación",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-07-05",
+      "mes_original": 7,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Julio"
+    },
+    {
+      "id": 193,
+      "patente": "KPQ392",
+      "centro_costo": "Sin Operación",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-02-27",
+      "mes_original": 2,
+      "fecha_ejecucion": "2026-05-08",
+      "mes_ejecucion": 5,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Mayo (Origen: Febrero)"
+    },
+    {
+      "id": 194,
+      "patente": "KTC854",
+      "centro_costo": "CCUCoAZA",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-05-16",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-06-09",
+      "mes_ejecucion": 6,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Junio (Origen: Mayo)"
+    },
+    {
+      "id": 195,
+      "patente": "KUF605",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-02-22",
+      "mes_original": 2,
+      "fecha_ejecucion": "2026-01-28",
+      "mes_ejecucion": 1,
+      "taller": "SRAF",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado por adelantado en Enero (Programado: Febrero)"
+    },
+    {
+      "id": 196,
+      "patente": "KUF605",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-07-05",
+      "mes_original": 7,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Julio"
+    },
+    {
+      "id": 197,
+      "patente": "KUF605",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-09-04",
+      "mes_original": 9,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Septiembre"
+    },
+    {
+      "id": 198,
+      "patente": "KUF606",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-03-27",
+      "mes_original": 3,
+      "fecha_ejecucion": "2026-06-18",
+      "mes_ejecucion": 6,
+      "taller": "MNZA",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Junio (Origen: Marzo)"
+    },
+    {
+      "id": 199,
+      "patente": "KUF609",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-05-12",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-05-07",
+      "mes_ejecucion": 5,
+      "taller": "SRAF",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 07/05/2026"
+    },
+    {
+      "id": 200,
+      "patente": "LFK336",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-03-21",
+      "mes_original": 3,
+      "fecha_ejecucion": "2026-06-26",
+      "mes_ejecucion": 6,
+      "taller": "SRAF",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Junio (Origen: Marzo)"
+    },
+    {
+      "id": 201,
+      "patente": "LFK337",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-06-27",
+      "mes_original": 6,
+      "fecha_ejecucion": "2026-06-18",
+      "mes_ejecucion": 6,
+      "taller": "SRAF",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 18/06/2026"
+    },
+    {
+      "id": 202,
+      "patente": "LFK338",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-02-03",
+      "mes_original": 2,
+      "fecha_ejecucion": "2026-02-27",
+      "mes_ejecucion": 2,
+      "taller": "MNZA",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 27/02/2026"
+    },
+    {
+      "id": 203,
+      "patente": "LFK338",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-11-24",
+      "mes_original": 11,
+      "fecha_ejecucion": "2026-05-18",
+      "mes_ejecucion": 5,
+      "taller": "MNZA",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado por adelantado en Mayo (Programado: Noviembre)"
+    },
+    {
+      "id": 204,
+      "patente": "LFK339",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-02-03",
+      "mes_original": 2,
+      "fecha_ejecucion": "2026-05-16",
+      "mes_ejecucion": 5,
+      "taller": "MNZA",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Mayo (Origen: Febrero)"
+    },
+    {
+      "id": 205,
+      "patente": "LRN157",
+      "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-05-20",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-05-15",
+      "mes_ejecucion": 5,
+      "taller": "MNZA",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 15/05/2026"
+    },
+    {
+      "id": 206,
+      "patente": "LRN157",
+      "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-06-27",
+      "mes_original": 6,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Junio"
+    },
+    {
+      "id": 207,
+      "patente": "LTS288",
+      "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-01-12",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-04-15",
+      "mes_ejecucion": 4,
+      "taller": "MNZA",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Abril (Origen: Enero)"
+    },
+    {
+      "id": 208,
+      "patente": "LTS288",
+      "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-06-27",
+      "mes_original": 6,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Junio"
+    },
+    {
+      "id": 209,
+      "patente": "MYR537",
+      "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-02-05",
+      "mes_original": 2,
+      "fecha_ejecucion": "2026-05-02",
+      "mes_ejecucion": 5,
+      "taller": "SRAF",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Mayo (Origen: Febrero)"
+    },
+    {
+      "id": 210,
+      "patente": "NIE146",
+      "centro_costo": "CMQ_TTE - QUILMES TTE",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-03-03",
+      "mes_original": 3,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Marzo"
+    },
+    {
+      "id": 211,
+      "patente": "NIE147",
+      "centro_costo": "CMQ_TTE - QUILMES TTE",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-06-27",
+      "mes_original": 6,
+      "fecha_ejecucion": "2026-06-11",
+      "mes_ejecucion": 6,
+      "taller": "CIUD",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 11/06/2026"
+    },
+    {
+      "id": 212,
+      "patente": "NIE152",
+      "centro_costo": "CMQ_TTE - QUILMES TTE",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-02-11",
+      "mes_original": 2,
+      "fecha_ejecucion": "2026-03-05",
+      "mes_ejecucion": 3,
+      "taller": "BSAS",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Marzo (Origen: Febrero)"
+    },
+    {
+      "id": 213,
+      "patente": "NIE154",
+      "centro_costo": "CMQ_TTE - QUILMES TTE",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-07-05",
+      "mes_original": 7,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Julio"
+    },
+    {
+      "id": 214,
+      "patente": "NIE155",
+      "centro_costo": "Papelera - Papelera del Plata S.A.",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-12-28",
+      "mes_original": 12,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Diciembre"
+    },
+    {
+      "id": 215,
+      "patente": "OAF640",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-11-21",
+      "mes_original": 11,
+      "fecha_ejecucion": "2026-01-27",
+      "mes_ejecucion": 1,
+      "taller": "SRAF",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado por adelantado en Enero (Programado: Noviembre)"
+    },
+    {
+      "id": 216,
+      "patente": "OAF641",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-01-17",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-01-21",
+      "mes_ejecucion": 1,
+      "taller": "MNZA",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 21/01/2026"
+    },
+    {
+      "id": 217,
+      "patente": "OAF641",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-12-04",
+      "mes_original": 12,
+      "fecha_ejecucion": "2026-05-04",
+      "mes_ejecucion": 5,
+      "taller": "MNZA",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado por adelantado en Mayo (Programado: Diciembre)"
+    },
+    {
+      "id": 218,
+      "patente": "OAF642",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-01-02",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-01-06",
+      "mes_ejecucion": 1,
+      "taller": "SRAF",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 06/01/2026"
+    },
+    {
+      "id": 219,
+      "patente": "OAF642",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-10-07",
+      "mes_original": 10,
+      "fecha_ejecucion": "2026-04-06",
+      "mes_ejecucion": 4,
+      "taller": "SRAF",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado por adelantado en Abril (Programado: Octubre)"
+    },
+    {
+      "id": 220,
+      "patente": "OAF643",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-01-22",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-05-13",
+      "mes_ejecucion": 5,
+      "taller": "SRAF",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Mayo (Origen: Enero)"
+    },
+    {
+      "id": 221,
+      "patente": "OAF644",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-01-10",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-03-13",
+      "mes_ejecucion": 3,
+      "taller": "BSAS",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Marzo (Origen: Enero)"
+    },
+    {
+      "id": 222,
+      "patente": "OHH589",
+      "centro_costo": "CMQ_TTE - QUILMES TTE",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-05-10",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-01-30",
+      "mes_ejecucion": 1,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado por adelantado en Enero (Programado: Mayo)"
+    },
+    {
+      "id": 223,
+      "patente": "OHH590",
+      "centro_costo": "CCUDyAZA",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-06-15",
+      "mes_original": 6,
+      "fecha_ejecucion": "2026-06-23",
+      "mes_ejecucion": 6,
+      "taller": "CIUD",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 23/06/2026"
+    },
+    {
+      "id": 224,
+      "patente": "OHH592",
+      "centro_costo": "CMQ_TTE - QUILMES TTE",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-05-20",
+      "mes_original": 5,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Mayo"
+    },
+    {
+      "id": 225,
+      "patente": "OHH595",
+      "centro_costo": "CCUDyAZA",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-06-15",
+      "mes_original": 6,
+      "fecha_ejecucion": "2026-06-10",
+      "mes_ejecucion": 6,
+      "taller": "CIUD",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 10/06/2026"
+    },
+    {
+      "id": 226,
+      "patente": "OHH596",
+      "centro_costo": "CCUCoAZA",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-04-13",
+      "mes_original": 4,
+      "fecha_ejecucion": "2026-04-01",
+      "mes_ejecucion": 4,
+      "taller": "BSAS",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 01/04/2026"
+    },
+    {
+      "id": 227,
+      "patente": "OHH597",
+      "centro_costo": "CMQ_TTE - QUILMES TTE",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-05-05",
+      "mes_original": 5,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Mayo"
+    },
+    {
+      "id": 228,
+      "patente": "OIC418",
+      "centro_costo": "CCUDyAZA",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-03-06",
+      "mes_original": 3,
+      "fecha_ejecucion": "2026-04-13",
+      "mes_ejecucion": 4,
+      "taller": "BSAS",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Abril (Origen: Marzo)"
+    },
+    {
+      "id": 229,
+      "patente": "OIC419",
+      "centro_costo": "CCUDyAZA",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-06-15",
+      "mes_original": 6,
+      "fecha_ejecucion": "2026-06-23",
+      "mes_ejecucion": 6,
+      "taller": "CIUD",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 23/06/2026"
+    },
+    {
+      "id": 230,
+      "patente": "OJG060",
+      "centro_costo": "CCUDyAZA",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-04-11",
+      "mes_original": 4,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Abril"
+    },
+    {
+      "id": 231,
+      "patente": "OJG063",
+      "centro_costo": "CCUCoAZA",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-06-15",
+      "mes_original": 6,
+      "fecha_ejecucion": "2026-06-09",
+      "mes_ejecucion": 6,
+      "taller": "CIUD",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 09/06/2026"
+    },
+    {
+      "id": 232,
+      "patente": "OJG097",
+      "centro_costo": "CCUDyAZA",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-05-09",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-06-11",
+      "mes_ejecucion": 6,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Junio (Origen: Mayo)"
+    },
+    {
+      "id": 233,
+      "patente": "OJG098",
+      "centro_costo": "CCUDyAZA",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-02-21",
+      "mes_original": 2,
+      "fecha_ejecucion": "2026-03-11",
+      "mes_ejecucion": 3,
+      "taller": "BSAS",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Marzo (Origen: Febrero)"
+    },
+    {
+      "id": 234,
+      "patente": "OJG099",
+      "centro_costo": "CCUDyAZA",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-05-08",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-06-24",
+      "mes_ejecucion": 6,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Junio (Origen: Mayo)"
+    },
+    {
+      "id": 235,
+      "patente": "OJG101",
+      "centro_costo": "CCUDyAZA",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-05-22",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-06-10",
+      "mes_ejecucion": 6,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Junio (Origen: Mayo)"
+    },
+    {
+      "id": 236,
+      "patente": "OJG103",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-01-10",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-03-14",
+      "mes_ejecucion": 3,
+      "taller": "MNZA",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Marzo (Origen: Enero)"
+    },
+    {
+      "id": 237,
+      "patente": "OJG103",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-07-05",
+      "mes_original": 7,
+      "fecha_ejecucion": "2026-07-20",
+      "mes_ejecucion": 7,
+      "taller": "MNZA",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 20/07/2026"
+    },
+    {
+      "id": 238,
+      "patente": "OMQ198",
+      "centro_costo": "CCUDyAZA",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-03-27",
+      "mes_original": 3,
+      "fecha_ejecucion": "2026-04-14",
+      "mes_ejecucion": 4,
+      "taller": "BSAS",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Abril (Origen: Marzo)"
+    },
+    {
+      "id": 239,
+      "patente": "OMQ199",
+      "centro_costo": "CCUDyAZA",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-03-18",
+      "mes_original": 3,
+      "fecha_ejecucion": "2026-05-04",
+      "mes_ejecucion": 5,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Mayo (Origen: Marzo)"
+    },
+    {
+      "id": 240,
+      "patente": "OZH811",
+      "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-02-11",
+      "mes_original": 2,
+      "fecha_ejecucion": "2026-06-09",
+      "mes_ejecucion": 6,
+      "taller": "MNZA",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Junio (Origen: Febrero)"
+    },
+    {
+      "id": 241,
+      "patente": "RNX412",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-04-22",
+      "mes_original": 4,
+      "fecha_ejecucion": "2026-06-24",
+      "mes_ejecucion": 6,
+      "taller": "MNZA",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Junio (Origen: Abril)"
+    },
+    {
+      "id": 242,
+      "patente": "SOC883",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-01-25",
+      "mes_original": 1,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Enero"
+    },
+    {
+      "id": 243,
+      "patente": "SYG971",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-03-17",
+      "mes_original": 3,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Marzo"
+    },
+    {
+      "id": 244,
+      "patente": "SYP554",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-03-19",
+      "mes_original": 3,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Marzo"
+    },
+    {
+      "id": 245,
+      "patente": "TLH736",
+      "centro_costo": "SUC_SRA - Sucursal San Rafael",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-01-25",
+      "mes_original": 1,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Enero"
+    },
+    {
+      "id": 246,
+      "patente": "TTV899",
+      "centro_costo": "Sin Operación",
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-01-25",
+      "mes_original": 1,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Enero"
+    },
+    {
+      "id": 247,
+      "patente": "AD426HT",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
+      "plan": "2ML",
+      "fecha_estimada": "2026-01-09",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-01-09",
+      "mes_ejecucion": 1,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Enero"
+    },
+    {
+      "id": 248,
+      "patente": "AD426IF",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
+      "plan": "2ML",
+      "fecha_estimada": "2026-04-15",
+      "mes_original": 4,
+      "fecha_ejecucion": "2026-04-15",
+      "mes_ejecucion": 4,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Abril"
+    },
+    {
+      "id": 249,
+      "patente": "AF088EA",
+      "centro_costo": "CMQ_TTE - QUILMES TTE",
+      "plan": "2MC",
+      "fecha_estimada": "2026-01-02",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-01-02",
+      "mes_ejecucion": 1,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Enero"
+    },
+    {
+      "id": 250,
+      "patente": "AF114FP",
+      "centro_costo": "CMQ_TTE - QUILMES TTE",
+      "plan": "2MC",
+      "fecha_estimada": "2026-01-07",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-01-07",
+      "mes_ejecucion": 1,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Enero"
+    },
+    {
+      "id": 251,
+      "patente": "AF114FP",
+      "centro_costo": "CMQ_TTE - QUILMES TTE",
+      "plan": "2MC",
+      "fecha_estimada": "2026-02-12",
+      "mes_original": 2,
+      "fecha_ejecucion": "2026-02-12",
+      "mes_ejecucion": 2,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Febrero"
+    },
+    {
+      "id": 252,
+      "patente": "AF114FZ",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
+      "plan": "2ML",
+      "fecha_estimada": "2026-01-20",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-01-20",
+      "mes_ejecucion": 1,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Enero"
+    },
+    {
+      "id": 253,
+      "patente": "AF118QB",
+      "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
+      "plan": "2ML",
+      "fecha_estimada": "2026-05-19",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-05-19",
+      "mes_ejecucion": 5,
+      "taller": "CIUD",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Mayo"
+    },
+    {
+      "id": 254,
+      "patente": "AF338VO",
+      "centro_costo": "CMQ_TTE - QUILMES TTE",
+      "plan": "2MC",
+      "fecha_estimada": "2026-01-09",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-01-09",
+      "mes_ejecucion": 1,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Enero"
+    },
+    {
+      "id": 255,
+      "patente": "AF518DM",
+      "centro_costo": "CMQ_TTE - QUILMES TTE",
+      "plan": "2MC",
+      "fecha_estimada": "2026-01-02",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-01-02",
+      "mes_ejecucion": 1,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Enero"
+    },
+    {
+      "id": 256,
+      "patente": "AF722DN",
+      "centro_costo": "CMQ_TTE - QUILMES TTE",
+      "plan": "2MC",
+      "fecha_estimada": "2026-01-30",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-01-30",
+      "mes_ejecucion": 1,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Enero"
+    },
+    {
+      "id": 257,
+      "patente": "AF918RI",
+      "centro_costo": "CMQ_TTE - QUILMES TTE",
+      "plan": "2MC",
+      "fecha_estimada": "2026-01-30",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-01-30",
+      "mes_ejecucion": 1,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Enero"
+    },
+    {
+      "id": 258,
+      "patente": "AG095MQ",
+      "centro_costo": "CMQ_TTE - QUILMES TTE",
+      "plan": "2MC",
+      "fecha_estimada": "2026-01-12",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-01-12",
+      "mes_ejecucion": 1,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Enero"
+    },
+    {
+      "id": 259,
+      "patente": "AG095MR",
+      "centro_costo": "CMQ_TTE - QUILMES TTE",
+      "plan": "2MC",
+      "fecha_estimada": "2026-01-07",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-01-07",
+      "mes_ejecucion": 1,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Enero"
+    },
+    {
+      "id": 260,
+      "patente": "AG238NS",
+      "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
+      "plan": "2ML",
+      "fecha_estimada": "2026-01-07",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-01-07",
+      "mes_ejecucion": 1,
+      "taller": "MNZA",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Enero"
+    },
+    {
+      "id": 261,
+      "patente": "GFZ650",
+      "centro_costo": "CENCO_MZ - Cencosud SA - Mendoza",
+      "plan": "2MC",
+      "fecha_estimada": "2026-01-22",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-01-22",
+      "mes_ejecucion": 1,
+      "taller": "MNZA",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Enero"
+    },
+    {
+      "id": 262,
+      "patente": "HRJ004",
+      "centro_costo": "CENCO_MZ - Cencosud SA - Mendoza",
+      "plan": "2MC",
+      "fecha_estimada": "2026-05-29",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-05-29",
+      "mes_ejecucion": 5,
+      "taller": "MNZA",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Mayo"
+    },
+    {
+      "id": 263,
+      "patente": "JWV370",
+      "centro_costo": "CCUDyAZA",
+      "plan": "2MC",
+      "fecha_estimada": "2026-01-06",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-01-06",
+      "mes_ejecucion": 1,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Enero"
+    },
+    {
+      "id": 264,
+      "patente": "JXZ992",
+      "centro_costo": "CCUCoAZA",
+      "plan": "2MC",
+      "fecha_estimada": "2026-01-12",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-01-12",
+      "mes_ejecucion": 1,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Enero"
+    },
+    {
+      "id": 265,
+      "patente": "KBV611",
+      "centro_costo": "CCUDyAZA",
+      "plan": "2MC",
+      "fecha_estimada": "2026-01-15",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-01-15",
+      "mes_ejecucion": 1,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Enero"
+    },
+    {
+      "id": 266,
+      "patente": "KBV611",
+      "centro_costo": "CCUDyAZA",
+      "plan": "2MC",
+      "fecha_estimada": "2026-02-13",
+      "mes_original": 2,
+      "fecha_ejecucion": "2026-02-13",
+      "mes_ejecucion": 2,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Febrero"
+    },
+    {
+      "id": 267,
+      "patente": "LFK339",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2ML",
+      "fecha_estimada": "2026-01-14",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-01-14",
+      "mes_ejecucion": 1,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Enero"
+    },
+    {
+      "id": 268,
+      "patente": "NIE153",
+      "centro_costo": "CMQ_TTE - QUILMES TTE",
+      "plan": "2MC",
+      "fecha_estimada": "2026-01-29",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-01-29",
+      "mes_ejecucion": 1,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Enero"
+    },
+    {
+      "id": 269,
+      "patente": "NVX394",
+      "centro_costo": "CIMSA_MZA",
+      "plan": "2MU",
+      "fecha_estimada": "2026-01-09",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-01-09",
+      "mes_ejecucion": 1,
+      "taller": "MNZA",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Enero"
+    },
+    {
+      "id": 270,
+      "patente": "OAF640",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2ML",
+      "fecha_estimada": "2026-04-28",
+      "mes_original": 4,
+      "fecha_ejecucion": "2026-04-28",
+      "mes_ejecucion": 4,
+      "taller": "SRAF",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Abril"
+    },
+    {
+      "id": 271,
+      "patente": "OAF640",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2ML",
+      "fecha_estimada": "2026-07-13",
+      "mes_original": 7,
+      "fecha_ejecucion": "2026-07-13",
+      "mes_ejecucion": 7,
+      "taller": "MNZA",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Julio"
+    },
+    {
+      "id": 272,
+      "patente": "OAF641",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2ML",
+      "fecha_estimada": "2026-07-23",
+      "mes_original": 7,
+      "fecha_ejecucion": "2026-07-23",
+      "mes_ejecucion": 7,
+      "taller": "MNZA",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Julio"
+    },
+    {
+      "id": 273,
+      "patente": "OAF642",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2ML",
+      "fecha_estimada": "2026-06-25",
+      "mes_original": 6,
+      "fecha_ejecucion": "2026-06-25",
+      "mes_ejecucion": 6,
+      "taller": "SRAF",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Junio"
+    },
+    {
+      "id": 274,
+      "patente": "OHH588",
+      "centro_costo": "CCUDyAZA",
+      "plan": "2MC",
+      "fecha_estimada": "2026-01-28",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-01-28",
+      "mes_ejecucion": 1,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Enero"
+    },
+    {
+      "id": 275,
+      "patente": "OHH589",
+      "centro_costo": "CMQ_TTE - QUILMES TTE",
+      "plan": "2MC",
+      "fecha_estimada": "2026-02-12",
+      "mes_original": 2,
+      "fecha_ejecucion": "2026-02-12",
+      "mes_ejecucion": 2,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Febrero"
+    },
+    {
+      "id": 276,
+      "patente": "OHH593",
+      "centro_costo": "CCUCoAZA",
+      "plan": "2MC",
+      "fecha_estimada": "2026-01-13",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-01-13",
+      "mes_ejecucion": 1,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Enero"
+    },
+    {
+      "id": 277,
+      "patente": "KUF606",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2ML",
+      "fecha_estimada": "2026-02-26",
+      "mes_original": 2,
+      "fecha_ejecucion": "2026-02-26",
+      "mes_ejecucion": 2,
+      "taller": "SRAF",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Febrero"
+    },
+    {
+      "id": 278,
+      "patente": "HRJ002",
+      "centro_costo": "SUC_REA - Sucursal Realicó",
+      "plan": "2MC",
+      "fecha_estimada": "2026-03-05",
+      "mes_original": 3,
+      "fecha_ejecucion": "2026-03-05",
+      "mes_ejecucion": 3,
+      "taller": "SRAF",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Marzo"
+    },
+    {
+      "id": 279,
+      "patente": "AF804RF",
+      "centro_costo": "CCU_MZA - Comp. Cerv. Unidas - MZA",
+      "plan": "2MC",
+      "fecha_estimada": "2026-03-10",
+      "mes_original": 3,
+      "fecha_ejecucion": "2026-03-10",
+      "mes_ejecucion": 3,
+      "taller": "MNZA",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Marzo"
+    },
+    {
+      "id": 280,
+      "patente": "AF444TW",
+      "centro_costo": "CMQ_TTE - QUILMES TTE",
+      "plan": "2MC",
+      "fecha_estimada": "2026-03-11",
+      "mes_original": 3,
+      "fecha_ejecucion": "2026-03-11",
+      "mes_ejecucion": 3,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Marzo"
+    },
+    {
+      "id": 281,
+      "patente": "OAF644",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2ML",
+      "fecha_estimada": "2026-06-10",
+      "mes_original": 6,
+      "fecha_ejecucion": "2026-06-10",
+      "mes_ejecucion": 6,
+      "taller": "CIUD",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Junio"
+    },
+    {
+      "id": 282,
+      "patente": "GJQ699",
+      "centro_costo": "CCUDyAZA",
+      "plan": "2MC",
+      "fecha_estimada": "2026-03-23",
+      "mes_original": 3,
+      "fecha_ejecucion": "2026-03-23",
+      "mes_ejecucion": 3,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Marzo"
+    },
+    {
+      "id": 283,
+      "patente": "OJG061",
+      "centro_costo": "CCUDyAZA",
+      "plan": "2MC",
+      "fecha_estimada": "2026-04-10",
+      "mes_original": 4,
+      "fecha_ejecucion": "2026-04-10",
+      "mes_ejecucion": 4,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Abril"
+    },
+    {
+      "id": 284,
+      "patente": "IVD940",
+      "centro_costo": "CCUCoAZA",
+      "plan": "2MC",
+      "fecha_estimada": "2026-04-10",
+      "mes_original": 4,
+      "fecha_ejecucion": "2026-04-10",
+      "mes_ejecucion": 4,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Abril"
+    },
+    {
+      "id": 285,
+      "patente": "GUW658",
+      "centro_costo": "Unilever - Unilever de Arg. S.A.",
+      "plan": "2MC",
+      "fecha_estimada": "2026-04-13",
+      "mes_original": 4,
+      "fecha_ejecucion": "2026-04-13",
+      "mes_ejecucion": 4,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Abril"
+    },
+    {
+      "id": 286,
+      "patente": "AF066NT",
+      "centro_costo": "CMQ_TTE - QUILMES TTE",
+      "plan": "2MC",
+      "fecha_estimada": "2026-04-13",
+      "mes_original": 4,
+      "fecha_ejecucion": "2026-04-13",
+      "mes_ejecucion": 4,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Abril"
+    },
+    {
+      "id": 287,
+      "patente": "AF642OU",
+      "centro_costo": "CCUDyAZA",
+      "plan": "2MC",
+      "fecha_estimada": "2026-04-13",
+      "mes_original": 4,
+      "fecha_ejecucion": "2026-04-13",
+      "mes_ejecucion": 4,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Abril"
+    },
+    {
+      "id": 288,
+      "patente": "HUY047",
+      "centro_costo": "Unilever - Unilever de Arg. S.A.",
+      "plan": "2MC",
+      "fecha_estimada": "2026-04-15",
+      "mes_original": 4,
+      "fecha_ejecucion": "2026-04-15",
+      "mes_ejecucion": 4,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Abril"
+    },
+    {
+      "id": 289,
+      "patente": "OHH591",
+      "centro_costo": "CCUDyAZA",
+      "plan": "2MC",
+      "fecha_estimada": "2026-04-15",
+      "mes_original": 4,
+      "fecha_ejecucion": "2026-04-15",
+      "mes_ejecucion": 4,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Abril"
+    },
+    {
+      "id": 290,
+      "patente": "AG404LX",
+      "centro_costo": "CCUDyAZA",
+      "plan": "2MC",
+      "fecha_estimada": "2026-04-15",
+      "mes_original": 4,
+      "fecha_ejecucion": "2026-04-15",
+      "mes_ejecucion": 4,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Abril"
+    },
+    {
+      "id": 291,
+      "patente": "AF804RE",
+      "centro_costo": "CCU_MZA - Comp. Cerv. Unidas - MZA",
+      "plan": "2MC",
+      "fecha_estimada": "2026-04-15",
+      "mes_original": 4,
+      "fecha_ejecucion": "2026-04-15",
+      "mes_ejecucion": 4,
+      "taller": "MNZA",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Abril"
+    },
+    {
+      "id": 292,
+      "patente": "GOX958",
+      "centro_costo": "Papelera - Papelera del Plata S.A.",
+      "plan": "2MC",
+      "fecha_estimada": "2026-04-21",
+      "mes_original": 4,
+      "fecha_ejecucion": "2026-04-21",
+      "mes_ejecucion": 4,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Abril"
+    },
+    {
+      "id": 293,
+      "patente": "OHH586",
+      "centro_costo": "CCUDyAZA",
+      "plan": "2MC",
+      "fecha_estimada": "2026-04-22",
+      "mes_original": 4,
+      "fecha_ejecucion": "2026-04-22",
+      "mes_ejecucion": 4,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Abril"
+    },
+    {
+      "id": 294,
+      "patente": "AF619YO",
+      "centro_costo": "SUC_MEN - Sucursal Mendoza",
+      "plan": "2MU",
+      "fecha_estimada": "2026-04-29",
+      "mes_original": 4,
+      "fecha_ejecucion": "2026-04-29",
+      "mes_ejecucion": 4,
+      "taller": "MNZA",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Abril"
+    },
+    {
+      "id": 295,
+      "patente": "AG390QD",
+      "centro_costo": "CCUDyAZA",
+      "plan": "2MC",
+      "fecha_estimada": "2026-05-06",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-05-06",
+      "mes_ejecucion": 5,
+      "taller": "CIUD",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Mayo"
+    },
+    {
+      "id": 296,
+      "patente": "OJG062",
+      "centro_costo": "CCUDyAZA",
+      "plan": "2MC",
+      "fecha_estimada": "2026-05-06",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-05-06",
+      "mes_ejecucion": 5,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Mayo"
+    },
+    {
+      "id": 297,
+      "patente": "PLU469",
+      "centro_costo": "CCUDyAZA",
+      "plan": "2MC",
+      "fecha_estimada": "2026-05-07",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-05-07",
+      "mes_ejecucion": 5,
+      "taller": "CIUD",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Mayo"
+    },
+    {
+      "id": 298,
+      "patente": "IDX164",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2ML",
+      "fecha_estimada": "2026-07-22",
+      "mes_original": 7,
+      "fecha_ejecucion": "2026-07-22",
+      "mes_ejecucion": 7,
+      "taller": "SRAF",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Julio"
+    },
+    {
+      "id": 299,
+      "patente": "AF461DV",
+      "centro_costo": "Unilever - Unilever de Arg. S.A.",
+      "plan": "2MU",
+      "fecha_estimada": "2026-05-11",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-05-11",
+      "mes_ejecucion": 5,
+      "taller": "BSAS",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Mayo"
+    },
+    {
+      "id": 300,
+      "patente": "GFZ651",
+      "centro_costo": "SUC_CTC - Sucursal Buenos Aires",
+      "plan": "2MC",
+      "fecha_estimada": "2026-05-12",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-05-12",
+      "mes_ejecucion": 5,
+      "taller": "CIUD",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Mayo"
+    },
+    {
+      "id": 301,
+      "patente": "GRC311",
+      "centro_costo": "CCUCoAZA",
+      "plan": "2MC",
+      "fecha_estimada": "2026-05-14",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-05-14",
+      "mes_ejecucion": 5,
+      "taller": "CIUD",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Mayo"
+    },
+    {
+      "id": 302,
+      "patente": "FGV321",
+      "centro_costo": "CCUCoAZA",
+      "plan": "2MC",
+      "fecha_estimada": "2026-05-14",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-05-14",
+      "mes_ejecucion": 5,
+      "taller": "CIUD",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Mayo"
+    },
+    {
+      "id": 303,
+      "patente": "AF642OT",
+      "centro_costo": "CCU_MZA - Comp. Cerv. Unidas - MZA",
+      "plan": "2MC",
+      "fecha_estimada": "2026-05-14",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-05-14",
+      "mes_ejecucion": 5,
+      "taller": "MNZA",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Mayo"
+    },
+    {
+      "id": 304,
+      "patente": "AF642OT",
+      "centro_costo": "CMQ_TTE - QUILMES TTE",
+      "plan": "2MC",
+      "fecha_estimada": "2026-06-19",
+      "mes_original": 6,
+      "fecha_ejecucion": "2026-06-19",
+      "mes_ejecucion": 6,
+      "taller": "CIUD",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Junio"
+    },
+    {
+      "id": 305,
+      "patente": "AF338VQ",
+      "centro_costo": "CMQ_TTE - QUILMES TTE",
+      "plan": "2MU",
+      "fecha_estimada": "2026-05-20",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-05-20",
+      "mes_ejecucion": 5,
+      "taller": "CIUD",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Mayo"
+    },
+    {
+      "id": 306,
+      "patente": "AF737MP",
+      "centro_costo": "CMQ_TTE - QUILMES TTE",
+      "plan": "2MC",
+      "fecha_estimada": "2026-05-20",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-05-20",
+      "mes_ejecucion": 5,
+      "taller": "CIUD",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Mayo"
+    },
+    {
+      "id": 307,
+      "patente": "AG404LU",
+      "centro_costo": "CMQ_TTE - QUILMES TTE",
+      "plan": "2MC",
+      "fecha_estimada": "2026-05-21",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-05-21",
+      "mes_ejecucion": 5,
+      "taller": "CIUD",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Mayo"
+    },
+    {
+      "id": 308,
+      "patente": "GLT550",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2MC",
+      "fecha_estimada": "2026-05-26",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-05-26",
+      "mes_ejecucion": 5,
+      "taller": "CIUD",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Mayo"
+    },
+    {
+      "id": 309,
+      "patente": "AF444TV",
+      "centro_costo": "CMQ_TTE - QUILMES TTE",
+      "plan": "2MC",
+      "fecha_estimada": "2026-05-26",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-05-26",
+      "mes_ejecucion": 5,
+      "taller": "CIUD",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Mayo"
+    },
+    {
+      "id": 310,
+      "patente": "KGM735",
+      "centro_costo": "CENCO_MZ - Cencosud SA - Mendoza",
+      "plan": "2MC",
+      "fecha_estimada": "2026-05-26",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-05-26",
+      "mes_ejecucion": 5,
+      "taller": "MNZA",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Mayo"
+    },
+    {
+      "id": 311,
+      "patente": "AG300AR",
+      "centro_costo": "Arcor S.A.I.C.",
+      "plan": "2ML",
+      "fecha_estimada": "2026-05-27",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-05-27",
+      "mes_ejecucion": 5,
+      "taller": "CIUD",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Mayo"
+    },
+    {
+      "id": 312,
+      "patente": "HSC655",
+      "centro_costo": "CENCO_MZ - Cencosud SA - Mendoza",
+      "plan": "2MC",
+      "fecha_estimada": "2026-05-30",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-05-30",
+      "mes_ejecucion": 5,
+      "taller": "MNZA",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Mayo"
+    },
+    {
+      "id": 313,
+      "patente": "KHS013",
+      "centro_costo": "SUC_GAL - Sucursal General Alvear",
+      "plan": "2MC",
+      "fecha_estimada": "2026-06-17",
+      "mes_original": 6,
+      "fecha_ejecucion": "2026-06-17",
+      "mes_ejecucion": 6,
+      "taller": "SRAF",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Junio"
+    },
+    {
+      "id": 314,
+      "patente": "JWV379",
+      "centro_costo": "CCUCoAZA",
+      "plan": "2MC",
+      "fecha_estimada": "2026-06-18",
+      "mes_original": 6,
+      "fecha_ejecucion": "2026-06-18",
+      "mes_ejecucion": 6,
+      "taller": "CIUD",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Junio"
+    },
+    {
+      "id": 315,
+      "patente": "KIP032",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "plan": "2ML",
+      "fecha_estimada": "2026-07-22",
+      "mes_original": 7,
+      "fecha_ejecucion": "2026-07-22",
+      "mes_ejecucion": 7,
+      "taller": "MNZA",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Julio"
+    },
+    {
+      "id": 316,
+      "patente": "TOTAL GENERAL",
+      "centro_costo": "Sin Centro de Costo",
+      "plan": "nan",
+      "fecha_estimada": "2026-01-01",
+      "mes_original": 1,
+      "fecha_ejecucion": "2026-01-01",
+      "mes_ejecucion": 1,
+      "taller": "Sin Taller",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado sin programación previa en Enero"
+    }
+  ]
+}

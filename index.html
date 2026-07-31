@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Mantenimiento Preventivo 2026 | Dashboard</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header TopBar -->
+        <header class="app-header">
+            <div class="header-brand">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-truck-wrench"></i>
+                </div>
+                <div>
+                    <h1>Control de Mantenimiento Preventivo 2026</h1>
+                    <p class="subtitle">Monitoreo Proyectado vs. Ejecutado por Centro de Costo y Taller</p>
+                </div>
+            </div>
+            <div class="header-actions">
+                <span class="live-badge"><i class="fa-solid fa-circle-dot"></i> 2026 YTD</span>
+                <button id="resetFiltersBtn" class="btn-secondary" title="Restablecer Filtros">
+                    <i class="fa-solid fa-rotate-left"></i> Limpiar Filtros
+                </button>
+            </div>
+        </header>
+
+        <!-- Global Filter Toolbar -->
+        <section class="filter-toolbar">
+            <!-- Multi-Select Centro de Costo -->
+            <div class="filter-group multiselect-group">
+                <label><i class="fa-solid fa-building-user"></i> Centro de Costo (CdC)</label>
+                <div class="custom-multiselect" id="cdcMultiselect">
+                    <button type="button" class="multiselect-trigger" id="cdcTrigger">
+                        <span id="cdcTriggerText">Todos los Centros de Costo</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="multiselect-dropdown" id="cdcDropdown">
+                        <div class="multiselect-search">
+                            <input type="text" id="cdcSearchInput" placeholder="Buscar CdC...">
+                        </div>
+                        <div class="multiselect-actions">
+                            <button type="button" id="selectAllCdcBtn" class="btn-text">Seleccionar Todos</button>
+                            <button type="button" id="deselectAllCdcBtn" class="btn-text">Deseleccionar Todos</button>
+                        </div>
+                        <div class="multiselect-options" id="cdcOptionsList">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Multi-Select Taller -->
+            <div class="filter-group multiselect-group">
+                <label><i class="fa-solid fa-wrench"></i> Taller (Ejecutado)</label>
+                <div class="custom-multiselect" id="tallerMultiselect">
+                    <button type="button" class="multiselect-trigger" id="tallerTrigger">
+                        <span id="tallerTriggerText">Todos los Talleres</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="multiselect-dropdown" id="tallerDropdown">
+                        <div class="multiselect-actions">
+                            <button type="button" id="selectAllTallerBtn" class="btn-text">Seleccionar Todos</button>
+                            <button type="button" id="deselectAllTallerBtn" class="btn-text">Deseleccionar Todos</button>
+                        </div>
+                        <div class="multiselect-options" id="tallerOptionsList">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <label for="monthFilter"><i class="fa-regular fa-calendar-days"></i> Mes de Evaluación</label>
+                <select id="monthFilter" class="filter-select">
+                    <option value="7">Julio 2026 (Mes Actual)</option>
+                    <option value="ALL">Todo el Año 2026</option>
+                    <option value="1">Enero 2026</option>
+                    <option value="2">Febrero 2026</option>
+                    <option value="3">Marzo 2026</option>
+                    <option value="4">Abril 2026</option>
+                    <option value="5">Mayo 2026</option>
+                    <option value="6">Junio 2026</option>
+                    <option value="7">Julio 2026</option>
+                    <option value="8">Agosto 2026</option>
+                    <option value="9">Septiembre 2026</option>
+                    <option value="10">Octubre 2026</option>
+                    <option value="11">Noviembre 2026</option>
+                    <option value="12">Diciembre 2026</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="statusFilter"><i class="fa-solid fa-shield-halved"></i> Estado</label>
+                <select id="statusFilter" class="filter-select">
+                    <option value="ALL">Todos los Estados</option>
+                    <option value="EN_FECHA">En Fecha</option>
+                    <option value="ADELANTADO">Adelantado (Antes de fecha)</option>
+                    <option value="FUERA_DE_TERMINO">Fuera de Término (Recuperado)</option>
+                    <option value="PENDIENTE">Pendiente / Atrasado</option>
+                </select>
+            </div>
+
+            <div class="filter-group search-group">
+                <label for="searchInput"><i class="fa-solid fa-magnifying-glass"></i> Buscar por Patente</label>
+                <div class="input-with-icon">
+                    <input type="text" id="searchInput" placeholder="Ej: AB320YQ..." class="filter-input">
+                    <i class="fa-solid fa-xmark clear-search-icon" id="clearSearchBtn" style="display:none;"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- KPI Metrics Cards Grid -->
+        <section class="kpi-grid">
+            <div class="kpi-card accent-blue">
+                <div class="kpi-header">
+                    <span class="kpi-title">Cumplimiento YTD 2026</span>
+                    <i class="fa-solid fa-chart-line kpi-icon"></i>
+                </div>
+                <div class="kpi-value" id="kpiYtdPct">0.0%</div>
+                <div class="kpi-progress">
+                    <div class="progress-bar-fill" id="barYtd" style="width: 0%;"></div>
+                </div>
+                <div class="kpi-footer" id="kpiYtdDetail">0 de 0 preventivos ejecutados a la fecha</div>
+            </div>
+
+            <div class="kpi-card accent-green">
+                <div class="kpi-header">
+                    <span class="kpi-title">% Cumplimiento en Término (Mes)</span>
+                    <i class="fa-solid fa-circle-check kpi-icon"></i>
+                </div>
+                <div class="kpi-value" id="kpiTerminoPct">0.0%</div>
+                <div class="kpi-progress">
+                    <div class="progress-bar-fill green-fill" id="barTermino" style="width: 0%;"></div>
+                </div>
+                <div class="kpi-footer" id="kpiTerminoDetail">0 proyectados realizados en fecha</div>
+            </div>
+
+            <div class="kpi-card accent-purple">
+                <div class="kpi-header">
+                    <span class="kpi-title">% Ejecución Total (Mes)</span>
+                    <i class="fa-solid fa-bolt kpi-icon"></i>
+                </div>
+                <div class="kpi-value" id="kpiTotalPct">0.0%</div>
+                <div class="kpi-progress">
+                    <div class="progress-bar-fill purple-fill" id="barTotal" style="width: 0%;"></div>
+                </div>
+                <div class="kpi-footer" id="kpiTotalDetail">Incluye tareas regularizadas de meses previos</div>
+            </div>
+
+            <div class="kpi-card accent-red">
+                <div class="kpi-header">
+                    <span class="kpi-title">Pendientes / Atrasados</span>
+                    <i class="fa-solid fa-clock-rotate-left kpi-icon"></i>
+                </div>
+                <div class="kpi-value" id="kpiAtrasadosQty">0</div>
+                <div class="kpi-progress">
+                    <div class="progress-bar-fill red-fill" id="barAtrasados" style="width: 0%;"></div>
+                </div>
+                <div class="kpi-footer" id="kpiAtrasadosDetail">Tareas requeridas sin ejecutar</div>
+            </div>
+        </section>
+
+        <!-- Charts Grid Section -->
+        <section class="charts-grid">
+            <div class="chart-card">
+                <div class="chart-header">
+                    <h3><i class="fa-solid fa-chart-column"></i> Programado vs. Realizado Mes a Mes (2026)</h3>
+                </div>
+                <div class="chart-body">
+                    <canvas id="monthlyChart"></canvas>
+                </div>
+            </div>
+
+            <div class="chart-card">
+                <div class="chart-header">
+                    <h3><i class="fa-solid fa-chart-pie"></i> Distribución de Estados</h3>
+                </div>
+                <div class="chart-body">
+                    <canvas id="statusChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Data Table Section -->
+        <section class="table-section">
+            <div class="table-header-toolbar">
+                <div class="table-title">
+                    <h2><i class="fa-solid fa-list-check"></i> Detalle de Mantenimientos Preventivos</h2>
+                    <span class="table-count-badge" id="tableCountBadge">0 Registros</span>
+                </div>
+                <div class="table-actions">
+                    <button id="exportCsvBtn" class="btn-outline">
+                        <i class="fa-solid fa-file-csv"></i> Exportar CSV
+                    </button>
+                </div>
+            </div>
+
+            <div class="table-wrapper">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 60px; text-align: center;">Listo</th>
+                            <th>Centro de Costo</th>
+                            <th>Patente / Unidad</th>
+                            <th>Preventivo Proyectado</th>
+                            <th>Mes Programado</th>
+                            <th>Estado</th>
+                            <th>Taller</th>
+                            <th>Fecha Real Ejecución</th>
+                            <th>Observaciones / Origen</th>
+                            <th>Aclaración del Mecánico</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!-- Dynamic content filled by app.js -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <!-- Confirmation Modal (Marcar como Listo) -->
+    <div class="modal-overlay" id="confirmModal">
+        <div class="modal-card">
+            <div class="modal-header header-warning">
+                <i class="fa-solid fa-circle-exclamation modal-icon"></i>
+                <h3>Confirmar Marcación</h3>
+            </div>
+            <div class="modal-body">
+                <p id="confirmModalText">¿Está seguro de marcar este mantenimiento como REALIZADO?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-secondary" id="confirmCancelBtn">Cancelar</button>
+                <button type="button" class="btn-primary-green" id="confirmOkBtn">Sí, Marcar como Listo</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Password Modal (Desmarcar) -->
+    <div class="modal-overlay" id="passModal">
+        <div class="modal-card">
+            <div class="modal-header header-lock">
+                <i class="fa-solid fa-lock modal-icon"></i>
+                <h3>Autorización Requerida</h3>
+            </div>
+            <div class="modal-body">
+                <p>Para desmarcar un mantenimiento ya realizado se requiere la clave de acceso:</p>
+                <div class="pass-input-group">
+                    <input type="password" id="passInput" placeholder="Ingrese clave..." class="filter-input">
+                    <span class="pass-error-msg" id="passErrorMsg">Clave incorrecta. Intente nuevamente.</span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-secondary" id="passCancelBtn">Cancelar</button>
+                <button type="button" class="btn-primary-red" id="passOkBtn">Desmarcar Registro</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
