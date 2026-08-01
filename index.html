@@ -60,12 +60,32 @@
                 </div>
             </div>
 
-            <!-- Multi-Select Taller -->
+            <!-- Multi-Select Taller Proyectado (Correspondiente) -->
             <div class="filter-group multiselect-group">
-                <label><i class="fa-solid fa-wrench"></i> Taller (Ejecutado)</label>
+                <label><i class="fa-solid fa-clipboard-list"></i> Taller Proyectado</label>
+                <div class="custom-multiselect" id="tallerProyMultiselect">
+                    <button type="button" class="multiselect-trigger" id="tallerProyTrigger">
+                        <span id="tallerProyTriggerText">Todos los Talleres Proyectados</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="multiselect-dropdown" id="tallerProyDropdown">
+                        <div class="multiselect-actions">
+                            <button type="button" id="selectAllTallerProyBtn" class="btn-text">Seleccionar Todos</button>
+                            <button type="button" id="deselectAllTallerProyBtn" class="btn-text">Deseleccionar Todos</button>
+                        </div>
+                        <div class="multiselect-options" id="tallerProyOptionsList">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Multi-Select Taller Realizado -->
+            <div class="filter-group multiselect-group">
+                <label><i class="fa-solid fa-wrench"></i> Taller Realizado</label>
                 <div class="custom-multiselect" id="tallerMultiselect">
                     <button type="button" class="multiselect-trigger" id="tallerTrigger">
-                        <span id="tallerTriggerText">Todos los Talleres</span>
+                        <span id="tallerTriggerText">Todos los Talleres Realizados</span>
                         <i class="fa-solid fa-chevron-down"></i>
                     </button>
                     <div class="multiselect-dropdown" id="tallerDropdown">
@@ -216,7 +236,8 @@
                             <th>Preventivo Proyectado</th>
                             <th>Mes Programado</th>
                             <th>Estado</th>
-                            <th>Taller</th>
+                            <th>Taller Proyectado</th>
+                            <th>Taller Realizado</th>
                             <th>Fecha Real Ejecución</th>
                             <th>Observaciones / Origen</th>
                             <th>Aclaración del Mecánico</th>

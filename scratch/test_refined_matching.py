@@ -4,36 +4,12 @@ import os
 import re
 from collections import defaultdict
 
-# Dictionary to normalize CC name variations across different Excel files
-CC_NORMALIZATION_MAP = {
-    'arcor - arcor': 'Arcor S.A.I.C.',
-    'arcor s.a.i.c.': 'Arcor S.A.I.C.',
-    'arcor': 'Arcor S.A.I.C.',
-    'ccucoaza - compañía industrial cer alianz': 'CCUCoAZA',
-    'ccucoaza - compania industrial cer alianz': 'CCUCoAZA',
-    'ccucoaza - compaia industrial cer alianz': 'CCUCoAZA',
-    'ccucoaza': 'CCUCoAZA',
-    'alfavini - alfavini': 'Alfavinil SA',
-    'alfavinil sa': 'Alfavinil SA',
-    'alfavinil': 'Alfavinil SA',
-    'molca - molino cañuelas': 'Molca',
-    'molca - molino canuelas': 'Molca',
-    'molca': 'Molca',
-    'topacio - topacio': 'Topacio',
-    'topacio': 'Topacio',
-    'cencomld - cencosud mza larga distancia': 'CENCOMLD - Cencosud SA - Mendoza',
-    'cencomld - cencosud sa - mendoza': 'CENCOMLD - Cencosud SA - Mendoza'
-}
-
 def clean_cc_name(cc_raw):
     if pd.isna(cc_raw):
         return None
     val = str(cc_raw).strip()
     if not val or val.lower() in ['nan', 'null', 'none', '(en blanco)', 'en blanco', '0', '-']:
         return None
-    val_lower = val.lower()
-    if val_lower in CC_NORMALIZATION_MAP:
-        return CC_NORMALIZATION_MAP[val_lower]
     return val
 
 def norm(s):
@@ -55,14 +31,13 @@ def get_abbrev(t_name):
     clean = str(t_name).strip().lower()
     return abbrev_map.get(clean, str(t_name).strip().upper())
 
-def parse_data():
+def test_refined_algorithm():
     proy_path = 'Preventivos Proyeccion 2026.xlsx'
     real_path = 'Preventivos Realizados 2026.xlsx'
 
     xl_proy = pd.ExcelFile(proy_path)
     df_proy = pd.read_excel(xl_proy, sheet_name=0)
 
-    # Read Taller mapping sheet and handle multiple talleres per CC
     cc_to_talleres_raw = defaultdict(list)
     if 'Taller' in xl_proy.sheet_names:
         df_taller_sheet = pd.read_excel(xl_proy, sheet_name='Taller')
@@ -86,30 +61,24 @@ def parse_data():
             return ('Sin Taller Proyectado', ['Sin Taller Proyectado'])
         s = str(cc_name).strip()
         n_s = norm(s)
-        
         if n_s in norm_taller_map:
             return norm_taller_map[n_s]
-        
         for k_norm, v_info in norm_taller_map.items():
             if k_norm in n_s or n_s in k_norm:
                 return v_info
-                
         if 'arcor' in n_s: return ('BSAS', ['BSAS'])
         if 'cimsa' in n_s: return ('BSAS', ['BSAS'])
         if 'cenco' in n_s: return ('MNZA', ['MNZA'])
-        
         return ('Sin Taller Proyectado', ['Sin Taller Proyectado'])
 
     df_real = pd.read_excel(real_path)
 
-    # Clean & normalize projection
     df_proy['Patente'] = df_proy.iloc[:, 0].astype(str).str.strip().str.upper()
     df_proy['Plan'] = df_proy.iloc[:, 1].astype(str).str.strip()
     df_proy['CC'] = df_proy.iloc[:, 2].apply(clean_cc_name)
     df_proy['Fecha_Est'] = pd.to_datetime(df_proy.iloc[:, 3], errors='coerce')
     df_proy['Mes_Orig'] = df_proy['Fecha_Est'].dt.month
 
-    # Clean & normalize real
     df_real['Patente'] = df_real.iloc[:, 0].astype(str).str.strip().str.upper()
     df_real['Plan'] = df_real.iloc[:, 2].astype(str).str.strip()
     df_real['CC'] = df_real.iloc[:, 3].apply(clean_cc_name)
@@ -117,7 +86,6 @@ def parse_data():
     df_real['Mes_Ejec'] = df_real['Fecha_Real'].dt.month
     df_real['Taller'] = df_real.iloc[:, 4].astype(str).str.strip().str.upper()
 
-    # Build fallback dict for vehicle -> CC
     vehicle_cc_map = {}
     for idx, row in df_proy.iterrows():
         pat = row['Patente']
@@ -131,26 +99,9 @@ def parse_data():
         if pat and cc and pat not in vehicle_cc_map:
             vehicle_cc_map[pat] = cc
 
-    # Fill missing CCs
     df_proy['CC'] = df_proy.apply(lambda r: r['CC'] if r['CC'] else vehicle_cc_map.get(r['Patente'], 'Sin Centro de Costo'), axis=1)
     df_real['CC'] = df_real.apply(lambda r: r['CC'] if r['CC'] else vehicle_cc_map.get(r['Patente'], 'Sin Centro de Costo'), axis=1)
 
-    # Unique Centros de Costo
-    ccs = sorted(list(set(df_proy['CC'].dropna().unique()).union(set(df_real['CC'].dropna().unique()))))
-    ccs = [c for c in ccs if c and c != 'Sin Centro de Costo']
-    if 'Sin Centro de Costo' in set(df_proy['CC']).union(set(df_real['CC'])):
-        ccs.append('Sin Centro de Costo')
-
-    # Unique Talleres Realizados
-    talleres_raw = df_real['Taller'].dropna().unique()
-    talleres = sorted([t for t in talleres_raw if t and t.lower() != 'nan'])
-
-    # Vehicles list
-    vehicles_dict = {}
-    for pat, cc in vehicle_cc_map.items():
-        vehicles_dict[pat] = {'patente': pat, 'centro_costo': cc}
-
-    vehicles = list(vehicles_dict.values())
     months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
 
     results = []
@@ -188,7 +139,7 @@ def parse_data():
                         matched_r = later_r.loc[matched_r_idx]
                         match_type = 'FUERA_DE_TERMINO'
                     else:
-                        # 3. Executed earlier ONLY IF within 45 days before fecha_est (true early execution window)
+                        # 3. Executed earlier ONLY IF within 45 days before fecha_est
                         earlier_r = avail_r[avail_r['Mes_Ejec'] < mes_orig]
                         for r_candidate_idx, r_candidate in earlier_r.iterrows():
                             if not pd.isna(fecha_est) and not pd.isna(r_candidate['Fecha_Real']):
@@ -247,7 +198,7 @@ def parse_data():
                 })
                 item_id += 1
 
-    # Unmatched executions (past cycle executions or extra services)
+    # Unmatched executions (extra or past cycle executions without matching projection window)
     unmatched_real = df_real[~df_real.index.isin(r_used)]
     for r_idx, r_row in unmatched_real.iterrows():
         pat = r_row['Patente']
@@ -276,28 +227,16 @@ def parse_data():
         })
         item_id += 1
 
-    # Build unique talleres proyectados list
-    t_proy_set = set()
-    for r in results:
-        t_proy_set.add(r['taller_proyectado'])
-        for single_t in r['talleres_proyectados_list']:
-            t_proy_set.add(single_t)
+    # Inspect HKW894
+    hkw_items = [r for r in results if r['patente'] == 'HKW894']
+    print("=== RESULTADOS PARA HKW894 ===")
+    for h in hkw_items:
+        print(f"Patente: {h['patente']} | Estado: {h['estado']} | Mes Orig: {h['mes_original']} | Mes Ejec: {h['mes_ejecucion']} | Obs: {h['observaciones']}")
 
-    talleres_proyectados = sorted(list(t_proy_set))
+    from collections import Counter
+    st_counts = Counter([r['estado'] for r in results])
+    print("\n=== DISTRIBUCIÓN DE ESTADOS CON ALGORITMO REFINADO ===")
+    for st, cnt in st_counts.items():
+        print(f" - {st}: {cnt}")
 
-    output = {
-        'centros_de_costo': ccs,
-        'talleres': talleres,
-        'talleres_proyectados': talleres_proyectados,
-        'vehiculos': vehicles,
-        'mantenimientos': results
-    }
-
-    os.makedirs('data', exist_ok=True)
-    with open('data/maintenance_data.json', 'w', encoding='utf-8') as f:
-        json.dump(output, f, ensure_ascii=False, indent=2)
-
-    print(f"Data parsed with Refined Cycle Matching: {len(ccs)} CCs, {len(talleres)} Talleres Realizados, {len(talleres_proyectados)} Talleres Proyectados, {len(results)} Mantenimientos.")
-
-if __name__ == '__main__':
-    parse_data()
+test_refined_algorithm()

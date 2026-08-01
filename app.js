@@ -1,14 +1,16 @@
-// App State & Data Management Engine with Default Checked Executed Items, Security Modals & ADELANTADO Support
+// App State & Data Management Engine with Clean Monthly Filtering, CdC, Talleres, Mechanic Notes & Modals
 document.addEventListener('DOMContentLoaded', async () => {
     let globalData = {
         centros_de_costo: [],
         talleres: [],
+        talleres_proyectados: [],
         vehiculos: [],
         mantenimientos: []
     };
 
     let selectedCdcs = new Set();
     let selectedTalleres = new Set();
+    let selectedTalleresProyectados = new Set();
 
     // Password required to uncheck ANY completed item
     const UNCHECK_PASSWORD = '4321';
@@ -43,7 +45,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     const selectAllCdcBtn = document.getElementById('selectAllCdcBtn');
     const deselectAllCdcBtn = document.getElementById('deselectAllCdcBtn');
 
-    // DOM Elements - Taller Multi-Select
+    // DOM Elements - Taller Proyectado Multi-Select
+    const tallerProyTrigger = document.getElementById('tallerProyTrigger');
+    const tallerProyDropdown = document.getElementById('tallerProyDropdown');
+    const tallerProyTriggerText = document.getElementById('tallerProyTriggerText');
+    const tallerProyOptionsList = document.getElementById('tallerProyOptionsList');
+    const selectAllTallerProyBtn = document.getElementById('selectAllTallerProyBtn');
+    const deselectAllTallerProyBtn = document.getElementById('deselectAllTallerProyBtn');
+
+    // DOM Elements - Taller Realizado Multi-Select
     const tallerTrigger = document.getElementById('tallerTrigger');
     const tallerDropdown = document.getElementById('tallerDropdown');
     const tallerTriggerText = document.getElementById('tallerTriggerText');
@@ -82,6 +92,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     function initDashboard() {
         populateCdcMultiselectOptions();
+        populateTallerProyectadoMultiselectOptions();
         populateTallerMultiselectOptions();
         setupEventListeners();
         setupModalEventListeners();
@@ -96,12 +107,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
-    // Determine if an item should be checked (executed items checked by default unless explicitly toggled)
     function getItemCheckState(item) {
         if (mechanicState[item.id] !== undefined && mechanicState[item.id].checked !== undefined) {
             return mechanicState[item.id].checked;
         }
-        // Default: EN_FECHA, ADELANTADO and FUERA_DE_TERMINO are checked by default
         return item.estado !== 'PENDIENTE';
     }
 
@@ -133,6 +142,36 @@ document.addEventListener('DOMContentLoaded', async () => {
             cdcOptionsList.appendChild(item);
         });
         updateCdcTriggerText();
+    }
+
+    function populateTallerProyectadoMultiselectOptions() {
+        tallerProyOptionsList.innerHTML = '';
+        (globalData.talleres_proyectados || []).forEach(taller => {
+            const item = document.createElement('div');
+            item.className = 'multiselect-option';
+            item.dataset.tallerproy = taller;
+
+            const isChecked = selectedTalleresProyectados.has(taller);
+
+            item.innerHTML = `
+                <input type="checkbox" id="tallerproy_chk_${sanitizeId(taller)}" value="${escapeHtml(taller)}" ${isChecked ? 'checked' : ''}>
+                <label for="tallerproy_chk_${sanitizeId(taller)}" style="cursor:pointer; width:100%;">${escapeHtml(taller)}</label>
+            `;
+
+            const checkbox = item.querySelector('input');
+            checkbox.addEventListener('change', (e) => {
+                if (e.target.checked) {
+                    selectedTalleresProyectados.add(taller);
+                } else {
+                    selectedTalleresProyectados.delete(taller);
+                }
+                updateTallerProyTriggerText();
+                updateDashboard();
+            });
+
+            tallerProyOptionsList.appendChild(item);
+        });
+        updateTallerProyTriggerText();
     }
 
     function populateTallerMultiselectOptions() {
@@ -182,17 +221,31 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
+    function updateTallerProyTriggerText() {
+        const total = globalData.talleres_proyectados ? globalData.talleres_proyectados.length : 0;
+        const count = selectedTalleresProyectados.size;
+
+        if (count === 0 || count === total) {
+            tallerProyTriggerText.textContent = "Todos los Talleres Proyectados";
+        } else if (count === 1) {
+            const singleVal = Array.from(selectedTalleresProyectados)[0];
+            tallerProyTriggerText.textContent = singleVal;
+        } else {
+            tallerProyTriggerText.textContent = `${count} Talleres Proyectados`;
+        }
+    }
+
     function updateTallerTriggerText() {
         const total = (globalData.talleres ? globalData.talleres.length : 0) + 1;
         const count = selectedTalleres.size;
 
         if (count === 0 || count === total) {
-            tallerTriggerText.textContent = "Todos los Talleres";
+            tallerTriggerText.textContent = "Todos los Talleres Realizados";
         } else if (count === 1) {
             const singleVal = Array.from(selectedTalleres)[0];
             tallerTriggerText.textContent = singleVal === 'SIN_TALLER' ? 'Sin Taller' : singleVal;
         } else {
-            tallerTriggerText.textContent = `${count} Talleres Seleccionados`;
+            tallerTriggerText.textContent = `${count} Talleres Realizados`;
         }
     }
 
@@ -204,17 +257,32 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Toggle CdC Dropdown
         cdcTrigger.addEventListener('click', (e) => {
             e.stopPropagation();
+            tallerProyDropdown.classList.remove('show');
+            tallerProyTrigger.classList.remove('active');
             tallerDropdown.classList.remove('show');
             tallerTrigger.classList.remove('active');
             cdcDropdown.classList.toggle('show');
             cdcTrigger.classList.toggle('active');
         });
 
-        // Toggle Taller Dropdown
+        // Toggle Taller Proyectado Dropdown
+        tallerProyTrigger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            cdcDropdown.classList.remove('show');
+            cdcTrigger.classList.remove('active');
+            tallerDropdown.classList.remove('show');
+            tallerTrigger.classList.remove('active');
+            tallerProyDropdown.classList.toggle('show');
+            tallerProyTrigger.classList.toggle('active');
+        });
+
+        // Toggle Taller Realizado Dropdown
         tallerTrigger.addEventListener('click', (e) => {
             e.stopPropagation();
             cdcDropdown.classList.remove('show');
             cdcTrigger.classList.remove('active');
+            tallerProyDropdown.classList.remove('show');
+            tallerProyTrigger.classList.remove('active');
             tallerDropdown.classList.toggle('show');
             tallerTrigger.classList.toggle('active');
         });
@@ -224,6 +292,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (!cdcDropdown.contains(e.target) && !cdcTrigger.contains(e.target)) {
                 cdcDropdown.classList.remove('show');
                 cdcTrigger.classList.remove('active');
+            }
+            if (!tallerProyDropdown.contains(e.target) && !tallerProyTrigger.contains(e.target)) {
+                tallerProyDropdown.classList.remove('show');
+                tallerProyTrigger.classList.remove('active');
             }
             if (!tallerDropdown.contains(e.target) && !tallerTrigger.contains(e.target)) {
                 tallerDropdown.classList.remove('show');
@@ -257,7 +329,23 @@ document.addEventListener('DOMContentLoaded', async () => {
             updateDashboard();
         });
 
-        // Taller Select All / Deselect All
+        // Taller Proyectado Select All / Deselect All
+        selectAllTallerProyBtn.addEventListener('click', () => {
+            selectedTalleresProyectados.clear();
+            (globalData.talleres_proyectados || []).forEach(t => selectedTalleresProyectados.add(t));
+            updateTallerProyCheckboxes();
+            updateTallerProyTriggerText();
+            updateDashboard();
+        });
+
+        deselectAllTallerProyBtn.addEventListener('click', () => {
+            selectedTalleresProyectados.clear();
+            updateTallerProyCheckboxes();
+            updateTallerProyTriggerText();
+            updateDashboard();
+        });
+
+        // Taller Realizado Select All / Deselect All
         selectAllTallerBtn.addEventListener('click', () => {
             selectedTalleres.clear();
             (globalData.talleres || []).forEach(t => selectedTalleres.add(t));
@@ -287,10 +375,13 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
         resetFiltersBtn.addEventListener('click', () => {
             selectedCdcs.clear();
+            selectedTalleresProyectados.clear();
             selectedTalleres.clear();
             updateCdcCheckboxes();
+            updateTallerProyCheckboxes();
             updateTallerCheckboxes();
             updateCdcTriggerText();
+            updateTallerProyTriggerText();
             updateTallerTriggerText();
             monthFilter.value = '7'; // Default current month July
             statusFilter.value = 'ALL';
@@ -303,7 +394,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Table Mechanic Checkbox Click Interceptor
         tableBody.addEventListener('click', (e) => {
             if (e.target.classList.contains('mechanic-check')) {
-                e.preventDefault(); // Prevent automatic DOM checkbox toggle
+                e.preventDefault();
                 const chk = e.target;
                 const id = parseInt(chk.dataset.id);
                 const item = globalData.mantenimientos.find(m => m.id === id);
@@ -314,12 +405,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const planName = item ? item.plan : 'Preventivo';
 
                 if (!isCurrentlyChecked) {
-                    // Unchecked (PENDIENTE) -> Wants to CHECK -> Show Warning Confirmation Modal
                     pendingAction = { type: 'CHECK', targetCheckbox: chk, id: id, item: item };
                     confirmModalText.innerHTML = `¿Está seguro de marcar el mantenimiento preventivo de la patente <strong>${escapeHtml(patenteName)}</strong> (<em>${escapeHtml(planName)}</em>) como <strong>REALIZADO</strong>?`;
                     confirmModal.classList.add('show');
                 } else {
-                    // Checked (EN_FECHA, ADELANTADO, FUERA_DE_TERMINO or mechanic checked) -> Wants to UNCHECK -> Show Password Authorization Modal
                     pendingAction = { type: 'UNCHECK', targetCheckbox: chk, id: id, item: item };
                     passInput.value = '';
                     passErrorMsg.style.display = 'none';
@@ -341,7 +430,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     function setupModalEventListeners() {
-        // Confirmation Modal Buttons
         confirmCancelBtn.addEventListener('click', () => {
             confirmModal.classList.remove('show');
             pendingAction = null;
@@ -365,7 +453,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             pendingAction = null;
         });
 
-        // Password Modal Buttons
         passCancelBtn.addEventListener('click', () => {
             passModal.classList.remove('show');
             pendingAction = null;
@@ -413,6 +500,13 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 
+    function updateTallerProyCheckboxes() {
+        const checkboxes = tallerProyOptionsList.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach(chk => {
+            chk.checked = selectedTalleresProyectados.has(chk.value);
+        });
+    }
+
     function updateTallerCheckboxes() {
         const checkboxes = tallerOptionsList.querySelectorAll('input[type="checkbox"]');
         checkboxes.forEach(chk => {
@@ -425,6 +519,27 @@ document.addEventListener('DOMContentLoaded', async () => {
             return true;
         }
         return selectedCdcs.has(itemCdc);
+    }
+
+    function isTallerProyMatch(item) {
+        const totalPossible = globalData.talleres_proyectados ? globalData.talleres_proyectados.length : 0;
+        if (selectedTalleresProyectados.size === 0 || selectedTalleresProyectados.size === totalPossible) {
+            return true;
+        }
+
+        if (selectedTalleresProyectados.has(item.taller_proyectado)) {
+            return true;
+        }
+
+        if (item.talleres_proyectados_list && Array.isArray(item.talleres_proyectados_list)) {
+            for (const t of item.talleres_proyectados_list) {
+                if (selectedTalleresProyectados.has(t)) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
     }
 
     function isTallerMatch(itemTaller) {
@@ -451,6 +566,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                 return false;
             }
 
+            if (!isTallerProyMatch(item)) {
+                return false;
+            }
+
             if (!isTallerMatch(item.taller)) {
                 return false;
             }
@@ -459,6 +578,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const m = parseInt(selectedMonth);
                 const isOriginalMonth = item.mes_original === m;
                 const isExecutedInMonth = item.mes_ejecucion === m;
+
                 if (!isOriginalMonth && !isExecutedInMonth) {
                     return false;
                 }
@@ -488,7 +608,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     function calculateAndRenderKpis(evalMonth) {
-        const cdcScope = globalData.mantenimientos.filter(m => isCdcMatch(m.centro_costo) && isTallerMatch(m.taller));
+        const cdcScope = globalData.mantenimientos.filter(m => 
+            isCdcMatch(m.centro_costo) && 
+            isTallerProyMatch(m) && 
+            isTallerMatch(m.taller)
+        );
 
         // 1. YTD Global
         const ytdProyectados = cdcScope.filter(m => m.mes_original <= evalMonth);
@@ -535,7 +659,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
         document.getElementById('kpiTotalDetail').textContent = detailText;
 
-        // 4. Cantidad de Preventivos Atrasados / Pendientes a la fecha
+        // 4. Cantidad de Preventivos Atrasados / Pendientes a la fecha (Acumulados <= evalMonth)
         const atrasadosScope = cdcScope.filter(m => m.estado === 'PENDIENTE' && m.mes_original <= evalMonth);
         document.getElementById('kpiAtrasadosQty').textContent = atrasadosScope.length;
         const maxBarAtrasados = proyectadosMes.length > 0 ? (atrasadosScope.length / proyectadosMes.length) * 100 : 0;
@@ -544,7 +668,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     function renderCharts() {
-        const cdcScope = globalData.mantenimientos.filter(m => isCdcMatch(m.centro_costo) && isTallerMatch(m.taller));
+        const cdcScope = globalData.mantenimientos.filter(m => 
+            isCdcMatch(m.centro_costo) && 
+            isTallerProyMatch(m) && 
+            isTallerMatch(m.taller)
+        );
 
         const monthlyProy = new Array(12).fill(0);
         const monthlyEjec = new Array(12).fill(0);
@@ -646,7 +774,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (list.length === 0) {
             tableBody.innerHTML = `
                 <tr>
-                    <td colspan="10" style="text-align: center; color: var(--text-muted); padding: 30px;">
+                    <td colspan="11" style="text-align: center; color: var(--text-muted); padding: 30px;">
                         <i class="fa-solid fa-inbox" style="font-size: 2rem; margin-bottom: 8px;"></i><br>
                         No se encontraron mantenimientos preventivos con los filtros aplicados.
                     </td>
@@ -688,6 +816,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                 obsClass = 'obs-tag obs-tag-highlight';
             }
 
+            const tallerProyBadge = item.taller_proyectado 
+                ? `<span class="taller-proy-tag"><i class="fa-solid fa-clipboard-list"></i> ${escapeHtml(item.taller_proyectado)}</span>` 
+                : `<span class="taller-tag-none">-</span>`;
+
             const tallerBadge = item.taller && item.taller !== 'Sin Taller' 
                 ? `<span class="taller-tag"><i class="fa-solid fa-wrench"></i> ${escapeHtml(item.taller)}</span>` 
                 : `<span class="taller-tag-none">-</span>`;
@@ -701,6 +833,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <td>${escapeHtml(item.plan)}</td>
                 <td>${mesOrigName} (${fechaEstFormatted})</td>
                 <td>${badgeHtml}</td>
+                <td>${tallerProyBadge}</td>
                 <td>${tallerBadge}</td>
                 <td>${fechaEjecFormatted}</td>
                 <td><span class="${obsClass}">${escapeHtml(item.observaciones)}</span></td>
@@ -743,7 +876,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
 
         let csvContent = "data:text/csv;charset=utf-8,\uFEFF"; // UTF-8 BOM
-        csvContent += "Listo (Mecánico);Centro de Costo;Patente;Plan;Mes Original;Fecha Estimada;Estado;Taller;Fecha Ejecución;Observaciones;Nota Mecánico\n";
+        csvContent += "Listo (Mecánico);Centro de Costo;Patente;Plan;Mes Original;Fecha Estimada;Estado;Taller Proyectado;Taller Realizado;Fecha Ejecución;Observaciones;Nota Mecánico\n";
 
         dataToExport.forEach(item => {
             const isChecked = getItemCheckState(item);
@@ -756,6 +889,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 `"${monthNames[item.mes_original - 1]}"`,
                 `"${item.fecha_estimada || ''}"`,
                 `"${item.estado}"`,
+                `"${item.taller_proyectado || 'Sin Taller Proyectado'}"`,
                 `"${item.taller || 'Sin Taller'}"`,
                 `"${item.fecha_ejecucion || ''}"`,
                 `"${item.observaciones}"`,
