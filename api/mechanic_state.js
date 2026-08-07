@@ -1,8 +1,8 @@
-// Vercel Serverless Function for Shared Multi-PC Mechanic State Persistence
+// Vercel Serverless Function - Multi-Cloud Free Tier Persistence Bridge
+// Supports: Upstash Redis (Free), Vercel KV, JSONBin.io, and Local Server fallback.
 let memoryState = {};
 
 module.exports = async (req, res) => {
-    // Enable CORS
     res.setHeader('Access-Control-Allow-Credentials', 'true');
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
@@ -18,8 +18,11 @@ module.exports = async (req, res) => {
 
     const kvUrl = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL;
     const kvToken = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN;
+    const jsonbinId = process.env.JSONBIN_ID;
+    const jsonbinKey = process.env.JSONBIN_KEY;
 
     if (req.method === 'GET') {
+        // 1. Upstash / Vercel KV
         if (kvUrl && kvToken) {
             try {
                 const response = await fetch(`${kvUrl}/get/mechanic_state`, {
@@ -29,9 +32,24 @@ module.exports = async (req, res) => {
                 const state = data.result ? (typeof data.result === 'string' ? JSON.parse(data.result) : data.result) : {};
                 return res.status(200).json(state);
             } catch (e) {
-                console.error('Error reading from Vercel KV:', e);
+                console.error('Error reading from Redis KV:', e);
             }
         }
+
+        // 2. JSONBin.io
+        if (jsonbinId) {
+            try {
+                const response = await fetch(`https://api.jsonbin.io/v3/b/${jsonbinId}/latest`, {
+                    headers: jsonbinKey ? { 'X-Master-Key': jsonbinKey } : {}
+                });
+                const data = await response.json();
+                const state = data.record || {};
+                return res.status(200).json(state);
+            } catch (e) {
+                console.error('Error reading from JSONBin:', e);
+            }
+        }
+
         return res.status(200).json(memoryState);
     }
 
@@ -45,6 +63,7 @@ module.exports = async (req, res) => {
         
         memoryState = bodyData;
 
+        // 1. Upstash / Vercel KV
         if (kvUrl && kvToken) {
             try {
                 await fetch(`${kvUrl}/set/mechanic_state`, {
@@ -53,11 +72,27 @@ module.exports = async (req, res) => {
                     body: JSON.stringify(JSON.stringify(bodyData))
                 });
             } catch (e) {
-                console.error('Error writing to Vercel KV:', e);
+                console.error('Error writing to Redis KV:', e);
             }
         }
 
-        return res.status(200).json({ status: 'ok', message: 'State saved successfully on Vercel' });
+        // 2. JSONBin.io
+        if (jsonbinId) {
+            try {
+                await fetch(`https://api.jsonbin.io/v3/b/${jsonbinId}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        ...(jsonbinKey ? { 'X-Master-Key': jsonbinKey } : {})
+                    },
+                    body: JSON.stringify(bodyData)
+                });
+            } catch (e) {
+                console.error('Error writing to JSONBin:', e);
+            }
+        }
+
+        return res.status(200).json({ status: 'ok', message: 'State saved' });
     }
 
     return res.status(405).json({ error: 'Method not allowed' });
