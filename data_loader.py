@@ -225,7 +225,8 @@ def parse_data():
                     'mes_ejecucion': mes_ejec,
                     'taller': matched_r['Taller'] if not pd.isna(matched_r['Taller']) and str(matched_r['Taller']).lower() != 'nan' else 'Sin Taller',
                     'estado': match_type,
-                    'observaciones': obs
+                    'observaciones': obs,
+                    'tiene_orden_realizado': True
                 })
                 item_id += 1
             else:
@@ -243,7 +244,8 @@ def parse_data():
                     'mes_ejecucion': None,
                     'taller': None,
                     'estado': 'PENDIENTE',
-                    'observaciones': 'Pendiente de ejecución desde ' + months[mes_orig-1]
+                    'observaciones': 'Pendiente de ejecución desde ' + months[mes_orig-1],
+                    'tiene_orden_realizado': False
                 })
                 item_id += 1
 
@@ -272,7 +274,8 @@ def parse_data():
             'mes_ejecucion': mes_ejec,
             'taller': taller,
             'estado': 'EN_FECHA',
-            'observaciones': 'Ejecutado en ' + months[mes_ejec-1] + ' (' + f_real_str + ')'
+            'observaciones': 'Ejecutado en ' + months[mes_ejec-1] + ' (' + f_real_str + ')',
+            'tiene_orden_realizado': True
         })
         item_id += 1
 
@@ -297,7 +300,7 @@ def parse_data():
     with open('data/maintenance_data.json', 'w', encoding='utf-8') as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
-    print(f"Data parsed with Refined Cycle Matching: {len(ccs)} CCs, {len(talleres)} Talleres Realizados, {len(talleres_proyectados)} Talleres Proyectados, {len(results)} Mantenimientos.")
+    print(f"Data parsed with tiene_orden_realizado field: {len(ccs)} CCs, {len(talleres)} Talleres Realizados, {len(results)} Mantenimientos.")
 
 if __name__ == '__main__':
     parse_data()

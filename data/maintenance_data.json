@@ -1028,7 +1028,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 2,
@@ -1045,7 +1046,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 3,
@@ -1062,7 +1064,8 @@
       "mes_ejecucion": 3,
       "taller": "MNZA",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Marzo (Origen: Febrero)"
+      "observaciones": "Ejecutado en Marzo (Origen: Febrero)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 4,
@@ -1079,7 +1082,8 @@
       "mes_ejecucion": 5,
       "taller": "CIUD",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Mayo (Origen: Abril)"
+      "observaciones": "Ejecutado en Mayo (Origen: Abril)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 5,
@@ -1096,7 +1100,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Septiembre"
+      "observaciones": "Pendiente de ejecución desde Septiembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 6,
@@ -1113,7 +1118,8 @@
       "mes_ejecucion": 5,
       "taller": "CIUD",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Mayo (Origen: Febrero)"
+      "observaciones": "Ejecutado en Mayo (Origen: Febrero)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 7,
@@ -1130,7 +1136,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Mayo"
+      "observaciones": "Pendiente de ejecución desde Mayo",
+      "tiene_orden_realizado": false
     },
     {
       "id": 8,
@@ -1147,7 +1154,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Septiembre"
+      "observaciones": "Pendiente de ejecución desde Septiembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 9,
@@ -1164,7 +1172,8 @@
       "mes_ejecucion": 1,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 05/01/2026"
+      "observaciones": "Ejecutado a tiempo en 05/01/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 10,
@@ -1181,7 +1190,8 @@
       "mes_ejecucion": 7,
       "taller": "CIUD",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Julio (Origen: Mayo)"
+      "observaciones": "Ejecutado en Julio (Origen: Mayo)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 11,
@@ -1198,7 +1208,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Octubre"
+      "observaciones": "Pendiente de ejecución desde Octubre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 12,
@@ -1215,7 +1226,8 @@
       "mes_ejecucion": 6,
       "taller": "CIUD",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Junio (Origen: Abril)"
+      "observaciones": "Ejecutado en Junio (Origen: Abril)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 13,
@@ -1232,7 +1244,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 14,
@@ -1249,7 +1262,8 @@
       "mes_ejecucion": 1,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 14/01/2026"
+      "observaciones": "Ejecutado a tiempo en 14/01/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 15,
@@ -1266,7 +1280,8 @@
       "mes_ejecucion": 4,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 17/04/2026"
+      "observaciones": "Ejecutado a tiempo en 17/04/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 16,
@@ -1283,7 +1298,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 17,
@@ -1300,7 +1316,8 @@
       "mes_ejecucion": 1,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 29/01/2026"
+      "observaciones": "Ejecutado a tiempo en 29/01/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 18,
@@ -1317,7 +1334,8 @@
       "mes_ejecucion": 7,
       "taller": "CIUD",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 01/07/2026"
+      "observaciones": "Ejecutado a tiempo en 01/07/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 19,
@@ -1334,7 +1352,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Noviembre"
+      "observaciones": "Pendiente de ejecución desde Noviembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 20,
@@ -1351,7 +1370,8 @@
       "mes_ejecucion": 4,
       "taller": "BSAS",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Abril (Origen: Febrero)"
+      "observaciones": "Ejecutado en Abril (Origen: Febrero)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 21,
@@ -1368,7 +1388,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Mayo"
+      "observaciones": "Pendiente de ejecución desde Mayo",
+      "tiene_orden_realizado": false
     },
     {
       "id": 22,
@@ -1385,7 +1406,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 23,
@@ -1402,7 +1424,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 24,
@@ -1419,7 +1442,8 @@
       "mes_ejecucion": 1,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 06/01/2026"
+      "observaciones": "Ejecutado a tiempo en 06/01/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 25,
@@ -1436,7 +1460,8 @@
       "mes_ejecucion": 4,
       "taller": "BSAS",
       "estado": "ADELANTADO",
-      "observaciones": "Ejecutado por adelantado en Abril (Programado: Mayo)"
+      "observaciones": "Ejecutado por adelantado en Abril (Programado: Mayo)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 26,
@@ -1453,7 +1478,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 27,
@@ -1470,7 +1496,8 @@
       "mes_ejecucion": 1,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 10/01/2026"
+      "observaciones": "Ejecutado a tiempo en 10/01/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 28,
@@ -1487,7 +1514,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Mayo"
+      "observaciones": "Pendiente de ejecución desde Mayo",
+      "tiene_orden_realizado": false
     },
     {
       "id": 29,
@@ -1504,7 +1532,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 30,
@@ -1521,7 +1550,8 @@
       "mes_ejecucion": 6,
       "taller": "MNZA",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Junio (Origen: Mayo)"
+      "observaciones": "Ejecutado en Junio (Origen: Mayo)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 31,
@@ -1538,7 +1568,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 32,
@@ -1555,7 +1586,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 33,
@@ -1572,7 +1604,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 34,
@@ -1590,7 +1623,8 @@
       "mes_ejecucion": 1,
       "taller": "MNZA",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 22/01/2026"
+      "observaciones": "Ejecutado a tiempo en 22/01/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 35,
@@ -1608,7 +1642,8 @@
       "mes_ejecucion": 4,
       "taller": "MNZA",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Abril (Origen: Marzo)"
+      "observaciones": "Ejecutado en Abril (Origen: Marzo)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 36,
@@ -1626,7 +1661,8 @@
       "mes_ejecucion": 7,
       "taller": "MNZA",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 29/07/2026"
+      "observaciones": "Ejecutado a tiempo en 29/07/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 37,
@@ -1644,7 +1680,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Septiembre"
+      "observaciones": "Pendiente de ejecución desde Septiembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 38,
@@ -1662,7 +1699,8 @@
       "mes_ejecucion": 1,
       "taller": "SRAF",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 07/01/2026"
+      "observaciones": "Ejecutado a tiempo en 07/01/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 39,
@@ -1680,7 +1718,8 @@
       "mes_ejecucion": 5,
       "taller": "SRAF",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Mayo (Origen: Abril)"
+      "observaciones": "Ejecutado en Mayo (Origen: Abril)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 40,
@@ -1698,7 +1737,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Septiembre"
+      "observaciones": "Pendiente de ejecución desde Septiembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 41,
@@ -1715,7 +1755,8 @@
       "mes_ejecucion": 2,
       "taller": "MNZA",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Febrero (Origen: Enero)"
+      "observaciones": "Ejecutado en Febrero (Origen: Enero)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 42,
@@ -1732,7 +1773,8 @@
       "mes_ejecucion": 5,
       "taller": "MNZA",
       "estado": "ADELANTADO",
-      "observaciones": "Ejecutado por adelantado en Mayo (Programado: Junio)"
+      "observaciones": "Ejecutado por adelantado en Mayo (Programado: Junio)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 43,
@@ -1749,7 +1791,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 44,
@@ -1766,7 +1809,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 45,
@@ -1783,7 +1827,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 46,
@@ -1800,7 +1845,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 47,
@@ -1817,7 +1863,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Marzo"
+      "observaciones": "Pendiente de ejecución desde Marzo",
+      "tiene_orden_realizado": false
     },
     {
       "id": 48,
@@ -1834,7 +1881,8 @@
       "mes_ejecucion": 7,
       "taller": "CIUD",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 07/07/2026"
+      "observaciones": "Ejecutado a tiempo en 07/07/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 49,
@@ -1851,7 +1899,8 @@
       "mes_ejecucion": 7,
       "taller": "CIUD",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 14/07/2026"
+      "observaciones": "Ejecutado a tiempo en 14/07/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 50,
@@ -1868,7 +1917,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 51,
@@ -1885,7 +1935,8 @@
       "mes_ejecucion": 6,
       "taller": "CIUD",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 02/06/2026"
+      "observaciones": "Ejecutado a tiempo en 02/06/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 52,
@@ -1902,7 +1953,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Octubre"
+      "observaciones": "Pendiente de ejecución desde Octubre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 53,
@@ -1919,7 +1971,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 54,
@@ -1936,7 +1989,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 55,
@@ -1953,7 +2007,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 56,
@@ -1970,7 +2025,8 @@
       "mes_ejecucion": 1,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 24/01/2026"
+      "observaciones": "Ejecutado a tiempo en 24/01/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 57,
@@ -1987,7 +2043,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Noviembre"
+      "observaciones": "Pendiente de ejecución desde Noviembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 58,
@@ -2004,7 +2061,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Noviembre"
+      "observaciones": "Pendiente de ejecución desde Noviembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 59,
@@ -2021,7 +2079,8 @@
       "mes_ejecucion": 5,
       "taller": "CIUD",
       "estado": "ADELANTADO",
-      "observaciones": "Ejecutado por adelantado en Mayo (Programado: Junio)"
+      "observaciones": "Ejecutado por adelantado en Mayo (Programado: Junio)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 60,
@@ -2038,7 +2097,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 61,
@@ -2055,7 +2115,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 62,
@@ -2072,7 +2133,8 @@
       "mes_ejecucion": 4,
       "taller": "MNZA",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Abril (Origen: Enero)"
+      "observaciones": "Ejecutado en Abril (Origen: Enero)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 63,
@@ -2089,7 +2151,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 64,
@@ -2106,7 +2169,8 @@
       "mes_ejecucion": 6,
       "taller": "MNZA",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Junio (Origen: Enero)"
+      "observaciones": "Ejecutado en Junio (Origen: Enero)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 65,
@@ -2123,7 +2187,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 66,
@@ -2140,7 +2205,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Mayo"
+      "observaciones": "Pendiente de ejecución desde Mayo",
+      "tiene_orden_realizado": false
     },
     {
       "id": 67,
@@ -2157,7 +2223,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 68,
@@ -2174,7 +2241,8 @@
       "mes_ejecucion": 6,
       "taller": "SRAF",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Junio (Origen: Enero)"
+      "observaciones": "Ejecutado en Junio (Origen: Enero)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 69,
@@ -2191,7 +2259,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Enero"
+      "observaciones": "Pendiente de ejecución desde Enero",
+      "tiene_orden_realizado": false
     },
     {
       "id": 70,
@@ -2208,7 +2277,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 71,
@@ -2225,7 +2295,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 72,
@@ -2242,7 +2313,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 73,
@@ -2259,7 +2331,8 @@
       "mes_ejecucion": 3,
       "taller": "MNZA",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Marzo (Origen: Febrero)"
+      "observaciones": "Ejecutado en Marzo (Origen: Febrero)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 74,
@@ -2276,7 +2349,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 75,
@@ -2293,7 +2367,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Noviembre"
+      "observaciones": "Pendiente de ejecución desde Noviembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 76,
@@ -2310,7 +2385,8 @@
       "mes_ejecucion": 5,
       "taller": "MNZA",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Mayo (Origen: Febrero)"
+      "observaciones": "Ejecutado en Mayo (Origen: Febrero)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 77,
@@ -2327,7 +2403,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Septiembre"
+      "observaciones": "Pendiente de ejecución desde Septiembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 78,
@@ -2344,7 +2421,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 79,
@@ -2361,7 +2439,8 @@
       "mes_ejecucion": 5,
       "taller": "CIUD",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Mayo (Origen: Marzo)"
+      "observaciones": "Ejecutado en Mayo (Origen: Marzo)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 80,
@@ -2378,7 +2457,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 81,
@@ -2395,7 +2475,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 82,
@@ -2412,7 +2493,8 @@
       "mes_ejecucion": 6,
       "taller": "SRAF",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 01/06/2026"
+      "observaciones": "Ejecutado a tiempo en 01/06/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 83,
@@ -2429,7 +2511,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 84,
@@ -2446,7 +2529,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 85,
@@ -2463,7 +2547,8 @@
       "mes_ejecucion": 5,
       "taller": "CIUD",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Mayo (Origen: Abril)"
+      "observaciones": "Ejecutado en Mayo (Origen: Abril)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 86,
@@ -2480,7 +2565,8 @@
       "mes_ejecucion": 6,
       "taller": "CIUD",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Junio (Origen: Mayo)"
+      "observaciones": "Ejecutado en Junio (Origen: Mayo)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 87,
@@ -2497,7 +2583,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 88,
@@ -2514,7 +2601,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Octubre"
+      "observaciones": "Pendiente de ejecución desde Octubre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 89,
@@ -2531,7 +2619,8 @@
       "mes_ejecucion": 2,
       "taller": "BSAS",
       "estado": "ADELANTADO",
-      "observaciones": "Ejecutado por adelantado en Febrero (Programado: Marzo)"
+      "observaciones": "Ejecutado por adelantado en Febrero (Programado: Marzo)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 90,
@@ -2548,7 +2637,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Noviembre"
+      "observaciones": "Pendiente de ejecución desde Noviembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 91,
@@ -2565,7 +2655,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Noviembre"
+      "observaciones": "Pendiente de ejecución desde Noviembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 92,
@@ -2582,7 +2673,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 93,
@@ -2599,7 +2691,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Octubre"
+      "observaciones": "Pendiente de ejecución desde Octubre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 94,
@@ -2616,7 +2709,8 @@
       "mes_ejecucion": 4,
       "taller": "BSAS",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Abril (Origen: Marzo)"
+      "observaciones": "Ejecutado en Abril (Origen: Marzo)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 95,
@@ -2633,7 +2727,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 96,
@@ -2650,7 +2745,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 97,
@@ -2667,7 +2763,8 @@
       "mes_ejecucion": 7,
       "taller": "CIUD",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 02/07/2026"
+      "observaciones": "Ejecutado a tiempo en 02/07/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 98,
@@ -2684,7 +2781,8 @@
       "mes_ejecucion": 5,
       "taller": "MNZA",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Mayo (Origen: Enero)"
+      "observaciones": "Ejecutado en Mayo (Origen: Enero)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 99,
@@ -2701,7 +2799,8 @@
       "mes_ejecucion": 3,
       "taller": "MNZA",
       "estado": "ADELANTADO",
-      "observaciones": "Ejecutado por adelantado en Marzo (Programado: Abril)"
+      "observaciones": "Ejecutado por adelantado en Marzo (Programado: Abril)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 100,
@@ -2718,7 +2817,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Mayo"
+      "observaciones": "Pendiente de ejecución desde Mayo",
+      "tiene_orden_realizado": false
     },
     {
       "id": 101,
@@ -2735,7 +2835,8 @@
       "mes_ejecucion": 5,
       "taller": "CIUD",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Mayo (Origen: Abril)"
+      "observaciones": "Ejecutado en Mayo (Origen: Abril)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 102,
@@ -2752,7 +2853,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Noviembre"
+      "observaciones": "Pendiente de ejecución desde Noviembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 103,
@@ -2769,7 +2871,8 @@
       "mes_ejecucion": 5,
       "taller": "MNZA",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 22/05/2026"
+      "observaciones": "Ejecutado a tiempo en 22/05/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 104,
@@ -2786,7 +2889,8 @@
       "mes_ejecucion": 7,
       "taller": "CIUD",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Julio (Origen: Mayo)"
+      "observaciones": "Ejecutado en Julio (Origen: Mayo)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 105,
@@ -2803,7 +2907,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 106,
@@ -2820,7 +2925,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 107,
@@ -2837,7 +2943,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Mayo"
+      "observaciones": "Pendiente de ejecución desde Mayo",
+      "tiene_orden_realizado": false
     },
     {
       "id": 108,
@@ -2854,7 +2961,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Octubre"
+      "observaciones": "Pendiente de ejecución desde Octubre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 109,
@@ -2871,7 +2979,8 @@
       "mes_ejecucion": 7,
       "taller": "CIUD",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 28/07/2026"
+      "observaciones": "Ejecutado a tiempo en 28/07/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 110,
@@ -2888,7 +2997,8 @@
       "mes_ejecucion": 7,
       "taller": "CIUD",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 13/07/2026"
+      "observaciones": "Ejecutado a tiempo en 13/07/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 111,
@@ -2905,7 +3015,8 @@
       "mes_ejecucion": 5,
       "taller": "MNZA",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Mayo (Origen: Febrero)"
+      "observaciones": "Ejecutado en Mayo (Origen: Febrero)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 112,
@@ -2922,7 +3033,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 113,
@@ -2939,7 +3051,8 @@
       "mes_ejecucion": 3,
       "taller": "MNZA",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 30/03/2026"
+      "observaciones": "Ejecutado a tiempo en 30/03/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 114,
@@ -2956,7 +3069,8 @@
       "mes_ejecucion": 7,
       "taller": "MNZA",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 11/07/2026"
+      "observaciones": "Ejecutado a tiempo en 11/07/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 115,
@@ -2973,7 +3087,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Octubre"
+      "observaciones": "Pendiente de ejecución desde Octubre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 116,
@@ -2991,7 +3106,8 @@
       "mes_ejecucion": 7,
       "taller": "CIUD",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Julio (Origen: Mayo)"
+      "observaciones": "Ejecutado en Julio (Origen: Mayo)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 117,
@@ -3009,7 +3125,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 118,
@@ -3027,7 +3144,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Septiembre"
+      "observaciones": "Pendiente de ejecución desde Septiembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 119,
@@ -3044,7 +3162,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 120,
@@ -3061,7 +3180,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 121,
@@ -3078,7 +3198,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 122,
@@ -3095,7 +3216,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Enero"
+      "observaciones": "Pendiente de ejecución desde Enero",
+      "tiene_orden_realizado": false
     },
     {
       "id": 123,
@@ -3112,7 +3234,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 124,
@@ -3129,7 +3252,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 125,
@@ -3146,7 +3270,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 126,
@@ -3163,7 +3288,8 @@
       "mes_ejecucion": 7,
       "taller": "SRAF",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 14/07/2026"
+      "observaciones": "Ejecutado a tiempo en 14/07/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 127,
@@ -3180,7 +3306,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Enero"
+      "observaciones": "Pendiente de ejecución desde Enero",
+      "tiene_orden_realizado": false
     },
     {
       "id": 128,
@@ -3197,7 +3324,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 129,
@@ -3214,7 +3342,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 130,
@@ -3231,7 +3360,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 131,
@@ -3248,7 +3378,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Diciembre"
+      "observaciones": "Pendiente de ejecución desde Diciembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 132,
@@ -3265,7 +3396,8 @@
       "mes_ejecucion": 5,
       "taller": "CIUD",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Mayo (Origen: Marzo)"
+      "observaciones": "Ejecutado en Mayo (Origen: Marzo)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 133,
@@ -3282,7 +3414,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 134,
@@ -3299,7 +3432,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Septiembre"
+      "observaciones": "Pendiente de ejecución desde Septiembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 135,
@@ -3316,7 +3450,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Febrero"
+      "observaciones": "Pendiente de ejecución desde Febrero",
+      "tiene_orden_realizado": false
     },
     {
       "id": 136,
@@ -3333,7 +3468,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 137,
@@ -3350,7 +3486,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 138,
@@ -3367,7 +3504,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 139,
@@ -3384,7 +3522,8 @@
       "mes_ejecucion": 4,
       "taller": "BSAS",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Abril (Origen: Febrero)"
+      "observaciones": "Ejecutado en Abril (Origen: Febrero)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 140,
@@ -3401,7 +3540,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Marzo"
+      "observaciones": "Pendiente de ejecución desde Marzo",
+      "tiene_orden_realizado": false
     },
     {
       "id": 141,
@@ -3418,7 +3558,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 142,
@@ -3435,7 +3576,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 143,
@@ -3452,7 +3594,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 144,
@@ -3469,7 +3612,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 145,
@@ -3486,7 +3630,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 146,
@@ -3503,7 +3648,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 147,
@@ -3520,7 +3666,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Marzo"
+      "observaciones": "Pendiente de ejecución desde Marzo",
+      "tiene_orden_realizado": false
     },
     {
       "id": 148,
@@ -3537,7 +3684,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 149,
@@ -3554,7 +3702,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 150,
@@ -3571,7 +3720,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 151,
@@ -3588,7 +3738,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Enero"
+      "observaciones": "Pendiente de ejecución desde Enero",
+      "tiene_orden_realizado": false
     },
     {
       "id": 152,
@@ -3605,7 +3756,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 153,
@@ -3622,7 +3774,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 154,
@@ -3639,7 +3792,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 155,
@@ -3656,7 +3810,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 156,
@@ -3673,7 +3828,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 157,
@@ -3690,7 +3846,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 158,
@@ -3707,7 +3864,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 159,
@@ -3724,7 +3882,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 160,
@@ -3741,7 +3900,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Febrero"
+      "observaciones": "Pendiente de ejecución desde Febrero",
+      "tiene_orden_realizado": false
     },
     {
       "id": 161,
@@ -3758,7 +3918,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 162,
@@ -3775,7 +3936,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 163,
@@ -3792,7 +3954,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Febrero"
+      "observaciones": "Pendiente de ejecución desde Febrero",
+      "tiene_orden_realizado": false
     },
     {
       "id": 164,
@@ -3809,7 +3972,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 165,
@@ -3826,7 +3990,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 166,
@@ -3843,7 +4008,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 167,
@@ -3860,7 +4026,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Mayo"
+      "observaciones": "Pendiente de ejecución desde Mayo",
+      "tiene_orden_realizado": false
     },
     {
       "id": 168,
@@ -3877,7 +4044,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 169,
@@ -3894,7 +4062,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 170,
@@ -3911,7 +4080,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 171,
@@ -3928,7 +4098,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 172,
@@ -3945,7 +4116,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 173,
@@ -3962,7 +4134,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 174,
@@ -3979,7 +4152,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 175,
@@ -3996,7 +4170,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 176,
@@ -4013,7 +4188,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 177,
@@ -4030,7 +4206,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Marzo"
+      "observaciones": "Pendiente de ejecución desde Marzo",
+      "tiene_orden_realizado": false
     },
     {
       "id": 178,
@@ -4047,7 +4224,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Diciembre"
+      "observaciones": "Pendiente de ejecución desde Diciembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 179,
@@ -4064,7 +4242,8 @@
       "mes_ejecucion": 6,
       "taller": "CIUD",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Junio (Origen: Mayo)"
+      "observaciones": "Ejecutado en Junio (Origen: Mayo)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 180,
@@ -4081,7 +4260,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 181,
@@ -4098,7 +4278,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 182,
@@ -4115,7 +4296,8 @@
       "mes_ejecucion": 6,
       "taller": "CIUD",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 18/06/2026"
+      "observaciones": "Ejecutado a tiempo en 18/06/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 183,
@@ -4132,7 +4314,8 @@
       "mes_ejecucion": 4,
       "taller": "BSAS",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Abril (Origen: Febrero)"
+      "observaciones": "Ejecutado en Abril (Origen: Febrero)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 184,
@@ -4149,7 +4332,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Noviembre"
+      "observaciones": "Pendiente de ejecución desde Noviembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 185,
@@ -4166,7 +4350,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Marzo"
+      "observaciones": "Pendiente de ejecución desde Marzo",
+      "tiene_orden_realizado": false
     },
     {
       "id": 186,
@@ -4183,7 +4368,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 187,
@@ -4200,7 +4386,8 @@
       "mes_ejecucion": 7,
       "taller": "MNZA",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Julio (Origen: Junio)"
+      "observaciones": "Ejecutado en Julio (Origen: Junio)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 188,
@@ -4217,7 +4404,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 189,
@@ -4234,7 +4422,8 @@
       "mes_ejecucion": 4,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 23/04/2026"
+      "observaciones": "Ejecutado a tiempo en 23/04/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 190,
@@ -4251,7 +4440,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Octubre"
+      "observaciones": "Pendiente de ejecución desde Octubre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 191,
@@ -4268,7 +4458,8 @@
       "mes_ejecucion": 5,
       "taller": "CIUD",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Mayo (Origen: Febrero)"
+      "observaciones": "Ejecutado en Mayo (Origen: Febrero)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 192,
@@ -4285,7 +4476,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Noviembre"
+      "observaciones": "Pendiente de ejecución desde Noviembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 193,
@@ -4302,7 +4494,8 @@
       "mes_ejecucion": 5,
       "taller": "MNZA",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 26/05/2026"
+      "observaciones": "Ejecutado a tiempo en 26/05/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 194,
@@ -4319,7 +4512,8 @@
       "mes_ejecucion": 5,
       "taller": "CIUD",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Mayo (Origen: Marzo)"
+      "observaciones": "Ejecutado en Mayo (Origen: Marzo)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 195,
@@ -4336,7 +4530,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 196,
@@ -4353,7 +4548,8 @@
       "mes_ejecucion": 5,
       "taller": "CIUD",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Mayo (Origen: Abril)"
+      "observaciones": "Ejecutado en Mayo (Origen: Abril)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 197,
@@ -4370,7 +4566,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Octubre"
+      "observaciones": "Pendiente de ejecución desde Octubre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 198,
@@ -4387,7 +4584,8 @@
       "mes_ejecucion": 5,
       "taller": "MNZA",
       "estado": "ADELANTADO",
-      "observaciones": "Ejecutado por adelantado en Mayo (Programado: Junio)"
+      "observaciones": "Ejecutado por adelantado en Mayo (Programado: Junio)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 199,
@@ -4404,7 +4602,8 @@
       "mes_ejecucion": 5,
       "taller": "CIUD",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Mayo (Origen: Marzo)"
+      "observaciones": "Ejecutado en Mayo (Origen: Marzo)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 200,
@@ -4421,7 +4620,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Diciembre"
+      "observaciones": "Pendiente de ejecución desde Diciembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 201,
@@ -4438,7 +4638,8 @@
       "mes_ejecucion": 5,
       "taller": "CIUD",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Mayo (Origen: Abril)"
+      "observaciones": "Ejecutado en Mayo (Origen: Abril)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 202,
@@ -4455,7 +4656,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Noviembre"
+      "observaciones": "Pendiente de ejecución desde Noviembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 203,
@@ -4472,7 +4674,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Noviembre"
+      "observaciones": "Pendiente de ejecución desde Noviembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 204,
@@ -4489,7 +4692,8 @@
       "mes_ejecucion": 6,
       "taller": "SRAF",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Junio (Origen: Febrero)"
+      "observaciones": "Ejecutado en Junio (Origen: Febrero)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 205,
@@ -4506,7 +4710,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 206,
@@ -4523,7 +4728,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Noviembre"
+      "observaciones": "Pendiente de ejecución desde Noviembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 207,
@@ -4541,7 +4747,8 @@
       "mes_ejecucion": 3,
       "taller": "BSAS",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Marzo (Origen: Enero)"
+      "observaciones": "Ejecutado en Marzo (Origen: Enero)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 208,
@@ -4559,7 +4766,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Noviembre"
+      "observaciones": "Pendiente de ejecución desde Noviembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 209,
@@ -4576,7 +4784,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 210,
@@ -4593,7 +4802,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 211,
@@ -4610,7 +4820,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Septiembre"
+      "observaciones": "Pendiente de ejecución desde Septiembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 212,
@@ -4627,7 +4838,8 @@
       "mes_ejecucion": 5,
       "taller": "CIUD",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Mayo (Origen: Marzo)"
+      "observaciones": "Ejecutado en Mayo (Origen: Marzo)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 213,
@@ -4644,7 +4856,8 @@
       "mes_ejecucion": 7,
       "taller": "MNZA",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Julio (Origen: Febrero)"
+      "observaciones": "Ejecutado en Julio (Origen: Febrero)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 214,
@@ -4661,7 +4874,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 215,
@@ -4678,7 +4892,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 216,
@@ -4695,7 +4910,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Noviembre"
+      "observaciones": "Pendiente de ejecución desde Noviembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 217,
@@ -4712,7 +4928,8 @@
       "mes_ejecucion": 4,
       "taller": "BSAS",
       "estado": "ADELANTADO",
-      "observaciones": "Ejecutado por adelantado en Abril (Programado: Mayo)"
+      "observaciones": "Ejecutado por adelantado en Abril (Programado: Mayo)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 218,
@@ -4729,7 +4946,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Octubre"
+      "observaciones": "Pendiente de ejecución desde Octubre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 219,
@@ -4746,7 +4964,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Diciembre"
+      "observaciones": "Pendiente de ejecución desde Diciembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 220,
@@ -4763,7 +4982,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 221,
@@ -4780,7 +5000,8 @@
       "mes_ejecucion": 4,
       "taller": "BSAS",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Abril (Origen: Marzo)"
+      "observaciones": "Ejecutado en Abril (Origen: Marzo)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 222,
@@ -4797,7 +5018,8 @@
       "mes_ejecucion": 6,
       "taller": "CIUD",
       "estado": "ADELANTADO",
-      "observaciones": "Ejecutado por adelantado en Junio (Programado: Julio)"
+      "observaciones": "Ejecutado por adelantado en Junio (Programado: Julio)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 223,
@@ -4814,7 +5036,8 @@
       "mes_ejecucion": 6,
       "taller": "CIUD",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 02/06/2026"
+      "observaciones": "Ejecutado a tiempo en 02/06/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 224,
@@ -4831,7 +5054,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Diciembre"
+      "observaciones": "Pendiente de ejecución desde Diciembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 225,
@@ -4848,7 +5072,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 226,
@@ -4865,7 +5090,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 227,
@@ -4882,7 +5108,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 228,
@@ -4899,7 +5126,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 229,
@@ -4916,7 +5144,8 @@
       "mes_ejecucion": 2,
       "taller": "MNZA",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Febrero (Origen: Enero)"
+      "observaciones": "Ejecutado en Febrero (Origen: Enero)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 230,
@@ -4933,7 +5162,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Diciembre"
+      "observaciones": "Pendiente de ejecución desde Diciembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 231,
@@ -4950,7 +5180,8 @@
       "mes_ejecucion": 4,
       "taller": "BSAS",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Abril (Origen: Marzo)"
+      "observaciones": "Ejecutado en Abril (Origen: Marzo)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 232,
@@ -4968,7 +5199,8 @@
       "mes_ejecucion": 5,
       "taller": "CIUD",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Mayo (Origen: Enero)"
+      "observaciones": "Ejecutado en Mayo (Origen: Enero)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 233,
@@ -4985,7 +5217,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Octubre"
+      "observaciones": "Pendiente de ejecución desde Octubre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 234,
@@ -5002,7 +5235,8 @@
       "mes_ejecucion": 3,
       "taller": "BSAS",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Marzo (Origen: Enero)"
+      "observaciones": "Ejecutado en Marzo (Origen: Enero)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 235,
@@ -5019,7 +5253,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Septiembre"
+      "observaciones": "Pendiente de ejecución desde Septiembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 236,
@@ -5036,7 +5271,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 237,
@@ -5053,7 +5289,8 @@
       "mes_ejecucion": 3,
       "taller": "BSAS",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Marzo (Origen: Febrero)"
+      "observaciones": "Ejecutado en Marzo (Origen: Febrero)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 238,
@@ -5070,7 +5307,8 @@
       "mes_ejecucion": 4,
       "taller": "SRAF",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 22/04/2026"
+      "observaciones": "Ejecutado a tiempo en 22/04/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 239,
@@ -5087,7 +5325,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 240,
@@ -5104,7 +5343,8 @@
       "mes_ejecucion": 6,
       "taller": "CIUD",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 22/06/2026"
+      "observaciones": "Ejecutado a tiempo en 22/06/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 241,
@@ -5121,7 +5361,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 242,
@@ -5138,7 +5379,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 243,
@@ -5155,7 +5397,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Octubre"
+      "observaciones": "Pendiente de ejecución desde Octubre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 244,
@@ -5172,7 +5415,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Abril"
+      "observaciones": "Pendiente de ejecución desde Abril",
+      "tiene_orden_realizado": false
     },
     {
       "id": 245,
@@ -5189,7 +5433,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 246,
@@ -5206,7 +5451,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 247,
@@ -5223,7 +5469,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 248,
@@ -5241,7 +5488,8 @@
       "mes_ejecucion": 2,
       "taller": "SRAF",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Febrero (Origen: Enero)"
+      "observaciones": "Ejecutado en Febrero (Origen: Enero)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 249,
@@ -5259,7 +5507,8 @@
       "mes_ejecucion": 5,
       "taller": "SRAF",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 26/05/2026"
+      "observaciones": "Ejecutado a tiempo en 26/05/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 250,
@@ -5277,7 +5526,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Septiembre"
+      "observaciones": "Pendiente de ejecución desde Septiembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 251,
@@ -5294,7 +5544,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 252,
@@ -5311,7 +5562,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 253,
@@ -5328,7 +5580,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 254,
@@ -5345,7 +5598,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 255,
@@ -5362,7 +5616,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 256,
@@ -5379,7 +5634,8 @@
       "mes_ejecucion": 6,
       "taller": "CIUD",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 03/06/2026"
+      "observaciones": "Ejecutado a tiempo en 03/06/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 257,
@@ -5396,7 +5652,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Abril"
+      "observaciones": "Pendiente de ejecución desde Abril",
+      "tiene_orden_realizado": false
     },
     {
       "id": 258,
@@ -5413,7 +5670,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 259,
@@ -5430,7 +5688,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 260,
@@ -5447,7 +5706,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 261,
@@ -5464,7 +5724,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Noviembre"
+      "observaciones": "Pendiente de ejecución desde Noviembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 262,
@@ -5481,7 +5742,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Marzo"
+      "observaciones": "Pendiente de ejecución desde Marzo",
+      "tiene_orden_realizado": false
     },
     {
       "id": 263,
@@ -5498,7 +5760,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 264,
@@ -5515,7 +5778,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 265,
@@ -5532,7 +5796,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 266,
@@ -5549,7 +5814,8 @@
       "mes_ejecucion": 7,
       "taller": "CIUD",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Julio (Origen: Mayo)"
+      "observaciones": "Ejecutado en Julio (Origen: Mayo)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 267,
@@ -5566,7 +5832,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 268,
@@ -5583,7 +5850,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 269,
@@ -5600,7 +5868,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Abril"
+      "observaciones": "Pendiente de ejecución desde Abril",
+      "tiene_orden_realizado": false
     },
     {
       "id": 270,
@@ -5617,7 +5886,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 271,
@@ -5634,7 +5904,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 272,
@@ -5652,7 +5923,8 @@
       "mes_ejecucion": 4,
       "taller": "BSAS",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Abril (Origen: Enero)"
+      "observaciones": "Ejecutado en Abril (Origen: Enero)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 273,
@@ -5670,7 +5942,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Septiembre"
+      "observaciones": "Pendiente de ejecución desde Septiembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 274,
@@ -5687,7 +5960,8 @@
       "mes_ejecucion": 6,
       "taller": "CIUD",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Junio (Origen: Mayo)"
+      "observaciones": "Ejecutado en Junio (Origen: Mayo)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 275,
@@ -5704,7 +5978,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 276,
@@ -5721,7 +5996,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Marzo"
+      "observaciones": "Pendiente de ejecución desde Marzo",
+      "tiene_orden_realizado": false
     },
     {
       "id": 277,
@@ -5738,7 +6014,8 @@
       "mes_ejecucion": 3,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 26/03/2026"
+      "observaciones": "Ejecutado a tiempo en 26/03/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 278,
@@ -5755,7 +6032,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Octubre"
+      "observaciones": "Pendiente de ejecución desde Octubre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 279,
@@ -5772,7 +6050,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Enero"
+      "observaciones": "Pendiente de ejecución desde Enero",
+      "tiene_orden_realizado": false
     },
     {
       "id": 280,
@@ -5789,7 +6068,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Marzo"
+      "observaciones": "Pendiente de ejecución desde Marzo",
+      "tiene_orden_realizado": false
     },
     {
       "id": 281,
@@ -5806,7 +6086,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 282,
@@ -5823,7 +6104,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Septiembre"
+      "observaciones": "Pendiente de ejecución desde Septiembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 283,
@@ -5840,7 +6122,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Octubre"
+      "observaciones": "Pendiente de ejecución desde Octubre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 284,
@@ -5857,7 +6140,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Mayo"
+      "observaciones": "Pendiente de ejecución desde Mayo",
+      "tiene_orden_realizado": false
     },
     {
       "id": 285,
@@ -5874,7 +6158,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 286,
@@ -5891,7 +6176,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 287,
@@ -5908,7 +6194,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 288,
@@ -5925,7 +6212,8 @@
       "mes_ejecucion": 1,
       "taller": "BSAS",
       "estado": "ADELANTADO",
-      "observaciones": "Ejecutado por adelantado en Enero (Programado: Febrero)"
+      "observaciones": "Ejecutado por adelantado en Enero (Programado: Febrero)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 289,
@@ -5942,7 +6230,8 @@
       "mes_ejecucion": 7,
       "taller": "CIUD",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Julio (Origen: Junio)"
+      "observaciones": "Ejecutado en Julio (Origen: Junio)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 290,
@@ -5959,7 +6248,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 291,
@@ -5976,7 +6266,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 292,
@@ -5993,7 +6284,8 @@
       "mes_ejecucion": 5,
       "taller": "CIUD",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 08/05/2026"
+      "observaciones": "Ejecutado a tiempo en 08/05/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 293,
@@ -6010,7 +6302,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 294,
@@ -6027,7 +6320,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 295,
@@ -6044,7 +6338,8 @@
       "mes_ejecucion": 6,
       "taller": "CIUD",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Junio (Origen: Marzo)"
+      "observaciones": "Ejecutado en Junio (Origen: Marzo)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 296,
@@ -6061,7 +6356,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 297,
@@ -6078,7 +6374,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Noviembre"
+      "observaciones": "Pendiente de ejecución desde Noviembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 298,
@@ -6095,7 +6392,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 299,
@@ -6112,7 +6410,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 300,
@@ -6129,7 +6428,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 301,
@@ -6146,7 +6446,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 302,
@@ -6163,7 +6464,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 303,
@@ -6180,7 +6482,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 304,
@@ -6197,7 +6500,8 @@
       "mes_ejecucion": 5,
       "taller": "CIUD",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Mayo (Origen: Febrero)"
+      "observaciones": "Ejecutado en Mayo (Origen: Febrero)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 305,
@@ -6214,7 +6518,8 @@
       "mes_ejecucion": 6,
       "taller": "CIUD",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Junio (Origen: Mayo)"
+      "observaciones": "Ejecutado en Junio (Origen: Mayo)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 306,
@@ -6231,7 +6536,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 307,
@@ -6249,7 +6555,8 @@
       "mes_ejecucion": 1,
       "taller": "SRAF",
       "estado": "ADELANTADO",
-      "observaciones": "Ejecutado por adelantado en Enero (Programado: Febrero)"
+      "observaciones": "Ejecutado por adelantado en Enero (Programado: Febrero)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 308,
@@ -6267,7 +6574,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 309,
@@ -6285,7 +6593,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 310,
@@ -6303,7 +6612,8 @@
       "mes_ejecucion": 6,
       "taller": "MNZA",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Junio (Origen: Marzo)"
+      "observaciones": "Ejecutado en Junio (Origen: Marzo)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 311,
@@ -6321,7 +6631,8 @@
       "mes_ejecucion": 5,
       "taller": "SRAF",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 07/05/2026"
+      "observaciones": "Ejecutado a tiempo en 07/05/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 312,
@@ -6339,7 +6650,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Octubre"
+      "observaciones": "Pendiente de ejecución desde Octubre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 313,
@@ -6357,7 +6669,8 @@
       "mes_ejecucion": 6,
       "taller": "SRAF",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Junio (Origen: Marzo)"
+      "observaciones": "Ejecutado en Junio (Origen: Marzo)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 314,
@@ -6375,7 +6688,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 315,
@@ -6393,7 +6707,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 316,
@@ -6411,7 +6726,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Septiembre"
+      "observaciones": "Pendiente de ejecución desde Septiembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 317,
@@ -6429,7 +6745,8 @@
       "mes_ejecucion": 6,
       "taller": "SRAF",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 18/06/2026"
+      "observaciones": "Ejecutado a tiempo en 18/06/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 318,
@@ -6447,7 +6764,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Septiembre"
+      "observaciones": "Pendiente de ejecución desde Septiembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 319,
@@ -6465,7 +6783,8 @@
       "mes_ejecucion": 2,
       "taller": "MNZA",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 27/02/2026"
+      "observaciones": "Ejecutado a tiempo en 27/02/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 320,
@@ -6483,7 +6802,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 321,
@@ -6501,7 +6821,8 @@
       "mes_ejecucion": 5,
       "taller": "MNZA",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Mayo (Origen: Febrero)"
+      "observaciones": "Ejecutado en Mayo (Origen: Febrero)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 322,
@@ -6519,7 +6840,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Septiembre"
+      "observaciones": "Pendiente de ejecución desde Septiembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 323,
@@ -6536,7 +6858,8 @@
       "mes_ejecucion": 5,
       "taller": "MNZA",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 15/05/2026"
+      "observaciones": "Ejecutado a tiempo en 15/05/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 324,
@@ -6553,7 +6876,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 325,
@@ -6570,7 +6894,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 326,
@@ -6587,7 +6912,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 327,
@@ -6604,7 +6930,8 @@
       "mes_ejecucion": 4,
       "taller": "MNZA",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Abril (Origen: Enero)"
+      "observaciones": "Ejecutado en Abril (Origen: Enero)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 328,
@@ -6621,7 +6948,8 @@
       "mes_ejecucion": 7,
       "taller": "MNZA",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Julio (Origen: Junio)"
+      "observaciones": "Ejecutado en Julio (Origen: Junio)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 329,
@@ -6638,7 +6966,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 330,
@@ -6655,7 +6984,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Septiembre"
+      "observaciones": "Pendiente de ejecución desde Septiembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 331,
@@ -6672,7 +7002,8 @@
       "mes_ejecucion": 5,
       "taller": "SRAF",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Mayo (Origen: Febrero)"
+      "observaciones": "Ejecutado en Mayo (Origen: Febrero)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 332,
@@ -6689,7 +7020,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Mayo"
+      "observaciones": "Pendiente de ejecución desde Mayo",
+      "tiene_orden_realizado": false
     },
     {
       "id": 333,
@@ -6706,7 +7038,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Noviembre"
+      "observaciones": "Pendiente de ejecución desde Noviembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 334,
@@ -6723,7 +7056,8 @@
       "mes_ejecucion": 6,
       "taller": "CIUD",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 11/06/2026"
+      "observaciones": "Ejecutado a tiempo en 11/06/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 335,
@@ -6740,7 +7074,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 336,
@@ -6757,7 +7092,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Noviembre"
+      "observaciones": "Pendiente de ejecución desde Noviembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 337,
@@ -6774,7 +7110,8 @@
       "mes_ejecucion": 3,
       "taller": "BSAS",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Marzo (Origen: Febrero)"
+      "observaciones": "Ejecutado en Marzo (Origen: Febrero)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 338,
@@ -6791,7 +7128,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 339,
@@ -6808,7 +7146,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 340,
@@ -6825,7 +7164,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 341,
@@ -6843,7 +7183,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Diciembre"
+      "observaciones": "Pendiente de ejecución desde Diciembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 342,
@@ -6861,7 +7202,8 @@
       "mes_ejecucion": 1,
       "taller": "MNZA",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 21/01/2026"
+      "observaciones": "Ejecutado a tiempo en 21/01/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 343,
@@ -6879,7 +7221,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Octubre"
+      "observaciones": "Pendiente de ejecución desde Octubre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 344,
@@ -6897,7 +7240,8 @@
       "mes_ejecucion": 1,
       "taller": "SRAF",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 06/01/2026"
+      "observaciones": "Ejecutado a tiempo en 06/01/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 345,
@@ -6915,7 +7259,8 @@
       "mes_ejecucion": 5,
       "taller": "SRAF",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Mayo (Origen: Enero)"
+      "observaciones": "Ejecutado en Mayo (Origen: Enero)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 346,
@@ -6933,7 +7278,8 @@
       "mes_ejecucion": 7,
       "taller": "SRAF",
       "estado": "ADELANTADO",
-      "observaciones": "Ejecutado por adelantado en Julio (Programado: Septiembre)"
+      "observaciones": "Ejecutado por adelantado en Julio (Programado: Septiembre)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 347,
@@ -6951,7 +7297,8 @@
       "mes_ejecucion": 3,
       "taller": "BSAS",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Marzo (Origen: Enero)"
+      "observaciones": "Ejecutado en Marzo (Origen: Enero)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 348,
@@ -6969,7 +7316,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Octubre"
+      "observaciones": "Pendiente de ejecución desde Octubre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 349,
@@ -6986,7 +7334,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Mayo"
+      "observaciones": "Pendiente de ejecución desde Mayo",
+      "tiene_orden_realizado": false
     },
     {
       "id": 350,
@@ -7003,7 +7352,8 @@
       "mes_ejecucion": 6,
       "taller": "CIUD",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 23/06/2026"
+      "observaciones": "Ejecutado a tiempo en 23/06/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 351,
@@ -7020,7 +7370,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Diciembre"
+      "observaciones": "Pendiente de ejecución desde Diciembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 352,
@@ -7037,7 +7388,8 @@
       "mes_ejecucion": 6,
       "taller": "CIUD",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 10/06/2026"
+      "observaciones": "Ejecutado a tiempo en 10/06/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 353,
@@ -7054,7 +7406,8 @@
       "mes_ejecucion": 4,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 01/04/2026"
+      "observaciones": "Ejecutado a tiempo en 01/04/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 354,
@@ -7071,7 +7424,8 @@
       "mes_ejecucion": 4,
       "taller": "BSAS",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Abril (Origen: Marzo)"
+      "observaciones": "Ejecutado en Abril (Origen: Marzo)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 355,
@@ -7088,7 +7442,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Marzo"
+      "observaciones": "Pendiente de ejecución desde Marzo",
+      "tiene_orden_realizado": false
     },
     {
       "id": 356,
@@ -7105,7 +7460,8 @@
       "mes_ejecucion": 6,
       "taller": "CIUD",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 23/06/2026"
+      "observaciones": "Ejecutado a tiempo en 23/06/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 357,
@@ -7122,7 +7478,8 @@
       "mes_ejecucion": 6,
       "taller": "CIUD",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 09/06/2026"
+      "observaciones": "Ejecutado a tiempo en 09/06/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 358,
@@ -7139,7 +7496,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 359,
@@ -7156,7 +7514,8 @@
       "mes_ejecucion": 6,
       "taller": "CIUD",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Junio (Origen: Mayo)"
+      "observaciones": "Ejecutado en Junio (Origen: Mayo)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 360,
@@ -7173,7 +7532,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 361,
@@ -7190,7 +7550,8 @@
       "mes_ejecucion": 3,
       "taller": "BSAS",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Marzo (Origen: Febrero)"
+      "observaciones": "Ejecutado en Marzo (Origen: Febrero)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 362,
@@ -7207,7 +7568,8 @@
       "mes_ejecucion": 6,
       "taller": "CIUD",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Junio (Origen: Mayo)"
+      "observaciones": "Ejecutado en Junio (Origen: Mayo)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 363,
@@ -7224,7 +7586,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 364,
@@ -7241,7 +7604,8 @@
       "mes_ejecucion": 6,
       "taller": "CIUD",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Junio (Origen: Mayo)"
+      "observaciones": "Ejecutado en Junio (Origen: Mayo)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 365,
@@ -7258,7 +7622,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 366,
@@ -7276,7 +7641,8 @@
       "mes_ejecucion": 3,
       "taller": "MNZA",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Marzo (Origen: Enero)"
+      "observaciones": "Ejecutado en Marzo (Origen: Enero)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 367,
@@ -7294,7 +7660,8 @@
       "mes_ejecucion": 7,
       "taller": "MNZA",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 20/07/2026"
+      "observaciones": "Ejecutado a tiempo en 20/07/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 368,
@@ -7312,7 +7679,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Septiembre"
+      "observaciones": "Pendiente de ejecución desde Septiembre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 369,
@@ -7329,7 +7697,8 @@
       "mes_ejecucion": 4,
       "taller": "BSAS",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Abril (Origen: Marzo)"
+      "observaciones": "Ejecutado en Abril (Origen: Marzo)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 370,
@@ -7346,7 +7715,8 @@
       "mes_ejecucion": 5,
       "taller": "CIUD",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Mayo (Origen: Marzo)"
+      "observaciones": "Ejecutado en Mayo (Origen: Marzo)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 371,
@@ -7363,7 +7733,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Abril"
+      "observaciones": "Pendiente de ejecución desde Abril",
+      "tiene_orden_realizado": false
     },
     {
       "id": 372,
@@ -7380,7 +7751,8 @@
       "mes_ejecucion": 6,
       "taller": "MNZA",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Junio (Origen: Febrero)"
+      "observaciones": "Ejecutado en Junio (Origen: Febrero)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 373,
@@ -7397,7 +7769,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 374,
@@ -7414,7 +7787,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio"
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 375,
@@ -7431,7 +7805,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 376,
@@ -7448,7 +7823,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Octubre"
+      "observaciones": "Pendiente de ejecución desde Octubre",
+      "tiene_orden_realizado": false
     },
     {
       "id": 377,
@@ -7466,7 +7842,8 @@
       "mes_ejecucion": 6,
       "taller": "MNZA",
       "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Junio (Origen: Abril)"
+      "observaciones": "Ejecutado en Junio (Origen: Abril)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 378,
@@ -7484,7 +7861,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio"
+      "observaciones": "Pendiente de ejecución desde Junio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 379,
@@ -7502,7 +7880,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Enero"
+      "observaciones": "Pendiente de ejecución desde Enero",
+      "tiene_orden_realizado": false
     },
     {
       "id": 380,
@@ -7520,7 +7899,8 @@
       "mes_ejecucion": null,
       "taller": null,
       "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto"
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 381,
@@ -7537,7 +7917,8 @@
       "mes_ejecucion": 1,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Enero (09/01/2026)"
+      "observaciones": "Ejecutado en Enero (09/01/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 382,
@@ -7554,7 +7935,8 @@
       "mes_ejecucion": 1,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Enero (30/01/2026)"
+      "observaciones": "Ejecutado en Enero (30/01/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 383,
@@ -7571,7 +7953,8 @@
       "mes_ejecucion": 1,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Enero (08/01/2026)"
+      "observaciones": "Ejecutado en Enero (08/01/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 384,
@@ -7588,7 +7971,8 @@
       "mes_ejecucion": 1,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Enero (07/01/2026)"
+      "observaciones": "Ejecutado en Enero (07/01/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 385,
@@ -7605,7 +7989,8 @@
       "mes_ejecucion": 1,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Enero (19/01/2026)"
+      "observaciones": "Ejecutado en Enero (19/01/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 386,
@@ -7622,7 +8007,8 @@
       "mes_ejecucion": 4,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Abril (15/04/2026)"
+      "observaciones": "Ejecutado en Abril (15/04/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 387,
@@ -7639,7 +8025,8 @@
       "mes_ejecucion": 3,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Marzo (21/03/2026)"
+      "observaciones": "Ejecutado en Marzo (21/03/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 388,
@@ -7656,7 +8043,8 @@
       "mes_ejecucion": 1,
       "taller": "MNZA",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Enero (28/01/2026)"
+      "observaciones": "Ejecutado en Enero (28/01/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 389,
@@ -7673,7 +8061,8 @@
       "mes_ejecucion": 4,
       "taller": "MNZA",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Abril (20/04/2026)"
+      "observaciones": "Ejecutado en Abril (20/04/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 390,
@@ -7691,7 +8080,8 @@
       "mes_ejecucion": 7,
       "taller": "SRAF",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Julio (21/07/2026)"
+      "observaciones": "Ejecutado en Julio (21/07/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 391,
@@ -7708,7 +8098,8 @@
       "mes_ejecucion": 2,
       "taller": "MNZA",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Febrero (04/02/2026)"
+      "observaciones": "Ejecutado en Febrero (04/02/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 392,
@@ -7725,7 +8116,8 @@
       "mes_ejecucion": 1,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Enero (15/01/2026)"
+      "observaciones": "Ejecutado en Enero (15/01/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 393,
@@ -7742,7 +8134,8 @@
       "mes_ejecucion": 1,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Enero (02/01/2026)"
+      "observaciones": "Ejecutado en Enero (02/01/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 394,
@@ -7759,7 +8152,8 @@
       "mes_ejecucion": 1,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Enero (07/01/2026)"
+      "observaciones": "Ejecutado en Enero (07/01/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 395,
@@ -7776,7 +8170,8 @@
       "mes_ejecucion": 2,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Febrero (12/02/2026)"
+      "observaciones": "Ejecutado en Febrero (12/02/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 396,
@@ -7793,7 +8188,8 @@
       "mes_ejecucion": 1,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Enero (20/01/2026)"
+      "observaciones": "Ejecutado en Enero (20/01/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 397,
@@ -7810,7 +8206,8 @@
       "mes_ejecucion": 5,
       "taller": "CIUD",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Mayo (19/05/2026)"
+      "observaciones": "Ejecutado en Mayo (19/05/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 398,
@@ -7827,7 +8224,8 @@
       "mes_ejecucion": 1,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Enero (09/01/2026)"
+      "observaciones": "Ejecutado en Enero (09/01/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 399,
@@ -7844,7 +8242,8 @@
       "mes_ejecucion": 1,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Enero (02/01/2026)"
+      "observaciones": "Ejecutado en Enero (02/01/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 400,
@@ -7861,7 +8260,8 @@
       "mes_ejecucion": 1,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Enero (30/01/2026)"
+      "observaciones": "Ejecutado en Enero (30/01/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 401,
@@ -7878,7 +8278,8 @@
       "mes_ejecucion": 1,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Enero (30/01/2026)"
+      "observaciones": "Ejecutado en Enero (30/01/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 402,
@@ -7895,7 +8296,8 @@
       "mes_ejecucion": 1,
       "taller": "MNZA",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Enero (12/01/2026)"
+      "observaciones": "Ejecutado en Enero (12/01/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 403,
@@ -7912,7 +8314,8 @@
       "mes_ejecucion": 1,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Enero (12/01/2026)"
+      "observaciones": "Ejecutado en Enero (12/01/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 404,
@@ -7929,7 +8332,8 @@
       "mes_ejecucion": 1,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Enero (07/01/2026)"
+      "observaciones": "Ejecutado en Enero (07/01/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 405,
@@ -7946,7 +8350,8 @@
       "mes_ejecucion": 1,
       "taller": "MNZA",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Enero (07/01/2026)"
+      "observaciones": "Ejecutado en Enero (07/01/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 406,
@@ -7964,7 +8369,8 @@
       "mes_ejecucion": 1,
       "taller": "MNZA",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Enero (31/01/2026)"
+      "observaciones": "Ejecutado en Enero (31/01/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 407,
@@ -7982,7 +8388,8 @@
       "mes_ejecucion": 4,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Abril (16/04/2026)"
+      "observaciones": "Ejecutado en Abril (16/04/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 408,
@@ -7999,7 +8406,8 @@
       "mes_ejecucion": 1,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Enero (26/01/2026)"
+      "observaciones": "Ejecutado en Enero (26/01/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 409,
@@ -8016,7 +8424,8 @@
       "mes_ejecucion": 1,
       "taller": "MNZA",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Enero (22/01/2026)"
+      "observaciones": "Ejecutado en Enero (22/01/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 410,
@@ -8033,7 +8442,8 @@
       "mes_ejecucion": 2,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Febrero (18/02/2026)"
+      "observaciones": "Ejecutado en Febrero (18/02/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 411,
@@ -8050,7 +8460,8 @@
       "mes_ejecucion": 5,
       "taller": "MNZA",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Mayo (29/05/2026)"
+      "observaciones": "Ejecutado en Mayo (29/05/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 412,
@@ -8067,7 +8478,8 @@
       "mes_ejecucion": 1,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Enero (06/01/2026)"
+      "observaciones": "Ejecutado en Enero (06/01/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 413,
@@ -8084,7 +8496,8 @@
       "mes_ejecucion": 1,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Enero (12/01/2026)"
+      "observaciones": "Ejecutado en Enero (12/01/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 414,
@@ -8101,7 +8514,8 @@
       "mes_ejecucion": 1,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Enero (15/01/2026)"
+      "observaciones": "Ejecutado en Enero (15/01/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 415,
@@ -8118,7 +8532,8 @@
       "mes_ejecucion": 2,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Febrero (13/02/2026)"
+      "observaciones": "Ejecutado en Febrero (13/02/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 416,
@@ -8135,7 +8550,8 @@
       "mes_ejecucion": 1,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Enero (28/01/2026)"
+      "observaciones": "Ejecutado en Enero (28/01/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 417,
@@ -8152,7 +8568,8 @@
       "mes_ejecucion": 2,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Febrero (02/02/2026)"
+      "observaciones": "Ejecutado en Febrero (02/02/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 418,
@@ -8170,7 +8587,8 @@
       "mes_ejecucion": 1,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Enero (14/01/2026)"
+      "observaciones": "Ejecutado en Enero (14/01/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 419,
@@ -8187,7 +8605,8 @@
       "mes_ejecucion": 1,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Enero (29/01/2026)"
+      "observaciones": "Ejecutado en Enero (29/01/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 420,
@@ -8204,7 +8623,8 @@
       "mes_ejecucion": 1,
       "taller": "MNZA",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Enero (09/01/2026)"
+      "observaciones": "Ejecutado en Enero (09/01/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 421,
@@ -8222,7 +8642,8 @@
       "mes_ejecucion": 1,
       "taller": "SRAF",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Enero (27/01/2026)"
+      "observaciones": "Ejecutado en Enero (27/01/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 422,
@@ -8240,7 +8661,8 @@
       "mes_ejecucion": 4,
       "taller": "SRAF",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Abril (28/04/2026)"
+      "observaciones": "Ejecutado en Abril (28/04/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 423,
@@ -8258,7 +8680,8 @@
       "mes_ejecucion": 7,
       "taller": "MNZA",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Julio (13/07/2026)"
+      "observaciones": "Ejecutado en Julio (13/07/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 424,
@@ -8276,7 +8699,8 @@
       "mes_ejecucion": 5,
       "taller": "MNZA",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Mayo (04/05/2026)"
+      "observaciones": "Ejecutado en Mayo (04/05/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 425,
@@ -8294,7 +8718,8 @@
       "mes_ejecucion": 7,
       "taller": "MNZA",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Julio (23/07/2026)"
+      "observaciones": "Ejecutado en Julio (23/07/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 426,
@@ -8312,7 +8737,8 @@
       "mes_ejecucion": 4,
       "taller": "SRAF",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Abril (06/04/2026)"
+      "observaciones": "Ejecutado en Abril (06/04/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 427,
@@ -8330,7 +8756,8 @@
       "mes_ejecucion": 6,
       "taller": "SRAF",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Junio (25/06/2026)"
+      "observaciones": "Ejecutado en Junio (25/06/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 428,
@@ -8347,7 +8774,8 @@
       "mes_ejecucion": 1,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Enero (28/01/2026)"
+      "observaciones": "Ejecutado en Enero (28/01/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 429,
@@ -8364,7 +8792,8 @@
       "mes_ejecucion": 1,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Enero (30/01/2026)"
+      "observaciones": "Ejecutado en Enero (30/01/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 430,
@@ -8381,7 +8810,8 @@
       "mes_ejecucion": 2,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Febrero (12/02/2026)"
+      "observaciones": "Ejecutado en Febrero (12/02/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 431,
@@ -8398,7 +8828,8 @@
       "mes_ejecucion": 1,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Enero (13/01/2026)"
+      "observaciones": "Ejecutado en Enero (13/01/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 432,
@@ -8416,7 +8847,8 @@
       "mes_ejecucion": 2,
       "taller": "SRAF",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Febrero (26/02/2026)"
+      "observaciones": "Ejecutado en Febrero (26/02/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 433,
@@ -8434,7 +8866,8 @@
       "mes_ejecucion": 5,
       "taller": "MNZA",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Mayo (18/05/2026)"
+      "observaciones": "Ejecutado en Mayo (18/05/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 434,
@@ -8451,7 +8884,8 @@
       "mes_ejecucion": 3,
       "taller": "SRAF",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Marzo (05/03/2026)"
+      "observaciones": "Ejecutado en Marzo (05/03/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 435,
@@ -8468,7 +8902,8 @@
       "mes_ejecucion": 3,
       "taller": "MNZA",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Marzo (09/03/2026)"
+      "observaciones": "Ejecutado en Marzo (09/03/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 436,
@@ -8485,7 +8920,8 @@
       "mes_ejecucion": 3,
       "taller": "MNZA",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Marzo (09/03/2026)"
+      "observaciones": "Ejecutado en Marzo (09/03/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 437,
@@ -8502,7 +8938,8 @@
       "mes_ejecucion": 3,
       "taller": "MNZA",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Marzo (10/03/2026)"
+      "observaciones": "Ejecutado en Marzo (10/03/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 438,
@@ -8519,7 +8956,8 @@
       "mes_ejecucion": 3,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Marzo (11/03/2026)"
+      "observaciones": "Ejecutado en Marzo (11/03/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 439,
@@ -8537,7 +8975,8 @@
       "mes_ejecucion": 6,
       "taller": "CIUD",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Junio (10/06/2026)"
+      "observaciones": "Ejecutado en Junio (10/06/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 440,
@@ -8554,7 +8993,8 @@
       "mes_ejecucion": 3,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Marzo (23/03/2026)"
+      "observaciones": "Ejecutado en Marzo (23/03/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 441,
@@ -8571,7 +9011,8 @@
       "mes_ejecucion": 4,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Abril (10/04/2026)"
+      "observaciones": "Ejecutado en Abril (10/04/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 442,
@@ -8588,7 +9029,8 @@
       "mes_ejecucion": 4,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Abril (10/04/2026)"
+      "observaciones": "Ejecutado en Abril (10/04/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 443,
@@ -8606,7 +9048,8 @@
       "mes_ejecucion": 7,
       "taller": "CIUD",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Julio (13/07/2026)"
+      "observaciones": "Ejecutado en Julio (13/07/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 444,
@@ -8623,7 +9066,8 @@
       "mes_ejecucion": 4,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Abril (13/04/2026)"
+      "observaciones": "Ejecutado en Abril (13/04/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 445,
@@ -8640,7 +9084,8 @@
       "mes_ejecucion": 4,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Abril (13/04/2026)"
+      "observaciones": "Ejecutado en Abril (13/04/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 446,
@@ -8657,7 +9102,8 @@
       "mes_ejecucion": 4,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Abril (13/04/2026)"
+      "observaciones": "Ejecutado en Abril (13/04/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 447,
@@ -8674,7 +9120,8 @@
       "mes_ejecucion": 4,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Abril (15/04/2026)"
+      "observaciones": "Ejecutado en Abril (15/04/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 448,
@@ -8691,7 +9138,8 @@
       "mes_ejecucion": 4,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Abril (15/04/2026)"
+      "observaciones": "Ejecutado en Abril (15/04/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 449,
@@ -8708,7 +9156,8 @@
       "mes_ejecucion": 4,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Abril (15/04/2026)"
+      "observaciones": "Ejecutado en Abril (15/04/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 450,
@@ -8725,7 +9174,8 @@
       "mes_ejecucion": 4,
       "taller": "MNZA",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Abril (15/04/2026)"
+      "observaciones": "Ejecutado en Abril (15/04/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 451,
@@ -8742,7 +9192,8 @@
       "mes_ejecucion": 4,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Abril (21/04/2026)"
+      "observaciones": "Ejecutado en Abril (21/04/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 452,
@@ -8759,7 +9210,8 @@
       "mes_ejecucion": 4,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Abril (22/04/2026)"
+      "observaciones": "Ejecutado en Abril (22/04/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 453,
@@ -8776,7 +9228,8 @@
       "mes_ejecucion": 4,
       "taller": "MNZA",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Abril (29/04/2026)"
+      "observaciones": "Ejecutado en Abril (29/04/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 454,
@@ -8793,7 +9246,8 @@
       "mes_ejecucion": 5,
       "taller": "CIUD",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Mayo (06/05/2026)"
+      "observaciones": "Ejecutado en Mayo (06/05/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 455,
@@ -8810,7 +9264,8 @@
       "mes_ejecucion": 5,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Mayo (06/05/2026)"
+      "observaciones": "Ejecutado en Mayo (06/05/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 456,
@@ -8827,7 +9282,8 @@
       "mes_ejecucion": 5,
       "taller": "CIUD",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Mayo (07/05/2026)"
+      "observaciones": "Ejecutado en Mayo (07/05/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 457,
@@ -8845,7 +9301,8 @@
       "mes_ejecucion": 7,
       "taller": "SRAF",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Julio (22/07/2026)"
+      "observaciones": "Ejecutado en Julio (22/07/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 458,
@@ -8862,7 +9319,8 @@
       "mes_ejecucion": 5,
       "taller": "BSAS",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Mayo (11/05/2026)"
+      "observaciones": "Ejecutado en Mayo (11/05/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 459,
@@ -8879,7 +9337,8 @@
       "mes_ejecucion": 5,
       "taller": "CIUD",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Mayo (12/05/2026)"
+      "observaciones": "Ejecutado en Mayo (12/05/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 460,
@@ -8896,7 +9355,8 @@
       "mes_ejecucion": 5,
       "taller": "CIUD",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Mayo (14/05/2026)"
+      "observaciones": "Ejecutado en Mayo (14/05/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 461,
@@ -8913,7 +9373,8 @@
       "mes_ejecucion": 5,
       "taller": "CIUD",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Mayo (14/05/2026)"
+      "observaciones": "Ejecutado en Mayo (14/05/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 462,
@@ -8930,7 +9391,8 @@
       "mes_ejecucion": 5,
       "taller": "MNZA",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Mayo (14/05/2026)"
+      "observaciones": "Ejecutado en Mayo (14/05/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 463,
@@ -8947,7 +9409,8 @@
       "mes_ejecucion": 6,
       "taller": "CIUD",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Junio (19/06/2026)"
+      "observaciones": "Ejecutado en Junio (19/06/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 464,
@@ -8964,7 +9427,8 @@
       "mes_ejecucion": 5,
       "taller": "CIUD",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Mayo (20/05/2026)"
+      "observaciones": "Ejecutado en Mayo (20/05/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 465,
@@ -8981,7 +9445,8 @@
       "mes_ejecucion": 5,
       "taller": "CIUD",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Mayo (20/05/2026)"
+      "observaciones": "Ejecutado en Mayo (20/05/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 466,
@@ -8998,7 +9463,8 @@
       "mes_ejecucion": 5,
       "taller": "CIUD",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Mayo (21/05/2026)"
+      "observaciones": "Ejecutado en Mayo (21/05/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 467,
@@ -9016,7 +9482,8 @@
       "mes_ejecucion": 5,
       "taller": "CIUD",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Mayo (26/05/2026)"
+      "observaciones": "Ejecutado en Mayo (26/05/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 468,
@@ -9033,7 +9500,8 @@
       "mes_ejecucion": 5,
       "taller": "CIUD",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Mayo (26/05/2026)"
+      "observaciones": "Ejecutado en Mayo (26/05/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 469,
@@ -9050,7 +9518,8 @@
       "mes_ejecucion": 5,
       "taller": "MNZA",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Mayo (26/05/2026)"
+      "observaciones": "Ejecutado en Mayo (26/05/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 470,
@@ -9067,7 +9536,8 @@
       "mes_ejecucion": 5,
       "taller": "CIUD",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Mayo (27/05/2026)"
+      "observaciones": "Ejecutado en Mayo (27/05/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 471,
@@ -9084,7 +9554,8 @@
       "mes_ejecucion": 5,
       "taller": "MNZA",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Mayo (30/05/2026)"
+      "observaciones": "Ejecutado en Mayo (30/05/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 472,
@@ -9101,7 +9572,8 @@
       "mes_ejecucion": 6,
       "taller": "SRAF",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Junio (17/06/2026)"
+      "observaciones": "Ejecutado en Junio (17/06/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 473,
@@ -9118,7 +9590,8 @@
       "mes_ejecucion": 6,
       "taller": "CIUD",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Junio (18/06/2026)"
+      "observaciones": "Ejecutado en Junio (18/06/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 474,
@@ -9135,7 +9608,8 @@
       "mes_ejecucion": 7,
       "taller": "CIUD",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Julio (03/07/2026)"
+      "observaciones": "Ejecutado en Julio (03/07/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 475,
@@ -9153,7 +9627,8 @@
       "mes_ejecucion": 7,
       "taller": "MNZA",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Julio (22/07/2026)"
+      "observaciones": "Ejecutado en Julio (22/07/2026)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 476,
@@ -9170,7 +9645,8 @@
       "mes_ejecucion": 1,
       "taller": "Sin Taller",
       "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Enero (-)"
+      "observaciones": "Ejecutado en Enero (-)",
+      "tiene_orden_realizado": true
     }
   ]
 }

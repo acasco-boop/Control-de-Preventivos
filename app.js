@@ -1,4 +1,4 @@
-// App State & Data Management Engine with Clean Monthly Filtering, CdC, Talleres, Mechanic Notes & Modals
+// App State & Data Management Engine with Server Persistence, CC Ascending Sort & Work Order Cross-Verification
 document.addEventListener('DOMContentLoaded', async () => {
     let globalData = {
         centros_de_costo: [],
@@ -15,15 +15,49 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Password required to uncheck ANY completed item
     const UNCHECK_PASSWORD = '4321';
 
-    // Mechanic State persistence via localStorage
+    // Mechanic State persistence (Shared Server API + localStorage fallback)
     let mechanicState = {};
-    try {
-        const savedState = localStorage.getItem('mechanic_state_v1');
-        if (savedState) {
-            mechanicState = JSON.parse(savedState);
+
+    async function loadMechanicState() {
+        try {
+            const resp = await fetch('/api/mechanic_state');
+            if (resp.ok) {
+                mechanicState = await resp.json();
+                localStorage.setItem('mechanic_state_v1', JSON.stringify(mechanicState));
+                return;
+            }
+        } catch (e) {
+            console.warn('Servidor API no respondió para /api/mechanic_state, usando almacenamiento local.');
         }
-    } catch (e) {
-        console.error('Error al leer mechanic_state:', e);
+
+        try {
+            const savedState = localStorage.getItem('mechanic_state_v1');
+            if (savedState) {
+                mechanicState = JSON.parse(savedState);
+            }
+        } catch (e) {
+            console.error('Error al leer mechanic_state local:', e);
+        }
+    }
+
+    async function saveMechanicState() {
+        try {
+            localStorage.setItem('mechanic_state_v1', JSON.stringify(mechanicState));
+        } catch (e) {
+            console.error('Error al guardar mechanic_state en localStorage:', e);
+        }
+
+        try {
+            await fetch('/api/mechanic_state', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(mechanicState)
+            });
+        } catch (e) {
+            console.warn('No se pudo sincronizar el estado del mecánico con el servidor:', e);
+        }
     }
 
     let pendingAction = null; // Store active modal target state
@@ -81,13 +115,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     const passCancelBtn = document.getElementById('passCancelBtn');
     const passOkBtn = document.getElementById('passOkBtn');
 
-    // Load Data
+    // Load Data & Shared State
     try {
+        await loadMechanicState();
         const response = await fetch('data/maintenance_data.json');
         globalData = await response.json();
         initDashboard();
     } catch (error) {
-        console.error('Error al cargar maintenance_data.json:', error);
+        console.error('Error al cargar datos e inicializar dashboard:', error);
     }
 
     function initDashboard() {
@@ -97,14 +132,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         setupEventListeners();
         setupModalEventListeners();
         updateDashboard();
-    }
-
-    function saveMechanicState() {
-        try {
-            localStorage.setItem('mechanic_state_v1', JSON.stringify(mechanicState));
-        } catch (e) {
-            console.error('Error al guardar mechanic_state:', e);
-        }
     }
 
     function getItemCheckState(item) {
@@ -442,12 +469,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 mechanicState[id].checked = true;
                 saveMechanicState();
 
-                targetCheckbox.checked = true;
-                const tr = targetCheckbox.closest('tr');
-                if (tr) {
-                    tr.classList.remove('row-completed-orange');
-                    tr.classList.add(item && item.estado === 'FUERA_DE_TERMINO' ? 'row-completed-orange' : 'row-completed');
-                }
+                updateDashboard();
             }
             confirmModal.classList.remove('show');
             pendingAction = null;
@@ -467,12 +489,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     mechanicState[id].checked = false;
                     saveMechanicState();
 
-                    targetCheckbox.checked = false;
-                    const tr = targetCheckbox.closest('tr');
-                    if (tr) {
-                        tr.classList.remove('row-completed');
-                        tr.classList.remove('row-completed-orange');
-                    }
+                    updateDashboard();
                 }
                 passModal.classList.remove('show');
                 pendingAction = null;
@@ -601,6 +618,18 @@ document.addEventListener('DOMContentLoaded', async () => {
         const selectedMonth = selectedMonthStr === 'ALL' ? 7 : parseInt(selectedMonthStr); // Current month July (7)
 
         const filteredList = getFilteredData();
+
+        // Sort table list ascending (De menor a mayor) by Centro de Costo (A-Z)
+        filteredList.sort((a, b) => {
+            const ccA = (a.centro_costo || '').toLowerCase();
+            const ccB = (b.centro_costo || '').toLowerCase();
+            if (ccA < ccB) return -1;
+            if (ccA > ccB) return 1;
+            if (a.mes_original !== b.mes_original) {
+                return a.mes_original - b.mes_original;
+            }
+            return (a.patente || '').localeCompare(b.patente || '');
+        });
 
         calculateAndRenderKpis(selectedMonth);
         renderCharts();
@@ -788,8 +817,14 @@ document.addEventListener('DOMContentLoaded', async () => {
             const isChecked = getItemCheckState(item);
             const mNote = mechanicState[item.id] ? mechanicState[item.id].note : '';
 
+            // Check work order verification status
+            const hasRealOrder = item.tiene_orden_realizado === true;
+
             if (isChecked) {
-                if (item.estado === 'FUERA_DE_TERMINO') {
+                if (!hasRealOrder) {
+                    // Checked OK BUT missing work order in Excel -> RED Warning Highlight!
+                    tr.classList.add('row-completed-red');
+                } else if (item.estado === 'FUERA_DE_TERMINO') {
                     tr.classList.add('row-completed-orange');
                 } else {
                     tr.classList.add('row-completed');
@@ -801,19 +836,24 @@ document.addEventListener('DOMContentLoaded', async () => {
             const mesOrigName = monthNames[item.mes_original - 1] || 'N/A';
 
             let badgeHtml = '';
-            if (item.estado === 'EN_FECHA') {
+            let obsText = item.observaciones;
+            let obsClass = 'obs-tag';
+
+            if (isChecked && !hasRealOrder) {
+                // RED Warning Badge for missing work order!
+                badgeHtml = `<span class="badge badge-error-orden"><i class="fa-solid fa-triangle-exclamation"></i> Sin Orden en Excel</span>`;
+                obsText = 'Plan mal marcado por no encontrarse en Órdenes de realizado';
+                obsClass = 'obs-tag obs-tag-error';
+            } else if (item.estado === 'EN_FECHA') {
                 badgeHtml = `<span class="badge badge-en-fecha"><i class="fa-solid fa-circle-check"></i> En fecha</span>`;
             } else if (item.estado === 'ADELANTADO') {
                 badgeHtml = `<span class="badge badge-adelantado"><i class="fa-solid fa-bolt-lightning"></i> Adelantado</span>`;
+                obsClass = 'obs-tag obs-tag-highlight';
             } else if (item.estado === 'FUERA_DE_TERMINO') {
                 badgeHtml = `<span class="badge badge-fuera-termino"><i class="fa-solid fa-clock-rotate-left"></i> Fuera de término</span>`;
+                obsClass = 'obs-tag obs-tag-highlight';
             } else {
                 badgeHtml = `<span class="badge badge-pendiente"><i class="fa-solid fa-triangle-exclamation"></i> Pendiente</span>`;
-            }
-
-            let obsClass = 'obs-tag';
-            if (item.estado === 'FUERA_DE_TERMINO' || item.estado === 'ADELANTADO') {
-                obsClass = 'obs-tag obs-tag-highlight';
             }
 
             const tallerProyBadge = item.taller_proyectado 
@@ -836,7 +876,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <td>${tallerProyBadge}</td>
                 <td>${tallerBadge}</td>
                 <td>${fechaEjecFormatted}</td>
-                <td><span class="${obsClass}">${escapeHtml(item.observaciones)}</span></td>
+                <td><span class="${obsClass}">${escapeHtml(obsText)}</span></td>
                 <td>
                     <input type="text" class="mechanic-note-input" data-id="${item.id}" placeholder="Escribir nota del mecánico..." value="${escapeHtml(mNote || '')}">
                 </td>

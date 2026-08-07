@@ -620,6 +620,22 @@ body {
     box-shadow: 0 0 10px var(--accent-orange-glow);
 }
 
+/* Completed Row Styling (RED Warning for Checked items WITHOUT real order in Excel) */
+.data-table tbody tr.row-completed-red {
+    background: rgba(239, 68, 68, 0.12) !important;
+    border-left: 4px solid var(--accent-red);
+}
+
+.data-table tbody tr.row-completed-red td {
+    color: #fecdd3;
+}
+
+.data-table tbody tr.row-completed-red .mechanic-check:checked {
+    background: var(--accent-red);
+    border-color: var(--accent-red);
+    box-shadow: 0 0 10px var(--accent-red-glow);
+}
+
 /* Mechanic Note Input */
 .mechanic-note-input {
     background: rgba(11, 15, 25, 0.7);
@@ -676,6 +692,13 @@ body {
     border: 1px solid rgba(239, 68, 68, 0.3);
 }
 
+.badge-error-orden {
+    background: rgba(239, 68, 68, 0.25);
+    color: #fca5a5;
+    border: 1px solid rgba(239, 68, 68, 0.6);
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.2);
+}
+
 .taller-proy-tag {
     display: inline-flex;
     align-items: center;
@@ -724,6 +747,10 @@ body {
 .obs-tag-highlight {
     color: var(--accent-orange);
     font-weight: 500;
+}
+.obs-tag-error {
+    color: var(--accent-red);
+    font-weight: 600;
 }
 
 /* Modals System */
