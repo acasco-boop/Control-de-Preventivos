@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/api/mechanic_state",
+      "destination": "/api/mechanic_state.js"
+    }
+  ]
+}
