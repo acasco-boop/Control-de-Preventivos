@@ -1,4 +1,4 @@
-// App State & Data Management Engine with Rock-Solid Dual State Sync & Cache-Busting
+// App State & Data Management Engine with Green Realizado Highlighting & Rock-Solid Dual State Sync
 document.addEventListener('DOMContentLoaded', async () => {
     let globalData = {
         centros_de_costo: [],
@@ -836,14 +836,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             const key = String(item.id);
             const mNote = mechanicState[key] ? mechanicState[key].note : '';
 
-            // Check work order verification status
-            const hasRealOrder = item.tiene_orden_realizado === true;
-
             if (isChecked) {
-                if (!hasRealOrder) {
-                    // Checked OK BUT missing work order in Excel -> RED Warning Highlight!
-                    tr.classList.add('row-completed-red');
-                } else if (item.estado === 'FUERA_DE_TERMINO') {
+                if (item.estado === 'FUERA_DE_TERMINO') {
                     tr.classList.add('row-completed-orange');
                 } else {
                     tr.classList.add('row-completed');
@@ -858,19 +852,17 @@ document.addEventListener('DOMContentLoaded', async () => {
             let obsText = item.observaciones;
             let obsClass = 'obs-tag';
 
-            if (isChecked && !hasRealOrder) {
-                // RED Warning Badge for missing work order!
-                badgeHtml = `<span class="badge badge-error-orden"><i class="fa-solid fa-triangle-exclamation"></i> Sin Orden en Excel</span>`;
-                obsText = 'Plan mal marcado por no encontrarse en Órdenes de realizado';
-                obsClass = 'obs-tag obs-tag-error';
-            } else if (item.estado === 'EN_FECHA') {
-                badgeHtml = `<span class="badge badge-en-fecha"><i class="fa-solid fa-circle-check"></i> En fecha</span>`;
-            } else if (item.estado === 'ADELANTADO') {
-                badgeHtml = `<span class="badge badge-adelantado"><i class="fa-solid fa-bolt-lightning"></i> Adelantado</span>`;
-                obsClass = 'obs-tag obs-tag-highlight';
-            } else if (item.estado === 'FUERA_DE_TERMINO') {
-                badgeHtml = `<span class="badge badge-fuera-termino"><i class="fa-solid fa-clock-rotate-left"></i> Fuera de término</span>`;
-                obsClass = 'obs-tag obs-tag-highlight';
+            if (isChecked) {
+                if (item.estado === 'FUERA_DE_TERMINO') {
+                    badgeHtml = `<span class="badge badge-fuera-termino"><i class="fa-solid fa-clock-rotate-left"></i> Fuera de término</span>`;
+                    obsClass = 'obs-tag obs-tag-highlight';
+                } else if (item.estado === 'ADELANTADO') {
+                    badgeHtml = `<span class="badge badge-adelantado"><i class="fa-solid fa-bolt-lightning"></i> Adelantado</span>`;
+                    obsClass = 'obs-tag obs-tag-highlight';
+                } else {
+                    badgeHtml = `<span class="badge badge-en-fecha"><i class="fa-solid fa-circle-check"></i> Realizado</span>`;
+                    obsClass = 'obs-tag';
+                }
             } else {
                 badgeHtml = `<span class="badge badge-pendiente"><i class="fa-solid fa-triangle-exclamation"></i> Pendiente</span>`;
             }
@@ -921,7 +913,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 '&': '&amp;',
                 '<': '&lt;',
                 '>': '&gt;',
-                '"': '&quot;',
+                '"': '&counts;',
                 "'": '&#039;'
             }[m];
         });
