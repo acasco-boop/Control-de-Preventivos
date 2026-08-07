@@ -1,4 +1,4 @@
-// App State & Data Management Engine with Server Persistence, CC Ascending Sort & Work Order Cross-Verification
+// App State & Data Management Engine with Rock-Solid Dual State Sync & Cache-Busting
 document.addEventListener('DOMContentLoaded', async () => {
     let globalData = {
         centros_de_costo: [],
@@ -15,28 +15,41 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Password required to uncheck ANY completed item
     const UNCHECK_PASSWORD = '4321';
 
-    // Mechanic State persistence (Shared Server API + localStorage fallback)
+    // Mechanic State persistence (Dual Sync: Server + LocalStorage)
     let mechanicState = {};
 
     async function loadMechanicState() {
-        try {
-            const resp = await fetch('/api/mechanic_state');
-            if (resp.ok) {
-                mechanicState = await resp.json();
-                localStorage.setItem('mechanic_state_v1', JSON.stringify(mechanicState));
-                return;
-            }
-        } catch (e) {
-            console.warn('Servidor API no respondió para /api/mechanic_state, usando almacenamiento local.');
-        }
-
+        let localState = {};
         try {
             const savedState = localStorage.getItem('mechanic_state_v1');
             if (savedState) {
-                mechanicState = JSON.parse(savedState);
+                localState = JSON.parse(savedState);
             }
         } catch (e) {
             console.error('Error al leer mechanic_state local:', e);
+        }
+
+        let serverState = {};
+        try {
+            const resp = await fetch('/api/mechanic_state?t=' + Date.now(), { cache: 'no-store' });
+            if (resp.ok) {
+                serverState = await resp.json();
+            }
+        } catch (e) {
+            console.warn('Servidor API no respondió, usando estado local.');
+        }
+
+        // Merge server and local states (local edits merge over server)
+        mechanicState = { ...serverState, ...localState };
+
+        // Save merged state back to localStorage
+        try {
+            localStorage.setItem('mechanic_state_v1', JSON.stringify(mechanicState));
+        } catch (e) {}
+
+        // Push local state to server if local had items
+        if (Object.keys(localState).length > 0) {
+            saveMechanicState();
         }
     }
 
@@ -118,7 +131,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Load Data & Shared State
     try {
         await loadMechanicState();
-        const response = await fetch('data/maintenance_data.json');
+        const response = await fetch('data/maintenance_data.json?t=' + Date.now());
         globalData = await response.json();
         initDashboard();
     } catch (error) {
@@ -135,8 +148,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     function getItemCheckState(item) {
-        if (mechanicState[item.id] !== undefined && mechanicState[item.id].checked !== undefined) {
-            return mechanicState[item.id].checked;
+        const key = String(item.id);
+        if (mechanicState[key] !== undefined && mechanicState[key].checked !== undefined) {
+            return mechanicState[key].checked;
         }
         return item.estado !== 'PENDIENTE';
     }
@@ -449,8 +463,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         tableBody.addEventListener('input', (e) => {
             if (e.target.classList.contains('mechanic-note-input')) {
                 const id = parseInt(e.target.dataset.id);
-                if (!mechanicState[id]) mechanicState[id] = { checked: getItemCheckState(globalData.mantenimientos.find(m => m.id === id)), note: '' };
-                mechanicState[id].note = e.target.value;
+                const key = String(id);
+                const item = globalData.mantenimientos.find(m => m.id === id);
+                if (!mechanicState[key]) mechanicState[key] = { checked: getItemCheckState(item), note: '' };
+                mechanicState[key].note = e.target.value;
                 saveMechanicState();
             }
         });
@@ -465,8 +481,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         confirmOkBtn.addEventListener('click', () => {
             if (pendingAction && pendingAction.type === 'CHECK') {
                 const { id, targetCheckbox, item } = pendingAction;
-                if (!mechanicState[id]) mechanicState[id] = { checked: true, note: '' };
-                mechanicState[id].checked = true;
+                const key = String(id);
+                if (!mechanicState[key]) mechanicState[key] = { checked: true, note: '' };
+                mechanicState[key].checked = true;
                 saveMechanicState();
 
                 updateDashboard();
@@ -485,8 +502,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (enteredPass === UNCHECK_PASSWORD) {
                 if (pendingAction && pendingAction.type === 'UNCHECK') {
                     const { id, targetCheckbox } = pendingAction;
-                    if (!mechanicState[id]) mechanicState[id] = { checked: false, note: '' };
-                    mechanicState[id].checked = false;
+                    const key = String(id);
+                    if (!mechanicState[key]) mechanicState[key] = { checked: false, note: '' };
+                    mechanicState[key].checked = false;
                     saveMechanicState();
 
                     updateDashboard();
@@ -815,7 +833,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             const tr = document.createElement('tr');
             
             const isChecked = getItemCheckState(item);
-            const mNote = mechanicState[item.id] ? mechanicState[item.id].note : '';
+            const key = String(item.id);
+            const mNote = mechanicState[key] ? mechanicState[key].note : '';
 
             // Check work order verification status
             const hasRealOrder = item.tiene_orden_realizado === true;
@@ -920,7 +939,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         dataToExport.forEach(item => {
             const isChecked = getItemCheckState(item);
-            const mNote = mechanicState[item.id] ? mechanicState[item.id].note : '';
+            const key = String(item.id);
+            const mNote = mechanicState[key] ? mechanicState[key].note : '';
             const row = [
                 `"${isChecked ? 'SÍ' : 'NO'}"`,
                 `"${item.centro_costo}"`,

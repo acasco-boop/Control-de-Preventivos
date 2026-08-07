@@ -19,32 +19,48 @@ class CustomHandler(http.server.SimpleHTTPRequestHandler):
         self.end_headers()
 
     def do_GET(self):
-        if self.path == '/api/mechanic_state':
+        if self.path.startswith('/api/mechanic_state') or self.path.startswith('/data/mechanic_state.json'):
             self.send_response(200)
             self.send_header('Content-Type', 'application/json; charset=utf-8')
+            self.send_header('Cache-Control', 'no-store, no-cache, must-revalidate')
             self.end_headers()
             if os.path.exists(STATE_FILE):
                 with open(STATE_FILE, 'r', encoding='utf-8') as f:
-                    self.wfile.write(f.read().encode('utf-8'))
+                    content = f.read()
+                    self.wfile.write(content.encode('utf-8') if content.strip() else b'{}')
             else:
-                self.wfile.write(json.dumps({}).encode('utf-8'))
+                self.wfile.write(b'{}')
             return
         return super().do_GET()
 
     def do_POST(self):
-        if self.path == '/api/mechanic_state':
+        if self.path.startswith('/api/mechanic_state') or self.path.startswith('/data/mechanic_state.json'):
             content_length = int(self.headers.get('Content-Length', 0))
             post_data = self.rfile.read(content_length)
             try:
                 state_data = json.loads(post_data.decode('utf-8'))
                 os.makedirs(DATA_DIR, exist_ok=True)
+                
+                # Merge existing state on server if any
+                existing = {}
+                if os.path.exists(STATE_FILE):
+                    try:
+                        with open(STATE_FILE, 'r', encoding='utf-8') as f:
+                            content = f.read().strip()
+                            if content:
+                                existing = json.loads(content)
+                    except Exception:
+                        existing = {}
+                
+                existing.update(state_data)
+                
                 with open(STATE_FILE, 'w', encoding='utf-8') as f:
-                    json.dump(state_data, f, ensure_ascii=False, indent=2)
+                    json.dump(existing, f, ensure_ascii=False, indent=2)
                 
                 self.send_response(200)
                 self.send_header('Content-Type', 'application/json; charset=utf-8')
                 self.end_headers()
-                self.wfile.write(json.dumps({'status': 'ok', 'message': 'State saved successfully'}).encode('utf-8'))
+                self.wfile.write(json.dumps({'status': 'ok', 'state': existing}).encode('utf-8'))
             except Exception as e:
                 self.send_response(500)
                 self.send_header('Content-Type', 'application/json; charset=utf-8')
@@ -70,5 +86,5 @@ if __name__ == '__main__':
     })
     
     with socketserver.TCPServer(('0.0.0.0', PORT), handler) as httpd:
-        print(f"Servidor activo en http://0.0.0.0:{PORT} (Persistencia compartida /api/mechanic_state habilitada)")
+        print(f"Servidor activo en http://0.0.0.0:{PORT}")
         httpd.serve_forever()
