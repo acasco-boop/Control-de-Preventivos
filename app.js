@@ -1,4 +1,4 @@
-// App State & Data Management Engine with Green Realizado Highlighting & Rock-Solid Dual State Sync
+// App State & Data Management Engine with Bulletproof Check Persist & Multi-PC Synchronization
 document.addEventListener('DOMContentLoaded', async () => {
     let globalData = {
         centros_de_costo: [],
@@ -39,18 +39,13 @@ document.addEventListener('DOMContentLoaded', async () => {
             console.warn('Servidor API no respondió, usando estado local.');
         }
 
-        // Merge server and local states (local edits merge over server)
-        mechanicState = { ...serverState, ...localState };
+        // Server state overrides local state so all PCs stay 100% in sync
+        mechanicState = { ...localState, ...serverState };
 
         // Save merged state back to localStorage
         try {
             localStorage.setItem('mechanic_state_v1', JSON.stringify(mechanicState));
         } catch (e) {}
-
-        // Push local state to server if local had items
-        if (Object.keys(localState).length > 0) {
-            saveMechanicState();
-        }
     }
 
     async function saveMechanicState() {
@@ -148,6 +143,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     function getItemCheckState(item) {
+        if (!item) return false;
         const key = String(item.id);
         if (mechanicState[key] !== undefined && mechanicState[key].checked !== undefined) {
             return mechanicState[key].checked;
@@ -465,8 +461,12 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const id = parseInt(e.target.dataset.id);
                 const key = String(id);
                 const item = globalData.mantenimientos.find(m => m.id === id);
-                if (!mechanicState[key]) mechanicState[key] = { checked: getItemCheckState(item), note: '' };
-                mechanicState[key].note = e.target.value;
+                const existingNote = e.target.value;
+                if (!mechanicState[key]) {
+                    mechanicState[key] = { checked: getItemCheckState(item), note: existingNote };
+                } else {
+                    mechanicState[key].note = existingNote;
+                }
                 saveMechanicState();
             }
         });
@@ -478,14 +478,18 @@ document.addEventListener('DOMContentLoaded', async () => {
             pendingAction = null;
         });
 
-        confirmOkBtn.addEventListener('click', () => {
+        confirmOkBtn.addEventListener('click', async () => {
             if (pendingAction && pendingAction.type === 'CHECK') {
                 const { id, targetCheckbox, item } = pendingAction;
                 const key = String(id);
-                if (!mechanicState[key]) mechanicState[key] = { checked: true, note: '' };
-                mechanicState[key].checked = true;
-                saveMechanicState();
+                const existingNote = mechanicState[key] ? mechanicState[key].note || '' : '';
+                
+                mechanicState[key] = { checked: true, note: existingNote };
+                await saveMechanicState();
 
+                if (targetCheckbox) {
+                    targetCheckbox.checked = true;
+                }
                 updateDashboard();
             }
             confirmModal.classList.remove('show');
@@ -497,16 +501,20 @@ document.addEventListener('DOMContentLoaded', async () => {
             pendingAction = null;
         });
 
-        const executeUncheckPass = () => {
+        const executeUncheckPass = async () => {
             const enteredPass = passInput.value.trim();
             if (enteredPass === UNCHECK_PASSWORD) {
                 if (pendingAction && pendingAction.type === 'UNCHECK') {
                     const { id, targetCheckbox } = pendingAction;
                     const key = String(id);
-                    if (!mechanicState[key]) mechanicState[key] = { checked: false, note: '' };
-                    mechanicState[key].checked = false;
-                    saveMechanicState();
+                    const existingNote = mechanicState[key] ? mechanicState[key].note || '' : '';
+                    
+                    mechanicState[key] = { checked: false, note: existingNote };
+                    await saveMechanicState();
 
+                    if (targetCheckbox) {
+                        targetCheckbox.checked = false;
+                    }
                     updateDashboard();
                 }
                 passModal.classList.remove('show');
@@ -913,7 +921,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 '&': '&amp;',
                 '<': '&lt;',
                 '>': '&gt;',
-                '"': '&counts;',
+                '"': '&quot;',
                 "'": '&#039;'
             }[m];
         });
