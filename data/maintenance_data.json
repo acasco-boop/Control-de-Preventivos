@@ -6,6 +6,7 @@
     "Arcor S.A.I.C.",
     "CCUCoAZA",
     "CCUDyAZA",
+    "CCUDyAZA - Compañía Industrial Cer Alianz",
     "CCU_MZA - Comp. Cerv. Unidas - MZA",
     "CENCOMLD - Cencosud SA - Mendoza",
     "CENCO_MZ - Cencosud SA - Mendoza",
@@ -1010,6 +1011,10 @@
     {
       "patente": "KIP032",
       "centro_costo": "Expreso - Servicios Troncales"
+    },
+    {
+      "patente": "AF066NU",
+      "centro_costo": "CENCO_MZ - Cencosud SA - Mendoza"
     }
   ],
   "mantenimientos": [
@@ -1805,12 +1810,12 @@
       "plan": "2/3/6M",
       "fecha_estimada": "2026-06-15",
       "mes_original": 6,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-07-31",
+      "mes_ejecucion": 7,
+      "taller": "MNZA",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Julio (Origen: Junio)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 45,
@@ -1967,12 +1972,12 @@
       "plan": "2/3/6M",
       "fecha_estimada": "2026-06-27",
       "mes_original": 6,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-08-06",
+      "mes_ejecucion": 8,
+      "taller": "MNZA",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Agosto (Origen: Junio)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 54,
@@ -2723,12 +2728,12 @@
       "plan": "2/3/6M",
       "fecha_estimada": "2026-08-02",
       "mes_original": 8,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-08-06",
+      "mes_ejecucion": 8,
+      "taller": "CIUD",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 06/08/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 96,
@@ -3860,12 +3865,12 @@
       "plan": "2/3/6M",
       "fecha_estimada": "2026-07-05",
       "mes_original": 7,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-08-01",
+      "mes_ejecucion": 8,
+      "taller": "MNZA",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Agosto (Origen: Julio)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 159,
@@ -4274,12 +4279,12 @@
       "plan": "2/3/6M",
       "fecha_estimada": "2026-08-01",
       "mes_original": 8,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-08-07",
+      "mes_ejecucion": 8,
+      "taller": "MNZA",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 07/08/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 182,
@@ -4346,12 +4351,12 @@
       "plan": "2/3/6M",
       "fecha_estimada": "2026-03-29",
       "mes_original": 3,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Marzo",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-08-01",
+      "mes_ejecucion": 8,
+      "taller": "MNZA",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Agosto (Origen: Marzo)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 186,
@@ -4526,12 +4531,12 @@
       "plan": "2/3/6M",
       "fecha_estimada": "2026-08-01",
       "mes_original": 8,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-08-06",
+      "mes_ejecucion": 8,
+      "taller": "CIUD",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 06/08/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 196,
@@ -4780,12 +4785,12 @@
       "plan": "2/3/6M",
       "fecha_estimada": "2026-08-01",
       "mes_original": 8,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-08-01",
+      "mes_ejecucion": 8,
+      "taller": "MNZA",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 01/08/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 210,
@@ -4798,12 +4803,12 @@
       "plan": "2/3/6M",
       "fecha_estimada": "2026-08-01",
       "mes_original": 8,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-08-03",
+      "mes_ejecucion": 8,
+      "taller": "CIUD",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 03/08/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 211,
@@ -5348,42 +5353,6 @@
     },
     {
       "id": 241,
-      "patente": "JEB635",
-      "centro_costo": "CMQ_TTE - QUILMES TTE",
-      "taller_proyectado": "BSAS",
-      "talleres_proyectados_list": [
-        "BSAS"
-      ],
-      "plan": "2/3/6M",
-      "fecha_estimada": "2026-07-05",
-      "mes_original": 7,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio",
-      "tiene_orden_realizado": false
-    },
-    {
-      "id": 242,
-      "patente": "JEB635",
-      "centro_costo": "CMQ_TTE - QUILMES TTE",
-      "taller_proyectado": "BSAS",
-      "talleres_proyectados_list": [
-        "BSAS"
-      ],
-      "plan": "2/3/6M",
-      "fecha_estimada": "2026-08-01",
-      "mes_original": 8,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto",
-      "tiene_orden_realizado": false
-    },
-    {
-      "id": 243,
       "patente": "JEB636",
       "centro_costo": "Molca",
       "taller_proyectado": "BSAS",
@@ -5401,7 +5370,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 244,
+      "id": 242,
       "patente": "JIL525",
       "centro_costo": "CENCO_SJ - Cencosud SA - San Juan",
       "taller_proyectado": "MNZA",
@@ -5419,7 +5388,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 245,
+      "id": 243,
       "patente": "JIL525",
       "centro_costo": "CENCO_SJ - Cencosud SA - San Juan",
       "taller_proyectado": "MNZA",
@@ -5437,7 +5406,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 246,
+      "id": 244,
       "patente": "JIL525",
       "centro_costo": "CENCO_SJ - Cencosud SA - San Juan",
       "taller_proyectado": "MNZA",
@@ -5455,7 +5424,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 247,
+      "id": 245,
       "patente": "JIL525",
       "centro_costo": "CENCO_SJ - Cencosud SA - San Juan",
       "taller_proyectado": "MNZA",
@@ -5473,7 +5442,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 248,
+      "id": 246,
       "patente": "JIU311",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -5492,7 +5461,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 249,
+      "id": 247,
       "patente": "JIU311",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -5511,7 +5480,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 250,
+      "id": 248,
       "patente": "JIU311",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -5530,7 +5499,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 251,
+      "id": 249,
       "patente": "JJH871",
       "centro_costo": "CCUCoAZA",
       "taller_proyectado": "BSAS",
@@ -5540,15 +5509,15 @@
       "plan": "2/3/6M",
       "fecha_estimada": "2026-08-01",
       "mes_original": 8,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-08-07",
+      "mes_ejecucion": 8,
+      "taller": "CIUD",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 07/08/2026",
+      "tiene_orden_realizado": true
     },
     {
-      "id": 252,
+      "id": 250,
       "patente": "JKG664",
       "centro_costo": "Molca",
       "taller_proyectado": "BSAS",
@@ -5566,7 +5535,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 253,
+      "id": 251,
       "patente": "JKQ773",
       "centro_costo": "Sin Operación",
       "taller_proyectado": "BSAS",
@@ -5584,7 +5553,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 254,
+      "id": 252,
       "patente": "JKQ773",
       "centro_costo": "Sin Operación",
       "taller_proyectado": "BSAS",
@@ -5602,7 +5571,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 255,
+      "id": 253,
       "patente": "JKQ773",
       "centro_costo": "Sin Operación",
       "taller_proyectado": "BSAS",
@@ -5620,7 +5589,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 256,
+      "id": 254,
       "patente": "JKQ774",
       "centro_costo": "CCUCoAZA",
       "taller_proyectado": "BSAS",
@@ -5638,7 +5607,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 257,
+      "id": 255,
       "patente": "JWV371",
       "centro_costo": "Sin Operación",
       "taller_proyectado": "BSAS",
@@ -5656,7 +5625,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 258,
+      "id": 256,
       "patente": "JWV371",
       "centro_costo": "Sin Operación",
       "taller_proyectado": "BSAS",
@@ -5674,7 +5643,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 259,
+      "id": 257,
       "patente": "JWV371",
       "centro_costo": "Sin Operación",
       "taller_proyectado": "BSAS",
@@ -5692,7 +5661,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 260,
+      "id": 258,
       "patente": "JWV371",
       "centro_costo": "Sin Operación",
       "taller_proyectado": "BSAS",
@@ -5710,7 +5679,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 261,
+      "id": 259,
       "patente": "JXJ303",
       "centro_costo": "CCUCoAZA",
       "taller_proyectado": "BSAS",
@@ -5728,7 +5697,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 262,
+      "id": 260,
       "patente": "JXZ993",
       "centro_costo": "Sin Operación",
       "taller_proyectado": "BSAS",
@@ -5746,7 +5715,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 263,
+      "id": 261,
       "patente": "JXZ993",
       "centro_costo": "Sin Operación",
       "taller_proyectado": "BSAS",
@@ -5764,7 +5733,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 264,
+      "id": 262,
       "patente": "JXZ993",
       "centro_costo": "Sin Operación",
       "taller_proyectado": "BSAS",
@@ -5782,7 +5751,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 265,
+      "id": 263,
       "patente": "JXZ993",
       "centro_costo": "Sin Operación",
       "taller_proyectado": "BSAS",
@@ -5800,7 +5769,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 266,
+      "id": 264,
       "patente": "JYQ969",
       "centro_costo": "Topacio",
       "taller_proyectado": "BSAS",
@@ -5818,7 +5787,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 267,
+      "id": 265,
       "patente": "JYQ969",
       "centro_costo": "Topacio",
       "taller_proyectado": "BSAS",
@@ -5836,7 +5805,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 268,
+      "id": 266,
       "patente": "JYQ969",
       "centro_costo": "Topacio",
       "taller_proyectado": "BSAS",
@@ -5854,7 +5823,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 269,
+      "id": 267,
       "patente": "KBO540",
       "centro_costo": "Sin Operación",
       "taller_proyectado": "BSAS",
@@ -5872,7 +5841,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 270,
+      "id": 268,
       "patente": "KBO540",
       "centro_costo": "Sin Operación",
       "taller_proyectado": "BSAS",
@@ -5890,7 +5859,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 271,
+      "id": 269,
       "patente": "KBO540",
       "centro_costo": "Sin Operación",
       "taller_proyectado": "BSAS",
@@ -5908,7 +5877,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 272,
+      "id": 270,
       "patente": "KBO542",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -5927,7 +5896,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 273,
+      "id": 271,
       "patente": "KBO542",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -5946,7 +5915,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 274,
+      "id": 272,
       "patente": "KBV618",
       "centro_costo": "CCUDyAZA",
       "taller_proyectado": "BSAS",
@@ -5964,7 +5933,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 275,
+      "id": 273,
       "patente": "KBV618",
       "centro_costo": "CCUDyAZA",
       "taller_proyectado": "BSAS",
@@ -5982,7 +5951,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 276,
+      "id": 274,
       "patente": "KBV620",
       "centro_costo": "CCUCoAZA",
       "taller_proyectado": "BSAS",
@@ -6000,7 +5969,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 277,
+      "id": 275,
       "patente": "KDG188",
       "centro_costo": "CCUCoAZA",
       "taller_proyectado": "BSAS",
@@ -6018,7 +5987,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 278,
+      "id": 276,
       "patente": "KER728",
       "centro_costo": "CENCO_MZ - Cencosud SA - Mendoza",
       "taller_proyectado": "MNZA",
@@ -6036,7 +6005,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 279,
+      "id": 277,
       "patente": "KHS009",
       "centro_costo": "CENCO_MZ - Cencosud SA - Mendoza",
       "taller_proyectado": "MNZA",
@@ -6054,7 +6023,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 280,
+      "id": 278,
       "patente": "KHS009",
       "centro_costo": "CENCO_MZ - Cencosud SA - Mendoza",
       "taller_proyectado": "MNZA",
@@ -6072,7 +6041,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 281,
+      "id": 279,
       "patente": "KHS009",
       "centro_costo": "Sin Operación",
       "taller_proyectado": "BSAS",
@@ -6090,7 +6059,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 282,
+      "id": 280,
       "patente": "KHS009",
       "centro_costo": "Sin Operación",
       "taller_proyectado": "BSAS",
@@ -6108,7 +6077,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 283,
+      "id": 281,
       "patente": "KHS012",
       "centro_costo": "JOHNSON - SC JOHNSON DE ARGENTINA SAIC",
       "taller_proyectado": "BSAS",
@@ -6126,7 +6095,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 284,
+      "id": 282,
       "patente": "KHS025",
       "centro_costo": "Sin Operación",
       "taller_proyectado": "BSAS",
@@ -6144,7 +6113,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 285,
+      "id": 283,
       "patente": "KHS025",
       "centro_costo": "Sin Operación",
       "taller_proyectado": "BSAS",
@@ -6162,7 +6131,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 286,
+      "id": 284,
       "patente": "KHS025",
       "centro_costo": "Sin Operación",
       "taller_proyectado": "BSAS",
@@ -6180,7 +6149,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 287,
+      "id": 285,
       "patente": "KHS025",
       "centro_costo": "Sin Operación",
       "taller_proyectado": "BSAS",
@@ -6198,7 +6167,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 288,
+      "id": 286,
       "patente": "KHS026",
       "centro_costo": "CMQ_TTE - QUILMES TTE",
       "taller_proyectado": "BSAS",
@@ -6216,7 +6185,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 289,
+      "id": 287,
       "patente": "KJH882",
       "centro_costo": "Unilever - Unilever de Arg. S.A.",
       "taller_proyectado": "BSAS",
@@ -6234,7 +6203,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 290,
+      "id": 288,
       "patente": "KJH882",
       "centro_costo": "Unilever - Unilever de Arg. S.A.",
       "taller_proyectado": "BSAS",
@@ -6252,7 +6221,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 291,
+      "id": 289,
       "patente": "KJH885",
       "centro_costo": "Arcor S.A.I.C.",
       "taller_proyectado": "BSAS",
@@ -6270,7 +6239,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 292,
+      "id": 290,
       "patente": "KKI233",
       "centro_costo": "Papelera - Papelera del Plata S.A.",
       "taller_proyectado": "BSAS",
@@ -6288,7 +6257,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 293,
+      "id": 291,
       "patente": "KMM903",
       "centro_costo": "AGN_TTE - AGUANORT - Transporte",
       "taller_proyectado": "BSAS",
@@ -6306,7 +6275,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 294,
+      "id": 292,
       "patente": "KMM904",
       "centro_costo": "AGN_TTE - AGUANORT - Transporte",
       "taller_proyectado": "BSAS",
@@ -6324,7 +6293,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 295,
+      "id": 293,
       "patente": "KNE956",
       "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
       "taller_proyectado": "BSAS",
@@ -6342,7 +6311,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 296,
+      "id": 294,
       "patente": "KNE956",
       "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
       "taller_proyectado": "BSAS",
@@ -6360,7 +6329,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 297,
+      "id": 295,
       "patente": "KNE956",
       "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
       "taller_proyectado": "BSAS",
@@ -6378,7 +6347,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 298,
+      "id": 296,
       "patente": "KPQ389",
       "centro_costo": "AGN_TTE - AGUANORT - Transporte",
       "taller_proyectado": "BSAS",
@@ -6396,7 +6365,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 299,
+      "id": 297,
       "patente": "KPQ389",
       "centro_costo": "AGN_TTE - AGUANORT - Transporte",
       "taller_proyectado": "BSAS",
@@ -6414,8 +6383,44 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 300,
+      "id": 298,
       "patente": "KPQ390",
+      "centro_costo": "Sin Operación",
+      "taller_proyectado": "BSAS",
+      "talleres_proyectados_list": [
+        "BSAS"
+      ],
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-07-05",
+      "mes_original": 7,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
+    },
+    {
+      "id": 299,
+      "patente": "KPQ390",
+      "centro_costo": "Sin Operación",
+      "taller_proyectado": "BSAS",
+      "talleres_proyectados_list": [
+        "BSAS"
+      ],
+      "plan": "2/3/6M",
+      "fecha_estimada": "2026-08-01",
+      "mes_original": 8,
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
+    },
+    {
+      "id": 300,
+      "patente": "KPQ391",
       "centro_costo": "Sin Operación",
       "taller_proyectado": "BSAS",
       "talleres_proyectados_list": [
@@ -6433,7 +6438,7 @@
     },
     {
       "id": 301,
-      "patente": "KPQ390",
+      "patente": "KPQ391",
       "centro_costo": "Sin Operación",
       "taller_proyectado": "BSAS",
       "talleres_proyectados_list": [
@@ -6451,42 +6456,6 @@
     },
     {
       "id": 302,
-      "patente": "KPQ391",
-      "centro_costo": "Sin Operación",
-      "taller_proyectado": "BSAS",
-      "talleres_proyectados_list": [
-        "BSAS"
-      ],
-      "plan": "2/3/6M",
-      "fecha_estimada": "2026-07-05",
-      "mes_original": 7,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio",
-      "tiene_orden_realizado": false
-    },
-    {
-      "id": 303,
-      "patente": "KPQ391",
-      "centro_costo": "Sin Operación",
-      "taller_proyectado": "BSAS",
-      "talleres_proyectados_list": [
-        "BSAS"
-      ],
-      "plan": "2/3/6M",
-      "fecha_estimada": "2026-08-01",
-      "mes_original": 8,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto",
-      "tiene_orden_realizado": false
-    },
-    {
-      "id": 304,
       "patente": "KPQ392",
       "centro_costo": "Sin Operación",
       "taller_proyectado": "BSAS",
@@ -6504,7 +6473,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 305,
+      "id": 303,
       "patente": "KTC854",
       "centro_costo": "CCUCoAZA",
       "taller_proyectado": "BSAS",
@@ -6522,7 +6491,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 306,
+      "id": 304,
       "patente": "KTC854",
       "centro_costo": "CCUCoAZA",
       "taller_proyectado": "BSAS",
@@ -6540,7 +6509,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 307,
+      "id": 305,
       "patente": "KUF605",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -6559,7 +6528,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 308,
+      "id": 306,
       "patente": "KUF605",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -6578,7 +6547,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 309,
+      "id": 307,
       "patente": "KUF605",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -6597,7 +6566,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 310,
+      "id": 308,
       "patente": "KUF606",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -6616,7 +6585,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 311,
+      "id": 309,
       "patente": "KUF609",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -6635,7 +6604,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 312,
+      "id": 310,
       "patente": "KUF609",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -6654,7 +6623,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 313,
+      "id": 311,
       "patente": "LFK336",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -6673,7 +6642,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 314,
+      "id": 312,
       "patente": "LFK336",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -6692,7 +6661,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 315,
+      "id": 313,
       "patente": "LFK336",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -6711,7 +6680,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 316,
+      "id": 314,
       "patente": "LFK336",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -6730,7 +6699,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 317,
+      "id": 315,
       "patente": "LFK337",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -6749,7 +6718,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 318,
+      "id": 316,
       "patente": "LFK337",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -6768,7 +6737,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 319,
+      "id": 317,
       "patente": "LFK338",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -6787,7 +6756,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 320,
+      "id": 318,
       "patente": "LFK338",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -6806,7 +6775,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 321,
+      "id": 319,
       "patente": "LFK339",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -6825,7 +6794,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 322,
+      "id": 320,
       "patente": "LFK339",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -6844,7 +6813,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 323,
+      "id": 321,
       "patente": "LRN157",
       "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
       "taller_proyectado": "MNZA",
@@ -6862,7 +6831,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 324,
+      "id": 322,
       "patente": "LRN157",
       "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
       "taller_proyectado": "MNZA",
@@ -6880,7 +6849,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 325,
+      "id": 323,
       "patente": "LRN157",
       "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
       "taller_proyectado": "MNZA",
@@ -6898,7 +6867,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 326,
+      "id": 324,
       "patente": "LRN157",
       "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
       "taller_proyectado": "MNZA",
@@ -6916,7 +6885,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 327,
+      "id": 325,
       "patente": "LTS288",
       "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
       "taller_proyectado": "MNZA",
@@ -6934,7 +6903,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 328,
+      "id": 326,
       "patente": "LTS288",
       "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
       "taller_proyectado": "MNZA",
@@ -6952,7 +6921,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 329,
+      "id": 327,
       "patente": "LTS288",
       "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
       "taller_proyectado": "MNZA",
@@ -6970,7 +6939,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 330,
+      "id": 328,
       "patente": "LTS288",
       "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
       "taller_proyectado": "MNZA",
@@ -6988,7 +6957,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 331,
+      "id": 329,
       "patente": "MYR537",
       "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
       "taller_proyectado": "MNZA",
@@ -7006,7 +6975,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 332,
+      "id": 330,
       "patente": "MYR537",
       "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
       "taller_proyectado": "MNZA",
@@ -7024,7 +6993,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 333,
+      "id": 331,
       "patente": "MYR537",
       "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
       "taller_proyectado": "MNZA",
@@ -7042,7 +7011,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 334,
+      "id": 332,
       "patente": "NIE147",
       "centro_costo": "CMQ_TTE - QUILMES TTE",
       "taller_proyectado": "BSAS",
@@ -7060,7 +7029,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 335,
+      "id": 333,
       "patente": "NIE148",
       "centro_costo": "Papelera - Papelera del Plata S.A.",
       "taller_proyectado": "BSAS",
@@ -7078,7 +7047,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 336,
+      "id": 334,
       "patente": "NIE150",
       "centro_costo": "Papelera - Papelera del Plata S.A.",
       "taller_proyectado": "BSAS",
@@ -7096,7 +7065,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 337,
+      "id": 335,
       "patente": "NIE152",
       "centro_costo": "CMQ_TTE - QUILMES TTE",
       "taller_proyectado": "BSAS",
@@ -7114,7 +7083,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 338,
+      "id": 336,
       "patente": "NIE154",
       "centro_costo": "CMQ_TTE - QUILMES TTE",
       "taller_proyectado": "BSAS",
@@ -7132,7 +7101,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 339,
+      "id": 337,
       "patente": "NIE154",
       "centro_costo": "CMQ_TTE - QUILMES TTE",
       "taller_proyectado": "BSAS",
@@ -7150,7 +7119,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 340,
+      "id": 338,
       "patente": "NIE155",
       "centro_costo": "Papelera - Papelera del Plata S.A.",
       "taller_proyectado": "BSAS",
@@ -7168,7 +7137,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 341,
+      "id": 339,
       "patente": "OAF640",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -7187,7 +7156,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 342,
+      "id": 340,
       "patente": "OAF641",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -7206,7 +7175,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 343,
+      "id": 341,
       "patente": "OAF641",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -7225,7 +7194,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 344,
+      "id": 342,
       "patente": "OAF642",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -7244,7 +7213,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 345,
+      "id": 343,
       "patente": "OAF643",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -7263,7 +7232,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 346,
+      "id": 344,
       "patente": "OAF643",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -7282,7 +7251,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 347,
+      "id": 345,
       "patente": "OAF644",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -7301,7 +7270,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 348,
+      "id": 346,
       "patente": "OAF644",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -7320,7 +7289,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 349,
+      "id": 347,
       "patente": "OHH589",
       "centro_costo": "CMQ_TTE - QUILMES TTE",
       "taller_proyectado": "BSAS",
@@ -7338,7 +7307,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 350,
+      "id": 348,
       "patente": "OHH590",
       "centro_costo": "CCUDyAZA",
       "taller_proyectado": "BSAS",
@@ -7356,7 +7325,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 351,
+      "id": 349,
       "patente": "OHH593",
       "centro_costo": "CCUCoAZA",
       "taller_proyectado": "BSAS",
@@ -7374,7 +7343,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 352,
+      "id": 350,
       "patente": "OHH595",
       "centro_costo": "CCUDyAZA",
       "taller_proyectado": "BSAS",
@@ -7392,7 +7361,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 353,
+      "id": 351,
       "patente": "OHH596",
       "centro_costo": "CCUCoAZA",
       "taller_proyectado": "BSAS",
@@ -7410,7 +7379,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 354,
+      "id": 352,
       "patente": "OIC418",
       "centro_costo": "CCUDyAZA",
       "taller_proyectado": "BSAS",
@@ -7428,7 +7397,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 355,
+      "id": 353,
       "patente": "OIC418",
       "centro_costo": "CCUDyAZA",
       "taller_proyectado": "BSAS",
@@ -7446,7 +7415,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 356,
+      "id": 354,
       "patente": "OIC419",
       "centro_costo": "CCUDyAZA",
       "taller_proyectado": "BSAS",
@@ -7464,7 +7433,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 357,
+      "id": 355,
       "patente": "OJG063",
       "centro_costo": "CCUCoAZA",
       "taller_proyectado": "BSAS",
@@ -7482,7 +7451,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 358,
+      "id": 356,
       "patente": "OJG065",
       "centro_costo": "CCUDyAZA",
       "taller_proyectado": "BSAS",
@@ -7492,15 +7461,15 @@
       "plan": "2/3/6M",
       "fecha_estimada": "2026-08-01",
       "mes_original": 8,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-08-06",
+      "mes_ejecucion": 8,
+      "taller": "CIUD",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 06/08/2026",
+      "tiene_orden_realizado": true
     },
     {
-      "id": 359,
+      "id": 357,
       "patente": "OJG097",
       "centro_costo": "CCUDyAZA",
       "taller_proyectado": "BSAS",
@@ -7518,7 +7487,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 360,
+      "id": 358,
       "patente": "OJG097",
       "centro_costo": "CCUDyAZA",
       "taller_proyectado": "BSAS",
@@ -7536,7 +7505,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 361,
+      "id": 359,
       "patente": "OJG098",
       "centro_costo": "CCUDyAZA",
       "taller_proyectado": "BSAS",
@@ -7554,7 +7523,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 362,
+      "id": 360,
       "patente": "OJG099",
       "centro_costo": "CCUDyAZA",
       "taller_proyectado": "BSAS",
@@ -7572,7 +7541,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 363,
+      "id": 361,
       "patente": "OJG099",
       "centro_costo": "CCUDyAZA",
       "taller_proyectado": "BSAS",
@@ -7590,7 +7559,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 364,
+      "id": 362,
       "patente": "OJG101",
       "centro_costo": "CCUDyAZA",
       "taller_proyectado": "BSAS",
@@ -7608,7 +7577,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 365,
+      "id": 363,
       "patente": "OJG101",
       "centro_costo": "CCUDyAZA",
       "taller_proyectado": "BSAS",
@@ -7626,7 +7595,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 366,
+      "id": 364,
       "patente": "OJG103",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -7645,7 +7614,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 367,
+      "id": 365,
       "patente": "OJG103",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -7664,7 +7633,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 368,
+      "id": 366,
       "patente": "OJG103",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -7683,7 +7652,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 369,
+      "id": 367,
       "patente": "OMQ198",
       "centro_costo": "CCUDyAZA",
       "taller_proyectado": "BSAS",
@@ -7701,7 +7670,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 370,
+      "id": 368,
       "patente": "OMQ199",
       "centro_costo": "CCUDyAZA",
       "taller_proyectado": "BSAS",
@@ -7719,7 +7688,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 371,
+      "id": 369,
       "patente": "OMQ199",
       "centro_costo": "CCUDyAZA",
       "taller_proyectado": "BSAS",
@@ -7737,7 +7706,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 372,
+      "id": 370,
       "patente": "OZH811",
       "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
       "taller_proyectado": "MNZA",
@@ -7755,7 +7724,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 373,
+      "id": 371,
       "patente": "OZH811",
       "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
       "taller_proyectado": "MNZA",
@@ -7765,15 +7734,15 @@
       "plan": "2/3/6M",
       "fecha_estimada": "2026-06-20",
       "mes_original": 6,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-08-04",
+      "mes_ejecucion": 8,
+      "taller": "MNZA",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Agosto (Origen: Junio)",
+      "tiene_orden_realizado": true
     },
     {
-      "id": 374,
+      "id": 372,
       "patente": "OZH811",
       "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
       "taller_proyectado": "MNZA",
@@ -7791,7 +7760,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 375,
+      "id": 373,
       "patente": "OZH811",
       "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
       "taller_proyectado": "MNZA",
@@ -7809,7 +7778,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 376,
+      "id": 374,
       "patente": "PLU468",
       "centro_costo": "JOHNSON - SC JOHNSON DE ARGENTINA SAIC",
       "taller_proyectado": "BSAS",
@@ -7827,7 +7796,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 377,
+      "id": 375,
       "patente": "RNX412",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -7846,7 +7815,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 378,
+      "id": 376,
       "patente": "RNX412",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -7865,7 +7834,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 379,
+      "id": 377,
       "patente": "SOC883",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -7884,7 +7853,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 380,
+      "id": 378,
       "patente": "SOC883",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -7903,7 +7872,7 @@
       "tiene_orden_realizado": false
     },
     {
-      "id": 381,
+      "id": 379,
       "patente": "AD426HT",
       "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
       "taller_proyectado": "BSAS",
@@ -7921,7 +7890,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 382,
+      "id": 380,
       "patente": "AD426HU",
       "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
       "taller_proyectado": "BSAS",
@@ -7939,7 +7908,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 383,
+      "id": 381,
       "patente": "AD426HW",
       "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
       "taller_proyectado": "BSAS",
@@ -7957,7 +7926,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 384,
+      "id": 382,
       "patente": "AD426HZ",
       "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
       "taller_proyectado": "BSAS",
@@ -7975,7 +7944,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 385,
+      "id": 383,
       "patente": "AD426IF",
       "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
       "taller_proyectado": "BSAS",
@@ -7993,7 +7962,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 386,
+      "id": 384,
       "patente": "AD426IF",
       "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
       "taller_proyectado": "BSAS",
@@ -8011,7 +7980,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 387,
+      "id": 385,
       "patente": "AD426IJ",
       "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
       "taller_proyectado": "BSAS",
@@ -8029,7 +7998,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 388,
+      "id": 386,
       "patente": "AE243WV",
       "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
       "taller_proyectado": "MNZA",
@@ -8047,7 +8016,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 389,
+      "id": 387,
       "patente": "AE243WV",
       "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
       "taller_proyectado": "MNZA",
@@ -8065,7 +8034,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 390,
+      "id": 388,
       "patente": "AE700VS",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -8084,7 +8053,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 391,
+      "id": 389,
       "patente": "AE794VC",
       "centro_costo": "SUC_MEN - Sucursal Mendoza",
       "taller_proyectado": "MNZA",
@@ -8102,7 +8071,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 392,
+      "id": 390,
       "patente": "AF066NS",
       "centro_costo": "CMQ_TTE - QUILMES TTE",
       "taller_proyectado": "BSAS",
@@ -8120,7 +8089,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 393,
+      "id": 391,
       "patente": "AF088EA",
       "centro_costo": "CMQ_TTE - QUILMES TTE",
       "taller_proyectado": "BSAS",
@@ -8138,7 +8107,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 394,
+      "id": 392,
       "patente": "AF114FP",
       "centro_costo": "CMQ_TTE - QUILMES TTE",
       "taller_proyectado": "BSAS",
@@ -8156,7 +8125,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 395,
+      "id": 393,
       "patente": "AF114FP",
       "centro_costo": "CMQ_TTE - QUILMES TTE",
       "taller_proyectado": "BSAS",
@@ -8174,7 +8143,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 396,
+      "id": 394,
       "patente": "AF114FZ",
       "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
       "taller_proyectado": "BSAS",
@@ -8192,7 +8161,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 397,
+      "id": 395,
       "patente": "AF118QB",
       "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
       "taller_proyectado": "BSAS",
@@ -8210,7 +8179,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 398,
+      "id": 396,
       "patente": "AF338VO",
       "centro_costo": "CMQ_TTE - QUILMES TTE",
       "taller_proyectado": "BSAS",
@@ -8228,7 +8197,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 399,
+      "id": 397,
       "patente": "AF518DM",
       "centro_costo": "CMQ_TTE - QUILMES TTE",
       "taller_proyectado": "BSAS",
@@ -8246,7 +8215,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 400,
+      "id": 398,
       "patente": "AF722DN",
       "centro_costo": "CMQ_TTE - QUILMES TTE",
       "taller_proyectado": "BSAS",
@@ -8264,7 +8233,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 401,
+      "id": 399,
       "patente": "AF918RI",
       "centro_costo": "CMQ_TTE - QUILMES TTE",
       "taller_proyectado": "BSAS",
@@ -8282,7 +8251,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 402,
+      "id": 400,
       "patente": "AG079GA",
       "centro_costo": "CENCO_MZ - Cencosud SA - Mendoza",
       "taller_proyectado": "MNZA",
@@ -8300,7 +8269,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 403,
+      "id": 401,
       "patente": "AG095MQ",
       "centro_costo": "CMQ_TTE - QUILMES TTE",
       "taller_proyectado": "BSAS",
@@ -8318,7 +8287,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 404,
+      "id": 402,
       "patente": "AG095MR",
       "centro_costo": "CMQ_TTE - QUILMES TTE",
       "taller_proyectado": "BSAS",
@@ -8336,7 +8305,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 405,
+      "id": 403,
       "patente": "AG238NS",
       "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
       "taller_proyectado": "MNZA",
@@ -8354,7 +8323,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 406,
+      "id": 404,
       "patente": "AG300AQ",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -8373,7 +8342,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 407,
+      "id": 405,
       "patente": "AG300AQ",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -8392,7 +8361,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 408,
+      "id": 406,
       "patente": "GDR525",
       "centro_costo": "Arcor S.A.I.C.",
       "taller_proyectado": "BSAS",
@@ -8410,7 +8379,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 409,
+      "id": 407,
       "patente": "GFZ650",
       "centro_costo": "CENCO_MZ - Cencosud SA - Mendoza",
       "taller_proyectado": "MNZA",
@@ -8428,7 +8397,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 410,
+      "id": 408,
       "patente": "HKW894",
       "centro_costo": "Papelera - Papelera del Plata S.A.",
       "taller_proyectado": "BSAS",
@@ -8446,7 +8415,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 411,
+      "id": 409,
       "patente": "HRJ004",
       "centro_costo": "CENCO_MZ - Cencosud SA - Mendoza",
       "taller_proyectado": "MNZA",
@@ -8464,7 +8433,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 412,
+      "id": 410,
       "patente": "JWV370",
       "centro_costo": "CCUDyAZA",
       "taller_proyectado": "BSAS",
@@ -8482,7 +8451,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 413,
+      "id": 411,
       "patente": "JXZ992",
       "centro_costo": "CCUCoAZA",
       "taller_proyectado": "BSAS",
@@ -8500,7 +8469,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 414,
+      "id": 412,
       "patente": "KBV611",
       "centro_costo": "CCUDyAZA",
       "taller_proyectado": "BSAS",
@@ -8518,7 +8487,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 415,
+      "id": 413,
       "patente": "KBV611",
       "centro_costo": "CCUDyAZA",
       "taller_proyectado": "BSAS",
@@ -8536,7 +8505,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 416,
+      "id": 414,
       "patente": "KBV620",
       "centro_costo": "CCUCoAZA",
       "taller_proyectado": "BSAS",
@@ -8554,7 +8523,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 417,
+      "id": 415,
       "patente": "KNE956",
       "centro_costo": "ADA_CH - Danone Arg. S.A. - Chascomus",
       "taller_proyectado": "BSAS",
@@ -8572,7 +8541,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 418,
+      "id": 416,
       "patente": "LFK339",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -8591,7 +8560,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 419,
+      "id": 417,
       "patente": "NIE153",
       "centro_costo": "CMQ_TTE - QUILMES TTE",
       "taller_proyectado": "BSAS",
@@ -8609,7 +8578,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 420,
+      "id": 418,
       "patente": "NVX394",
       "centro_costo": "CIMSA_MZA",
       "taller_proyectado": "MNZA",
@@ -8627,7 +8596,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 421,
+      "id": 419,
       "patente": "OAF640",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -8646,7 +8615,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 422,
+      "id": 420,
       "patente": "OAF640",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -8665,7 +8634,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 423,
+      "id": 421,
       "patente": "OAF640",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -8684,7 +8653,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 424,
+      "id": 422,
       "patente": "OAF641",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -8703,7 +8672,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 425,
+      "id": 423,
       "patente": "OAF641",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -8722,7 +8691,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 426,
+      "id": 424,
       "patente": "OAF642",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -8741,7 +8710,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 427,
+      "id": 425,
       "patente": "OAF642",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -8760,7 +8729,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 428,
+      "id": 426,
       "patente": "OHH588",
       "centro_costo": "CCUDyAZA",
       "taller_proyectado": "BSAS",
@@ -8778,7 +8747,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 429,
+      "id": 427,
       "patente": "OHH589",
       "centro_costo": "CMQ_TTE - QUILMES TTE",
       "taller_proyectado": "BSAS",
@@ -8796,7 +8765,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 430,
+      "id": 428,
       "patente": "OHH589",
       "centro_costo": "CMQ_TTE - QUILMES TTE",
       "taller_proyectado": "BSAS",
@@ -8814,7 +8783,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 431,
+      "id": 429,
       "patente": "OHH593",
       "centro_costo": "CCUCoAZA",
       "taller_proyectado": "BSAS",
@@ -8832,7 +8801,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 432,
+      "id": 430,
       "patente": "KUF606",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -8851,7 +8820,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 433,
+      "id": 431,
       "patente": "LFK338",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -8870,7 +8839,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 434,
+      "id": 432,
       "patente": "HRJ002",
       "centro_costo": "SUC_REA - Sucursal Realicó",
       "taller_proyectado": "SRAF",
@@ -8888,7 +8857,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 435,
+      "id": 433,
       "patente": "AF804RC",
       "centro_costo": "CCU_MZA - Comp. Cerv. Unidas - MZA",
       "taller_proyectado": "MNZA",
@@ -8906,7 +8875,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 436,
+      "id": 434,
       "patente": "AF118QC",
       "centro_costo": "CENCOMLD - Cencosud SA - Mendoza",
       "taller_proyectado": "MNZA",
@@ -8924,7 +8893,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 437,
+      "id": 435,
       "patente": "AF804RF",
       "centro_costo": "CCU_MZA - Comp. Cerv. Unidas - MZA",
       "taller_proyectado": "MNZA",
@@ -8942,7 +8911,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 438,
+      "id": 436,
       "patente": "AF444TW",
       "centro_costo": "CMQ_TTE - QUILMES TTE",
       "taller_proyectado": "BSAS",
@@ -8960,7 +8929,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 439,
+      "id": 437,
       "patente": "OAF644",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -8979,7 +8948,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 440,
+      "id": 438,
       "patente": "GJQ699",
       "centro_costo": "CCUDyAZA",
       "taller_proyectado": "BSAS",
@@ -8997,7 +8966,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 441,
+      "id": 439,
       "patente": "OJG061",
       "centro_costo": "CCUDyAZA",
       "taller_proyectado": "BSAS",
@@ -9015,7 +8984,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 442,
+      "id": 440,
       "patente": "IVD940",
       "centro_costo": "CCUCoAZA",
       "taller_proyectado": "BSAS",
@@ -9033,7 +9002,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 443,
+      "id": 441,
       "patente": "KBO542",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -9052,7 +9021,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 444,
+      "id": 442,
       "patente": "GUW658",
       "centro_costo": "Unilever - Unilever de Arg. S.A.",
       "taller_proyectado": "BSAS",
@@ -9070,7 +9039,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 445,
+      "id": 443,
       "patente": "AF066NT",
       "centro_costo": "CMQ_TTE - QUILMES TTE",
       "taller_proyectado": "BSAS",
@@ -9088,7 +9057,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 446,
+      "id": 444,
       "patente": "AF642OU",
       "centro_costo": "CCUDyAZA",
       "taller_proyectado": "BSAS",
@@ -9106,7 +9075,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 447,
+      "id": 445,
       "patente": "HUY047",
       "centro_costo": "Unilever - Unilever de Arg. S.A.",
       "taller_proyectado": "BSAS",
@@ -9124,7 +9093,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 448,
+      "id": 446,
       "patente": "OHH591",
       "centro_costo": "CCUDyAZA",
       "taller_proyectado": "BSAS",
@@ -9142,7 +9111,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 449,
+      "id": 447,
       "patente": "AG404LX",
       "centro_costo": "CCUDyAZA",
       "taller_proyectado": "BSAS",
@@ -9160,7 +9129,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 450,
+      "id": 448,
       "patente": "AF804RE",
       "centro_costo": "CCU_MZA - Comp. Cerv. Unidas - MZA",
       "taller_proyectado": "MNZA",
@@ -9178,7 +9147,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 451,
+      "id": 449,
       "patente": "GOX958",
       "centro_costo": "Papelera - Papelera del Plata S.A.",
       "taller_proyectado": "BSAS",
@@ -9196,7 +9165,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 452,
+      "id": 450,
       "patente": "OHH586",
       "centro_costo": "CCUDyAZA",
       "taller_proyectado": "BSAS",
@@ -9214,7 +9183,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 453,
+      "id": 451,
       "patente": "AF619YO",
       "centro_costo": "SUC_MEN - Sucursal Mendoza",
       "taller_proyectado": "MNZA",
@@ -9232,7 +9201,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 454,
+      "id": 452,
       "patente": "AG390QD",
       "centro_costo": "CCUDyAZA",
       "taller_proyectado": "BSAS",
@@ -9250,7 +9219,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 455,
+      "id": 453,
       "patente": "OJG062",
       "centro_costo": "CCUDyAZA",
       "taller_proyectado": "BSAS",
@@ -9268,7 +9237,26 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 456,
+      "id": 454,
+      "patente": "KUF609",
+      "centro_costo": "Expreso - Servicios Troncales",
+      "taller_proyectado": "BSAS / SRAF",
+      "talleres_proyectados_list": [
+        "BSAS",
+        "SRAF"
+      ],
+      "plan": "2ML",
+      "fecha_estimada": "2026-08-05",
+      "mes_original": 8,
+      "fecha_ejecucion": "2026-08-05",
+      "mes_ejecucion": 8,
+      "taller": "SRAF",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado en Agosto (05/08/2026)",
+      "tiene_orden_realizado": true
+    },
+    {
+      "id": 455,
       "patente": "PLU469",
       "centro_costo": "CCUDyAZA",
       "taller_proyectado": "BSAS",
@@ -9286,7 +9274,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 457,
+      "id": 456,
       "patente": "IDX164",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -9305,7 +9293,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 458,
+      "id": 457,
       "patente": "AF461DV",
       "centro_costo": "Unilever - Unilever de Arg. S.A.",
       "taller_proyectado": "BSAS",
@@ -9323,7 +9311,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 459,
+      "id": 458,
       "patente": "GFZ651",
       "centro_costo": "SUC_CTC - Sucursal Buenos Aires",
       "taller_proyectado": "BSAS",
@@ -9341,7 +9329,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 460,
+      "id": 459,
       "patente": "GRC311",
       "centro_costo": "CCUCoAZA",
       "taller_proyectado": "BSAS",
@@ -9359,7 +9347,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 461,
+      "id": 460,
       "patente": "FGV321",
       "centro_costo": "CCUCoAZA",
       "taller_proyectado": "BSAS",
@@ -9377,7 +9365,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 462,
+      "id": 461,
       "patente": "AF642OT",
       "centro_costo": "CCU_MZA - Comp. Cerv. Unidas - MZA",
       "taller_proyectado": "MNZA",
@@ -9395,7 +9383,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 463,
+      "id": 462,
       "patente": "AF642OT",
       "centro_costo": "CMQ_TTE - QUILMES TTE",
       "taller_proyectado": "BSAS",
@@ -9413,7 +9401,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 464,
+      "id": 463,
       "patente": "AF338VQ",
       "centro_costo": "CMQ_TTE - QUILMES TTE",
       "taller_proyectado": "BSAS",
@@ -9431,7 +9419,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 465,
+      "id": 464,
       "patente": "AF737MP",
       "centro_costo": "CMQ_TTE - QUILMES TTE",
       "taller_proyectado": "BSAS",
@@ -9449,7 +9437,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 466,
+      "id": 465,
       "patente": "AG404LU",
       "centro_costo": "CMQ_TTE - QUILMES TTE",
       "taller_proyectado": "BSAS",
@@ -9467,7 +9455,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 467,
+      "id": 466,
       "patente": "GLT550",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -9486,7 +9474,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 468,
+      "id": 467,
       "patente": "AF444TV",
       "centro_costo": "CMQ_TTE - QUILMES TTE",
       "taller_proyectado": "BSAS",
@@ -9504,7 +9492,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 469,
+      "id": 468,
       "patente": "KGM735",
       "centro_costo": "CENCO_MZ - Cencosud SA - Mendoza",
       "taller_proyectado": "MNZA",
@@ -9522,7 +9510,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 470,
+      "id": 469,
       "patente": "AG300AR",
       "centro_costo": "Arcor S.A.I.C.",
       "taller_proyectado": "BSAS",
@@ -9540,7 +9528,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 471,
+      "id": 470,
       "patente": "HSC655",
       "centro_costo": "CENCO_MZ - Cencosud SA - Mendoza",
       "taller_proyectado": "MNZA",
@@ -9558,7 +9546,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 472,
+      "id": 471,
       "patente": "KHS013",
       "centro_costo": "SUC_GAL - Sucursal General Alvear",
       "taller_proyectado": "SRAF",
@@ -9576,7 +9564,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 473,
+      "id": 472,
       "patente": "JWV379",
       "centro_costo": "CCUCoAZA",
       "taller_proyectado": "BSAS",
@@ -9594,7 +9582,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 474,
+      "id": 473,
       "patente": "GDR526",
       "centro_costo": "Molca",
       "taller_proyectado": "BSAS",
@@ -9612,7 +9600,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 475,
+      "id": 474,
       "patente": "KIP032",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -9631,7 +9619,43 @@
       "tiene_orden_realizado": true
     },
     {
+      "id": 475,
+      "patente": "AF066NU",
+      "centro_costo": "CENCO_MZ - Cencosud SA - Mendoza",
+      "taller_proyectado": "MNZA",
+      "talleres_proyectados_list": [
+        "MNZA"
+      ],
+      "plan": "2MC",
+      "fecha_estimada": "2026-07-31",
+      "mes_original": 7,
+      "fecha_ejecucion": "2026-07-31",
+      "mes_ejecucion": 7,
+      "taller": "MNZA",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado en Julio (31/07/2026)",
+      "tiene_orden_realizado": true
+    },
+    {
       "id": 476,
+      "patente": "KER728",
+      "centro_costo": "CENCO_MZ - Cencosud SA - Mendoza",
+      "taller_proyectado": "MNZA",
+      "talleres_proyectados_list": [
+        "MNZA"
+      ],
+      "plan": "2MC",
+      "fecha_estimada": "2026-08-04",
+      "mes_original": 8,
+      "fecha_ejecucion": "2026-08-04",
+      "mes_ejecucion": 8,
+      "taller": "MNZA",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado en Agosto (04/08/2026)",
+      "tiene_orden_realizado": true
+    },
+    {
+      "id": 477,
       "patente": "TOTAL GENERAL",
       "centro_costo": "Sin Centro de Costo",
       "taller_proyectado": "Sin Taller Proyectado",
