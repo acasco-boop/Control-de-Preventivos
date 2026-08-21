@@ -141,8 +141,13 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Default filters: Taller Proyectado = BSAS / SRAF, CdC = all except "Sin Operación" and "Sin Centro de Costo"
         selectedTalleresProyectados.clear();
         selectedTalleresProyectados.add('BSAS / SRAF');
+        selectedTalleresProyectados.add('BSAS');
         updateTallerProyCheckboxes();
         updateTallerProyTriggerText();
+
+        selectedTalleres.clear();
+        updateTallerCheckboxes();
+        updateTallerTriggerText();
 
         selectedCdcs.clear();
         globalData.centros_de_costo.forEach(cdc => {
@@ -436,6 +441,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             });
             selectedTalleresProyectados.clear();
             selectedTalleresProyectados.add('BSAS / SRAF');
+            selectedTalleresProyectados.add('BSAS');
             selectedTalleres.clear();
             updateCdcCheckboxes();
             updateTallerProyCheckboxes();
