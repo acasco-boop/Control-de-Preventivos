@@ -137,6 +137,22 @@ document.addEventListener('DOMContentLoaded', async () => {
         populateCdcMultiselectOptions();
         populateTallerProyectadoMultiselectOptions();
         populateTallerMultiselectOptions();
+
+        // Default filters: Taller Proyectado = BSAS / SRAF, CdC = all except "Sin Operación" and "Sin Centro de Costo"
+        selectedTalleresProyectados.clear();
+        selectedTalleresProyectados.add('BSAS / SRAF');
+        updateTallerProyCheckboxes();
+        updateTallerProyTriggerText();
+
+        selectedCdcs.clear();
+        globalData.centros_de_costo.forEach(cdc => {
+            if (cdc !== 'Sin Operación' && cdc !== 'Sin Centro de Costo') {
+                selectedCdcs.add(cdc);
+            }
+        });
+        updateCdcCheckboxes();
+        updateCdcTriggerText();
+
         setupEventListeners();
         setupModalEventListeners();
         updateDashboard();
@@ -411,8 +427,15 @@ document.addEventListener('DOMContentLoaded', async () => {
             updateDashboard();
         });
         resetFiltersBtn.addEventListener('click', () => {
+            // Reset to defaults: Taller Proyectado = BSAS / SRAF, CdC = all except "Sin Operación" and "Sin Centro de Costo"
             selectedCdcs.clear();
+            globalData.centros_de_costo.forEach(cdc => {
+                if (cdc !== 'Sin Operación' && cdc !== 'Sin Centro de Costo') {
+                    selectedCdcs.add(cdc);
+                }
+            });
             selectedTalleresProyectados.clear();
+            selectedTalleresProyectados.add('BSAS / SRAF');
             selectedTalleres.clear();
             updateCdcCheckboxes();
             updateTallerProyCheckboxes();
@@ -420,7 +443,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             updateCdcTriggerText();
             updateTallerProyTriggerText();
             updateTallerTriggerText();
-            monthFilter.value = '7'; // Default current month July
+            monthFilter.value = '8'; // Default current month August
             statusFilter.value = 'ALL';
             searchInput.value = '';
             clearSearchBtn.style.display = 'none';
@@ -641,7 +664,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     function updateDashboard() {
         const selectedMonthStr = monthFilter.value;
-        const selectedMonth = selectedMonthStr === 'ALL' ? 7 : parseInt(selectedMonthStr); // Current month July (7)
+        const selectedMonth = selectedMonthStr === 'ALL' ? 8 : parseInt(selectedMonthStr); // Current month August (8)
 
         const filteredList = getFilteredData();
 
