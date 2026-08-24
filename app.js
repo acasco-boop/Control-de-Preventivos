@@ -140,8 +140,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         // Default filters: Taller Proyectado = BSAS / SRAF, CdC = all except "Sin Operación" and "Sin Centro de Costo"
         selectedTalleresProyectados.clear();
-        selectedTalleresProyectados.add('BSAS / SRAF');
         selectedTalleresProyectados.add('BSAS');
+        selectedTalleresProyectados.add('BSAS / SRAF');
         updateTallerProyCheckboxes();
         updateTallerProyTriggerText();
 
@@ -440,8 +440,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }
             });
             selectedTalleresProyectados.clear();
-            selectedTalleresProyectados.add('BSAS / SRAF');
             selectedTalleresProyectados.add('BSAS');
+            selectedTalleresProyectados.add('BSAS / SRAF');
             selectedTalleres.clear();
             updateCdcCheckboxes();
             updateTallerProyCheckboxes();
@@ -628,10 +628,42 @@ document.addEventListener('DOMContentLoaded', async () => {
         return selectedTalleres.has(itemTaller);
     }
 
+    function getCdcScope() {
+        return globalData.mantenimientos.filter(m =>
+            isCdcMatch(m.centro_costo) &&
+            isTallerProyMatch(m) &&
+            isTallerMatch(m.taller)
+        );
+    }
+
+    // Helper: pre-compute set of patentes that already have a completed (non-PENDIENTE) task in the given month
+    function getPatentesCompletedInMonth(month) {
+        const set = new Set();
+        globalData.mantenimientos.forEach(it => {
+            if (it.mes_ejecucion === month && it.estado !== 'PENDIENTE') {
+                set.add(it.patente);
+            }
+        });
+        return set;
+    }
+
+    // Helper: hide PENDIENTE tasks for the given month whose vehicle already has a completed task in that month
+    function isPendingCoveredByLateExecution(item, month, patentesCompletedInMonth) {
+        if (item.estado !== 'PENDIENTE') return false;
+        if (item.mes_original !== month) return false;
+        return patentesCompletedInMonth.has(item.patente);
+    }
+
     function getFilteredData() {
         const selectedMonth = monthFilter.value;
         const selectedStatus = statusFilter.value;
         const searchQuery = searchInput.value.trim().toUpperCase();
+
+        // Pre-compute: set of patentes that already have a completed (non-PENDIENTE) task in the selected month
+        let patentesCompletedInMonth = new Set();
+        if (selectedMonth !== 'ALL') {
+            patentesCompletedInMonth = getPatentesCompletedInMonth(parseInt(selectedMonth));
+        }
 
         return globalData.mantenimientos.filter(item => {
             if (!isCdcMatch(item.centro_costo)) {
@@ -652,6 +684,11 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const isExecutedInMonth = item.mes_ejecucion === m;
 
                 if (!isOriginalMonth && !isExecutedInMonth) {
+                    return false;
+                }
+
+                // If this item is PENDIENTE for the selected month AND the vehicle already has a completed task in this month, hide it
+                if (isPendingCoveredByLateExecution(item, m, patentesCompletedInMonth)) {
                     return false;
                 }
             }
@@ -692,17 +729,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     function calculateAndRenderKpis(evalMonth) {
-        const cdcScope = globalData.mantenimientos.filter(m => 
-            isCdcMatch(m.centro_costo) && 
-            isTallerProyMatch(m) && 
-            isTallerMatch(m.taller)
-        );
+        const patentesCompletedInMonth = getPatentesCompletedInMonth(evalMonth);
+        const cdcScope = getCdcScope().filter(m => !isPendingCoveredByLateExecution(m, evalMonth, patentesCompletedInMonth));
 
         // 1. YTD Global
         const ytdProyectados = cdcScope.filter(m => m.mes_original <= evalMonth);
         const ytdEjecutados = cdcScope.filter(m => m.fecha_ejecucion !== null && m.mes_ejecucion <= evalMonth);
 
-        const ytdPct = ytdProyectados.length > 0 
+        const ytdPct = ytdProyectados.length > 0
             ? ((ytdEjecutados.length / ytdProyectados.length) * 100).toFixed(1)
             : '0.0';
 
@@ -712,9 +746,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         // 2. Mes Seleccionado Metrics
         const proyectadosMes = cdcScope.filter(m => m.mes_original === evalMonth);
-        
+
         const ejecutadosEnTerminoMes = proyectadosMes.filter(m => m.mes_ejecucion === evalMonth);
-        const terminoPct = proyectadosMes.length > 0 
+        const terminoPct = proyectadosMes.length > 0
             ? ((ejecutadosEnTerminoMes.length / proyectadosMes.length) * 100).toFixed(1)
             : '0.0';
 
@@ -724,16 +758,16 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         // 3. % Ejecución Total (Mes)
         const todosEjecutadosEnMes = cdcScope.filter(m => m.mes_ejecucion === evalMonth);
-        const totalEjecucionPct = proyectadosMes.length > 0 
+        const totalEjecucionPct = proyectadosMes.length > 0
             ? ((todosEjecutadosEnMes.length / proyectadosMes.length) * 100).toFixed(1)
             : '0.0';
 
         document.getElementById('kpiTotalPct').textContent = `${totalEjecucionPct}%`;
         document.getElementById('barTotal').style.width = `${Math.min(totalEjecucionPct, 100)}%`;
-        
+
         const recuperadosPrevios = todosEjecutadosEnMes.filter(m => m.mes_original < evalMonth).length;
         const adelantadosFuturos = todosEjecutadosEnMes.filter(m => m.mes_original > evalMonth).length;
-        
+
         let detailText = `${todosEjecutadosEnMes.length} ejecutados en ${monthNames[evalMonth - 1]}`;
         let extrasList = [];
         if (recuperadosPrevios > 0) extrasList.push(`${recuperadosPrevios} regularizados`);
@@ -752,11 +786,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     function renderCharts() {
-        const cdcScope = globalData.mantenimientos.filter(m => 
-            isCdcMatch(m.centro_costo) && 
-            isTallerProyMatch(m) && 
-            isTallerMatch(m.taller)
-        );
+        const evalMonth = monthFilter.value === 'ALL' ? 8 : parseInt(monthFilter.value);
+        const patentesCompletedInMonth = getPatentesCompletedInMonth(evalMonth);
+        const cdcScope = getCdcScope().filter(m => !isPendingCoveredByLateExecution(m, evalMonth, patentesCompletedInMonth));
 
         const monthlyProy = new Array(12).fill(0);
         const monthlyEjec = new Array(12).fill(0);
