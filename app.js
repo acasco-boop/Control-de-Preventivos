@@ -111,6 +111,24 @@ document.addEventListener('DOMContentLoaded', async () => {
     const exportCsvBtn = document.getElementById('exportCsvBtn');
     const tableBody = document.getElementById('tableBody');
 
+    // Tab Navigation DOM Elements
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const filterToolbarEl = document.querySelector('.filter-toolbar');
+    const kpiGrid = document.querySelector('.kpi-grid');
+    const chartsGrid = document.querySelector('.charts-grid');
+    const mainTableSection = document.querySelector('.app-container > .table-section');
+    const realizadosTab = document.getElementById('realizadosTab');
+
+    // Realizados Tab DOM Elements
+    const realizadosMonthFilter = document.getElementById('realizadosMonthFilter');
+    const realizadosEstadoFilter = document.getElementById('realizadosEstadoFilter');
+    const realizadosSearchInput = document.getElementById('realizadosSearchInput');
+    const realizadosClearSearchBtn = document.getElementById('realizadosClearSearchBtn');
+    const realizadosTableBody = document.getElementById('realizadosTableBody');
+    const realizadosTableCountBadge = document.getElementById('realizadosTableCountBadge');
+    const realizadosExportCsvBtn = document.getElementById('realizadosExportCsvBtn');
+    const realizadosCountBadge = document.getElementById('realizadosCountBadge');
+
     // Modals DOM Elements
     const confirmModal = document.getElementById('confirmModal');
     const confirmModalText = document.getElementById('confirmModalText');
@@ -160,7 +178,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         setupEventListeners();
         setupModalEventListeners();
+        setupTabNavigation();
         updateDashboard();
+        updateRealizadosTab();
     }
 
     function getItemCheckState(item) {
@@ -194,7 +214,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     selectedCdcs.delete(cdc);
                 }
                 updateCdcTriggerText();
-                updateDashboard();
+                refreshAllViews();
             });
 
             cdcOptionsList.appendChild(item);
@@ -224,7 +244,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     selectedTalleresProyectados.delete(taller);
                 }
                 updateTallerProyTriggerText();
-                updateDashboard();
+                refreshAllViews();
             });
 
             tallerProyOptionsList.appendChild(item);
@@ -257,7 +277,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     selectedTalleres.delete(taller);
                 }
                 updateTallerTriggerText();
-                updateDashboard();
+                refreshAllViews();
             });
 
             tallerOptionsList.appendChild(item);
@@ -377,14 +397,14 @@ document.addEventListener('DOMContentLoaded', async () => {
             globalData.centros_de_costo.forEach(c => selectedCdcs.add(c));
             updateCdcCheckboxes();
             updateCdcTriggerText();
-            updateDashboard();
+            refreshAllViews();
         });
 
         deselectAllCdcBtn.addEventListener('click', () => {
             selectedCdcs.clear();
             updateCdcCheckboxes();
             updateCdcTriggerText();
-            updateDashboard();
+            refreshAllViews();
         });
 
         // Taller Proyectado Select All / Deselect All
@@ -393,14 +413,14 @@ document.addEventListener('DOMContentLoaded', async () => {
             (globalData.talleres_proyectados || []).forEach(t => selectedTalleresProyectados.add(t));
             updateTallerProyCheckboxes();
             updateTallerProyTriggerText();
-            updateDashboard();
+            refreshAllViews();
         });
 
         deselectAllTallerProyBtn.addEventListener('click', () => {
             selectedTalleresProyectados.clear();
             updateTallerProyCheckboxes();
             updateTallerProyTriggerText();
-            updateDashboard();
+            refreshAllViews();
         });
 
         // Taller Realizado Select All / Deselect All
@@ -410,14 +430,14 @@ document.addEventListener('DOMContentLoaded', async () => {
             selectedTalleres.add('SIN_TALLER');
             updateTallerCheckboxes();
             updateTallerTriggerText();
-            updateDashboard();
+            refreshAllViews();
         });
 
         deselectAllTallerBtn.addEventListener('click', () => {
             selectedTalleres.clear();
             updateTallerCheckboxes();
             updateTallerTriggerText();
-            updateDashboard();
+            refreshAllViews();
         });
 
         monthFilter.addEventListener('change', updateDashboard);
@@ -453,7 +473,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             statusFilter.value = 'ALL';
             searchInput.value = '';
             clearSearchBtn.style.display = 'none';
-            updateDashboard();
+            refreshAllViews();
         });
         exportCsvBtn.addEventListener('click', exportToCsv);
 
@@ -519,7 +539,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 if (targetCheckbox) {
                     targetCheckbox.checked = true;
                 }
-                updateDashboard();
+                refreshAllViews();
             }
             confirmModal.classList.remove('show');
             pendingAction = null;
@@ -544,7 +564,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     if (targetCheckbox) {
                         targetCheckbox.checked = false;
                     }
-                    updateDashboard();
+                    refreshAllViews();
                 }
                 passModal.classList.remove('show');
                 pendingAction = null;
@@ -563,6 +583,212 @@ document.addEventListener('DOMContentLoaded', async () => {
                 executeUncheckPass();
             }
         });
+    }
+
+    function setupTabNavigation() {
+        tabButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tab = btn.dataset.tab;
+                tabButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                if (tab === 'dashboard') {
+                    showDashboardTab();
+                } else if (tab === 'realizados') {
+                    showRealizadosTab();
+                }
+            });
+        });
+
+        realizadosMonthFilter.addEventListener('change', updateRealizadosTab);
+        realizadosEstadoFilter.addEventListener('change', updateRealizadosTab);
+        realizadosSearchInput.addEventListener('input', () => {
+            realizadosClearSearchBtn.style.display = realizadosSearchInput.value ? 'block' : 'none';
+            updateRealizadosTab();
+        });
+        realizadosClearSearchBtn.addEventListener('click', () => {
+            realizadosSearchInput.value = '';
+            realizadosClearSearchBtn.style.display = 'none';
+            updateRealizadosTab();
+        });
+        realizadosExportCsvBtn.addEventListener('click', exportRealizadosToCsv);
+    }
+
+    function showDashboardTab() {
+        realizadosTab.style.display = 'none';
+        filterToolbarEl.style.display = '';
+        kpiGrid.style.display = '';
+        chartsGrid.style.display = '';
+        mainTableSection.style.display = '';
+    }
+
+    function showRealizadosTab() {
+        realizadosTab.style.display = 'block';
+        filterToolbarEl.style.display = 'none';
+        kpiGrid.style.display = 'none';
+        chartsGrid.style.display = 'none';
+        mainTableSection.style.display = 'none';
+        updateRealizadosTab();
+    }
+
+    function getRealizadosFilteredData() {
+        const selectedMonth = realizadosMonthFilter.value;
+        const selectedEstado = realizadosEstadoFilter.value;
+        const searchQuery = realizadosSearchInput.value.trim().toUpperCase();
+
+        return globalData.mantenimientos.filter(item => {
+            // Only items that were actually executed (non-PENDIENTE)
+            if (item.estado === 'PENDIENTE') return false;
+            if (!item.fecha_ejecucion) return false;
+
+            // Apply global filters: CdC, Taller Proyectado, Taller Realizado
+            if (!isCdcMatch(item.centro_costo)) return false;
+            if (!isTallerProyMatch(item)) return false;
+            if (!isTallerMatch(item.taller)) return false;
+
+            // Month of execution filter
+            if (selectedMonth !== 'ALL') {
+                const m = parseInt(selectedMonth);
+                if (item.mes_ejecucion !== m) return false;
+            }
+
+            // Estado filter
+            if (selectedEstado !== 'ALL' && item.estado !== selectedEstado) {
+                return false;
+            }
+
+            // Search by patente
+            if (searchQuery && !item.patente.includes(searchQuery)) {
+                return false;
+            }
+
+            return true;
+        });
+    }
+
+    function updateRealizadosTab() {
+        const filtered = getRealizadosFilteredData();
+
+        // Sort by execution date descending (most recent first)
+        filtered.sort((a, b) => {
+            if (a.fecha_ejecucion && b.fecha_ejecucion) {
+                return b.fecha_ejecucion.localeCompare(a.fecha_ejecucion);
+            }
+            return 0;
+        });
+
+        renderRealizadosTable(filtered);
+        updateRealizadosCountBadge();
+    }
+
+    function updateRealizadosCountBadge() {
+        const allCompleted = globalData.mantenimientos.filter(m => m.estado !== 'PENDIENTE' && m.fecha_ejecucion);
+        realizadosCountBadge.textContent = allCompleted.length;
+    }
+
+    function renderRealizadosTable(list) {
+        realizadosTableCountBadge.textContent = `${list.length} Registros`;
+        realizadosTableBody.innerHTML = '';
+
+        if (list.length === 0) {
+            realizadosTableBody.innerHTML = `
+                <tr>
+                    <td colspan="10" style="text-align: center; color: var(--text-muted); padding: 30px;">
+                        <i class="fa-solid fa-inbox" style="font-size: 2rem; margin-bottom: 8px;"></i><br>
+                        No se encontraron preventivos realizados con los filtros aplicados.
+                    </td>
+                </tr>`;
+            return;
+        }
+
+        list.forEach(item => {
+            const tr = document.createElement('tr');
+            tr.classList.add('row-completed');
+
+            const fechaEjecFormatted = item.fecha_ejecucion ? formatDate(item.fecha_ejecucion) : '-';
+            const fechaEstFormatted = item.fecha_estimada ? formatDate(item.fecha_estimada) : '-';
+            const mesOrigName = item.mes_original && item.mes_original >= 1 && item.mes_original <= 12
+                ? monthNames[item.mes_original - 1] : 'N/A';
+            const mesEjecName = item.mes_ejecucion && item.mes_ejecucion >= 1 && item.mes_ejecucion <= 12
+                ? monthNames[item.mes_ejecucion - 1] : 'N/A';
+
+            let badgeHtml = '';
+            if (item.estado === 'FUERA_DE_TERMINO') {
+                badgeHtml = `<span class="badge badge-fuera-termino"><i class="fa-solid fa-clock-rotate-left"></i> Fuera de término</span>`;
+                tr.classList.add('row-completed-orange');
+            } else if (item.estado === 'ADELANTADO') {
+                badgeHtml = `<span class="badge badge-adelantado"><i class="fa-solid fa-bolt-lightning"></i> Adelantado</span>`;
+            } else {
+                badgeHtml = `<span class="badge badge-en-fecha"><i class="fa-solid fa-circle-check"></i> En Fecha</span>`;
+            }
+
+            const tallerProyBadge = item.taller_proyectado
+                ? `<span class="taller-proy-tag"><i class="fa-solid fa-clipboard-list"></i> ${escapeHtml(item.taller_proyectado)}</span>`
+                : `<span class="taller-tag-none">-</span>`;
+
+            const tallerBadge = item.taller && item.taller !== 'Sin Taller'
+                ? `<span class="taller-tag"><i class="fa-solid fa-wrench"></i> ${escapeHtml(item.taller)}</span>`
+                : `<span class="taller-tag-none">-</span>`;
+
+            tr.innerHTML = `
+                <td><strong>${escapeHtml(item.centro_costo)}</strong></td>
+                <td><span class="patente-code">${escapeHtml(item.patente)}</span></td>
+                <td>${escapeHtml(item.plan)}</td>
+                <td>${mesOrigName} (${fechaEstFormatted})</td>
+                <td>${mesEjecName}</td>
+                <td>${badgeHtml}</td>
+                <td>${tallerProyBadge}</td>
+                <td>${tallerBadge}</td>
+                <td><strong>${fechaEjecFormatted}</strong></td>
+                <td><span class="obs-tag">${escapeHtml(item.observaciones)}</span></td>
+            `;
+
+            realizadosTableBody.appendChild(tr);
+        });
+    }
+
+    function exportRealizadosToCsv() {
+        const dataToExport = getRealizadosFilteredData();
+        if (dataToExport.length === 0) {
+            alert('No hay datos para exportar.');
+            return;
+        }
+
+        let csvContent = "data:text/csv;charset=utf-8,\uFEFF";
+        csvContent += "Centro de Costo;Patente;Plan;Mes Programado;Mes Ejecución;Estado;Taller Proyectado;Taller Realizado;Fecha Ejecución;Observaciones\n";
+
+        dataToExport.forEach(item => {
+            const mesOrigName = item.mes_original && item.mes_original >= 1 && item.mes_original <= 12
+                ? monthNames[item.mes_original - 1] : 'N/A';
+            const mesEjecName = item.mes_ejecucion && item.mes_ejecucion >= 1 && item.mes_ejecucion <= 12
+                ? monthNames[item.mes_ejecucion - 1] : 'N/A';
+            const row = [
+                `"${item.centro_costo}"`,
+                `"${item.patente}"`,
+                `"${item.plan}"`,
+                `"${mesOrigName}"`,
+                `"${mesEjecName}"`,
+                `"${item.estado}"`,
+                `"${item.taller_proyectado || 'Sin Taller Proyectado'}"`,
+                `"${item.taller || 'Sin Taller'}"`,
+                `"${item.fecha_ejecucion || ''}"`,
+                `"${(item.observaciones || '').replace(/"/g, '""')}"`
+            ].join(";");
+            csvContent += row + "\n";
+        });
+
+        const encodedUri = encodeURI(csvContent);
+        const link = document.createElement("a");
+        link.setAttribute("href", encodedUri);
+        link.setAttribute("download", `Preventivos_Realizados_2026_${new Date().toISOString().slice(0,10)}.csv`);
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+
+    function refreshAllViews() {
+        updateDashboard();
+        updateRealizadosTab();
     }
 
     function updateCdcCheckboxes() {

@@ -852,3 +852,145 @@ body {
     font-weight: 600;
     display: none;
 }
+
+/* Tab Navigation */
+.tab-navigation {
+    display: flex;
+    gap: 4px;
+    padding: 0 20px;
+    background: var(--bg-surface);
+    border-bottom: 1px solid var(--border-color);
+    margin-top: -1px;
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    padding: 14px 22px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: inherit;
+    position: relative;
+    margin-bottom: -1px;
+}
+
+.tab-btn:hover {
+    color: var(--text-light);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.tab-btn.active {
+    color: var(--accent-blue);
+    border-bottom-color: var(--accent-blue);
+    background: rgba(59, 130, 246, 0.05);
+}
+
+.tab-btn i {
+    font-size: 0.95rem;
+}
+
+.tab-badge {
+    background: var(--accent-green);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 10px;
+    min-width: 22px;
+    text-align: center;
+}
+
+.tab-btn.active .tab-badge {
+    background: var(--accent-blue);
+}
+
+/* Tab Content Visibility */
+.app-container > section:not(.tab-content):not(.filter-toolbar):not(.kpi-grid):not(.charts-grid):not(.table-section) {
+    /* Existing sections remain visible when dashboard tab is active */
+}
+
+.app-container.tab-dashboard-active .realizados-only {
+    display: none;
+}
+
+/* Realizados Tab Section */
+.realizados-header {
+    padding: 20px 24px;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), rgba(6, 182, 211, 0.04));
+    border-bottom: 1px solid var(--border-color);
+}
+
+.realizados-header h2 {
+    color: var(--text-main);
+    font-size: 1.4rem;
+    margin: 0 0 6px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.realizados-header h2 i {
+    color: var(--accent-green);
+}
+
+.realizados-subtitle {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    margin: 0;
+}
+
+.realizados-filters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    padding: 18px 24px;
+    background: var(--bg-surface);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.realizados-filters .filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.realizados-filters label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.realizados-filters .filter-select,
+.realizados-filters .filter-input {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 0.88rem;
+    font-family: inherit;
+    transition: border-color 0.2s;
+}
+
+.realizados-filters .filter-select:focus,
+.realizados-filters .filter-input:focus {
+    outline: none;
+    border-color: var(--accent-green);
+}
+
+.tab-content {
+    display: block;
+}

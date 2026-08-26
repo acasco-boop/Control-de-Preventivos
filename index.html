@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="styles.css?v=2.1">
+    <link rel="stylesheet" href="styles.css?v=2.2">
 </head>
 <body>
     <div class="app-container">
@@ -34,6 +34,17 @@
                 </button>
             </div>
         </header>
+
+        <!-- Tab Navigation -->
+        <nav class="tab-navigation">
+            <button type="button" class="tab-btn active" data-tab="dashboard">
+                <i class="fa-solid fa-gauge-high"></i> Dashboard
+            </button>
+            <button type="button" class="tab-btn" data-tab="realizados">
+                <i class="fa-solid fa-circle-check"></i> Realizados 2026
+                <span class="tab-badge" id="realizadosCountBadge">0</span>
+            </button>
+        </nav>
 
         <!-- Global Filter Toolbar -->
         <section class="filter-toolbar">
@@ -249,6 +260,89 @@
                 </table>
             </div>
         </section>
+
+        <!-- Realizados 2026 Tab Section -->
+        <section class="tab-content" id="realizadosTab" style="display: none;">
+            <div class="realizados-header">
+                <h2><i class="fa-solid fa-circle-check"></i> Preventivos Realizados - Año 2026</h2>
+                <p class="realizados-subtitle">Listado completo de mantenimientos preventivos ejecutados durante el año</p>
+            </div>
+
+            <!-- Realizados Sub-Filters -->
+            <div class="realizados-filters">
+                <div class="filter-group">
+                    <label for="realizadosMonthFilter"><i class="fa-regular fa-calendar-days"></i> Mes de Ejecución</label>
+                    <select id="realizadosMonthFilter" class="filter-select">
+                        <option value="ALL">Todos los meses</option>
+                        <option value="1">Enero</option>
+                        <option value="2">Febrero</option>
+                        <option value="3">Marzo</option>
+                        <option value="4">Abril</option>
+                        <option value="5">Mayo</option>
+                        <option value="6">Junio</option>
+                        <option value="7">Julio</option>
+                        <option value="8">Agosto</option>
+                        <option value="9">Septiembre</option>
+                        <option value="10">Octubre</option>
+                        <option value="11">Noviembre</option>
+                        <option value="12">Diciembre</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="realizadosEstadoFilter"><i class="fa-solid fa-shield-halved"></i> Estado de Ejecución</label>
+                    <select id="realizadosEstadoFilter" class="filter-select">
+                        <option value="ALL">Todos los Estados</option>
+                        <option value="EN_FECHA">En Fecha</option>
+                        <option value="ADELANTADO">Adelantado</option>
+                        <option value="FUERA_DE_TERMINO">Fuera de Término</option>
+                    </select>
+                </div>
+                <div class="filter-group search-group">
+                    <label for="realizadosSearchInput"><i class="fa-solid fa-magnifying-glass"></i> Buscar por Patente</label>
+                    <div class="input-with-icon">
+                        <input type="text" id="realizadosSearchInput" placeholder="Ej: AB320YQ..." class="filter-input">
+                        <i class="fa-solid fa-xmark clear-search-icon" id="realizadosClearSearchBtn" style="display:none;"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Realizados Table Section -->
+            <section class="table-section">
+                <div class="table-header-toolbar">
+                    <div class="table-title">
+                        <h3><i class="fa-solid fa-list-check"></i> Listado de Mantenimientos Ejecutados</h3>
+                        <span class="table-count-badge" id="realizadosTableCountBadge">0 Registros</span>
+                    </div>
+                    <div class="table-actions">
+                        <button id="realizadosExportCsvBtn" class="btn-outline">
+                            <i class="fa-solid fa-file-csv"></i> Exportar CSV
+                        </button>
+                    </div>
+                </div>
+
+                <div class="table-wrapper">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Centro de Costo</th>
+                                <th>Patente / Unidad</th>
+                                <th>Preventivo</th>
+                                <th>Mes Programado</th>
+                                <th>Mes Ejecución</th>
+                                <th>Estado</th>
+                                <th>Taller Proyectado</th>
+                                <th>Taller Realizado</th>
+                                <th>Fecha Real Ejecución</th>
+                                <th>Observaciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="realizadosTableBody">
+                            <!-- Dynamic content filled by app.js -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </section>
     </div>
 
     <!-- Confirmation Modal (Marcar como Listo) -->
@@ -289,6 +383,6 @@
         </div>
     </div>
 
-    <script src="app.js?v=2.1"></script>
+    <script src="app.js?v=2.2"></script>
 </body>
 </html>
