@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="styles.css?v=2.2">
+    <link rel="stylesheet" href="styles.css?v=2.3">
 </head>
 <body>
     <div class="app-container">
@@ -38,7 +38,10 @@
         <!-- Tab Navigation -->
         <nav class="tab-navigation">
             <button type="button" class="tab-btn active" data-tab="dashboard">
-                <i class="fa-solid fa-gauge-high"></i> Dashboard
+                <i class="fa-solid fa-gauge-high"></i> Proyectado 2026
+            </button>
+            <button type="button" class="tab-btn" data-tab="presupuesto">
+                <i class="fa-solid fa-file-invoice-dollar"></i> Presupuesto 2026
             </button>
             <button type="button" class="tab-btn" data-tab="realizados">
                 <i class="fa-solid fa-circle-check"></i> Realizados 2026
@@ -261,6 +264,213 @@
             </div>
         </section>
 
+        <!-- Presupuesto 2026 Tab Section -->
+        <section class="tab-content" id="presupuestoTab" style="display: none;">
+            <!-- Presupuesto Filter Toolbar -->
+            <section class="filter-toolbar" id="presupuestoFilterToolbar">
+                <div class="filter-group multiselect-group">
+                    <label><i class="fa-solid fa-building-user"></i> Centro de Costo (CdC)</label>
+                    <div class="custom-multiselect" id="presuCdcMultiselect">
+                        <button type="button" class="multiselect-trigger" id="presuCdcTrigger">
+                            <span id="presuCdcTriggerText">Todos los Centros de Costo</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="multiselect-dropdown" id="presuCdcDropdown">
+                            <div class="multiselect-search">
+                                <input type="text" id="presuCdcSearchInput" placeholder="Buscar CdC...">
+                            </div>
+                            <div class="multiselect-actions">
+                                <button type="button" id="presuSelectAllCdcBtn" class="btn-text">Seleccionar Todos</button>
+                                <button type="button" id="presuDeselectAllCdcBtn" class="btn-text">Deseleccionar Todos</button>
+                            </div>
+                            <div class="multiselect-options" id="presuCdcOptionsList"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-group multiselect-group">
+                    <label><i class="fa-solid fa-clipboard-list"></i> Taller Proyectado</label>
+                    <div class="custom-multiselect" id="presuTallerProyMultiselect">
+                        <button type="button" class="multiselect-trigger" id="presuTallerProyTrigger">
+                            <span id="presuTallerProyTriggerText">Todos los Talleres Proyectados</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="multiselect-dropdown" id="presuTallerProyDropdown">
+                            <div class="multiselect-actions">
+                                <button type="button" id="presuSelectAllTallerProyBtn" class="btn-text">Seleccionar Todos</button>
+                                <button type="button" id="presuDeselectAllTallerProyBtn" class="btn-text">Deseleccionar Todos</button>
+                            </div>
+                            <div class="multiselect-options" id="presuTallerProyOptionsList"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-group multiselect-group">
+                    <label><i class="fa-solid fa-wrench"></i> Taller Realizado</label>
+                    <div class="custom-multiselect" id="presuTallerMultiselect">
+                        <button type="button" class="multiselect-trigger" id="presuTallerTrigger">
+                            <span id="presuTallerTriggerText">Todos los Talleres Realizados</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="multiselect-dropdown" id="presuTallerDropdown">
+                            <div class="multiselect-actions">
+                                <button type="button" id="presuSelectAllTallerBtn" class="btn-text">Seleccionar Todos</button>
+                                <button type="button" id="presuDeselectAllTallerBtn" class="btn-text">Deseleccionar Todos</button>
+                            </div>
+                            <div class="multiselect-options" id="presuTallerOptionsList"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <label for="presuMonthFilter"><i class="fa-regular fa-calendar-days"></i> Mes de Evaluación</label>
+                    <select id="presuMonthFilter" class="filter-select">
+                        <option value="8">Agosto 2026 (Mes Actual)</option>
+                        <option value="ALL">Todo el Año 2026</option>
+                        <option value="1">Enero 2026</option>
+                        <option value="2">Febrero 2026</option>
+                        <option value="3">Marzo 2026</option>
+                        <option value="4">Abril 2026</option>
+                        <option value="5">Mayo 2026</option>
+                        <option value="6">Junio 2026</option>
+                        <option value="7">Julio 2026</option>
+                        <option value="8">Agosto 2026</option>
+                        <option value="9">Septiembre 2026</option>
+                        <option value="10">Octubre 2026</option>
+                        <option value="11">Noviembre 2026</option>
+                        <option value="12">Diciembre 2026</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="presuStatusFilter"><i class="fa-solid fa-shield-halved"></i> Estado</label>
+                    <select id="presuStatusFilter" class="filter-select">
+                        <option value="ALL">Todos los Estados</option>
+                        <option value="EN_FECHA">En Fecha</option>
+                        <option value="ADELANTADO">Adelantado (Antes de fecha)</option>
+                        <option value="FUERA_DE_TERMINO">Fuera de Término (Recuperado)</option>
+                        <option value="PENDIENTE">Pendiente / Atrasado</option>
+                    </select>
+                </div>
+
+                <div class="filter-group search-group">
+                    <label for="presuSearchInput"><i class="fa-solid fa-magnifying-glass"></i> Buscar por Patente</label>
+                    <div class="input-with-icon">
+                        <input type="text" id="presuSearchInput" placeholder="Ej: AB320YQ..." class="filter-input">
+                        <i class="fa-solid fa-xmark clear-search-icon" id="presuClearSearchBtn" style="display:none;"></i>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Presupuesto KPI Cards -->
+            <section class="kpi-grid" id="presupuestoKpiGrid">
+                <div class="kpi-card accent-blue">
+                    <div class="kpi-header">
+                        <span class="kpi-title">Cumplimiento YTD 2026</span>
+                        <i class="fa-solid fa-chart-line kpi-icon"></i>
+                    </div>
+                    <div class="kpi-value" id="presuKpiYtdPct">0.0%</div>
+                    <div class="kpi-progress">
+                        <div class="progress-bar-fill" id="presuBarYtd" style="width: 0%;"></div>
+                    </div>
+                    <div class="kpi-footer" id="presuKpiYtdDetail">0 de 0 preventivos ejecutados a la fecha</div>
+                </div>
+
+                <div class="kpi-card accent-green">
+                    <div class="kpi-header">
+                        <span class="kpi-title">% Cumplimiento en Término (Mes)</span>
+                        <i class="fa-solid fa-circle-check kpi-icon"></i>
+                    </div>
+                    <div class="kpi-value" id="presuKpiTerminoPct">0.0%</div>
+                    <div class="kpi-progress">
+                        <div class="progress-bar-fill green-fill" id="presuBarTermino" style="width: 0%;"></div>
+                    </div>
+                    <div class="kpi-footer" id="presuKpiTerminoDetail">0 proyectados realizados en fecha</div>
+                </div>
+
+                <div class="kpi-card accent-purple">
+                    <div class="kpi-header">
+                        <span class="kpi-title">% Ejecución Total (Mes)</span>
+                        <i class="fa-solid fa-bolt kpi-icon"></i>
+                    </div>
+                    <div class="kpi-value" id="presuKpiTotalPct">0.0%</div>
+                    <div class="kpi-progress">
+                        <div class="progress-bar-fill purple-fill" id="presuBarTotal" style="width: 0%;"></div>
+                    </div>
+                    <div class="kpi-footer" id="presuKpiTotalDetail">Incluye tareas regularizadas de meses previos</div>
+                </div>
+
+                <div class="kpi-card accent-red">
+                    <div class="kpi-header">
+                        <span class="kpi-title">Pendientes / Atrasados</span>
+                        <i class="fa-solid fa-clock-rotate-left kpi-icon"></i>
+                    </div>
+                    <div class="kpi-value" id="presuKpiAtrasadosQty">0</div>
+                    <div class="kpi-progress">
+                        <div class="progress-bar-fill red-fill" id="presuBarAtrasados" style="width: 0%;"></div>
+                    </div>
+                    <div class="kpi-footer" id="presuKpiAtrasadosDetail">Tareas requeridas sin ejecutar</div>
+                </div>
+            </section>
+
+            <!-- Presupuesto Charts -->
+            <section class="charts-grid" id="presupuestoChartsGrid">
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3><i class="fa-solid fa-chart-column"></i> Presupuesto vs. Realizado Mes a Mes (2026)</h3>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="presuMonthlyChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3><i class="fa-solid fa-chart-pie"></i> Distribución de Estados</h3>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="presuStatusChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Presupuesto Table -->
+            <section class="table-section" id="presupuestoTableSection">
+                <div class="table-header-toolbar">
+                    <div class="table-title">
+                        <h2><i class="fa-solid fa-list-check"></i> Detalle de Mantenimientos - Presupuesto 2026</h2>
+                        <span class="table-count-badge" id="presuTableCountBadge">0 Registros</span>
+                    </div>
+                    <div class="table-actions">
+                        <button id="presuExportCsvBtn" class="btn-outline">
+                            <i class="fa-solid fa-file-csv"></i> Exportar CSV
+                        </button>
+                    </div>
+                </div>
+
+                <div class="table-wrapper">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 60px; text-align: center;">Listo</th>
+                                <th>Centro de Costo</th>
+                                <th>Patente / Unidad</th>
+                                <th>Preventivo Presupuestado</th>
+                                <th>Mes Programado</th>
+                                <th>Estado</th>
+                                <th>Taller Proyectado</th>
+                                <th>Taller Realizado</th>
+                                <th>Fecha Real Ejecución</th>
+                                <th>Observaciones / Origen</th>
+                                <th>Aclaración del Mecánico</th>
+                            </tr>
+                        </thead>
+                        <tbody id="presuTableBody"></tbody>
+                    </table>
+                </div>
+            </section>
+        </section>
+
         <!-- Realizados 2026 Tab Section -->
         <section class="tab-content" id="realizadosTab" style="display: none;">
             <div class="realizados-header">
@@ -383,6 +593,6 @@
         </div>
     </div>
 
-    <script src="app.js?v=2.2"></script>
+    <script src="app.js?v=2.3"></script>
 </body>
 </html>

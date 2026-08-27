@@ -8,9 +8,22 @@ document.addEventListener('DOMContentLoaded', async () => {
         mantenimientos: []
     };
 
+    let budgetData = {
+        centros_de_costo: [],
+        talleres: [],
+        talleres_proyectados: [],
+        vehiculos: [],
+        mantenimientos: []
+    };
+
     let selectedCdcs = new Set();
     let selectedTalleres = new Set();
     let selectedTalleresProyectados = new Set();
+
+    // Presupuesto filter state
+    let presuSelectedCdcs = new Set();
+    let presuSelectedTalleres = new Set();
+    let presuSelectedTalleresProyectados = new Set();
 
     // Password required to uncheck ANY completed item
     const UNCHECK_PASSWORD = '4321';
@@ -129,6 +142,41 @@ document.addEventListener('DOMContentLoaded', async () => {
     const realizadosExportCsvBtn = document.getElementById('realizadosExportCsvBtn');
     const realizadosCountBadge = document.getElementById('realizadosCountBadge');
 
+    // Presupuesto Tab DOM Elements
+    const presupuestoTab = document.getElementById('presupuestoTab');
+    const presuCdcTrigger = document.getElementById('presuCdcTrigger');
+    const presuCdcDropdown = document.getElementById('presuCdcDropdown');
+    const presuCdcTriggerText = document.getElementById('presuCdcTriggerText');
+    const presuCdcOptionsList = document.getElementById('presuCdcOptionsList');
+    const presuCdcSearchInput = document.getElementById('presuCdcSearchInput');
+    const presuSelectAllCdcBtn = document.getElementById('presuSelectAllCdcBtn');
+    const presuDeselectAllCdcBtn = document.getElementById('presuDeselectAllCdcBtn');
+
+    const presuTallerProyTrigger = document.getElementById('presuTallerProyTrigger');
+    const presuTallerProyDropdown = document.getElementById('presuTallerProyDropdown');
+    const presuTallerProyTriggerText = document.getElementById('presuTallerProyTriggerText');
+    const presuTallerProyOptionsList = document.getElementById('presuTallerProyOptionsList');
+    const presuSelectAllTallerProyBtn = document.getElementById('presuSelectAllTallerProyBtn');
+    const presuDeselectAllTallerProyBtn = document.getElementById('presuDeselectAllTallerProyBtn');
+
+    const presuTallerTrigger = document.getElementById('presuTallerTrigger');
+    const presuTallerDropdown = document.getElementById('presuTallerDropdown');
+    const presuTallerTriggerText = document.getElementById('presuTallerTriggerText');
+    const presuTallerOptionsList = document.getElementById('presuTallerOptionsList');
+    const presuSelectAllTallerBtn = document.getElementById('presuSelectAllTallerBtn');
+    const presuDeselectAllTallerBtn = document.getElementById('presuDeselectAllTallerBtn');
+
+    const presuMonthFilter = document.getElementById('presuMonthFilter');
+    const presuStatusFilter = document.getElementById('presuStatusFilter');
+    const presuSearchInput = document.getElementById('presuSearchInput');
+    const presuClearSearchBtn = document.getElementById('presuClearSearchBtn');
+    const presuExportCsvBtn = document.getElementById('presuExportCsvBtn');
+    const presuTableBody = document.getElementById('presuTableBody');
+
+    // Presupuesto Charts
+    let presuMonthlyChartInstance = null;
+    let presuStatusChartInstance = null;
+
     // Modals DOM Elements
     const confirmModal = document.getElementById('confirmModal');
     const confirmModalText = document.getElementById('confirmModalText');
@@ -144,8 +192,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Load Data & Shared State
     try {
         await loadMechanicState();
-        const response = await fetch('data/maintenance_data.json?t=' + Date.now());
-        globalData = await response.json();
+        const [mainResponse, budgetResponse] = await Promise.all([
+            fetch('data/maintenance_data.json?t=' + Date.now()),
+            fetch('data/budget_data.json?t=' + Date.now())
+        ]);
+        globalData = await mainResponse.json();
+        budgetData = await budgetResponse.json();
         initDashboard();
     } catch (error) {
         console.error('Error al cargar datos e inicializar dashboard:', error);
@@ -176,10 +228,36 @@ document.addEventListener('DOMContentLoaded', async () => {
         updateCdcCheckboxes();
         updateCdcTriggerText();
 
+        // Initialize Presupuesto dashboard
+        populatePresuCdcMultiselectOptions();
+        populatePresuTallerProyectadoMultiselectOptions();
+        populatePresuTallerMultiselectOptions();
+
+        // Default Presupuesto filters: same as main dashboard
+        presuSelectedTalleresProyectados.clear();
+        presuSelectedTalleresProyectados.add('BSAS');
+        presuSelectedTalleresProyectados.add('BSAS / SRAF');
+        updatePresuTallerProyCheckboxes();
+        updatePresuTallerProyTriggerText();
+
+        presuSelectedTalleres.clear();
+        updatePresuTallerCheckboxes();
+        updatePresuTallerTriggerText();
+
+        presuSelectedCdcs.clear();
+        budgetData.centros_de_costo.forEach(cdc => {
+            if (cdc !== 'Sin Operación' && cdc !== 'Sin Centro de Costo') {
+                presuSelectedCdcs.add(cdc);
+            }
+        });
+        updatePresuCdcCheckboxes();
+        updatePresuCdcTriggerText();
+
         setupEventListeners();
         setupModalEventListeners();
         setupTabNavigation();
         updateDashboard();
+        updatePresupuestoDashboard();
         updateRealizadosTab();
     }
 
@@ -594,10 +672,133 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                 if (tab === 'dashboard') {
                     showDashboardTab();
+                } else if (tab === 'presupuesto') {
+                    showPresupuestoTab();
                 } else if (tab === 'realizados') {
                     showRealizadosTab();
                 }
             });
+        });
+
+        // Presupuesto filter listeners
+        presuCdcSearchInput.addEventListener('input', () => {
+            const q = presuCdcSearchInput.value.toLowerCase();
+            presuCdcOptionsList.querySelectorAll('.multiselect-option').forEach(opt => {
+                opt.style.display = opt.dataset.cdc.toLowerCase().includes(q) ? 'flex' : 'none';
+            });
+        });
+        presuSelectAllCdcBtn.addEventListener('click', () => {
+            presuSelectedCdcs.clear();
+            budgetData.centros_de_costo.forEach(c => presuSelectedCdcs.add(c));
+            updatePresuCdcCheckboxes(); updatePresuCdcTriggerText(); updatePresupuestoDashboard();
+        });
+        presuDeselectAllCdcBtn.addEventListener('click', () => {
+            presuSelectedCdcs.clear();
+            updatePresuCdcCheckboxes(); updatePresuCdcTriggerText(); updatePresupuestoDashboard();
+        });
+        presuSelectAllTallerProyBtn.addEventListener('click', () => {
+            presuSelectedTalleresProyectados.clear();
+            (budgetData.talleres_proyectados || []).forEach(t => presuSelectedTalleresProyectados.add(t));
+            updatePresuTallerProyCheckboxes(); updatePresuTallerProyTriggerText(); updatePresupuestoDashboard();
+        });
+        presuDeselectAllTallerProyBtn.addEventListener('click', () => {
+            presuSelectedTalleresProyectados.clear();
+            updatePresuTallerProyCheckboxes(); updatePresuTallerProyTriggerText(); updatePresupuestoDashboard();
+        });
+        presuSelectAllTallerBtn.addEventListener('click', () => {
+            presuSelectedTalleres.clear();
+            (budgetData.talleres || []).forEach(t => presuSelectedTalleres.add(t));
+            presuSelectedTalleres.add('SIN_TALLER');
+            updatePresuTallerCheckboxes(); updatePresuTallerTriggerText(); updatePresupuestoDashboard();
+        });
+        presuDeselectAllTallerBtn.addEventListener('click', () => {
+            presuSelectedTalleres.clear();
+            updatePresuTallerCheckboxes(); updatePresuTallerTriggerText(); updatePresupuestoDashboard();
+        });
+
+        // Presupuesto dropdown toggles
+        presuCdcTrigger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            presuTallerProyDropdown.classList.remove('show'); presuTallerProyTrigger.classList.remove('active');
+            presuTallerDropdown.classList.remove('show'); presuTallerTrigger.classList.remove('active');
+            presuCdcDropdown.classList.toggle('show'); presuCdcTrigger.classList.toggle('active');
+        });
+        presuTallerProyTrigger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            presuCdcDropdown.classList.remove('show'); presuCdcTrigger.classList.remove('active');
+            presuTallerDropdown.classList.remove('show'); presuTallerTrigger.classList.remove('active');
+            presuTallerProyDropdown.classList.toggle('show'); presuTallerProyTrigger.classList.toggle('active');
+        });
+        presuTallerTrigger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            presuCdcDropdown.classList.remove('show'); presuCdcTrigger.classList.remove('active');
+            presuTallerProyDropdown.classList.remove('show'); presuTallerProyTrigger.classList.remove('active');
+            presuTallerDropdown.classList.toggle('show'); presuTallerTrigger.classList.toggle('active');
+        });
+        document.addEventListener('click', (e) => {
+            if (!presuCdcDropdown.contains(e.target) && !presuCdcTrigger.contains(e.target)) {
+                presuCdcDropdown.classList.remove('show'); presuCdcTrigger.classList.remove('active');
+            }
+            if (!presuTallerProyDropdown.contains(e.target) && !presuTallerProyTrigger.contains(e.target)) {
+                presuTallerProyDropdown.classList.remove('show'); presuTallerProyTrigger.classList.remove('active');
+            }
+            if (!presuTallerDropdown.contains(e.target) && !presuTallerTrigger.contains(e.target)) {
+                presuTallerDropdown.classList.remove('show'); presuTallerTrigger.classList.remove('active');
+            }
+        });
+
+        presuMonthFilter.addEventListener('change', updatePresupuestoDashboard);
+        presuStatusFilter.addEventListener('change', updatePresupuestoDashboard);
+        presuSearchInput.addEventListener('input', () => {
+            presuClearSearchBtn.style.display = presuSearchInput.value ? 'block' : 'none';
+            updatePresupuestoDashboard();
+        });
+        presuClearSearchBtn.addEventListener('click', () => {
+            presuSearchInput.value = '';
+            presuClearSearchBtn.style.display = 'none';
+            updatePresupuestoDashboard();
+        });
+        presuExportCsvBtn.addEventListener('click', exportPresuToCsv);
+
+        // Presupuesto table mechanic checkbox listener
+        presuTableBody.addEventListener('click', (e) => {
+            if (e.target.classList.contains('mechanic-check')) {
+                e.preventDefault();
+                const chk = e.target;
+                const id = parseInt(chk.dataset.id);
+                const item = budgetData.mantenimientos.find(m => m.id === id);
+                const isCurrentlyChecked = getItemCheckState(item);
+                const patenteName = item ? item.patente : 'Unidad';
+                const planName = item ? item.plan : 'Preventivo';
+
+                if (!isCurrentlyChecked) {
+                    pendingAction = { type: 'CHECK', targetCheckbox: chk, id: id, item: item };
+                    confirmModalText.innerHTML = `¿Está seguro de marcar el mantenimiento preventivo de la patente <strong>${escapeHtml(patenteName)}</strong> (<em>${escapeHtml(planName)}</em>) como <strong>REALIZADO</strong>?`;
+                    confirmModal.classList.add('show');
+                } else {
+                    pendingAction = { type: 'UNCHECK', targetCheckbox: chk, id: id, item: item };
+                    passInput.value = '';
+                    passErrorMsg.style.display = 'none';
+                    passModal.classList.add('show');
+                    setTimeout(() => passInput.focus(), 100);
+                }
+            }
+        });
+
+        // Presupuesto table note input listener
+        presuTableBody.addEventListener('input', (e) => {
+            if (e.target.classList.contains('mechanic-note-input')) {
+                const id = parseInt(e.target.dataset.id);
+                const key = String(id);
+                const item = budgetData.mantenimientos.find(m => m.id === id);
+                const existingNote = e.target.value;
+                if (!mechanicState[key]) {
+                    mechanicState[key] = { checked: getItemCheckState(item), note: existingNote };
+                } else {
+                    mechanicState[key].note = existingNote;
+                }
+                saveMechanicState();
+            }
         });
 
         realizadosMonthFilter.addEventListener('change', updateRealizadosTab);
@@ -616,14 +817,26 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     function showDashboardTab() {
         realizadosTab.style.display = 'none';
+        presupuestoTab.style.display = 'none';
         filterToolbarEl.style.display = '';
         kpiGrid.style.display = '';
         chartsGrid.style.display = '';
         mainTableSection.style.display = '';
     }
 
+    function showPresupuestoTab() {
+        realizadosTab.style.display = 'none';
+        presupuestoTab.style.display = 'block';
+        filterToolbarEl.style.display = 'none';
+        kpiGrid.style.display = 'none';
+        chartsGrid.style.display = 'none';
+        mainTableSection.style.display = 'none';
+        updatePresupuestoDashboard();
+    }
+
     function showRealizadosTab() {
         realizadosTab.style.display = 'block';
+        presupuestoTab.style.display = 'none';
         filterToolbarEl.style.display = 'none';
         kpiGrid.style.display = 'none';
         chartsGrid.style.display = 'none';
@@ -788,6 +1001,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     function refreshAllViews() {
         updateDashboard();
+        updatePresupuestoDashboard();
         updateRealizadosTab();
     }
 
@@ -1249,6 +1463,408 @@ document.addEventListener('DOMContentLoaded', async () => {
         const link = document.createElement("a");
         link.setAttribute("href", encodedUri);
         link.setAttribute("download", `Preventivos_2026_Export_${new Date().toISOString().slice(0,10)}.csv`);
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+
+    // ========== PRESUPUESTO DASHBOARD FUNCTIONS ==========
+
+    function populatePresuCdcMultiselectOptions() {
+        presuCdcOptionsList.innerHTML = '';
+        budgetData.centros_de_costo.forEach(cdc => {
+            const item = document.createElement('div');
+            item.className = 'multiselect-option';
+            item.dataset.cdc = cdc;
+            const isChecked = presuSelectedCdcs.has(cdc);
+            item.innerHTML = `
+                <input type="checkbox" id="presu_cdc_chk_${sanitizeId(cdc)}" value="${escapeHtml(cdc)}" ${isChecked ? 'checked' : ''}>
+                <label for="presu_cdc_chk_${sanitizeId(cdc)}" style="cursor:pointer; width:100%;">${escapeHtml(cdc)}</label>
+            `;
+            const checkbox = item.querySelector('input');
+            checkbox.addEventListener('change', (e) => {
+                if (e.target.checked) { presuSelectedCdcs.add(cdc); } else { presuSelectedCdcs.delete(cdc); }
+                updatePresuCdcTriggerText();
+                updatePresupuestoDashboard();
+            });
+            presuCdcOptionsList.appendChild(item);
+        });
+        updatePresuCdcTriggerText();
+    }
+
+    function populatePresuTallerProyectadoMultiselectOptions() {
+        presuTallerProyOptionsList.innerHTML = '';
+        (budgetData.talleres_proyectados || []).forEach(taller => {
+            const item = document.createElement('div');
+            item.className = 'multiselect-option';
+            item.dataset.tallerproy = taller;
+            const isChecked = presuSelectedTalleresProyectados.has(taller);
+            item.innerHTML = `
+                <input type="checkbox" id="presu_tallerproy_chk_${sanitizeId(taller)}" value="${escapeHtml(taller)}" ${isChecked ? 'checked' : ''}>
+                <label for="presu_tallerproy_chk_${sanitizeId(taller)}" style="cursor:pointer; width:100%;">${escapeHtml(taller)}</label>
+            `;
+            const checkbox = item.querySelector('input');
+            checkbox.addEventListener('change', (e) => {
+                if (e.target.checked) { presuSelectedTalleresProyectados.add(taller); } else { presuSelectedTalleresProyectados.delete(taller); }
+                updatePresuTallerProyTriggerText();
+                updatePresupuestoDashboard();
+            });
+            presuTallerProyOptionsList.appendChild(item);
+        });
+        updatePresuTallerProyTriggerText();
+    }
+
+    function populatePresuTallerMultiselectOptions() {
+        presuTallerOptionsList.innerHTML = '';
+        const allTalleres = [...(budgetData.talleres || []), 'SIN_TALLER'];
+        allTalleres.forEach(taller => {
+            const item = document.createElement('div');
+            item.className = 'multiselect-option';
+            item.dataset.taller = taller;
+            const isChecked = presuSelectedTalleres.has(taller);
+            const labelText = taller === 'SIN_TALLER' ? 'Sin Taller / Pendientes' : `Taller: ${taller}`;
+            item.innerHTML = `
+                <input type="checkbox" id="presu_taller_chk_${sanitizeId(taller)}" value="${escapeHtml(taller)}" ${isChecked ? 'checked' : ''}>
+                <label for="presu_taller_chk_${sanitizeId(taller)}" style="cursor:pointer; width:100%;">${escapeHtml(labelText)}</label>
+            `;
+            const checkbox = item.querySelector('input');
+            checkbox.addEventListener('change', (e) => {
+                if (e.target.checked) { presuSelectedTalleres.add(taller); } else { presuSelectedTalleres.delete(taller); }
+                updatePresuTallerTriggerText();
+                updatePresupuestoDashboard();
+            });
+            presuTallerOptionsList.appendChild(item);
+        });
+        updatePresuTallerTriggerText();
+    }
+
+    function updatePresuCdcCheckboxes() {
+        presuCdcOptionsList.querySelectorAll('input[type="checkbox"]').forEach(chk => {
+            chk.checked = presuSelectedCdcs.has(chk.value);
+        });
+    }
+
+    function updatePresuTallerProyCheckboxes() {
+        presuTallerProyOptionsList.querySelectorAll('input[type="checkbox"]').forEach(chk => {
+            chk.checked = presuSelectedTalleresProyectados.has(chk.value);
+        });
+    }
+
+    function updatePresuTallerCheckboxes() {
+        presuTallerOptionsList.querySelectorAll('input[type="checkbox"]').forEach(chk => {
+            chk.checked = presuSelectedTalleres.has(chk.value);
+        });
+    }
+
+    function updatePresuCdcTriggerText() {
+        const total = budgetData.centros_de_costo.length;
+        const count = presuSelectedCdcs.size;
+        if (count === 0 || count === total) {
+            presuCdcTriggerText.textContent = "Todos los Centros de Costo";
+        } else if (count === 1) {
+            presuCdcTriggerText.textContent = Array.from(presuSelectedCdcs)[0];
+        } else {
+            presuCdcTriggerText.textContent = `${count} CdC Seleccionados`;
+        }
+    }
+
+    function updatePresuTallerProyTriggerText() {
+        const total = budgetData.talleres_proyectados ? budgetData.talleres_proyectados.length : 0;
+        const count = presuSelectedTalleresProyectados.size;
+        if (count === 0 || count === total) {
+            presuTallerProyTriggerText.textContent = "Todos los Talleres Proyectados";
+        } else if (count === 1) {
+            presuTallerProyTriggerText.textContent = Array.from(presuSelectedTalleresProyectados)[0];
+        } else {
+            presuTallerProyTriggerText.textContent = `${count} Talleres Proyectados`;
+        }
+    }
+
+    function updatePresuTallerTriggerText() {
+        const total = (budgetData.talleres ? budgetData.talleres.length : 0) + 1;
+        const count = presuSelectedTalleres.size;
+        if (count === 0 || count === total) {
+            presuTallerTriggerText.textContent = "Todos los Talleres Realizados";
+        } else if (count === 1) {
+            const singleVal = Array.from(presuSelectedTalleres)[0];
+            presuTallerTriggerText.textContent = singleVal === 'SIN_TALLER' ? 'Sin Taller' : singleVal;
+        } else {
+            presuTallerTriggerText.textContent = `${count} Talleres Realizados`;
+        }
+    }
+
+    function isPresuCdcMatch(itemCdc) {
+        if (presuSelectedCdcs.size === 0 || presuSelectedCdcs.size === budgetData.centros_de_costo.length) return true;
+        return presuSelectedCdcs.has(itemCdc);
+    }
+
+    function isPresuTallerProyMatch(item) {
+        const totalPossible = budgetData.talleres_proyectados ? budgetData.talleres_proyectados.length : 0;
+        if (presuSelectedTalleresProyectados.size === 0 || presuSelectedTalleresProyectados.size === totalPossible) return true;
+        if (presuSelectedTalleresProyectados.has(item.taller_proyectado)) return true;
+        if (item.talleres_proyectados_list && Array.isArray(item.talleres_proyectados_list)) {
+            for (const t of item.talleres_proyectados_list) {
+                if (presuSelectedTalleresProyectados.has(t)) return true;
+            }
+        }
+        return false;
+    }
+
+    function isPresuTallerMatch(itemTaller) {
+        const totalPossible = (budgetData.talleres ? budgetData.talleres.length : 0) + 1;
+        if (presuSelectedTalleres.size === 0 || presuSelectedTalleres.size === totalPossible) return true;
+        const isSinTaller = !itemTaller || itemTaller === 'Sin Taller';
+        if (isSinTaller) return presuSelectedTalleres.has('SIN_TALLER');
+        return presuSelectedTalleres.has(itemTaller);
+    }
+
+    function getPresuCdcScope() {
+        return budgetData.mantenimientos.filter(m =>
+            isPresuCdcMatch(m.centro_costo) &&
+            isPresuTallerProyMatch(m) &&
+            isPresuTallerMatch(m.taller)
+        );
+    }
+
+    function getPresuPatentesCompletedInMonth(month) {
+        const set = new Set();
+        budgetData.mantenimientos.forEach(it => {
+            if (it.mes_ejecucion === month && it.estado !== 'PENDIENTE') set.add(it.patente);
+        });
+        return set;
+    }
+
+    function isPresuPendingCoveredByLateExecution(item, month, patentesCompletedInMonth) {
+        if (item.estado !== 'PENDIENTE') return false;
+        if (item.mes_original !== month) return false;
+        return patentesCompletedInMonth.has(item.patente);
+    }
+
+    function getPresuFilteredData() {
+        const selectedMonth = presuMonthFilter.value;
+        const selectedStatus = presuStatusFilter.value;
+        const searchQuery = presuSearchInput.value.trim().toUpperCase();
+
+        let patentesCompletedInMonth = new Set();
+        if (selectedMonth !== 'ALL') {
+            patentesCompletedInMonth = getPresuPatentesCompletedInMonth(parseInt(selectedMonth));
+        }
+
+        return budgetData.mantenimientos.filter(item => {
+            if (!isPresuCdcMatch(item.centro_costo)) return false;
+            if (!isPresuTallerProyMatch(item)) return false;
+            if (!isPresuTallerMatch(item.taller)) return false;
+
+            if (selectedMonth !== 'ALL') {
+                const m = parseInt(selectedMonth);
+                const isOriginalMonth = item.mes_original === m;
+                const isExecutedInMonth = item.mes_ejecucion === m;
+                if (!isOriginalMonth && !isExecutedInMonth) return false;
+                if (isPresuPendingCoveredByLateExecution(item, m, patentesCompletedInMonth)) return false;
+            }
+
+            if (selectedStatus !== 'ALL' && item.estado !== selectedStatus) return false;
+            if (searchQuery && !item.patente.includes(searchQuery)) return false;
+            return true;
+        });
+    }
+
+    function updatePresupuestoDashboard() {
+        const selectedMonthStr = presuMonthFilter.value;
+        const selectedMonth = selectedMonthStr === 'ALL' ? 8 : parseInt(selectedMonthStr);
+        const filteredList = getPresuFilteredData();
+
+        filteredList.sort((a, b) => {
+            const ccA = (a.centro_costo || '').toLowerCase();
+            const ccB = (b.centro_costo || '').toLowerCase();
+            if (ccA < ccB) return -1;
+            if (ccA > ccB) return 1;
+            if (a.mes_original !== b.mes_original) return a.mes_original - b.mes_original;
+            return (a.patente || '').localeCompare(b.patente || '');
+        });
+
+        calculateAndRenderPresuKpis(selectedMonth);
+        renderPresuCharts();
+        renderPresuTable(filteredList);
+    }
+
+    function calculateAndRenderPresuKpis(evalMonth) {
+        const patentesCompletedInMonth = getPresuPatentesCompletedInMonth(evalMonth);
+        const cdcScope = getPresuCdcScope().filter(m => !isPresuPendingCoveredByLateExecution(m, evalMonth, patentesCompletedInMonth));
+
+        const ytdProyectados = cdcScope.filter(m => m.mes_original <= evalMonth);
+        const ytdEjecutados = cdcScope.filter(m => m.fecha_ejecucion !== null && m.mes_ejecucion <= evalMonth);
+        const ytdPct = ytdProyectados.length > 0 ? ((ytdEjecutados.length / ytdProyectados.length) * 100).toFixed(1) : '0.0';
+        document.getElementById('presuKpiYtdPct').textContent = `${ytdPct}%`;
+        document.getElementById('presuBarYtd').style.width = `${Math.min(ytdPct, 100)}%`;
+        document.getElementById('presuKpiYtdDetail').textContent = `${ytdEjecutados.length} de ${ytdProyectados.length} proyectados a ${monthNames[evalMonth - 1]}`;
+
+        const proyectadosMes = cdcScope.filter(m => m.mes_original === evalMonth);
+        const ejecutadosEnTerminoMes = proyectadosMes.filter(m => m.mes_ejecucion === evalMonth);
+        const terminoPct = proyectadosMes.length > 0 ? ((ejecutadosEnTerminoMes.length / proyectadosMes.length) * 100).toFixed(1) : '0.0';
+        document.getElementById('presuKpiTerminoPct').textContent = `${terminoPct}%`;
+        document.getElementById('presuBarTermino').style.width = `${Math.min(terminoPct, 100)}%`;
+        document.getElementById('presuKpiTerminoDetail').textContent = `${ejecutadosEnTerminoMes.length} de ${proyectadosMes.length} preventivos a tiempo en ${monthNames[evalMonth - 1]}`;
+
+        const todosEjecutadosEnMes = cdcScope.filter(m => m.mes_ejecucion === evalMonth);
+        const totalEjecucionPct = proyectadosMes.length > 0 ? ((todosEjecutadosEnMes.length / proyectadosMes.length) * 100).toFixed(1) : '0.0';
+        document.getElementById('presuKpiTotalPct').textContent = `${totalEjecucionPct}%`;
+        document.getElementById('presuBarTotal').style.width = `${Math.min(totalEjecucionPct, 100)}%`;
+
+        const recuperadosPrevios = todosEjecutadosEnMes.filter(m => m.mes_original < evalMonth).length;
+        const adelantadosFuturos = todosEjecutadosEnMes.filter(m => m.mes_original > evalMonth).length;
+        let detailText = `${todosEjecutadosEnMes.length} ejecutados en ${monthNames[evalMonth - 1]}`;
+        let extrasList = [];
+        if (recuperadosPrevios > 0) extrasList.push(`${recuperadosPrevios} regularizados`);
+        if (adelantadosFuturos > 0) extrasList.push(`${adelantadosFuturos} adelantados`);
+        if (extrasList.length > 0) detailText += ` (${extrasList.join(', ')})`;
+        document.getElementById('presuKpiTotalDetail').textContent = detailText;
+
+        const atrasadosScope = cdcScope.filter(m => m.estado === 'PENDIENTE' && m.mes_original <= evalMonth);
+        document.getElementById('presuKpiAtrasadosQty').textContent = atrasadosScope.length;
+        const maxBarAtrasados = proyectadosMes.length > 0 ? (atrasadosScope.length / proyectadosMes.length) * 100 : 0;
+        document.getElementById('presuBarAtrasados').style.width = `${Math.min(maxBarAtrasados, 100)}%`;
+        document.getElementById('presuKpiAtrasadosDetail').textContent = `Pendientes acumulados hasta ${monthNames[evalMonth - 1]}`;
+    }
+
+    function renderPresuCharts() {
+        const evalMonth = presuMonthFilter.value === 'ALL' ? 8 : parseInt(presuMonthFilter.value);
+        const patentesCompletedInMonth = getPresuPatentesCompletedInMonth(evalMonth);
+        const cdcScope = getPresuCdcScope().filter(m => !isPresuPendingCoveredByLateExecution(m, evalMonth, patentesCompletedInMonth));
+
+        const monthlyProy = new Array(12).fill(0);
+        const monthlyEjec = new Array(12).fill(0);
+        cdcScope.forEach(m => {
+            if (m.mes_original >= 1 && m.mes_original <= 12) monthlyProy[m.mes_original - 1]++;
+            if (m.mes_ejecucion >= 1 && m.mes_ejecucion <= 12) monthlyEjec[m.mes_ejecucion - 1]++;
+        });
+
+        const ctxMonthly = document.getElementById('presuMonthlyChart').getContext('2d');
+        if (presuMonthlyChartInstance) presuMonthlyChartInstance.destroy();
+        presuMonthlyChartInstance = new Chart(ctxMonthly, {
+            type: 'bar',
+            data: {
+                labels: monthNames,
+                datasets: [
+                    { label: 'Presupuestado', data: monthlyProy, backgroundColor: 'rgba(59, 130, 246, 0.65)', borderColor: '#3b82f6', borderWidth: 1, borderRadius: 4 },
+                    { label: 'Ejecutado (Incluye Adelantados)', data: monthlyEjec, backgroundColor: 'rgba(16, 185, 129, 0.75)', borderColor: '#10b981', borderWidth: 1, borderRadius: 4 }
+                ]
+            },
+            options: {
+                responsive: true, maintainAspectRatio: false,
+                plugins: { legend: { labels: { color: '#94a3b8' } } },
+                scales: {
+                    x: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.05)' } },
+                    y: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.05)' } }
+                }
+            }
+        });
+
+        let enFechaCount = 0, adelantadoCount = 0, fueraTerminoCount = 0, pendienteCount = 0;
+        cdcScope.forEach(m => {
+            if (m.estado === 'EN_FECHA') enFechaCount++;
+            else if (m.estado === 'ADELANTADO') adelantadoCount++;
+            else if (m.estado === 'FUERA_DE_TERMINO') fueraTerminoCount++;
+            else if (m.estado === 'PENDIENTE') pendienteCount++;
+        });
+
+        const ctxStatus = document.getElementById('presuStatusChart').getContext('2d');
+        if (presuStatusChartInstance) presuStatusChartInstance.destroy();
+        presuStatusChartInstance = new Chart(ctxStatus, {
+            type: 'doughnut',
+            data: {
+                labels: ['En Fecha', 'Adelantado (Anticipado)', 'Fuera de Término', 'Pendiente / Atrasado'],
+                datasets: [{ data: [enFechaCount, adelantadoCount, fueraTerminoCount, pendienteCount], backgroundColor: ['#10b981', '#06b6d4', '#f59e0b', '#ef4444'], borderWidth: 0 }]
+            },
+            options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { color: '#94a3b8' } } }, cutout: '68%' }
+        });
+    }
+
+    function renderPresuTable(list) {
+        const countBadge = document.getElementById('presuTableCountBadge');
+        presuTableBody.innerHTML = '';
+        countBadge.textContent = `${list.length} Registros`;
+
+        if (list.length === 0) {
+            presuTableBody.innerHTML = `<tr><td colspan="11" style="text-align: center; color: var(--text-muted); padding: 30px;"><i class="fa-solid fa-inbox" style="font-size: 2rem; margin-bottom: 8px;"></i><br>No se encontraron mantenimientos con los filtros aplicados.</td></tr>`;
+            return;
+        }
+
+        list.forEach(item => {
+            const tr = document.createElement('tr');
+            const isChecked = getItemCheckState(item);
+            const key = String(item.id);
+            const mNote = mechanicState[key] ? mechanicState[key].note : '';
+
+            if (isChecked) {
+                if (item.estado === 'FUERA_DE_TERMINO') tr.classList.add('row-completed-orange');
+                else tr.classList.add('row-completed');
+            }
+
+            const fechaEstFormatted = item.fecha_estimada ? formatDate(item.fecha_estimada) : '-';
+            const fechaEjecFormatted = item.fecha_ejecucion ? formatDate(item.fecha_ejecucion) : '-';
+            const mesOrigName = monthNames[item.mes_original - 1] || 'N/A';
+
+            let badgeHtml = '';
+            let obsClass = 'obs-tag';
+            if (isChecked) {
+                if (item.estado === 'FUERA_DE_TERMINO') {
+                    badgeHtml = `<span class="badge badge-fuera-termino"><i class="fa-solid fa-clock-rotate-left"></i> Fuera de término</span>`;
+                    obsClass = 'obs-tag obs-tag-highlight';
+                } else if (item.estado === 'ADELANTADO') {
+                    badgeHtml = `<span class="badge badge-adelantado"><i class="fa-solid fa-bolt-lightning"></i> Adelantado</span>`;
+                    obsClass = 'obs-tag obs-tag-highlight';
+                } else {
+                    badgeHtml = `<span class="badge badge-en-fecha"><i class="fa-solid fa-circle-check"></i> Realizado</span>`;
+                }
+            } else {
+                badgeHtml = `<span class="badge badge-pendiente"><i class="fa-solid fa-triangle-exclamation"></i> Pendiente</span>`;
+            }
+
+            const tallerProyBadge = item.taller_proyectado ? `<span class="taller-proy-tag"><i class="fa-solid fa-clipboard-list"></i> ${escapeHtml(item.taller_proyectado)}</span>` : `<span class="taller-tag-none">-</span>`;
+            const tallerBadge = item.taller && item.taller !== 'Sin Taller' ? `<span class="taller-tag"><i class="fa-solid fa-wrench"></i> ${escapeHtml(item.taller)}</span>` : `<span class="taller-tag-none">-</span>`;
+
+            tr.innerHTML = `
+                <td class="mechanic-check-cell"><input type="checkbox" class="mechanic-check" data-id="${item.id}" ${isChecked ? 'checked' : ''} title="Marcar/Desmarcar mantenimiento"></td>
+                <td><strong>${escapeHtml(item.centro_costo)}</strong></td>
+                <td><span class="patente-code">${escapeHtml(item.patente)}</span></td>
+                <td>${escapeHtml(item.plan)}</td>
+                <td>${mesOrigName} (${fechaEstFormatted})</td>
+                <td>${badgeHtml}</td>
+                <td>${tallerProyBadge}</td>
+                <td>${tallerBadge}</td>
+                <td>${fechaEjecFormatted}</td>
+                <td><span class="${obsClass}">${escapeHtml(item.observaciones)}</span></td>
+                <td><input type="text" class="mechanic-note-input" data-id="${item.id}" placeholder="Escribir nota del mecánico..." value="${escapeHtml(mNote || '')}"></td>
+            `;
+            presuTableBody.appendChild(tr);
+        });
+    }
+
+    function exportPresuToCsv() {
+        const dataToExport = getPresuFilteredData();
+        if (dataToExport.length === 0) { alert('No hay datos para exportar.'); return; }
+
+        let csvContent = "data:text/csv;charset=utf-8,\uFEFF";
+        csvContent += "Listo (Mecánico);Centro de Costo;Patente;Plan;Mes Original;Fecha Estimada;Estado;Taller Proyectado;Taller Realizado;Fecha Ejecución;Observaciones;Nota Mecánico\n";
+
+        dataToExport.forEach(item => {
+            const isChecked = getItemCheckState(item);
+            const key = String(item.id);
+            const mNote = mechanicState[key] ? mechanicState[key].note : '';
+            const row = [
+                `"${isChecked ? 'SÍ' : 'NO'}"`, `"${item.centro_costo}"`, `"${item.patente}"`, `"${item.plan}"`,
+                `"${monthNames[item.mes_original - 1]}"`, `"${item.fecha_estimada || ''}"`, `"${item.estado}"`,
+                `"${item.taller_proyectado || 'Sin Taller Proyectado'}"`, `"${item.taller || 'Sin Taller'}"`,
+                `"${item.fecha_ejecucion || ''}"`, `"${item.observaciones}"`, `"${(mNote || '').replace(/"/g, '""')}"`
+            ].join(";");
+            csvContent += row + "\n";
+        });
+
+        const encodedUri = encodeURI(csvContent);
+        const link = document.createElement("a");
+        link.setAttribute("href", encodedUri);
+        link.setAttribute("download", `Presupuesto_2026_Export_${new Date().toISOString().slice(0,10)}.csv`);
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
