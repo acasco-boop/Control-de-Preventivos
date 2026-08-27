@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="styles.css?v=2.4">
+    <link rel="stylesheet" href="styles.css?v=2.5">
 </head>
 <body>
     <div class="app-container">
@@ -498,7 +498,7 @@
             <div class="analisis-content" id="analisisContent" style="display: none;">
                 <div class="analisis-header">
                     <h2><i class="fa-solid fa-magnifying-glass-chart"></i> Análisis Comparativo: Proyectado vs. Presupuesto 2026</h2>
-                    <p class="analisis-subtitle">Explicación de las diferencias entre la proyección original y el presupuesto asignado</p>
+                    <p class="analisis-subtitle">Explicación de las diferencias entre la proyección original y el presupuesto asignado. El presupuesto se calculó utilizando el <strong>promedio de kilómetros recorridos por vehículo en 2025</strong> para determinar la frecuencia óptima de mantenimiento.</p>
                 </div>
 
                 <!-- Summary Cards -->
@@ -601,6 +601,7 @@
                 <!-- Explanation Section -->
                 <div class="analisis-explanation-section">
                     <h3><i class="fa-solid fa-lightbulb"></i> ¿Por qué el Presupuesto es mayor al Proyectado?</h3>
+                    <p style="color: var(--text-muted); font-size: 0.88rem; margin: 0 0 16px;">El presupuesto 2026 se elaboró analizando el <strong>promedio de kilómetros recorridos por cada vehículo durante 2025</strong>. A partir de este dato, se asignó la frecuencia de mantenimiento preventivo óptima para cada unidad.</p>
                     <div class="analisis-explanation-cards" id="analisisExplanationCards"></div>
                 </div>
             </div>
@@ -728,6 +729,6 @@
         </div>
     </div>
 
-    <script src="app.js?v=2.4"></script>
+    <script src="app.js?v=2.5"></script>
 </body>
 </html>

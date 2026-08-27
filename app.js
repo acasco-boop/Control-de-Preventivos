@@ -2171,34 +2171,39 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         const explanations = [
             {
-                title: '1. Más vehículos incluidos en el presupuesto',
-                text: `El presupuesto incluye <strong>${soloPresuCount} patentes adicionales</strong> que no estaban en la proyección original. Esto significa que se asignaron preventivos a vehículos que originalmente no tenían mantenimiento programado, ampliando la cobertura de la flota.`,
+                title: '1. Metodología: Promedio de Km Recorridos en 2025',
+                text: `El presupuesto se calculó utilizando el <strong>promedio de kilómetros recorridos por cada vehículo durante el año 2025</strong>. A partir de este dato, se determinó la frecuencia óptima de mantenimiento preventivo para 2026. Vehículos con mayor kilometraje anual requieren preventivos más frecuentes (cada 2 meses), mientras que los de menor recorrido pueden espaciarse más (cada 3 o 6 meses).`,
+                stat: 'Basado en datos reales 2025'
+            },
+            {
+                title: '2. Más vehículos incluidos en el presupuesto',
+                text: `El presupuesto incluye <strong>${soloPresuCount} patentes adicionales</strong> que no estaban en la proyección original. Al analizar los km recorridos en 2025, se identificaron vehículos que, por su uso intensivo, necesitaban mantenimiento preventivo programado pero no estaban contemplados en la proyección inicial.`,
                 stat: `+${soloPresuCount} patentes nuevas`
             },
             {
-                title: '2. Mayor frecuencia de mantenimiento por vehículo',
-                text: `<strong>${patentesConMas} patentes</strong> tienen más preventivos asignados en el presupuesto que en la proyección. Esto indica que se incrementó la frecuencia de mantenimiento (por ejemplo, de cada 3 meses a cada 2 meses) para asegurar mejor estado de la flota.`,
+                title: '3. Mayor frecuencia por mayor kilometraje',
+                text: `<strong>${patentesConMas} patentes</strong> tienen más preventivos asignados en el presupuesto que en la proyección. Esto se debe a que, según los km recorridos en 2025, estos vehículos superaron los umbrales de kilometraje que requieren mantenimiento más frecuente. Por ejemplo, un vehículo que recorrió 60.000 km en 2025 necesita preventivos cada 2 meses en lugar de cada 3.`,
                 stat: `${patentesConMas} patentes con más frecuencia`
             },
             {
-                title: `3. Mes con mayor diferencia: ${monthNames[maxDiffMonth]}`,
-                text: `El mes de <strong>${monthNames[maxDiffMonth]}</strong> tiene la mayor diferencia con <strong>+${maxDiffValue} preventivos</strong> adicionales en el presupuesto. Esto puede deberse a la concentración de vencimientos de ciclos de mantenimiento o a una decisión operativa de reforzar los preventivos en ese período.`,
+                title: `4. Mes con mayor diferencia: ${monthNames[maxDiffMonth]}`,
+                text: `El mes de <strong>${monthNames[maxDiffMonth]}</strong> tiene la mayor diferencia con <strong>+${maxDiffValue} preventivos</strong> adicionales en el presupuesto. Esto se explica porque, al calcular los ciclos basados en km promedio de 2025, muchos vehículos alcanzan el umbral de mantenimiento en ese mes del año.`,
                 stat: `+${maxDiffValue} preventivos en ${monthNames[maxDiffMonth]}`
             },
             {
-                title: '4. Decisión de negocio: mayor inversión en preventivos',
-                text: `La diferencia entre proyectado y presupuestado refleja una <strong>decisión estratégica de aumentar la inversión en mantenimiento preventivo</strong>. Un mayor número de preventivos reduce el riesgo de fallas mecánicas, costos de reparaciones correctivas y tiempo de inactividad de los vehículos.`,
+                title: '5. Decisión basada en datos operativos',
+                text: `La diferencia entre proyectado y presupuestado refleja una <strong>decisión estratégica basada en datos reales de operación 2025</strong>. Al usar el promedio de km recorridos, el presupuesto es más preciso y realista, asignando preventivos donde realmente se necesitan según el desgaste real de cada vehículo.`,
                 stat: `${((presu.length / proy.length - 1) * 100).toFixed(1)}% más inversión`
             },
             {
-                title: '5. Reducción de patentes del proyectado al presupuesto',
-                text: `${soloProyCount > 0 ? `<strong>${soloProyCount} patentes</strong> del proyectado original no están en el presupuesto. Esto puede deberse a que estos vehículos fueron dados de baja, transferidos a otra flota, o se decidió no incluirlos en el plan de mantenimiento presupuestado.` : 'No se removieron patentes del proyectado al presupuesto, lo que indica una cobertura consistente.'}`,
+                title: '6. Reducción de patentes del proyectado al presupuesto',
+                text: `${soloProyCount > 0 ? `<strong>${soloProyCount} patentes</strong> del proyectado original no están en el presupuesto. Al analizar los km de 2025, se determinó que estos vehículos tienen un uso muy bajo o fueron dados de baja, por lo que no requieren preventivos frecuentes.` : 'No se removieron patentes del proyectado al presupuesto, lo que indica una cobertura consistente.'}`,
                 stat: soloProyCount > 0 ? `-${soloProyCount} patentes removidas` : 'Sin remociones'
             },
             {
-                title: '6. Optimización de ciclos de mantenimiento',
-                text: `El presupuesto puede incluir <strong>ajustes en los ciclos de mantenimiento</strong> basados en la experiencia operativa del año. Si un vehículo requirió mantenimiento correctivo frecuente, se le asignan más preventivos en el presupuesto para evitar esas fallas.`,
-                stat: 'Optimización basada en datos'
+                title: '7. Optimización basada en desgaste real',
+                text: `El presupuesto <strong>optimiza los ciclos de mantenimiento</strong> basándose en el desgaste real medido por kilómetros. Un vehículo que recorrió más km en 2025 tendrá más preventivos en 2026 para prevenir fallas. Esto reduce costos de reparaciones correctivas y mejora la disponibilidad de la flota.`,
+                stat: 'Prevención basada en uso real'
             }
         ];
 
