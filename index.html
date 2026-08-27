@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="styles.css?v=2.3">
+    <link rel="stylesheet" href="styles.css?v=2.4">
 </head>
 <body>
     <div class="app-container">
@@ -42,6 +42,9 @@
             </button>
             <button type="button" class="tab-btn" data-tab="presupuesto">
                 <i class="fa-solid fa-file-invoice-dollar"></i> Presupuesto 2026
+            </button>
+            <button type="button" class="tab-btn" data-tab="analisis">
+                <i class="fa-solid fa-magnifying-glass-chart"></i> Análisis
             </button>
             <button type="button" class="tab-btn" data-tab="realizados">
                 <i class="fa-solid fa-circle-check"></i> Realizados 2026
@@ -471,6 +474,138 @@
             </section>
         </section>
 
+        <!-- Análisis Tab Section -->
+        <section class="tab-content" id="analisisTab" style="display: none;">
+            <!-- Password Gate -->
+            <div class="analisis-password-gate" id="analisisPasswordGate">
+                <div class="analisis-password-card">
+                    <div class="analisis-password-icon">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <h2>Acceso Restringido</h2>
+                    <p>Esta sección contiene análisis comparativo entre Proyectado y Presupuesto. Ingrese la clave de acceso para continuar.</p>
+                    <div class="analisis-password-input-group">
+                        <input type="password" id="analisisPassInput" placeholder="Ingrese clave..." class="filter-input">
+                        <button type="button" id="analisisPassBtn" class="btn-primary-green">
+                            <i class="fa-solid fa-unlock"></i> Acceder
+                        </button>
+                    </div>
+                    <span class="analisis-pass-error" id="analisisPassError">Clave incorrecta. Intente nuevamente.</span>
+                </div>
+            </div>
+
+            <!-- Analysis Content (hidden until password is entered) -->
+            <div class="analisis-content" id="analisisContent" style="display: none;">
+                <div class="analisis-header">
+                    <h2><i class="fa-solid fa-magnifying-glass-chart"></i> Análisis Comparativo: Proyectado vs. Presupuesto 2026</h2>
+                    <p class="analisis-subtitle">Explicación de las diferencias entre la proyección original y el presupuesto asignado</p>
+                </div>
+
+                <!-- Summary Cards -->
+                <div class="analisis-summary-grid">
+                    <div class="analisis-summary-card">
+                        <div class="analisis-summary-icon blue"><i class="fa-solid fa-calendar-check"></i></div>
+                        <div class="analisis-summary-info">
+                            <span class="analisis-summary-label">Total Proyectado</span>
+                            <span class="analisis-summary-value" id="analisisTotalProy">0</span>
+                        </div>
+                    </div>
+                    <div class="analisis-summary-card">
+                        <div class="analisis-summary-icon green"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                        <div class="analisis-summary-info">
+                            <span class="analisis-summary-label">Total Presupuestado</span>
+                            <span class="analisis-summary-value" id="analisisTotalPresu">0</span>
+                        </div>
+                    </div>
+                    <div class="analisis-summary-card">
+                        <div class="analisis-summary-icon orange"><i class="fa-solid fa-arrow-up-right-dots"></i></div>
+                        <div class="analisis-summary-info">
+                            <span class="analisis-summary-label">Diferencia</span>
+                            <span class="analisis-summary-value" id="analisisDiferencia">0</span>
+                        </div>
+                    </div>
+                    <div class="analisis-summary-card">
+                        <div class="analisis-summary-icon purple"><i class="fa-solid fa-percent"></i></div>
+                        <div class="analisis-summary-info">
+                            <span class="analisis-summary-label">% Mayor Presupuesto</span>
+                            <span class="analisis-summary-value" id="analisisPctDiferencia">0%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Monthly Comparison Chart -->
+                <div class="analisis-chart-section">
+                    <h3><i class="fa-solid fa-chart-bar"></i> Comparación Mensual: Proyectado vs. Presupuesto</h3>
+                    <div class="analisis-chart-container">
+                        <canvas id="analisisMonthlyChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Monthly Comparison Table -->
+                <div class="analisis-table-section">
+                    <h3><i class="fa-solid fa-table"></i> Detalle Mensual de Diferencias</h3>
+                    <div class="table-wrapper">
+                        <table class="data-table analisis-table">
+                            <thead>
+                                <tr>
+                                    <th>Mes</th>
+                                    <th>Proyectado</th>
+                                    <th>Presupuestado</th>
+                                    <th>Diferencia</th>
+                                    <th>% Diferencia</th>
+                                    <th>Explicación</th>
+                                </tr>
+                            </thead>
+                            <tbody id="analisisMonthlyTableBody"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Patente Differences -->
+                <div class="analisis-patentes-section">
+                    <h3><i class="fa-solid fa-car"></i> Diferencias por Patente</h3>
+                    <p class="analisis-section-desc">Patentes que están en Presupuesto pero no en Proyectado (y viceversa), o con diferente cantidad de preventivos.</p>
+
+                    <div class="analisis-patentes-grid">
+                        <div class="analisis-patentes-card">
+                            <h4><i class="fa-solid fa-circle-plus" style="color: var(--accent-green);"></i> Solo en Presupuesto (<span id="analisisSoloPresuCount">0</span>)</h4>
+                            <p class="analisis-card-desc">Patentes que aparecen en el presupuesto pero no en la proyección original. Estos son preventivos adicionales asignados por presupuesto.</p>
+                            <div class="analisis-patentes-list" id="analisisSoloPresuList"></div>
+                        </div>
+                        <div class="analisis-patentes-card">
+                            <h4><i class="fa-solid fa-circle-minus" style="color: var(--accent-red);"></i> Solo en Proyectado (<span id="analisisSoloProyCount">0</span>)</h4>
+                            <p class="analisis-card-desc">Patentes que aparecen en la proyección pero no en el presupuesto. Estos preventivos fueron removidos del presupuesto final.</p>
+                            <div class="analisis-patentes-list" id="analisisSoloProyList"></div>
+                        </div>
+                        <div class="analisis-patentes-card full-width">
+                            <h4><i class="fa-solid fa-arrow-up-right-dots" style="color: var(--accent-orange);"></i> Patentes con más preventivos en Presupuesto (<span id="analisisMasPresuCount">0</span>)</h4>
+                            <p class="analisis-card-desc">Patentes que están en ambos pero con mayor cantidad de preventivos en el presupuesto. Esto indica que el presupuesto asigna más frecuencia de mantenimiento.</p>
+                            <div class="table-wrapper">
+                                <table class="data-table analisis-table-small">
+                                    <thead>
+                                        <tr>
+                                            <th>Patente</th>
+                                            <th>Centro de Costo</th>
+                                            <th>Cant. Proyectado</th>
+                                            <th>Cant. Presupuesto</th>
+                                            <th>Diferencia</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="analisisMasPresuTableBody"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Explanation Section -->
+                <div class="analisis-explanation-section">
+                    <h3><i class="fa-solid fa-lightbulb"></i> ¿Por qué el Presupuesto es mayor al Proyectado?</h3>
+                    <div class="analisis-explanation-cards" id="analisisExplanationCards"></div>
+                </div>
+            </div>
+        </section>
+
         <!-- Realizados 2026 Tab Section -->
         <section class="tab-content" id="realizadosTab" style="display: none;">
             <div class="realizados-header">
@@ -593,6 +728,6 @@
         </div>
     </div>
 
-    <script src="app.js?v=2.3"></script>
+    <script src="app.js?v=2.4"></script>
 </body>
 </html>

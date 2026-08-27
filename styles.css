@@ -994,3 +994,394 @@ body {
 .tab-content {
     display: block;
 }
+
+/* Análisis Tab - Password Gate */
+.analisis-password-gate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    padding: 40px 20px;
+}
+
+.analisis-password-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 48px 40px;
+    max-width: 460px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.analisis-password-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.15), rgba(245, 158, 11, 0.1));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.analisis-password-icon i {
+    font-size: 2rem;
+    color: var(--accent-red);
+}
+
+.analisis-password-card h2 {
+    color: var(--text-main);
+    font-size: 1.5rem;
+    margin: 0 0 12px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.analisis-password-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin: 0 0 24px;
+    line-height: 1.5;
+}
+
+.analisis-password-input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.analisis-password-input-group .filter-input {
+    flex: 1;
+}
+
+.analisis-pass-error {
+    color: var(--accent-red);
+    font-size: 0.82rem;
+    font-weight: 600;
+    display: none;
+}
+
+/* Análisis Content */
+.analisis-header {
+    padding: 24px 28px;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.08), rgba(59, 130, 246, 0.04));
+    border-bottom: 1px solid var(--border-color);
+}
+
+.analisis-header h2 {
+    color: var(--text-main);
+    font-size: 1.4rem;
+    margin: 0 0 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.analisis-header h2 i {
+    color: var(--accent-purple);
+}
+
+.analisis-subtitle {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    margin: 0;
+}
+
+/* Summary Cards */
+.analisis-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    padding: 20px 28px;
+    background: var(--bg-surface);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.analisis-summary-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.analisis-summary-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.analisis-summary-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+.analisis-summary-icon.blue { background: rgba(59, 130, 246, 0.15); color: var(--accent-blue); }
+.analisis-summary-icon.green { background: rgba(16, 185, 129, 0.15); color: var(--accent-green); }
+.analisis-summary-icon.orange { background: rgba(245, 158, 11, 0.15); color: var(--accent-orange); }
+.analisis-summary-icon.purple { background: rgba(139, 92, 246, 0.15); color: var(--accent-purple); }
+
+.analisis-summary-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.analisis-summary-label {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    font-weight: 600;
+}
+
+.analisis-summary-value {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--text-main);
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Chart Section */
+.analisis-chart-section {
+    padding: 24px 28px;
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.analisis-chart-section h3 {
+    color: var(--text-main);
+    font-size: 1.1rem;
+    margin: 0 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.analisis-chart-section h3 i {
+    color: var(--accent-blue);
+}
+
+.analisis-chart-container {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    height: 350px;
+}
+
+/* Table Section */
+.analisis-table-section {
+    padding: 24px 28px;
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.analisis-table-section h3 {
+    color: var(--text-main);
+    font-size: 1.1rem;
+    margin: 0 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.analisis-table-section h3 i {
+    color: var(--accent-green);
+}
+
+.analisis-table th {
+    background: var(--bg-surface);
+    font-size: 0.82rem;
+}
+
+.analisis-table td {
+    font-size: 0.88rem;
+}
+
+.analisis-table .diff-positive {
+    color: var(--accent-orange);
+    font-weight: 700;
+}
+
+.analisis-table .diff-negative {
+    color: var(--accent-red);
+    font-weight: 700;
+}
+
+.analisis-table .diff-zero {
+    color: var(--text-muted);
+}
+
+/* Patentes Section */
+.analisis-patentes-section {
+    padding: 24px 28px;
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.analisis-patentes-section h3 {
+    color: var(--text-main);
+    font-size: 1.1rem;
+    margin: 0 0 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.analisis-patentes-section h3 i {
+    color: var(--accent-purple);
+}
+
+.analisis-section-desc {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    margin: 0 0 20px;
+}
+
+.analisis-patentes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.analisis-patentes-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.analisis-patentes-card.full-width {
+    grid-column: 1 / -1;
+}
+
+.analisis-patentes-card h4 {
+    color: var(--text-main);
+    font-size: 1rem;
+    margin: 0 0 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.analisis-card-desc {
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    margin: 0 0 14px;
+    line-height: 1.4;
+}
+
+.analisis-patentes-list {
+    max-height: 300px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.analisis-patente-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    background: var(--bg-surface);
+    border-radius: 8px;
+    font-size: 0.85rem;
+}
+
+.analisis-patente-item .patente-code {
+    font-weight: 700;
+    color: var(--accent-cyan);
+}
+
+.analisis-patente-item .patente-cc {
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.analisis-table-small {
+    font-size: 0.85rem;
+}
+
+.analisis-table-small th {
+    background: var(--bg-surface);
+    font-size: 0.78rem;
+}
+
+/* Explanation Section */
+.analisis-explanation-section {
+    padding: 24px 28px;
+    background: var(--bg-primary);
+}
+
+.analisis-explanation-section h3 {
+    color: var(--text-main);
+    font-size: 1.1rem;
+    margin: 0 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.analisis-explanation-section h3 i {
+    color: var(--accent-orange);
+}
+
+.analisis-explanation-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+}
+
+.analisis-explanation-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    border-left: 4px solid var(--accent-blue);
+}
+
+.analisis-explanation-card h4 {
+    color: var(--text-main);
+    font-size: 0.95rem;
+    margin: 0 0 8px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.analisis-explanation-card p {
+    color: var(--text-light);
+    font-size: 0.88rem;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.analisis-explanation-card .explanation-stat {
+    display: inline-block;
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--accent-blue);
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin-top: 8px;
+}

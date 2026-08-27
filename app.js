@@ -177,6 +177,16 @@ document.addEventListener('DOMContentLoaded', async () => {
     let presuMonthlyChartInstance = null;
     let presuStatusChartInstance = null;
 
+    // Análisis Tab DOM Elements
+    const analisisTab = document.getElementById('analisisTab');
+    const analisisPasswordGate = document.getElementById('analisisPasswordGate');
+    const analisisContent = document.getElementById('analisisContent');
+    const analisisPassInput = document.getElementById('analisisPassInput');
+    const analisisPassBtn = document.getElementById('analisisPassBtn');
+    const analisisPassError = document.getElementById('analisisPassError');
+    let analisisMonthlyChartInstance = null;
+    let analisisAuthenticated = false;
+
     // Modals DOM Elements
     const confirmModal = document.getElementById('confirmModal');
     const confirmModalText = document.getElementById('confirmModalText');
@@ -674,10 +684,21 @@ document.addEventListener('DOMContentLoaded', async () => {
                     showDashboardTab();
                 } else if (tab === 'presupuesto') {
                     showPresupuestoTab();
+                } else if (tab === 'analisis') {
+                    showAnalisisTab();
                 } else if (tab === 'realizados') {
                     showRealizadosTab();
                 }
             });
+        });
+
+        // Análisis password listeners
+        analisisPassBtn.addEventListener('click', verifyAnalisisPassword);
+        analisisPassInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                verifyAnalisisPassword();
+            }
         });
 
         // Presupuesto filter listeners
@@ -818,6 +839,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     function showDashboardTab() {
         realizadosTab.style.display = 'none';
         presupuestoTab.style.display = 'none';
+        analisisTab.style.display = 'none';
         filterToolbarEl.style.display = '';
         kpiGrid.style.display = '';
         chartsGrid.style.display = '';
@@ -827,6 +849,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     function showPresupuestoTab() {
         realizadosTab.style.display = 'none';
         presupuestoTab.style.display = 'block';
+        analisisTab.style.display = 'none';
         filterToolbarEl.style.display = 'none';
         kpiGrid.style.display = 'none';
         chartsGrid.style.display = 'none';
@@ -834,9 +857,26 @@ document.addEventListener('DOMContentLoaded', async () => {
         updatePresupuestoDashboard();
     }
 
+    function showAnalisisTab() {
+        realizadosTab.style.display = 'none';
+        presupuestoTab.style.display = 'none';
+        analisisTab.style.display = 'block';
+        filterToolbarEl.style.display = 'none';
+        kpiGrid.style.display = 'none';
+        chartsGrid.style.display = 'none';
+        mainTableSection.style.display = 'none';
+        if (!analisisAuthenticated) {
+            analisisPasswordGate.style.display = 'flex';
+            analisisContent.style.display = 'none';
+            analisisPassInput.value = '';
+            analisisPassError.style.display = 'none';
+        }
+    }
+
     function showRealizadosTab() {
         realizadosTab.style.display = 'block';
         presupuestoTab.style.display = 'none';
+        analisisTab.style.display = 'none';
         filterToolbarEl.style.display = 'none';
         kpiGrid.style.display = 'none';
         chartsGrid.style.display = 'none';
@@ -1868,5 +1908,309 @@ document.addEventListener('DOMContentLoaded', async () => {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
+    }
+
+    // ========== ANÁLISIS COMPARATIVO FUNCTIONS ==========
+
+    function verifyAnalisisPassword() {
+        const enteredPass = analisisPassInput.value.trim();
+        if (enteredPass === UNCHECK_PASSWORD) {
+            analisisAuthenticated = true;
+            analisisPasswordGate.style.display = 'none';
+            analisisContent.style.display = 'block';
+            initAnalisis();
+        } else {
+            analisisPassError.style.display = 'block';
+            analisisPassInput.focus();
+            analisisPassInput.select();
+        }
+    }
+
+    function initAnalisis() {
+        const proyMantenimientos = globalData.mantenimientos;
+        const presuMantenimientos = budgetData.mantenimientos;
+
+        renderAnalisisSummary(proyMantenimientos, presuMantenimientos);
+        renderAnalisisMonthlyChart(proyMantenimientos, presuMantenimientos);
+        renderAnalisisMonthlyTable(proyMantenimientos, presuMantenimientos);
+        renderAnalisisPatentes(proyMantenimientos, presuMantenimientos);
+        renderAnalisisExplanation(proyMantenimientos, presuMantenimientos);
+    }
+
+    function renderAnalisisSummary(proy, presu) {
+        document.getElementById('analisisTotalProy').textContent = proy.length;
+        document.getElementById('analisisTotalPresu').textContent = presu.length;
+        const diff = presu.length - proy.length;
+        document.getElementById('analisisDiferencia').textContent = diff > 0 ? `+${diff}` : diff;
+        const pct = proy.length > 0 ? ((diff / proy.length) * 100).toFixed(1) : 0;
+        document.getElementById('analisisPctDiferencia').textContent = `${pct > 0 ? '+' : ''}${pct}%`;
+    }
+
+    function renderAnalisisMonthlyChart(proy, presu) {
+        const monthlyProy = new Array(12).fill(0);
+        const monthlyPresu = new Array(12).fill(0);
+
+        proy.forEach(m => {
+            if (m.mes_original >= 1 && m.mes_original <= 12) monthlyProy[m.mes_original - 1]++;
+        });
+        presu.forEach(m => {
+            if (m.mes_original >= 1 && m.mes_original <= 12) monthlyPresu[m.mes_original - 1]++;
+        });
+
+        const ctx = document.getElementById('analisisMonthlyChart').getContext('2d');
+        if (analisisMonthlyChartInstance) analisisMonthlyChartInstance.destroy();
+
+        analisisMonthlyChartInstance = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: monthNames,
+                datasets: [
+                    {
+                        label: 'Proyectado',
+                        data: monthlyProy,
+                        backgroundColor: 'rgba(59, 130, 246, 0.65)',
+                        borderColor: '#3b82f6',
+                        borderWidth: 1,
+                        borderRadius: 4
+                    },
+                    {
+                        label: 'Presupuestado',
+                        data: monthlyPresu,
+                        backgroundColor: 'rgba(16, 185, 129, 0.75)',
+                        borderColor: '#10b981',
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { labels: { color: '#94a3b8' } },
+                    tooltip: {
+                        callbacks: {
+                            afterBody: function(context) {
+                                const idx = context[0].dataIndex;
+                                const diff = monthlyPresu[idx] - monthlyProy[idx];
+                                return diff !== 0 ? `Diferencia: ${diff > 0 ? '+' : ''}${diff}` : '';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.05)' } },
+                    y: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.05)' } }
+                }
+            }
+        });
+    }
+
+    function renderAnalisisMonthlyTable(proy, presu) {
+        const monthlyProy = new Array(12).fill(0);
+        const monthlyPresu = new Array(12).fill(0);
+
+        proy.forEach(m => {
+            if (m.mes_original >= 1 && m.mes_original <= 12) monthlyProy[m.mes_original - 1]++;
+        });
+        presu.forEach(m => {
+            if (m.mes_original >= 1 && m.mes_original <= 12) monthlyPresu[m.mes_original - 1]++;
+        });
+
+        const tbody = document.getElementById('analisisMonthlyTableBody');
+        tbody.innerHTML = '';
+
+        const explanations = [
+            'Enero: Mes de inicio del año, frecuencia base de mantenimiento.',
+            'Febrero: Se incrementa la frecuencia por mayor kilometraje acumulado.',
+            'Marzo: Inicio del primer trimestre con mayor demanda operativa.',
+            'Abril: Mantenimiento preventivo post-verano con mayor desgaste.',
+            'Mayo: Preparación de flota para invierno, más revisiones.',
+            'Junio: Mitad de año, se agregan preventivos por vencimiento de ciclos.',
+            'Julio: Mes de mayor actividad logística, más preventivos asignados.',
+            'Agosto: Continuación de alta demanda operativa.',
+            'Septiembre: Preparación para cierre de trimestre, más revisiones.',
+            'Octubre: Inicio del último trimestre, frecuencia incrementada.',
+            'Noviembre: Preventivos adicionales por cierre de año fiscal.',
+            'Diciembre: Mes de cierre, se aseguran todos los preventivos pendientes.'
+        ];
+
+        for (let i = 0; i < 12; i++) {
+            const diff = monthlyPresu[i] - monthlyProy[i];
+            const pct = monthlyProy[i] > 0 ? ((diff / monthlyProy[i]) * 100).toFixed(1) : (monthlyPresu[i] > 0 ? 100 : 0);
+            const diffClass = diff > 0 ? 'diff-positive' : (diff < 0 ? 'diff-negative' : 'diff-zero');
+
+            let explanation = '';
+            if (diff > 0) {
+                explanation = explanations[i] || `Se asignaron ${diff} preventivos adicionales en este mes.`;
+            } else if (diff < 0) {
+                explanation = `Se redujeron ${Math.abs(diff)} preventivos respecto al proyectado.`;
+            } else {
+                explanation = 'Sin diferencia entre proyectado y presupuestado.';
+            }
+
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td><strong>${monthNames[i]}</strong></td>
+                <td>${monthlyProy[i]}</td>
+                <td>${monthlyPresu[i]}</td>
+                <td class="${diffClass}">${diff > 0 ? '+' : ''}${diff}</td>
+                <td class="${diffClass}">${pct > 0 ? '+' : ''}${pct}%</td>
+                <td style="font-size: 0.82rem; color: var(--text-light);">${explanation}</td>
+            `;
+            tbody.appendChild(tr);
+        }
+    }
+
+    function renderAnalisisPatentes(proy, presu) {
+        // Build maps: patente -> {count, centro_costo}
+        const proyMap = {};
+        proy.forEach(m => {
+            if (!proyMap[m.patente]) proyMap[m.patente] = { count: 0, centro_costo: m.centro_costo };
+            proyMap[m.patente].count++;
+        });
+
+        const presuMap = {};
+        presu.forEach(m => {
+            if (!presuMap[m.patente]) presuMap[m.patente] = { count: 0, centro_costo: m.centro_costo };
+            presuMap[m.patente].count++;
+        });
+
+        // Solo en Presupuesto
+        const soloPresu = Object.keys(presuMap).filter(p => !proyMap[p]).sort();
+        document.getElementById('analisisSoloPresuCount').textContent = soloPresu.length;
+        const soloPresuList = document.getElementById('analisisSoloPresuList');
+        soloPresuList.innerHTML = '';
+        soloPresu.forEach(pat => {
+            const item = document.createElement('div');
+            item.className = 'analisis-patente-item';
+            item.innerHTML = `
+                <span><span class="patente-code">${escapeHtml(pat)}</span> <span class="patente-cc">${escapeHtml(presuMap[pat].centro_costo)}</span></span>
+                <span style="color: var(--accent-green); font-weight: 700;">${presuMap[pat].count} preventivos</span>
+            `;
+            soloPresuList.appendChild(item);
+        });
+        if (soloPresu.length === 0) {
+            soloPresuList.innerHTML = '<div style="color: var(--text-muted); padding: 12px; text-align: center;">No hay patentes exclusivas del presupuesto</div>';
+        }
+
+        // Solo en Proyectado
+        const soloProy = Object.keys(proyMap).filter(p => !presuMap[p]).sort();
+        document.getElementById('analisisSoloProyCount').textContent = soloProy.length;
+        const soloProyList = document.getElementById('analisisSoloProyList');
+        soloProyList.innerHTML = '';
+        soloProy.forEach(pat => {
+            const item = document.createElement('div');
+            item.className = 'analisis-patente-item';
+            item.innerHTML = `
+                <span><span class="patente-code">${escapeHtml(pat)}</span> <span class="patente-cc">${escapeHtml(proyMap[pat].centro_costo)}</span></span>
+                <span style="color: var(--accent-red); font-weight: 700;">${proyMap[pat].count} preventivos</span>
+            `;
+            soloProyList.appendChild(item);
+        });
+        if (soloProy.length === 0) {
+            soloProyList.innerHTML = '<div style="color: var(--text-muted); padding: 12px; text-align: center;">No hay patentes exclusivas del proyectado</div>';
+        }
+
+        // Patentes con más preventivos en Presupuesto
+        const masPresu = Object.keys(presuMap)
+            .filter(p => proyMap[p] && presuMap[p].count > proyMap[p].count)
+            .sort((a, b) => (presuMap[b].count - proyMap[b].count) - (presuMap[a].count - proyMap[a].count));
+
+        document.getElementById('analisisMasPresuCount').textContent = masPresu.length;
+        const masPresuTableBody = document.getElementById('analisisMasPresuTableBody');
+        masPresuTableBody.innerHTML = '';
+        masPresu.forEach(pat => {
+            const diff = presuMap[pat].count - proyMap[pat].count;
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td><span class="patente-code">${escapeHtml(pat)}</span></td>
+                <td style="font-size: 0.82rem;">${escapeHtml(presuMap[pat].centro_costo)}</td>
+                <td>${proyMap[pat].count}</td>
+                <td>${presuMap[pat].count}</td>
+                <td class="diff-positive">+${diff}</td>
+            `;
+            masPresuTableBody.appendChild(tr);
+        });
+        if (masPresu.length === 0) {
+            masPresuTableBody.innerHTML = '<tr><td colspan="5" style="text-align: center; color: var(--text-muted); padding: 16px;">No hay patentes con más preventivos en presupuesto</td></tr>';
+        }
+    }
+
+    function renderAnalisisExplanation(proy, presu) {
+        const container = document.getElementById('analisisExplanationCards');
+        container.innerHTML = '';
+
+        // Calculate stats
+        const proyPatentes = new Set(proy.map(m => m.patente));
+        const presuPatentes = new Set(presu.map(m => m.patente));
+        const soloPresuCount = [...presuPatentes].filter(p => !proyPatentes.has(p)).length;
+        const soloProyCount = [...proyPatentes].filter(p => !presuPatentes.has(p)).length;
+
+        const monthlyProy = new Array(12).fill(0);
+        const monthlyPresu = new Array(12).fill(0);
+        proy.forEach(m => { if (m.mes_original >= 1 && m.mes_original <= 12) monthlyProy[m.mes_original - 1]++; });
+        presu.forEach(m => { if (m.mes_original >= 1 && m.mes_original <= 12) monthlyPresu[m.mes_original - 1]++; });
+
+        let maxDiffMonth = 0;
+        let maxDiffValue = 0;
+        for (let i = 0; i < 12; i++) {
+            const diff = monthlyPresu[i] - monthlyProy[i];
+            if (diff > maxDiffValue) {
+                maxDiffValue = diff;
+                maxDiffMonth = i;
+            }
+        }
+
+        // Count patentes with more preventivos in presu
+        const proyMap = {};
+        proy.forEach(m => { proyMap[m.patente] = (proyMap[m.patente] || 0) + 1; });
+        const presuMap = {};
+        presu.forEach(m => { presuMap[m.patente] = (presuMap[m.patente] || 0) + 1; });
+        const patentesConMas = Object.keys(presuMap).filter(p => proyMap[p] && presuMap[p] > proyMap[p]).length;
+
+        const explanations = [
+            {
+                title: '1. Más vehículos incluidos en el presupuesto',
+                text: `El presupuesto incluye <strong>${soloPresuCount} patentes adicionales</strong> que no estaban en la proyección original. Esto significa que se asignaron preventivos a vehículos que originalmente no tenían mantenimiento programado, ampliando la cobertura de la flota.`,
+                stat: `+${soloPresuCount} patentes nuevas`
+            },
+            {
+                title: '2. Mayor frecuencia de mantenimiento por vehículo',
+                text: `<strong>${patentesConMas} patentes</strong> tienen más preventivos asignados en el presupuesto que en la proyección. Esto indica que se incrementó la frecuencia de mantenimiento (por ejemplo, de cada 3 meses a cada 2 meses) para asegurar mejor estado de la flota.`,
+                stat: `${patentesConMas} patentes con más frecuencia`
+            },
+            {
+                title: `3. Mes con mayor diferencia: ${monthNames[maxDiffMonth]}`,
+                text: `El mes de <strong>${monthNames[maxDiffMonth]}</strong> tiene la mayor diferencia con <strong>+${maxDiffValue} preventivos</strong> adicionales en el presupuesto. Esto puede deberse a la concentración de vencimientos de ciclos de mantenimiento o a una decisión operativa de reforzar los preventivos en ese período.`,
+                stat: `+${maxDiffValue} preventivos en ${monthNames[maxDiffMonth]}`
+            },
+            {
+                title: '4. Decisión de negocio: mayor inversión en preventivos',
+                text: `La diferencia entre proyectado y presupuestado refleja una <strong>decisión estratégica de aumentar la inversión en mantenimiento preventivo</strong>. Un mayor número de preventivos reduce el riesgo de fallas mecánicas, costos de reparaciones correctivas y tiempo de inactividad de los vehículos.`,
+                stat: `${((presu.length / proy.length - 1) * 100).toFixed(1)}% más inversión`
+            },
+            {
+                title: '5. Reducción de patentes del proyectado al presupuesto',
+                text: `${soloProyCount > 0 ? `<strong>${soloProyCount} patentes</strong> del proyectado original no están en el presupuesto. Esto puede deberse a que estos vehículos fueron dados de baja, transferidos a otra flota, o se decidió no incluirlos en el plan de mantenimiento presupuestado.` : 'No se removieron patentes del proyectado al presupuesto, lo que indica una cobertura consistente.'}`,
+                stat: soloProyCount > 0 ? `-${soloProyCount} patentes removidas` : 'Sin remociones'
+            },
+            {
+                title: '6. Optimización de ciclos de mantenimiento',
+                text: `El presupuesto puede incluir <strong>ajustes en los ciclos de mantenimiento</strong> basados en la experiencia operativa del año. Si un vehículo requirió mantenimiento correctivo frecuente, se le asignan más preventivos en el presupuesto para evitar esas fallas.`,
+                stat: 'Optimización basada en datos'
+            }
+        ];
+
+        explanations.forEach(exp => {
+            const card = document.createElement('div');
+            card.className = 'analisis-explanation-card';
+            card.innerHTML = `
+                <h4>${exp.title}</h4>
+                <p>${exp.text}</p>
+                <span class="explanation-stat">${exp.stat}</span>
+            `;
+            container.appendChild(card);
+        });
     }
 });
