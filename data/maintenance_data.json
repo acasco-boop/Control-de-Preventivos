@@ -2679,12 +2679,12 @@
       "plan": "2/3/6M",
       "fecha_estimada": "2026-08-01",
       "mes_original": 8,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-08-26",
+      "mes_ejecucion": 8,
+      "taller": "CIUD",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 26/08/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 93,
@@ -6218,12 +6218,12 @@
       "plan": "2/3/6M",
       "fecha_estimada": "2026-07-05",
       "mes_original": 7,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-07-02",
+      "mes_ejecucion": 7,
+      "taller": "CIUD",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 02/07/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 289,
@@ -6362,12 +6362,12 @@
       "plan": "2/3/6M",
       "fecha_estimada": "2026-07-05",
       "mes_original": 7,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Julio",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-08-25",
+      "mes_ejecucion": 8,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Agosto (Origen: Julio)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 297,
@@ -9660,6 +9660,24 @@
     },
     {
       "id": 477,
+      "patente": "GDR526",
+      "centro_costo": "Molca",
+      "taller_proyectado": "BSAS",
+      "talleres_proyectados_list": [
+        "BSAS"
+      ],
+      "plan": "2MC",
+      "fecha_estimada": "2026-07-03",
+      "mes_original": 7,
+      "fecha_ejecucion": "2026-07-03",
+      "mes_ejecucion": 7,
+      "taller": "CIUD",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado en Julio (03/07/2026)",
+      "tiene_orden_realizado": true
+    },
+    {
+      "id": 478,
       "patente": "KIP032",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -9678,7 +9696,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 478,
+      "id": 479,
       "patente": "AF066NU",
       "centro_costo": "CENCO_MZ - Cencosud SA - Mendoza",
       "taller_proyectado": "MNZA",
@@ -9696,7 +9714,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 479,
+      "id": 480,
       "patente": "KER728",
       "centro_costo": "CENCO_MZ - Cencosud SA - Mendoza",
       "taller_proyectado": "MNZA",
@@ -9714,7 +9732,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 480,
+      "id": 481,
       "patente": "KLY952",
       "centro_costo": "AGN_TTE - AGUANORT - Transporte",
       "taller_proyectado": "BSAS",
@@ -9732,7 +9750,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 481,
+      "id": 482,
       "patente": "TOTAL GENERAL",
       "centro_costo": "Sin Centro de Costo",
       "taller_proyectado": "Sin Taller Proyectado",
