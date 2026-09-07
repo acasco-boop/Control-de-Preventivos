@@ -1162,10 +1162,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const m = parseInt(selectedMonth);
                 const isOriginalMonth = item.mes_original === m;
                 const isExecutedInMonth = item.mes_ejecucion === m;
-                // Pendientes vencidos de meses anteriores se arrastran al mes seleccionado
-                const isOverduePending = item.estado === 'PENDIENTE' && item.mes_original < m;
 
-                if (!isOriginalMonth && !isExecutedInMonth && !isOverduePending) {
+                if (!isOriginalMonth && !isExecutedInMonth) {
                     return false;
                 }
 
@@ -1186,18 +1184,39 @@ document.addEventListener('DOMContentLoaded', async () => {
             return true;
         });
 
-        // En vista mensual: una sola fila de pendiente por patente (se conserva la más antigua = la atrasada)
+        // En vista mensual: solo items del mes en curso. Si la patente tiene un pendiente
+        // más antiguo (vencido), se muestra ese en lugar del pendiente del mes,
+        // quedando una sola fila de pendiente por patente.
         if (selectedMonth !== 'ALL') {
+            const m = parseInt(selectedMonth);
             const oldestPendingByPatente = new Map();
-            result.forEach(item => {
-                if (item.estado !== 'PENDIENTE') return;
+            globalData.mantenimientos.forEach(item => {
+                if (!isCdcMatch(item.centro_costo)) return;
+                if (!isTallerProyMatch(item)) return;
+                if (!isTallerMatch(item.taller)) return;
+                if (item.estado !== 'PENDIENTE' || item.mes_original > m) return;
+                if (getItemCheckState(item)) return;
                 const cur = oldestPendingByPatente.get(item.patente);
                 if (!cur || item.mes_original < cur.mes_original ||
                     (item.mes_original === cur.mes_original && item.id < cur.id)) {
                     oldestPendingByPatente.set(item.patente, item);
                 }
             });
-            const keepPendingIds = new Set([...oldestPendingByPatente.values()].map(i => i.id));
+            result = result.map(item => {
+                if (item.estado !== 'PENDIENTE' || item.mes_original !== m) return item;
+                const oldest = oldestPendingByPatente.get(item.patente);
+                return (oldest && oldest.mes_original < m) ? oldest : item;
+            });
+            const oldestInResult = new Map();
+            result.forEach(item => {
+                if (item.estado !== 'PENDIENTE') return;
+                const cur = oldestInResult.get(item.patente);
+                if (!cur || item.mes_original < cur.mes_original ||
+                    (item.mes_original === cur.mes_original && item.id < cur.id)) {
+                    oldestInResult.set(item.patente, item);
+                }
+            });
+            const keepPendingIds = new Set([...oldestInResult.values()].map(i => i.id));
             result = result.filter(item => item.estado !== 'PENDIENTE' || keepPendingIds.has(item.id));
         }
 
@@ -1734,9 +1753,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const m = parseInt(selectedMonth);
                 const isOriginalMonth = item.mes_original === m;
                 const isExecutedInMonth = item.mes_ejecucion === m;
-                // Pendientes vencidos de meses anteriores se arrastran al mes seleccionado
-                const isOverduePending = item.estado === 'PENDIENTE' && item.mes_original < m;
-                if (!isOriginalMonth && !isExecutedInMonth && !isOverduePending) return false;
+                if (!isOriginalMonth && !isExecutedInMonth) return false;
                 if (isPresuPendingCoveredByLateExecution(item, m, patentesCompletedInMonth)) return false;
             }
 
@@ -1745,18 +1762,39 @@ document.addEventListener('DOMContentLoaded', async () => {
             return true;
         });
 
-        // En vista mensual: una sola fila de pendiente por patente (se conserva la más antigua = la atrasada)
+        // En vista mensual: solo items del mes en curso. Si la patente tiene un pendiente
+        // más antiguo (vencido), se muestra ese en lugar del pendiente del mes,
+        // quedando una sola fila de pendiente por patente.
         if (selectedMonth !== 'ALL') {
+            const m = parseInt(selectedMonth);
             const presuOldestPendingByPatente = new Map();
-            presuResult.forEach(item => {
-                if (item.estado !== 'PENDIENTE') return;
+            budgetData.mantenimientos.forEach(item => {
+                if (!isPresuCdcMatch(item.centro_costo)) return;
+                if (!isPresuTallerProyMatch(item)) return;
+                if (!isPresuTallerMatch(item.taller)) return;
+                if (item.estado !== 'PENDIENTE' || item.mes_original > m) return;
+                if (getItemCheckState(item)) return;
                 const cur = presuOldestPendingByPatente.get(item.patente);
                 if (!cur || item.mes_original < cur.mes_original ||
                     (item.mes_original === cur.mes_original && item.id < cur.id)) {
                     presuOldestPendingByPatente.set(item.patente, item);
                 }
             });
-            const presuKeepPendingIds = new Set([...presuOldestPendingByPatente.values()].map(i => i.id));
+            presuResult = presuResult.map(item => {
+                if (item.estado !== 'PENDIENTE' || item.mes_original !== m) return item;
+                const oldest = presuOldestPendingByPatente.get(item.patente);
+                return (oldest && oldest.mes_original < m) ? oldest : item;
+            });
+            const presuOldestInResult = new Map();
+            presuResult.forEach(item => {
+                if (item.estado !== 'PENDIENTE') return;
+                const cur = presuOldestInResult.get(item.patente);
+                if (!cur || item.mes_original < cur.mes_original ||
+                    (item.mes_original === cur.mes_original && item.id < cur.id)) {
+                    presuOldestInResult.set(item.patente, item);
+                }
+            });
+            const presuKeepPendingIds = new Set([...presuOldestInResult.values()].map(i => i.id));
             presuResult = presuResult.filter(item => item.estado !== 'PENDIENTE' || presuKeepPendingIds.has(item.id));
         }
 
