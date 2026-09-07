@@ -1158,12 +1158,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                 return false;
             }
 
+            // Vista mensual: solo lo proyectado del mes en curso (igual que la barra Proyectado del gráfico)
             if (selectedMonth !== 'ALL') {
                 const m = parseInt(selectedMonth);
-                const isOriginalMonth = item.mes_original === m;
-                const isExecutedInMonth = item.mes_ejecucion === m;
-
-                if (!isOriginalMonth && !isExecutedInMonth) {
+                if (item.mes_original !== m) {
                     return false;
                 }
 
@@ -1749,11 +1747,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (!isPresuTallerProyMatch(item)) return false;
             if (!isPresuTallerMatch(item.taller)) return false;
 
+            // Vista mensual: solo lo proyectado del mes en curso (igual que la barra Proyectado del gráfico)
             if (selectedMonth !== 'ALL') {
                 const m = parseInt(selectedMonth);
-                const isOriginalMonth = item.mes_original === m;
-                const isExecutedInMonth = item.mes_ejecucion === m;
-                if (!isOriginalMonth && !isExecutedInMonth) return false;
+                if (item.mes_original !== m) return false;
                 if (isPresuPendingCoveredByLateExecution(item, m, patentesCompletedInMonth)) return false;
             }
 
