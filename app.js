@@ -1145,7 +1145,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             patentesCompletedInMonth = getPatentesCompletedInMonth(parseInt(selectedMonth));
         }
 
-        return globalData.mantenimientos.filter(item => {
+        let result = globalData.mantenimientos.filter(item => {
             if (!isCdcMatch(item.centro_costo)) {
                 return false;
             }
@@ -1162,8 +1162,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const m = parseInt(selectedMonth);
                 const isOriginalMonth = item.mes_original === m;
                 const isExecutedInMonth = item.mes_ejecucion === m;
+                // Pendientes vencidos de meses anteriores se arrastran al mes seleccionado
+                const isOverduePending = item.estado === 'PENDIENTE' && item.mes_original < m;
 
-                if (!isOriginalMonth && !isExecutedInMonth) {
+                if (!isOriginalMonth && !isExecutedInMonth && !isOverduePending) {
                     return false;
                 }
 
@@ -1183,6 +1185,23 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             return true;
         });
+
+        // En vista mensual: una sola fila de pendiente por patente (se conserva la más antigua = la atrasada)
+        if (selectedMonth !== 'ALL') {
+            const oldestPendingByPatente = new Map();
+            result.forEach(item => {
+                if (item.estado !== 'PENDIENTE') return;
+                const cur = oldestPendingByPatente.get(item.patente);
+                if (!cur || item.mes_original < cur.mes_original ||
+                    (item.mes_original === cur.mes_original && item.id < cur.id)) {
+                    oldestPendingByPatente.set(item.patente, item);
+                }
+            });
+            const keepPendingIds = new Set([...oldestPendingByPatente.values()].map(i => i.id));
+            result = result.filter(item => item.estado !== 'PENDIENTE' || keepPendingIds.has(item.id));
+        }
+
+        return result;
     }
 
     function updateDashboard() {
@@ -1258,7 +1277,16 @@ document.addEventListener('DOMContentLoaded', async () => {
         document.getElementById('kpiTotalDetail').textContent = detailText;
 
         // 4. Cantidad de Preventivos Atrasados / Pendientes a la fecha (Acumulados <= evalMonth)
-        const atrasadosScope = cdcScope.filter(m => m.estado === 'PENDIENTE' && m.mes_original <= evalMonth);
+        // Una sola fila por patente (se conserva el pendiente más antiguo = el atrasado)
+        const atrasadosByPatente = new Map();
+        cdcScope.forEach(m => {
+            if (!(m.estado === 'PENDIENTE' && m.mes_original <= evalMonth)) return;
+            const cur = atrasadosByPatente.get(m.patente);
+            if (!cur || m.mes_original < cur.mes_original || (m.mes_original === cur.mes_original && m.id < cur.id)) {
+                atrasadosByPatente.set(m.patente, m);
+            }
+        });
+        const atrasadosScope = [...atrasadosByPatente.values()];
         document.getElementById('kpiAtrasadosQty').textContent = atrasadosScope.length;
         const maxBarAtrasados = proyectadosMes.length > 0 ? (atrasadosScope.length / proyectadosMes.length) * 100 : 0;
         document.getElementById('barAtrasados').style.width = `${Math.min(maxBarAtrasados, 100)}%`;
@@ -1413,7 +1441,14 @@ document.addEventListener('DOMContentLoaded', async () => {
                     obsClass = 'obs-tag';
                 }
             } else {
-                badgeHtml = `<span class="badge badge-pendiente"><i class="fa-solid fa-triangle-exclamation"></i> Pendiente</span>`;
+                const selectedM = monthFilter.value !== 'ALL' ? parseInt(monthFilter.value) : null;
+                const isOverdue = selectedM !== null && item.estado === 'PENDIENTE' && item.mes_original < selectedM;
+                if (isOverdue) {
+                    const overdueMesName = monthNames[item.mes_original - 1] || 'N/A';
+                    badgeHtml = `<span class="badge badge-pendiente"><i class="fa-solid fa-triangle-exclamation"></i> Atrasado (desde ${overdueMesName})</span>`;
+                } else {
+                    badgeHtml = `<span class="badge badge-pendiente"><i class="fa-solid fa-triangle-exclamation"></i> Pendiente</span>`;
+                }
             }
 
             const tallerProyBadge = item.taller_proyectado 
@@ -1690,7 +1725,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             patentesCompletedInMonth = getPresuPatentesCompletedInMonth(parseInt(selectedMonth));
         }
 
-        return budgetData.mantenimientos.filter(item => {
+        let presuResult = budgetData.mantenimientos.filter(item => {
             if (!isPresuCdcMatch(item.centro_costo)) return false;
             if (!isPresuTallerProyMatch(item)) return false;
             if (!isPresuTallerMatch(item.taller)) return false;
@@ -1699,7 +1734,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const m = parseInt(selectedMonth);
                 const isOriginalMonth = item.mes_original === m;
                 const isExecutedInMonth = item.mes_ejecucion === m;
-                if (!isOriginalMonth && !isExecutedInMonth) return false;
+                // Pendientes vencidos de meses anteriores se arrastran al mes seleccionado
+                const isOverduePending = item.estado === 'PENDIENTE' && item.mes_original < m;
+                if (!isOriginalMonth && !isExecutedInMonth && !isOverduePending) return false;
                 if (isPresuPendingCoveredByLateExecution(item, m, patentesCompletedInMonth)) return false;
             }
 
@@ -1707,6 +1744,23 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (searchQuery && !item.patente.includes(searchQuery)) return false;
             return true;
         });
+
+        // En vista mensual: una sola fila de pendiente por patente (se conserva la más antigua = la atrasada)
+        if (selectedMonth !== 'ALL') {
+            const presuOldestPendingByPatente = new Map();
+            presuResult.forEach(item => {
+                if (item.estado !== 'PENDIENTE') return;
+                const cur = presuOldestPendingByPatente.get(item.patente);
+                if (!cur || item.mes_original < cur.mes_original ||
+                    (item.mes_original === cur.mes_original && item.id < cur.id)) {
+                    presuOldestPendingByPatente.set(item.patente, item);
+                }
+            });
+            const presuKeepPendingIds = new Set([...presuOldestPendingByPatente.values()].map(i => i.id));
+            presuResult = presuResult.filter(item => item.estado !== 'PENDIENTE' || presuKeepPendingIds.has(item.id));
+        }
+
+        return presuResult;
     }
 
     function updatePresupuestoDashboard() {
@@ -1760,7 +1814,15 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (extrasList.length > 0) detailText += ` (${extrasList.join(', ')})`;
         document.getElementById('presuKpiTotalDetail').textContent = detailText;
 
-        const atrasadosScope = cdcScope.filter(m => m.estado === 'PENDIENTE' && m.mes_original <= evalMonth);
+        const presuAtrasadosByPatente = new Map();
+        cdcScope.forEach(m => {
+            if (!(m.estado === 'PENDIENTE' && m.mes_original <= evalMonth)) return;
+            const cur = presuAtrasadosByPatente.get(m.patente);
+            if (!cur || m.mes_original < cur.mes_original || (m.mes_original === cur.mes_original && m.id < cur.id)) {
+                presuAtrasadosByPatente.set(m.patente, m);
+            }
+        });
+        const atrasadosScope = [...presuAtrasadosByPatente.values()];
         document.getElementById('presuKpiAtrasadosQty').textContent = atrasadosScope.length;
         const maxBarAtrasados = proyectadosMes.length > 0 ? (atrasadosScope.length / proyectadosMes.length) * 100 : 0;
         document.getElementById('presuBarAtrasados').style.width = `${Math.min(maxBarAtrasados, 100)}%`;
@@ -1858,7 +1920,14 @@ document.addEventListener('DOMContentLoaded', async () => {
                     badgeHtml = `<span class="badge badge-en-fecha"><i class="fa-solid fa-circle-check"></i> Realizado</span>`;
                 }
             } else {
-                badgeHtml = `<span class="badge badge-pendiente"><i class="fa-solid fa-triangle-exclamation"></i> Pendiente</span>`;
+                const presuSelectedM = presuMonthFilter.value !== 'ALL' ? parseInt(presuMonthFilter.value) : null;
+                const presuIsOverdue = presuSelectedM !== null && item.estado === 'PENDIENTE' && item.mes_original < presuSelectedM;
+                if (presuIsOverdue) {
+                    const presuOverdueMesName = monthNames[item.mes_original - 1] || 'N/A';
+                    badgeHtml = `<span class="badge badge-pendiente"><i class="fa-solid fa-triangle-exclamation"></i> Atrasado (desde ${presuOverdueMesName})</span>`;
+                } else {
+                    badgeHtml = `<span class="badge badge-pendiente"><i class="fa-solid fa-triangle-exclamation"></i> Pendiente</span>`;
+                }
             }
 
             const tallerProyBadge = item.taller_proyectado ? `<span class="taller-proy-tag"><i class="fa-solid fa-clipboard-list"></i> ${escapeHtml(item.taller_proyectado)}</span>` : `<span class="taller-tag-none">-</span>`;
