@@ -995,6 +995,82 @@ body {
     display: block;
 }
 
+/* Realizados - Doble ejecución alert */
+.realizados-alert {
+    margin: 16px 24px 0;
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.12), rgba(239, 68, 68, 0.08));
+    border: 1px solid rgba(245, 158, 11, 0.4);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+
+.realizados-alert-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--accent-orange);
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+.realizados-alert-header i {
+    font-size: 1.2rem;
+}
+
+.realizados-alert-body {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-height: 220px;
+    overflow-y: auto;
+}
+
+.realizados-doble-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    flex-wrap: wrap;
+}
+
+.realizados-doble-item .patente-code {
+    font-weight: 700;
+    color: var(--accent-orange);
+}
+
+.realizados-doble-item .doble-dates {
+    color: var(--text-light);
+}
+
+.realizados-doble-item .doble-gap {
+    background: rgba(245, 158, 11, 0.2);
+    color: var(--accent-orange);
+    padding: 2px 10px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.78rem;
+    white-space: nowrap;
+}
+
+.badge-doble {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: rgba(245, 158, 11, 0.15);
+    color: var(--accent-orange);
+    border: 1px solid rgba(245, 158, 11, 0.45);
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-top: 6px;
+    white-space: nowrap;
+}
+
 /* Análisis Tab - Password Gate */
 .analisis-password-gate {
     display: flex;

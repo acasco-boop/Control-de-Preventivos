@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="styles.css?v=2.6">
+    <link rel="stylesheet" href="styles.css?v=2.7">
 </head>
 <body>
     <div class="app-container">
@@ -652,6 +652,15 @@
                 </div>
             </div>
 
+            <!-- Doble ejecución (< 30 días) Alert -->
+            <div class="realizados-alert" id="realizadosDobleAlert" style="display: none;">
+                <div class="realizados-alert-header">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <strong>Atención: doble ejecución en menos de 30 días (<span id="realizadosDobleAlertCount">0</span>)</strong>
+                </div>
+                <div class="realizados-alert-body" id="realizadosDobleAlertBody"></div>
+            </div>
+
             <!-- Realizados Table Section -->
             <section class="table-section">
                 <div class="table-header-toolbar">
@@ -729,6 +738,6 @@
         </div>
     </div>
 
-    <script src="app.js?v=2.9"></script>
+    <script src="app.js?v=2.10"></script>
 </body>
 </html>

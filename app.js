@@ -141,6 +141,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const realizadosTableCountBadge = document.getElementById('realizadosTableCountBadge');
     const realizadosExportCsvBtn = document.getElementById('realizadosExportCsvBtn');
     const realizadosCountBadge = document.getElementById('realizadosCountBadge');
+    const realizadosDobleAlert = document.getElementById('realizadosDobleAlert');
 
     // Presupuesto Tab DOM Elements
     const presupuestoTab = document.getElementById('presupuestoTab');
@@ -930,8 +931,61 @@ document.addEventListener('DOMContentLoaded', async () => {
             return 0;
         });
 
-        renderRealizadosTable(filtered);
+        const dobleMap = getDobleEjecucionMap();
+        renderDobleEjecucionAlert(dobleMap);
+        renderRealizadosTable(filtered, dobleMap);
         updateRealizadosCountBadge();
+    }
+
+    // Diferencia en días entre dos fechas YYYY-MM-DD (sin problemas de timezone)
+    function dateDiffDays(a, b) {
+        const pa = a.split('-').map(Number);
+        const pb = b.split('-').map(Number);
+        return Math.round((Date.UTC(pb[0], pb[1] - 1, pb[2]) - Date.UTC(pa[0], pa[1] - 1, pa[2])) / 86400000);
+    }
+
+    // Detecta patentes con dos ejecuciones separadas por menos de 30 días
+    // Respeta los filtros globales (CdC, Taller Proyectado, Taller Realizado)
+    function getDobleEjecucionMap() {
+        const byPatente = {};
+        getCdcScope().forEach(m => {
+            if (m.estado === 'PENDIENTE' || !m.fecha_ejecucion) return;
+            (byPatente[m.patente] = byPatente[m.patente] || []).push(m);
+        });
+        const result = {};
+        Object.keys(byPatente).forEach(pat => {
+            const arr = byPatente[pat].slice().sort((x, y) => x.fecha_ejecucion.localeCompare(y.fecha_ejecucion));
+            for (let i = 1; i < arr.length; i++) {
+                const gap = dateDiffDays(arr[i - 1].fecha_ejecucion, arr[i].fecha_ejecucion);
+                if (gap < 30) {
+                    if (!result[pat]) result[pat] = { ids: new Set(), pairs: [] };
+                    result[pat].ids.add(arr[i - 1].id);
+                    result[pat].ids.add(arr[i].id);
+                    result[pat].pairs.push({ d1: arr[i - 1].fecha_ejecucion, d2: arr[i].fecha_ejecucion, gap: gap });
+                }
+            }
+        });
+        return result;
+    }
+
+    function renderDobleEjecucionAlert(dobleMap) {
+        const patentes = Object.keys(dobleMap).sort();
+        if (patentes.length === 0) {
+            realizadosDobleAlert.style.display = 'none';
+            return;
+        }
+        realizadosDobleAlert.style.display = 'block';
+        document.getElementById('realizadosDobleAlertCount').textContent = patentes.length;
+        const body = document.getElementById('realizadosDobleAlertBody');
+        body.innerHTML = '';
+        patentes.forEach(pat => {
+            const info = dobleMap[pat];
+            const detail = info.pairs.map(p => `${formatDate(p.d1)} y ${formatDate(p.d2)} (${p.gap} días)`).join(' · ');
+            const div = document.createElement('div');
+            div.className = 'realizados-doble-item';
+            div.innerHTML = `<span><span class="patente-code">${escapeHtml(pat)}</span> <span class="doble-dates">ejecutado el ${detail}</span></span><span class="doble-gap">Revisar</span>`;
+            body.appendChild(div);
+        });
     }
 
     function updateRealizadosCountBadge() {
@@ -939,7 +993,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         realizadosCountBadge.textContent = allCompleted.length;
     }
 
-    function renderRealizadosTable(list) {
+    function renderRealizadosTable(list, dobleMap) {
         realizadosTableCountBadge.textContent = `${list.length} Registros`;
         realizadosTableBody.innerHTML = '';
 
@@ -973,6 +1027,14 @@ document.addEventListener('DOMContentLoaded', async () => {
                 badgeHtml = `<span class="badge badge-adelantado"><i class="fa-solid fa-bolt-lightning"></i> Adelantado</span>`;
             } else {
                 badgeHtml = `<span class="badge badge-en-fecha"><i class="fa-solid fa-circle-check"></i> En Fecha</span>`;
+            }
+
+            // Alerta de doble ejecución en menos de 30 días
+            const dobleInfo = dobleMap && dobleMap[item.patente] && dobleMap[item.patente].ids.has(item.id)
+                ? dobleMap[item.patente] : null;
+            if (dobleInfo) {
+                const tip = dobleInfo.pairs.map(p => `${formatDate(p.d1)} y ${formatDate(p.d2)} (${p.gap} días)`).join(' · ');
+                badgeHtml += `<br><span class="badge-doble" title="Esta patente también se ejecutó el ${tip}"><i class="fa-solid fa-triangle-exclamation"></i> Doble ejecución &lt; 30 días</span>`;
             }
 
             const tallerProyBadge = item.taller_proyectado
