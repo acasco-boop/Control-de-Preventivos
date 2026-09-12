@@ -1178,17 +1178,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         );
     }
 
-    // Helper: pre-compute set of patentes that already have a completed (non-PENDIENTE) task in the given month
-    function getPatentesCompletedInMonth(month) {
-        const set = new Set();
-        globalData.mantenimientos.forEach(it => {
-            if (it.mes_ejecucion === month && it.estado !== 'PENDIENTE') {
-                set.add(it.patente);
-            }
-        });
-        return set;
-    }
-
     function getFilteredData() {
         const selectedMonth = monthFilter.value;
         const selectedStatus = statusFilter.value;
@@ -1227,14 +1216,27 @@ document.addEventListener('DOMContentLoaded', async () => {
             return true;
         });
 
-        // En vista mensual (sin búsqueda): el pendiente del mes siempre se muestra.
-        // Solo si la patente tuvo una ejecución en ese mes (tarea tardía de un plan
-        // anterior ya realizada) y además existe un pendiente vencido más reciente,
-        // se muestra ese vencido en su lugar para aclarar qué quedó sin hacer.
-        // Queda una sola fila de pendiente por patente.
+        // En vista mensual (sin búsqueda): el pendiente del mes se muestra, salvo que la
+        // patente haya sido ejecutada ese mes con un plan anterior tardío. En ese caso se
+        // muestra, en su lugar, el pendiente vencido más reciente si existe (lo que quedó
+        // sin hacer); si no hay vencido, se muestra la ejecución del mes marcada como
+        // realizada. Con filtro de estado activo solo se sustituye por otro pendiente.
+        // Queda una sola fila por patente.
         if (selectedMonth !== 'ALL' && !searchQuery) {
             const m = parseInt(selectedMonth);
-            const completedInMonth = getPatentesCompletedInMonth(m);
+            const allowCompletionSwap = selectedStatus === 'ALL';
+            const lateDoneInMonthByPatente = new Map();
+            globalData.mantenimientos.forEach(it => {
+                if (!isCdcMatch(it.centro_costo)) return;
+                if (!isTallerProyMatch(it)) return;
+                if (!isTallerMatch(it.taller)) return;
+                if (it.estado === 'PENDIENTE' || it.mes_ejecucion !== m || it.mes_original >= m) return;
+                if (!getItemCheckState(it)) return;
+                const cur = lateDoneInMonthByPatente.get(it.patente);
+                if (!cur || (it.fecha_ejecucion || '') > (cur.fecha_ejecucion || '')) {
+                    lateDoneInMonthByPatente.set(it.patente, it);
+                }
+            });
             const latestOlderPendingByPatente = new Map();
             globalData.mantenimientos.forEach(item => {
                 if (!isCdcMatch(item.centro_costo)) return;
@@ -1251,10 +1253,16 @@ document.addEventListener('DOMContentLoaded', async () => {
             result = result.map(item => {
                 if (item.estado !== 'PENDIENTE' || item.mes_original !== m) return item;
                 if (getItemCheckState(item)) return item;
-                if (!completedInMonth.has(item.patente)) return item;
+                if (!lateDoneInMonthByPatente.has(item.patente)) return item;
                 const older = latestOlderPendingByPatente.get(item.patente);
-                return (older && older.mes_original < m) ? older : item;
+                if (older && older.mes_original < m) return older;
+                if (allowCompletionSwap) {
+                    const done = lateDoneInMonthByPatente.get(item.patente);
+                    if (done) return done;
+                }
+                return item;
             });
+            const seenIds = new Set();
             const oldestInResult = new Map();
             result.forEach(item => {
                 if (item.estado !== 'PENDIENTE') return;
@@ -1265,7 +1273,11 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }
             });
             const keepPendingIds = new Set([...oldestInResult.values()].map(i => i.id));
-            result = result.filter(item => item.estado !== 'PENDIENTE' || keepPendingIds.has(item.id));
+            result = result.filter(item => {
+                if (seenIds.has(item.id)) return false;
+                seenIds.add(item.id);
+                return item.estado !== 'PENDIENTE' || keepPendingIds.has(item.id);
+            });
         }
 
         return result;
@@ -1765,14 +1777,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         );
     }
 
-    function getPresuPatentesCompletedInMonth(month) {
-        const set = new Set();
-        budgetData.mantenimientos.forEach(it => {
-            if (it.mes_ejecucion === month && it.estado !== 'PENDIENTE') set.add(it.patente);
-        });
-        return set;
-    }
-
     function getPresuFilteredData() {
         const selectedMonth = presuMonthFilter.value;
         const selectedStatus = presuStatusFilter.value;
@@ -1795,14 +1799,27 @@ document.addEventListener('DOMContentLoaded', async () => {
             return true;
         });
 
-        // En vista mensual (sin búsqueda): el pendiente del mes siempre se muestra.
-        // Solo si la patente tuvo una ejecución en ese mes (tarea tardía de un plan
-        // anterior ya realizada) y además existe un pendiente vencido más reciente,
-        // se muestra ese vencido en su lugar para aclarar qué quedó sin hacer.
-        // Queda una sola fila de pendiente por patente.
+        // En vista mensual (sin búsqueda): el pendiente del mes se muestra, salvo que la
+        // patente haya sido ejecutada ese mes con un plan anterior tardío. En ese caso se
+        // muestra, en su lugar, el pendiente vencido más reciente si existe (lo que quedó
+        // sin hacer); si no hay vencido, se muestra la ejecución del mes marcada como
+        // realizada. Con filtro de estado activo solo se sustituye por otro pendiente.
+        // Queda una sola fila por patente.
         if (selectedMonth !== 'ALL' && !searchQuery) {
             const m = parseInt(selectedMonth);
-            const presuCompletedInMonth = getPresuPatentesCompletedInMonth(m);
+            const presuAllowCompletionSwap = selectedStatus === 'ALL';
+            const presuLateDoneInMonthByPatente = new Map();
+            budgetData.mantenimientos.forEach(it => {
+                if (!isPresuCdcMatch(it.centro_costo)) return;
+                if (!isPresuTallerProyMatch(it)) return;
+                if (!isPresuTallerMatch(it.taller)) return;
+                if (it.estado === 'PENDIENTE' || it.mes_ejecucion !== m || it.mes_original >= m) return;
+                if (!getItemCheckState(it)) return;
+                const cur = presuLateDoneInMonthByPatente.get(it.patente);
+                if (!cur || (it.fecha_ejecucion || '') > (cur.fecha_ejecucion || '')) {
+                    presuLateDoneInMonthByPatente.set(it.patente, it);
+                }
+            });
             const presuLatestOlderPendingByPatente = new Map();
             budgetData.mantenimientos.forEach(item => {
                 if (!isPresuCdcMatch(item.centro_costo)) return;
@@ -1819,9 +1836,14 @@ document.addEventListener('DOMContentLoaded', async () => {
             presuResult = presuResult.map(item => {
                 if (item.estado !== 'PENDIENTE' || item.mes_original !== m) return item;
                 if (getItemCheckState(item)) return item;
-                if (!presuCompletedInMonth.has(item.patente)) return item;
+                if (!presuLateDoneInMonthByPatente.has(item.patente)) return item;
                 const older = presuLatestOlderPendingByPatente.get(item.patente);
-                return (older && older.mes_original < m) ? older : item;
+                if (older && older.mes_original < m) return older;
+                if (presuAllowCompletionSwap) {
+                    const done = presuLateDoneInMonthByPatente.get(item.patente);
+                    if (done) return done;
+                }
+                return item;
             });
             const presuOldestInResult = new Map();
             presuResult.forEach(item => {
@@ -1833,7 +1855,12 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }
             });
             const presuKeepPendingIds = new Set([...presuOldestInResult.values()].map(i => i.id));
-            presuResult = presuResult.filter(item => item.estado !== 'PENDIENTE' || presuKeepPendingIds.has(item.id));
+            const presuSeenIds = new Set();
+            presuResult = presuResult.filter(item => {
+                if (presuSeenIds.has(item.id)) return false;
+                presuSeenIds.add(item.id);
+                return item.estado !== 'PENDIENTE' || presuKeepPendingIds.has(item.id);
+            });
         }
 
         return presuResult;
