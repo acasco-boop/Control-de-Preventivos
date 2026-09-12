@@ -1162,12 +1162,12 @@
       "plan": "2/3/6M",
       "fecha_estimada": "2026-05-22",
       "mes_original": 5,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Mayo",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-09-07",
+      "mes_ejecucion": 9,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Septiembre (Origen: Mayo)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 8,
@@ -1648,12 +1648,12 @@
       "plan": "2/3/6M",
       "fecha_estimada": "2026-06-10",
       "mes_original": 6,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Junio",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-09-07",
+      "mes_ejecucion": 9,
+      "taller": "MNZA",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Septiembre (Origen: Junio)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 35,
@@ -2213,11 +2213,11 @@
       "plan": "2/3/6M",
       "fecha_estimada": "2026-06-20",
       "mes_original": 6,
-      "fecha_ejecucion": "2026-05-19",
-      "mes_ejecucion": 5,
+      "fecha_ejecucion": "2026-09-09",
+      "mes_ejecucion": 9,
       "taller": "CIUD",
-      "estado": "ADELANTADO",
-      "observaciones": "Ejecutado por adelantado en Mayo (Programado: Junio)",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Septiembre (Origen: Junio)",
       "tiene_orden_realizado": true
     },
     {
@@ -5349,12 +5349,12 @@
       "plan": "2/3/6M",
       "fecha_estimada": "2026-09-07",
       "mes_original": 9,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Septiembre",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-09-08",
+      "mes_ejecucion": 9,
+      "taller": "CIUD",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 08/09/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 240,
@@ -6361,12 +6361,12 @@
       "plan": "2/3/6M",
       "fecha_estimada": "2026-09-07",
       "mes_original": 9,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Septiembre",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-09-11",
+      "mes_ejecucion": 9,
+      "taller": "CIUD",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 11/09/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 296,
@@ -6903,12 +6903,12 @@
       "plan": "2/3/6M",
       "fecha_estimada": "2026-07-05",
       "mes_original": 7,
-      "fecha_ejecucion": "2026-07-02",
-      "mes_ejecucion": 7,
-      "taller": "CIUD",
-      "estado": "EN_FECHA",
-      "observaciones": "Ejecutado a tiempo en 02/07/2026",
-      "tiene_orden_realizado": true
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Julio",
+      "tiene_orden_realizado": false
     },
     {
       "id": 326,
@@ -6921,12 +6921,12 @@
       "plan": "2/3/6M",
       "fecha_estimada": "2026-08-01",
       "mes_original": 8,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-09-07",
+      "mes_ejecucion": 9,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Septiembre (Origen: Agosto)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 327,
@@ -6975,12 +6975,12 @@
       "plan": "2/3/6M",
       "fecha_estimada": "2026-08-01",
       "mes_original": 8,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-09-08",
+      "mes_ejecucion": 9,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Septiembre (Origen: Agosto)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 330,
@@ -7567,12 +7567,12 @@
       "plan": "2/3/6M",
       "fecha_estimada": "2026-08-29",
       "mes_original": 8,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-09-10",
+      "mes_ejecucion": 9,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Septiembre (Origen: Agosto)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 362,
@@ -7967,12 +7967,12 @@
       "plan": "2/3/6M",
       "fecha_estimada": "2026-09-30",
       "mes_original": 9,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Septiembre",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-09-10",
+      "mes_ejecucion": 9,
+      "taller": "CIUD",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 10/09/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 384,
@@ -10294,6 +10294,24 @@
     },
     {
       "id": 511,
+      "patente": "AF148ME",
+      "centro_costo": "CMQ_TTE - QUILMES TTE",
+      "taller_proyectado": "BSAS",
+      "talleres_proyectados_list": [
+        "BSAS"
+      ],
+      "plan": "2MC",
+      "fecha_estimada": "2026-05-19",
+      "mes_original": 5,
+      "fecha_ejecucion": "2026-05-19",
+      "mes_ejecucion": 5,
+      "taller": "CIUD",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado en Mayo (19/05/2026)",
+      "tiene_orden_realizado": true
+    },
+    {
+      "id": 512,
       "patente": "AF338VQ",
       "centro_costo": "CMQ_TTE - QUILMES TTE",
       "taller_proyectado": "BSAS",
@@ -10311,7 +10329,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 512,
+      "id": 513,
       "patente": "AF737MP",
       "centro_costo": "CMQ_TTE - QUILMES TTE",
       "taller_proyectado": "BSAS",
@@ -10329,7 +10347,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 513,
+      "id": 514,
       "patente": "AG404LU",
       "centro_costo": "CMQ_TTE - QUILMES TTE",
       "taller_proyectado": "BSAS",
@@ -10347,7 +10365,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 514,
+      "id": 515,
       "patente": "OAF643",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -10366,7 +10384,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 515,
+      "id": 516,
       "patente": "GLT550",
       "centro_costo": "Expreso - Servicios Troncales",
       "taller_proyectado": "BSAS / SRAF",
@@ -10385,7 +10403,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 516,
+      "id": 517,
       "patente": "AF444TV",
       "centro_costo": "CMQ_TTE - QUILMES TTE",
       "taller_proyectado": "BSAS",
@@ -10403,7 +10421,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 517,
+      "id": 518,
       "patente": "KGM735",
       "centro_costo": "CENCO_MZ - Cencosud SA - Mendoza",
       "taller_proyectado": "MNZA",
@@ -10421,7 +10439,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 518,
+      "id": 519,
       "patente": "AG300AR",
       "centro_costo": "Arcor S.A.I.C.",
       "taller_proyectado": "BSAS",
@@ -10439,7 +10457,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 519,
+      "id": 520,
       "patente": "HSC655",
       "centro_costo": "CENCO_MZ - Cencosud SA - Mendoza",
       "taller_proyectado": "MNZA",
@@ -10457,7 +10475,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 520,
+      "id": 521,
       "patente": "KHS013",
       "centro_costo": "SUC_GAL - Sucursal General Alvear",
       "taller_proyectado": "SRAF",
@@ -10475,7 +10493,7 @@
       "tiene_orden_realizado": true
     },
     {
-      "id": 521,
+      "id": 522,
       "patente": "JWV379",
       "centro_costo": "CCUCoAZA",
       "taller_proyectado": "BSAS",
@@ -10490,24 +10508,6 @@
       "taller": "CIUD",
       "estado": "EN_FECHA",
       "observaciones": "Ejecutado en Junio (18/06/2026)",
-      "tiene_orden_realizado": true
-    },
-    {
-      "id": 522,
-      "patente": "GDR526",
-      "centro_costo": "Molca",
-      "taller_proyectado": "BSAS",
-      "talleres_proyectados_list": [
-        "BSAS"
-      ],
-      "plan": "2MC",
-      "fecha_estimada": "2026-07-03",
-      "mes_original": 7,
-      "fecha_ejecucion": "2026-07-03",
-      "mes_ejecucion": 7,
-      "taller": "CIUD",
-      "estado": "EN_FECHA",
-      "observaciones": "Ejecutado en Julio (03/07/2026)",
       "tiene_orden_realizado": true
     },
     {
