@@ -1189,23 +1189,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         return set;
     }
 
-    // Helper: hide PENDIENTE tasks for the given month whose vehicle already has a completed task in that month
-    function isPendingCoveredByLateExecution(item, month, patentesCompletedInMonth) {
-        if (item.estado !== 'PENDIENTE') return false;
-        if (item.mes_original !== month) return false;
-        return patentesCompletedInMonth.has(item.patente);
-    }
-
     function getFilteredData() {
         const selectedMonth = monthFilter.value;
         const selectedStatus = statusFilter.value;
         const searchQuery = searchInput.value.trim().toUpperCase();
-
-        // Pre-compute: set of patentes that already have a completed (non-PENDIENTE) task in the selected month
-        let patentesCompletedInMonth = new Set();
-        if (selectedMonth !== 'ALL') {
-            patentesCompletedInMonth = getPatentesCompletedInMonth(parseInt(selectedMonth));
-        }
 
         let result = globalData.mantenimientos.filter(item => {
             if (!isCdcMatch(item.centro_costo)) {
@@ -1221,14 +1208,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
 
             // Vista mensual: solo lo proyectado del mes en curso (igual que la barra Proyectado del gráfico)
-            if (selectedMonth !== 'ALL') {
+            // Si se busca por patente, se ignora el mes y se muestra su historial completo
+            if (selectedMonth !== 'ALL' && !searchQuery) {
                 const m = parseInt(selectedMonth);
                 if (item.mes_original !== m) {
-                    return false;
-                }
-
-                // If this item is PENDIENTE for the selected month AND the vehicle already has a completed task in this month, hide it
-                if (isPendingCoveredByLateExecution(item, m, patentesCompletedInMonth)) {
                     return false;
                 }
             }
@@ -1244,28 +1227,33 @@ document.addEventListener('DOMContentLoaded', async () => {
             return true;
         });
 
-        // En vista mensual: solo items del mes en curso. Si la patente tiene un pendiente
-        // más antiguo (vencido), se muestra ese en lugar del pendiente del mes,
-        // quedando una sola fila de pendiente por patente.
-        if (selectedMonth !== 'ALL') {
+        // En vista mensual (sin búsqueda): el pendiente del mes siempre se muestra.
+        // Solo si la patente tuvo una ejecución en ese mes (tarea tardía de un plan
+        // anterior ya realizada) y además existe un pendiente vencido más reciente,
+        // se muestra ese vencido en su lugar para aclarar qué quedó sin hacer.
+        // Queda una sola fila de pendiente por patente.
+        if (selectedMonth !== 'ALL' && !searchQuery) {
             const m = parseInt(selectedMonth);
-            const oldestPendingByPatente = new Map();
+            const completedInMonth = getPatentesCompletedInMonth(m);
+            const latestOlderPendingByPatente = new Map();
             globalData.mantenimientos.forEach(item => {
                 if (!isCdcMatch(item.centro_costo)) return;
                 if (!isTallerProyMatch(item)) return;
                 if (!isTallerMatch(item.taller)) return;
-                if (item.estado !== 'PENDIENTE' || item.mes_original > m) return;
+                if (item.estado !== 'PENDIENTE' || item.mes_original >= m) return;
                 if (getItemCheckState(item)) return;
-                const cur = oldestPendingByPatente.get(item.patente);
-                if (!cur || item.mes_original < cur.mes_original ||
-                    (item.mes_original === cur.mes_original && item.id < cur.id)) {
-                    oldestPendingByPatente.set(item.patente, item);
+                const cur = latestOlderPendingByPatente.get(item.patente);
+                if (!cur || item.mes_original > cur.mes_original ||
+                    (item.mes_original === cur.mes_original && item.id > cur.id)) {
+                    latestOlderPendingByPatente.set(item.patente, item);
                 }
             });
             result = result.map(item => {
                 if (item.estado !== 'PENDIENTE' || item.mes_original !== m) return item;
-                const oldest = oldestPendingByPatente.get(item.patente);
-                return (oldest && oldest.mes_original < m) ? oldest : item;
+                if (getItemCheckState(item)) return item;
+                if (!completedInMonth.has(item.patente)) return item;
+                const older = latestOlderPendingByPatente.get(item.patente);
+                return (older && older.mes_original < m) ? older : item;
             });
             const oldestInResult = new Map();
             result.forEach(item => {
@@ -1307,8 +1295,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     function calculateAndRenderKpis(evalMonth) {
-        const patentesCompletedInMonth = getPatentesCompletedInMonth(evalMonth);
-        const cdcScope = getCdcScope().filter(m => !isPendingCoveredByLateExecution(m, evalMonth, patentesCompletedInMonth));
+        const cdcScope = getCdcScope();
 
         // 1. YTD Global
         const ytdProyectados = cdcScope.filter(m => m.mes_original <= evalMonth);
@@ -1373,9 +1360,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     function renderCharts() {
-        const evalMonth = monthFilter.value === 'ALL' ? 8 : parseInt(monthFilter.value);
-        const patentesCompletedInMonth = getPatentesCompletedInMonth(evalMonth);
-        const cdcScope = getCdcScope().filter(m => !isPendingCoveredByLateExecution(m, evalMonth, patentesCompletedInMonth));
+        const cdcScope = getCdcScope();
 
         const monthlyProy = new Array(12).fill(0);
         const monthlyEjec = new Array(12).fill(0);
@@ -1788,21 +1773,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         return set;
     }
 
-    function isPresuPendingCoveredByLateExecution(item, month, patentesCompletedInMonth) {
-        if (item.estado !== 'PENDIENTE') return false;
-        if (item.mes_original !== month) return false;
-        return patentesCompletedInMonth.has(item.patente);
-    }
-
     function getPresuFilteredData() {
         const selectedMonth = presuMonthFilter.value;
         const selectedStatus = presuStatusFilter.value;
         const searchQuery = presuSearchInput.value.trim().toUpperCase();
-
-        let patentesCompletedInMonth = new Set();
-        if (selectedMonth !== 'ALL') {
-            patentesCompletedInMonth = getPresuPatentesCompletedInMonth(parseInt(selectedMonth));
-        }
 
         let presuResult = budgetData.mantenimientos.filter(item => {
             if (!isPresuCdcMatch(item.centro_costo)) return false;
@@ -1810,10 +1784,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (!isPresuTallerMatch(item.taller)) return false;
 
             // Vista mensual: solo lo proyectado del mes en curso (igual que la barra Proyectado del gráfico)
-            if (selectedMonth !== 'ALL') {
+            // Si se busca por patente, se ignora el mes y se muestra su historial completo
+            if (selectedMonth !== 'ALL' && !searchQuery) {
                 const m = parseInt(selectedMonth);
                 if (item.mes_original !== m) return false;
-                if (isPresuPendingCoveredByLateExecution(item, m, patentesCompletedInMonth)) return false;
             }
 
             if (selectedStatus !== 'ALL' && item.estado !== selectedStatus) return false;
@@ -1821,28 +1795,33 @@ document.addEventListener('DOMContentLoaded', async () => {
             return true;
         });
 
-        // En vista mensual: solo items del mes en curso. Si la patente tiene un pendiente
-        // más antiguo (vencido), se muestra ese en lugar del pendiente del mes,
-        // quedando una sola fila de pendiente por patente.
-        if (selectedMonth !== 'ALL') {
+        // En vista mensual (sin búsqueda): el pendiente del mes siempre se muestra.
+        // Solo si la patente tuvo una ejecución en ese mes (tarea tardía de un plan
+        // anterior ya realizada) y además existe un pendiente vencido más reciente,
+        // se muestra ese vencido en su lugar para aclarar qué quedó sin hacer.
+        // Queda una sola fila de pendiente por patente.
+        if (selectedMonth !== 'ALL' && !searchQuery) {
             const m = parseInt(selectedMonth);
-            const presuOldestPendingByPatente = new Map();
+            const presuCompletedInMonth = getPresuPatentesCompletedInMonth(m);
+            const presuLatestOlderPendingByPatente = new Map();
             budgetData.mantenimientos.forEach(item => {
                 if (!isPresuCdcMatch(item.centro_costo)) return;
                 if (!isPresuTallerProyMatch(item)) return;
                 if (!isPresuTallerMatch(item.taller)) return;
-                if (item.estado !== 'PENDIENTE' || item.mes_original > m) return;
+                if (item.estado !== 'PENDIENTE' || item.mes_original >= m) return;
                 if (getItemCheckState(item)) return;
-                const cur = presuOldestPendingByPatente.get(item.patente);
-                if (!cur || item.mes_original < cur.mes_original ||
-                    (item.mes_original === cur.mes_original && item.id < cur.id)) {
-                    presuOldestPendingByPatente.set(item.patente, item);
+                const cur = presuLatestOlderPendingByPatente.get(item.patente);
+                if (!cur || item.mes_original > cur.mes_original ||
+                    (item.mes_original === cur.mes_original && item.id > cur.id)) {
+                    presuLatestOlderPendingByPatente.set(item.patente, item);
                 }
             });
             presuResult = presuResult.map(item => {
                 if (item.estado !== 'PENDIENTE' || item.mes_original !== m) return item;
-                const oldest = presuOldestPendingByPatente.get(item.patente);
-                return (oldest && oldest.mes_original < m) ? oldest : item;
+                if (getItemCheckState(item)) return item;
+                if (!presuCompletedInMonth.has(item.patente)) return item;
+                const older = presuLatestOlderPendingByPatente.get(item.patente);
+                return (older && older.mes_original < m) ? older : item;
             });
             const presuOldestInResult = new Map();
             presuResult.forEach(item => {
@@ -1880,8 +1859,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     function calculateAndRenderPresuKpis(evalMonth) {
-        const patentesCompletedInMonth = getPresuPatentesCompletedInMonth(evalMonth);
-        const cdcScope = getPresuCdcScope().filter(m => !isPresuPendingCoveredByLateExecution(m, evalMonth, patentesCompletedInMonth));
+        const cdcScope = getPresuCdcScope();
 
         const ytdProyectados = cdcScope.filter(m => m.mes_original <= evalMonth);
         const ytdEjecutados = cdcScope.filter(m => m.fecha_ejecucion !== null && m.mes_ejecucion <= evalMonth);
@@ -1927,9 +1905,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     function renderPresuCharts() {
-        const evalMonth = presuMonthFilter.value === 'ALL' ? 8 : parseInt(presuMonthFilter.value);
-        const patentesCompletedInMonth = getPresuPatentesCompletedInMonth(evalMonth);
-        const cdcScope = getPresuCdcScope().filter(m => !isPresuPendingCoveredByLateExecution(m, evalMonth, patentesCompletedInMonth));
+        const cdcScope = getPresuCdcScope();
 
         const monthlyProy = new Array(12).fill(0);
         const monthlyEjec = new Array(12).fill(0);
