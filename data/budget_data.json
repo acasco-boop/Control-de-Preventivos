@@ -4403,12 +4403,12 @@
       "plan": "3MU",
       "fecha_estimada": "2026-03-17",
       "mes_original": 3,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Marzo",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-09-21",
+      "mes_ejecucion": 9,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Septiembre (Origen: Marzo)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 179,
@@ -5105,12 +5105,12 @@
       "plan": "2MC 1",
       "fecha_estimada": "2026-08-18",
       "mes_original": 8,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-09-17",
+      "mes_ejecucion": 9,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Septiembre (Origen: Agosto)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 218,
@@ -7088,12 +7088,12 @@
       "plan": "2MC",
       "fecha_estimada": "2026-08-12",
       "mes_original": 8,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-09-18",
+      "mes_ejecucion": 9,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Septiembre (Origen: Agosto)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 328,
@@ -7142,12 +7142,12 @@
       "plan": "2MC",
       "fecha_estimada": "2026-02-05",
       "mes_original": 2,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Febrero",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-09-17",
+      "mes_ejecucion": 9,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Septiembre (Origen: Febrero)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 331,
@@ -8582,12 +8582,12 @@
       "plan": "3MC",
       "fecha_estimada": "2026-10-21",
       "mes_original": 10,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Octubre",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-09-18",
+      "mes_ejecucion": 9,
+      "taller": "CIUD",
+      "estado": "ADELANTADO",
+      "observaciones": "Ejecutado por adelantado en Septiembre (Programado: Octubre)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 411,
@@ -10928,12 +10928,12 @@
       "plan": "2MU",
       "fecha_estimada": "2026-01-25",
       "mes_original": 1,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Enero",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-09-14",
+      "mes_ejecucion": 9,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Septiembre (Origen: Enero)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 541,
@@ -11162,12 +11162,12 @@
       "plan": "2ML",
       "fecha_estimada": "2026-08-19",
       "mes_original": 8,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-09-17",
+      "mes_ejecucion": 9,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Septiembre (Origen: Agosto)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 554,
@@ -11273,12 +11273,12 @@
       "plan": "6ML",
       "fecha_estimada": "2026-01-23",
       "mes_original": 1,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Enero",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-09-16",
+      "mes_ejecucion": 9,
+      "taller": "MNZA",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Septiembre (Origen: Enero)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 560,
@@ -11855,12 +11855,12 @@
       "plan": "6ML",
       "fecha_estimada": "2026-01-31",
       "mes_original": 1,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Enero",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-09-16",
+      "mes_ejecucion": 9,
+      "taller": "SRAF",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Septiembre (Origen: Enero)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 592,
