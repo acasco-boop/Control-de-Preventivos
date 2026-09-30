@@ -1349,12 +1349,12 @@
       "plan": "3ML 1",
       "fecha_estimada": "2026-04-05",
       "mes_original": 4,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Abril",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-09-22",
+      "mes_ejecucion": 9,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Septiembre (Origen: Abril)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 10,
@@ -4511,12 +4511,12 @@
       "plan": "2MC",
       "fecha_estimada": "2026-08-13",
       "mes_original": 8,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-09-22",
+      "mes_ejecucion": 9,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Septiembre (Origen: Agosto)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 185,
@@ -4925,12 +4925,12 @@
       "plan": "2MC 2",
       "fecha_estimada": "2026-08-26",
       "mes_original": 8,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-09-22",
+      "mes_ejecucion": 9,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Septiembre (Origen: Agosto)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 208,
@@ -6005,12 +6005,12 @@
       "plan": "2MC 2",
       "fecha_estimada": "2026-05-05",
       "mes_original": 5,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Mayo",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-09-28",
+      "mes_ejecucion": 9,
+      "taller": "MNZA",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Septiembre (Origen: Mayo)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 268,
@@ -11672,12 +11672,12 @@
       "plan": "2MC",
       "fecha_estimada": "2026-03-13",
       "mes_original": 3,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Marzo",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-09-23",
+      "mes_ejecucion": 9,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Septiembre (Origen: Marzo)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 582,
@@ -13240,12 +13240,12 @@
       "plan": "3ML 1",
       "fecha_estimada": "2026-03-21",
       "mes_original": 3,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Marzo",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-09-24",
+      "mes_ejecucion": 9,
+      "taller": "SRAF",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Septiembre (Origen: Marzo)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 668,
@@ -15367,12 +15367,12 @@
       "plan": "2MC",
       "fecha_estimada": "2026-08-31",
       "mes_original": 8,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-09-30",
+      "mes_ejecucion": 9,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Septiembre (Origen: Agosto)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 785,
