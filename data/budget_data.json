@@ -4403,12 +4403,12 @@
       "plan": "3MU",
       "fecha_estimada": "2026-03-17",
       "mes_original": 3,
-      "fecha_ejecucion": "2026-09-21",
-      "mes_ejecucion": 9,
-      "taller": "CIUD",
-      "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Septiembre (Origen: Marzo)",
-      "tiene_orden_realizado": true
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Marzo",
+      "tiene_orden_realizado": false
     },
     {
       "id": 179,
@@ -9446,12 +9446,12 @@
       "plan": "2MC",
       "fecha_estimada": "2026-08-13",
       "mes_original": 8,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Agosto",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-09-21",
+      "mes_ejecucion": 9,
+      "taller": "CIUD",
+      "estado": "FUERA_DE_TERMINO",
+      "observaciones": "Ejecutado en Septiembre (Origen: Agosto)",
+      "tiene_orden_realizado": true
     },
     {
       "id": 459,

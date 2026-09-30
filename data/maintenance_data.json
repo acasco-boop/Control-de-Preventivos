@@ -3061,12 +3061,12 @@
       "plan": "2/3/6M",
       "fecha_estimada": "2026-08-13",
       "mes_original": 8,
-      "fecha_ejecucion": "2026-09-21",
-      "mes_ejecucion": 9,
-      "taller": "CIUD",
-      "estado": "FUERA_DE_TERMINO",
-      "observaciones": "Ejecutado en Septiembre (Origen: Agosto)",
-      "tiene_orden_realizado": true
+      "fecha_ejecucion": null,
+      "mes_ejecucion": null,
+      "taller": null,
+      "estado": "PENDIENTE",
+      "observaciones": "Pendiente de ejecución desde Agosto",
+      "tiene_orden_realizado": false
     },
     {
       "id": 105,
@@ -6161,12 +6161,12 @@
       "plan": "2/3/6M",
       "fecha_estimada": "2026-09-07",
       "mes_original": 9,
-      "fecha_ejecucion": null,
-      "mes_ejecucion": null,
-      "taller": null,
-      "estado": "PENDIENTE",
-      "observaciones": "Pendiente de ejecución desde Septiembre",
-      "tiene_orden_realizado": false
+      "fecha_ejecucion": "2026-09-21",
+      "mes_ejecucion": 9,
+      "taller": "CIUD",
+      "estado": "EN_FECHA",
+      "observaciones": "Ejecutado a tiempo en 21/09/2026",
+      "tiene_orden_realizado": true
     },
     {
       "id": 277,
