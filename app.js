@@ -1216,11 +1216,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             return true;
         });
 
-        // En vista mensual (sin búsqueda): el pendiente del mes se muestra, salvo que la
-        // patente haya sido ejecutada ese mes con un plan anterior tardío. En ese caso se
-        // muestra, en su lugar, el pendiente vencido más reciente si existe (lo que quedó
-        // sin hacer); si no hay vencido, se muestra la ejecución del mes marcada como
-        // realizada. Con filtro de estado activo solo se sustituye por otro pendiente.
+        // En vista mensual (sin búsqueda): si existe un pendiente vencido más reciente
+        // se muestra ese en lugar del pendiente del mes (es lo que quedó sin hacer).
+        // Si no hay vencido pero la patente se ejecutó ese mes con un plan anterior
+        // tardío, se muestra esa ejecución marcada como realizada.
+        // Con filtro de estado activo solo se sustituye por otro pendiente.
         // Queda una sola fila por patente.
         if (selectedMonth !== 'ALL' && !searchQuery) {
             const m = parseInt(selectedMonth);
@@ -1253,9 +1253,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             result = result.map(item => {
                 if (item.estado !== 'PENDIENTE' || item.mes_original !== m) return item;
                 if (getItemCheckState(item)) return item;
-                if (!lateDoneInMonthByPatente.has(item.patente)) return item;
                 const older = latestOlderPendingByPatente.get(item.patente);
                 if (older && older.mes_original < m) return older;
+                if (!lateDoneInMonthByPatente.has(item.patente)) return item;
                 if (allowCompletionSwap) {
                     const done = lateDoneInMonthByPatente.get(item.patente);
                     if (done) return done;
@@ -1799,11 +1799,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             return true;
         });
 
-        // En vista mensual (sin búsqueda): el pendiente del mes se muestra, salvo que la
-        // patente haya sido ejecutada ese mes con un plan anterior tardío. En ese caso se
-        // muestra, en su lugar, el pendiente vencido más reciente si existe (lo que quedó
-        // sin hacer); si no hay vencido, se muestra la ejecución del mes marcada como
-        // realizada. Con filtro de estado activo solo se sustituye por otro pendiente.
+        // En vista mensual (sin búsqueda): si existe un pendiente vencido más reciente
+        // se muestra ese en lugar del pendiente del mes (es lo que quedó sin hacer).
+        // Si no hay vencido pero la patente se ejecutó ese mes con un plan anterior
+        // tardío, se muestra esa ejecución marcada como realizada.
+        // Con filtro de estado activo solo se sustituye por otro pendiente.
         // Queda una sola fila por patente.
         if (selectedMonth !== 'ALL' && !searchQuery) {
             const m = parseInt(selectedMonth);
@@ -1836,9 +1836,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             presuResult = presuResult.map(item => {
                 if (item.estado !== 'PENDIENTE' || item.mes_original !== m) return item;
                 if (getItemCheckState(item)) return item;
-                if (!presuLateDoneInMonthByPatente.has(item.patente)) return item;
                 const older = presuLatestOlderPendingByPatente.get(item.patente);
                 if (older && older.mes_original < m) return older;
+                if (!presuLateDoneInMonthByPatente.has(item.patente)) return item;
                 if (presuAllowCompletionSwap) {
                     const done = presuLateDoneInMonthByPatente.get(item.patente);
                     if (done) return done;
